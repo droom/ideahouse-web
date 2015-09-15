@@ -1,0 +1,34 @@
+body
+  .ui.dropdown.burger
+    .menu > .item
+      padding: 20px 1.14285714rem !important
+
+
+@media (min-width: 601px)
+  // EXPAND MENU
+  body
+    .ui.dropdown.burger
+      .ui.button
+        display: none
+      .menu
+        position: static !important
+        cursor: auto
+        position: absolute
+        display: block !important
+        width: 100%
+        box-shadow: none
+        border: none
+        background: none
+        visibility: visible
+        .selected.item
+          background: $yellow
+          font-weight: 400
+      .menu > .item
+        visibility: visible
+        border-radius: 2px
+        padding: 7px !important
+        &:hover
+          background: $yellow
+
+
+

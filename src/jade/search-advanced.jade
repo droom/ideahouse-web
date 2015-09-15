@@ -1,0 +1,65 @@
+- var authorised = true
+- var page = 'search-advanced'
+
+html
+  include _head
+
+  body
+    include _brand
+    .wrap
+      include _nav
+
+      .main
+        .ui.huge.breadcrumb
+          .section Advanced Search
+
+        .content
+          h5 Category
+          .ui.large.fluid.multiple.search.selection.dropdown
+            input(type="hidden", name="receipt")
+            i.dropdown.icon
+            .default.text Category
+            .menu
+              .item(data-value="category-1", data-text="Plastic Pens")
+                img.ui.mini.avatar.image(src="img/cat-1.png")
+                p.label Plastic Pens
+              .item(data-value="category-2", data-text="Metal Pens")
+                img.ui.mini.avatar.image(src="img/cat-2.png")
+                p.label Metal Pens
+              .item(data-value="category-2", data-text="Metal Pens")
+                img.ui.mini.avatar.image(src="img/cat-3.png")
+                p.label Multi Function Pens
+              .item(data-value="category-2", data-text="Metal Pens")
+                img.ui.mini.avatar.image(src="img/cat-4.png")
+                p.label Pen Sets
+              .item(data-value="category-2", data-text="Metal Pens")
+                img.ui.mini.avatar.image(src="img/cat-5.png")
+                p.label Eco-Friendly Gifts
+          hr
+          h5 Colour
+
+          button.ui.circular.red.icon.button
+          button.ui.circular.blue.icon.button
+          button.ui.circular.orange.icon.button
+          button.ui.circular.green.icon.button
+
+          hr
+          .ui.large.input
+            input(type="number", placeholder="Quantity")
+
+          .ui.large.buttons
+            button.ui.button &minus;
+            .or
+            button.ui.button &plus;
+
+
+          hr
+          .ui.huge.input
+            input(type="number", placeholder="Price")
+
+          hr
+          .ui.icon.black.button Search now
+
+
+      include _footer
+      include _scripts

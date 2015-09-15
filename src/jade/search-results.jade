@@ -1,0 +1,54 @@
+- var authorised = true
+- var page = 'search-results'
+
+html
+  include _head
+  body
+    include _brand
+    .wrap
+      include _nav
+      .main
+        .ui.huge.breadcrumb
+          a.section Quick Search
+          i.right.angle.icon.divider
+          .section Results (4)
+
+        table.ui.sortable.celled.table.unstackable
+            thead
+                tr
+                  th.sorted.descending Name
+                  th Code
+                  th Stock
+                  th Price (RM)
+              tbody
+                tr
+                  td Umbra 21 Inches Tri Fold Open / Close Automatic Umbrella
+                  td 3002A
+                  td 250
+                  td 60
+                tr
+                  td Baron Metal Ball Pen (Black Ink)
+                  td 936B
+                  td 10000
+                  td 80
+                tr
+                  td International Travel Dual USB Adaptor W/ PU Pouch
+                  td EZ264
+                  td 860
+                  td 15.50
+              tfoot
+                tr
+                  th(colspan='4').center.aligned
+                    .ui.pagination.menu
+                      a.icon.item
+                        i.left.chevron.icon
+                      a.item 1
+                      a.item 2
+                      a.item 3
+                      a.item 4
+                      a.icon.item
+                        i.right.chevron.icon
+
+
+      include _footer
+      include _scripts

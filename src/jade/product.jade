@@ -1,0 +1,100 @@
+- var authorised = true
+- var page = 'product'
+
+html
+  include _head
+  body
+    include _brand
+    .wrap
+      include _nav
+
+      .main
+        .ui.huge.breadcrumb
+          a.section Quick Search
+          i.right.angle.icon.divider
+          .section Umbra 21 Inches Tri Fold Open / Close Automatic Umbrella
+
+
+        .product-wrap
+          img(src="img/product.png", class="product-hero")
+          .ui.labeled.icon.black.button.download Download
+            i.cloud.download.icon
+
+        .ui.two.item.menu
+          a.item(data-tab="overview") Product Details
+          a.item.active(data-tab="test") Stock Details
+
+        table.ui.celled.table.unstackable.product
+          tbody
+            tr
+              td Category
+              td Other cool gifts
+            tr
+              td Sub Category
+              td Umbra Umbrellas
+            tr
+              td Code No.
+              td UM01
+            tr
+              td Surface Finishing
+              td Solid Matt 60
+            tr
+              td Dimensions (mm)
+              td 310(L) &times; 310(W) &times; 500(H)
+
+
+
+
+        table.ui.sortable.celled.table.unstackable.stock
+          thead
+            tr
+              th.sorted.descending Colour
+              th Available
+              th Reserved
+          tbody
+            tr
+              td Black
+              td 10
+              td 05
+            tr
+              td White
+              td 110
+              td 05
+            tr
+              td Grey
+              td 820
+              td 05
+            tr
+              td Blue
+              td 120
+              td 05
+            tr
+              td Light blue
+              td 108
+              td 05
+            tr
+              td Maroon
+              td 45
+              td 05
+            tr
+              td Red
+              td 55
+              td 05
+
+
+
+
+      .ui.tab(data-tab="overview")
+        P Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae doloremque reiciendis consequatur, nam ipsa rem eveniet minus a iste perspiciatis? Nesciunt quo aliquam porro soluta nulla, rerum distinctio aut.
+
+      .ui.tab(data-tab="test")
+        P Should have sans-serif font family (opinionated)
+
+
+
+
+
+
+
+      include _footer
+      include _scripts

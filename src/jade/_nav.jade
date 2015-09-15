@@ -1,0 +1,51 @@
+.nav
+  .ui.two.column.grid
+    .row
+      .column
+        .ui.dropdown.burger
+          .ui.labeled.icon.button IdeaHouse
+            i.sidebar.download.icon
+
+          if authorised
+            .menu
+              a(href="browse.html").item browse.html
+              a(href="clearance.html").item clearance.html
+
+              a(href="search-advanced.html").item search-advanced.html
+              a(href="search-quick.html").item search-quick.html
+              a(href="search-results.html").item search-results.html
+              a(href="product.html").item product.html
+
+              a(href="gate.html").item gate.html
+
+
+          else
+            .menu
+              .item Resigter an account
+              .item Send password reminder
+              .item Visit IdeaHouse
+
+              //- For dev purposes
+              hr
+              a(href="browse.html").item { dev: bypass gate }
+
+
+
+      .column.right.aligned
+        if page == 'product'
+          .ui.labeled.icon.button.contextual Bookmark
+            i.remove.bookmark.icon
+
+
+
+
+            //- .item Quick Search
+            //- .item Advanced Search
+            //- .item Browse Items
+            //- .item Clearance Items
+            //- .item New Items
+            //- .item Coming Soon
+            //- .item Bookmarks
+            //- .item View History
+            //- .item Sign Out
+            //- .item Product

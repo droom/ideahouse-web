@@ -1,0 +1,120 @@
+body
+  padding: 0
+  margin: 0
+
+.wrap
+  max-width: 850px
+  margin: auto
+
+footer
+  width: 30%
+  float: left
+  clear: left
+  margin-top: 140px
+  padding: 15px
+
+.content
+  background: #eee
+  padding: 15px
+  border-radius: 2px
+
+.brand
+  width: 100%
+  float: left
+  min-height: 100px
+  padding: 15px
+  background: $blue
+  transition: all 400ms ease
+
+.main
+  width: 70%
+  float: right
+  float: left
+  clear: none
+  border-left: 1px solid #ddd
+  padding: 15px
+
+.nav
+  width: 30%
+  float: left
+  clear: left
+  padding: 15px
+
+  .ui.two.column.grid
+    .row
+      .column
+        width: 100%
+        display: block
+        text-align: left
+      .column + .column
+        margin-top: 30px
+
+.ui.breadcrumb
+  min-height: 100px
+  display: block
+
+.browse
+  .ui.card
+    width: calc(100%/3)
+    display: inline-block
+    border: none
+
+
+@media (max-width: 600px)
+  body
+    .browse
+      .ui.card
+        width: calc(100%/2)
+
+    .ui.grid > .row
+      padding: 0
+      .column
+        padding: 0
+        width: 100%
+        text-align: left
+
+    .brand
+      width: 100%
+      float: left
+      height: 100px
+      display: none
+
+    .main
+      width: 100%
+      float: right
+      float: left
+      clear: none
+      margin: 0
+      padding: 0
+      border-left: none
+
+    .nav
+      width: 100%
+      float: left
+      clear: left
+      margin: 0 0 20px 0
+      background: $blue
+      padding: 15px
+
+      .ui.two.column.grid
+        .row
+          .column
+            width: 50%
+            display: inline
+            text-align: left
+            margin-top: 0
+          .column + .column
+            margin-top: 0
+            text-align: right
+
+
+    .ui.breadcrumb
+      padding: 12px
+      min-height: auto
+
+    footer
+      margin: 1em 0
+      width: 100%
+      float: left
+      clear: left
+

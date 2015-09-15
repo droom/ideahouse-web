@@ -1,0 +1,45 @@
+hr
+  margin: 1rem 0rem
+  height: 1px
+  background: $grey
+  border: none
+
+.browse
+  .ui.card
+    margin: 0
+    border-radius: 0
+    border: 0
+    .image
+      border-radius: 0
+      border: 0
+
+  .ui.cards > .card > :first-child,
+  .ui.card > :first-child
+    border-radius: 0 !important
+
+.ui.info.message,
+.ui.attached.info.message
+  margin-top: 0
+  padding: 1em 1em
+  border-radius: 0 !important
+  box-shadow: none !important
+  border: none !important
+
+  .header
+    padding: 0 20px 30px 0
+
+
+.ui.multiple.search.selection.dropdown
+  p.label
+    display: inline-block
+
+.browse
+  .ui.card
+    width: calc(100%/3)
+    display: inline-block
+    border: none
+
+@media (max-width: 600px)
+  .browse
+    .ui.card
+      width: calc(100%/2)

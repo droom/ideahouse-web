@@ -1,0 +1,30 @@
+- var authorised = false
+- var page = 'gate'
+
+html
+  include _head
+  body
+    include _brand
+    .wrap
+      include _nav
+
+      .main
+
+        .ui.huge.breadcrumb
+          .section
+          | Welcome to the Approved Agent Portal.
+          br
+          | Please sign in to continue.
+
+        .ui.big.fluid.input
+          input(type="email", placeholder="Email")
+        .ui.big.fluid.input
+          input(type="password", placeholder="Password")
+
+        hr
+
+        .ui.big.green.button Sign in
+
+
+
+      include _scripts
