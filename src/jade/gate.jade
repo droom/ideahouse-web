@@ -7,23 +7,24 @@ html
     include partials/_brand
     .wrap
       include partials/_nav
-
       .main
-
         .ui.huge.breadcrumb
-          .section
-          | Welcome to the Approved Agent Portal.
-          br
-          | Please sign in to continue.
+          .section Welcome to the Approved Agent portal
 
-        .ui.big.fluid.input
-          input(type="email", placeholder="Email")
-        .ui.big.fluid.input
-          input(type="password", placeholder="Password")
+        .content
+          label.input Email
+          .ui.big.input.gate
+            input(type="email", placeholder="Email")
+          label.input Password
+          .ui.big.input.gate
+            input(type="password", placeholder="Password")
 
-        hr
-
-        .ui.big.green.button Sign in
-
+          hr
+          div.ui.checkbox
+            input(type="checkbox" name="remember")
+            label Remember me
+          hr
+          a(href="browse.html").ui.big.green.button Sign in
+          //- a(href="whatsapp://send?text=Message!").ui.big.green.button Send Whatsapp message
 
       include partials/_scripts

@@ -1,0 +1,24 @@
+- var authorised = true
+- var page = 'search-results-none'
+
+html
+  include partials/_head
+  body
+    include partials/_brand
+    .wrap
+      include partials/_nav
+      .main
+        .ui.huge.breadcrumb
+          a.section Quick Search
+          i.right.angle.icon.divider
+          .section No results found
+
+        .content
+          h2 No results found
+          p Lorem ipsum dolor sit amet, consecteturadipisicing elit, sed do eiusmod tempor.
+          .ui.icon.button Modify search
+          .ui.icon.button Try advanced search
+
+
+      include partials/_footer
+      include partials/_scripts

@@ -1,13 +1,31 @@
-table#product
-  width: 100%
-  td, th
-    vertical-align: top
-    background: white
-    padding: 10px 20px 10px 10px
-    font-size: 13px
-    text-align: left
-  th
-    background: #eee
-
-.ui.table
+table.ui.table
   margin-top: 0
+  background: none
+  td, th
+    padding: 10px 14px
+  th
+    padding: 14px 14px
+  td,
+  th,
+  tfoot
+    background: none
+
+  thead
+    th
+    background: rgba(0, 0, 0, 0.05)
+  tfoot
+    tr
+      background: none
+
+  .ui.pagination.menu
+    box-shadow: none
+
+
+@media (max-width: 600px)
+  table.ui.table
+    border-left: 0
+    border-right: 0
+    border-radius: 0
+    thead tr:first-child > th:first-child,
+    thead tr:first-child > th:last-child
+      border-radius: 0

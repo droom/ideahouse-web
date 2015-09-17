@@ -1,6 +1,7 @@
 - var authorised = true
 - var page = 'search-advanced'
 
+
 html
   include partials/_head
 
@@ -14,7 +15,7 @@ html
           .section Advanced Search
 
         .content
-          h5 Category
+          label.input Category
           .ui.large.fluid.multiple.search.selection.dropdown
             input(type="hidden", name="receipt")
             i.dropdown.icon
@@ -36,7 +37,7 @@ html
                 img.ui.mini.avatar.image(src="img/cat-5.png")
                 p.label Eco-Friendly Gifts
           hr
-          h5 Colour
+          label.input Colour
 
           button.ui.circular.red.icon.button
           button.ui.circular.blue.icon.button
@@ -44,21 +45,37 @@ html
           button.ui.circular.green.icon.button
 
           hr
-          .ui.large.input
-            input(type="number", placeholder="Quantity")
+          label.input Unit Quantity
 
-          .ui.large.buttons
+          .ui.large.input.as
+            input(type="number", placeholder="Quantity")
+          .ui.large.buttons.increment
             button.ui.button &minus;
             .or
             button.ui.button &plus;
 
 
           hr
-          .ui.huge.input
-            input(type="number", placeholder="Price")
+          label.input Unit Price Range (MYR)
+
+          .ui.large.input.as
+            input(type="number", placeholder="From")
+          .ui.large.buttons.increment
+            button.ui.button &minus;
+            .or
+            button.ui.button &plus;
+
+          .ui.large.input.as
+            input(type="number", placeholder="To")
+          .ui.large.buttons.increment
+            button.ui.button &minus;
+            .or
+            button.ui.button &plus;
+
+
 
           hr
-          .ui.icon.black.button Search now
+          a(href="search-results.html").ui.icon.black.button Search now
 
 
       include partials/_footer

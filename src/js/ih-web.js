@@ -4,7 +4,11 @@
     $('table').tablesort();
 
 
-    // Semantic UI
+    $('.ui.circular.icon.button').on('click', function() {
+      $(this).toggleClass('active')
+    });
+
+
 
     $('.ui.button.menu').on('click', function() {
       $('.ui.sidebar').sidebar('toggle')
@@ -23,31 +27,31 @@
       ;
     });
 
+
+
     $('.ui.labeled.icon.button.bookmark').on('click', function() {
+      $(this).toggleClass('active');
+    });
 
 
-      if ($(this).hasClass('active')){
+     // TABS
 
-        $(this).replaceWith( "<div class=\"ui labeled icon button bookmark\">Bookmark<i class=\"bookmark icon\"></i></div>" );
-
-      } else {
-
-        $(this).replaceWith( "<div class=\"ui labeled icon button bookmark active\">Bookmarked<i class=\"bookmark icon\"></i></div>" );
-
-      }
+     // on load
+     $('table.stock').hide();
 
 
+     $('a.btn-details').on('click', function() {
+      $('table.stock').hide();
+      $('table.details').show();
+    });
 
+     $('a.btn-stock').on('click', function() {
+      $('table.stock').show();
+      $('table.details').hide();
     });
 
 
 
 
-// $( "div.second" ).replaceWith( "<h2>New heading</h2>" );
 
-
-
-
-
-
-  });
+   });

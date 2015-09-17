@@ -55,10 +55,15 @@ module.exports = function(grunt) {
           "dist/gate.html": ["src/jade/gate.jade"],
           "dist/product.html": ["src/jade/product.jade"],
           "dist/clearance.html": ["src/jade/clearance.jade"],
+          "dist/history.html": ["src/jade/history.jade"],
+          "dist/coming.html": ["src/jade/coming.jade"],
+          "dist/bookmarks.html": ["src/jade/bookmarks.jade"],
+
 
           "dist/search-quick.html": ["src/jade/search-quick.jade"],
           "dist/search-advanced.html": ["src/jade/search-advanced.jade"],
-          "dist/search-results.html": ["src/jade/search-results.jade"]
+          "dist/search-results.html": ["src/jade/search-results.jade"],
+          "dist/search-results-none.html": ["src/jade/search-results-none.jade"]
 
         }
       }

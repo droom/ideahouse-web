@@ -21,10 +21,10 @@ html
             i.cloud.download.icon
 
         .ui.two.item.menu
-          a.item(data-tab="overview") Product Details
-          a.item.active(data-tab="test") Stock Details
+          a.item(class="btn-details") Product Details
+          a.item.active(class="btn-stock") Stock Details
 
-        table.ui.celled.table.unstackable.product
+        table.ui.celled.table.unstackable.details
           tbody
             tr
               td Category
@@ -51,35 +51,42 @@ html
               th.sorted.descending Colour
               th Available
               th Reserved
+              th QTY
+              th Price (MYR)
+
           tbody
             tr
-              td Black
+              td BL
               td 10
               td 05
+              td 200
+              td 440
+
             tr
-              td White
+              td WH
               td 110
               td 05
+              td 150
+              td 430
+
             tr
-              td Grey
+              td GR
               td 820
               td 05
+              td 175
+              td 420
             tr
-              td Blue
+              td B
               td 120
               td 05
+              td 175
+              td 410
             tr
-              td Light blue
+              td LB
               td 108
               td 05
-            tr
-              td Maroon
-              td 45
-              td 05
-            tr
-              td Red
-              td 55
-              td 05
+              td 110
+              td 400
 
 
 

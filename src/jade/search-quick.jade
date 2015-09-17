@@ -3,7 +3,6 @@
 
 html
   include partials/_head
-
   body
     include partials/_brand
     .wrap
@@ -13,13 +12,12 @@ html
         .ui.huge.breadcrumb
           .section Quick Search
 
-
-        .ui.huge.input.focus
-          input(type="text", placeholder="Search...")
-
-        hr
-
-        .ui.icon.black.button Search now
+        .content
+          h2 Search for products using its name, description, price or code.
+          .ui.huge.fluid.input.focus
+            input(type="text", placeholder="Search for product ...")
+          hr
+          a(href='search-results-none.html').ui.icon.button Search now
 
       include partials/_footer
       include partials/_scripts
