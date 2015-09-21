@@ -3,10 +3,11 @@
     .nav
       img(src="img/logo-white.png" class="ih-logo")
 
-    unless page == 'search'
-      .main
-        .ui.search.quick
-          .ui.icon.input
-            input.prompt(type="text" placeholder="Quick search...")
-            i.search.icon
-          .results
+    if authorised
+      unless page == 'search'
+        .main
+          .ui.search.quick
+            .ui.icon.input
+              input.prompt(type="text" placeholder="Quick search...")
+              i.search.icon
+            .results
