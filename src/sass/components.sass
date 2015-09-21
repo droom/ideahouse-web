@@ -8,6 +8,30 @@ hr
   display: block
   margin-top: 10px
 
+
+.ui.search.quick
+  .ui.icon.input
+    input.prompt
+      border-radius: 6px
+
+
+.ui.column.grid.mobile-quick-search
+  display: none
+  .row
+    .column
+      .ui.fluid.search.quick
+        width: 100%
+        border: 0
+        .ui.icon.input
+          width: 100%
+          border: 0
+          border-radius: 0
+        input.prompt
+          width: 100%
+          border: 0
+          border-radius: 0
+
+
 .ui.circular.icon.button
   width: 40px
   height: 40px
@@ -55,7 +79,6 @@ hr
     letter-spacing: 0.1em
     padding: 3px 9px
 
-
   .label.clearance
     background: $green
     color: white
@@ -65,7 +88,6 @@ hr
   .label.offer
     background: $yellow
     color: black
-
 
 .ui.input.gate
   display: block
@@ -117,13 +139,8 @@ hr
   p.label
     display: inline-block
 
-
-
-
 .item.dev
   background: grey
-
-
 
 .browse
   .ui.card
@@ -133,6 +150,9 @@ hr
     box-shadow: none
 
 @media (max-width: 600px)
+  .ui.column.grid.mobile-quick-search
+    display: block
+
   .browse
     .ui.card
       width: calc(100%/2)
