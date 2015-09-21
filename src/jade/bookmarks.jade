@@ -7,25 +7,59 @@ html
     include partials/_brand
     .wrap
       include partials/_nav
-
       .main
         .ui.huge.breadcrumb
-          .section Bookmarks
+          .section Bookmarked items
 
-        .clearance
+        .tiles
+          .ui.grid
+            .three.column.row
+              .column
+                a(href="product.html").ui.card
+                  .label.bookmark
+                    i.red.heart.label.icon
+                  .image
+                    img.product(src="img/product/UM02.jpg")
+                  .content
+                    .description Minute - Push Action Ball Plastic Pen (Blue Ink)
+                  .extra.content
+                    small UM02
 
-          .ui.card
-            a.image
-              img(src="img/clearance-5.png")
-            .content
-              a.header Boomerang highlighter
-              small AV3401
-          .ui.card
-            a.image
-              img(src="img/clearance-6.png")
-            .content
-              a.header Eco Notepad with Recycled Paper Pen
-              small S57
+              .column
+                .ui.card
+                  .label.bookmark
+                    i.red.heart.label.icon
+                  .image
+                    img.product(src="img/product/005.jpg")
+                  .content
+                    .description Minute - Push Action Ball Plastic Pen (Blue Ink)
+                  .extra.content
+                    small 005
+              .column
+                .ui.card
+                  .label.bookmark
+                    i.red.heart.label.icon
+                  .image
+                    img.product(src="img/product/1809.jpg")
+                  .content
+                    .description Phoenix-Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 1809
+
+            .three.column.row
+              .column
+                .ui.card
+                  .label.bookmark
+                    i.red.heart.label.icon
+                  .image
+                    img.product(src="img/product/1910.jpg")
+                  .content
+                    .description Cambridge - Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 1910
+
+
+
 
 
       include partials/_footer

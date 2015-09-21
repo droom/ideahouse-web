@@ -10,10 +10,22 @@ html
 
       .main
         .ui.huge.breadcrumb
-          a.section Quick Search
+          a.section(href="search-results.html") Advanced Search
           i.right.angle.icon.divider
           .section Umbra 21 Inches Tri Fold Open / Close Automatic Umbrella
 
+        .ui.two.column.grid.cycle
+          .row
+            .column
+              button.ui.labeled.icon.tiny.cycle.button
+                i.left.arrow.icon
+                p Previous item
+            .column.right.aligned
+              button.ui.right.labeled.icon.tiny.cycle.button
+                i.right.arrow.icon
+                p Next item
+
+        hr
 
         .product-wrap
           img(src="img/product.png", class="product-hero")
@@ -21,8 +33,8 @@ html
             i.cloud.download.icon
 
         .ui.two.item.menu
-          a.item(class="btn-details") Product Details
-          a.item.active(class="btn-stock") Stock Details
+          a.item.active(class="btn-details") Product Details
+          a.item(class="btn-stock") Stock Details
 
         table.ui.celled.table.unstackable.details
           tbody
@@ -48,53 +60,167 @@ html
         table.ui.sortable.celled.table.unstackable.stock
           thead
             tr
+              th.not-sortable
+              th.not-sortable(colspan="3") Stock
+              th.not-sortable(colspan="2") Price (MYR)
+            tr
               th.sorted.descending Colour
               th Available
               th Reserved
+              th Total
               th QTY
-              th Price (MYR)
+              th Price
 
           tbody
             tr
-              td BL
+              td As pictured
               td 10
+              td 05
               td 05
               td 200
               td 440
-
             tr
-              td WH
-              td 110
+              td Black
+              td 10
               td 05
-              td 150
-              td 430
-
+              td 200
+              td 200
+              td 440
             tr
-              td GR
-              td 820
+              td White
+              td 10
               td 05
-              td 175
-              td 420
+              td 200
+              td 200
+              td 440
             tr
-              td B
-              td 120
+              td Grey
+              td 10
               td 05
-              td 175
-              td 410
+              td 200
+              td 200
+              td 440
             tr
-              td LB
+              td Blue
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Light Blue
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Red
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Maroon
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Green
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Bright Green
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Yellow
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Purple
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Pink
               td 108
               td 05
               td 110
+              td 500
               td 400
+            tr
+              td Orange
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Turquoise
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Silver
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Gold
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Glow in the dark
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+            tr
+              td Wood
+              td 108
+              td 05
+              td 10
+              td 110
+              td 400
+            tr
+              td Beige
+              td 10
+              td 05
+              td 200
+              td 200
+              td 440
+          tfoot
+            tr
+              td Total
+              td 5181
+              td 5181
+              td 5181
+              td 5181
+              td 5181
 
-
-
-      .ui.tab(data-tab="overview")
-        P Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae doloremque reiciendis consequatur, nam ipsa rem eveniet minus a iste perspiciatis? Nesciunt quo aliquam porro soluta nulla, rerum distinctio aut.
-
-      .ui.tab(data-tab="test")
-        P Should have sans-serif font family (opinionated)
 
 
 

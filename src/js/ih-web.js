@@ -1,37 +1,44 @@
   $(document).ready(function() {
 
+   $('th.not-sortable').on('click', function() {
+   });
 
-    $('table').tablesort();
-
-
-    $('.ui.circular.icon.button').on('click', function() {
-      $(this).toggleClass('active')
-    });
-
-
-
-    $('.ui.button.menu').on('click', function() {
-      $('.ui.sidebar').sidebar('toggle')
-      ;
-    });
-
-    $('.ui.dropdown').dropdown({
-      on: 'click'
-    });
-
-    $('.ui.menu a.item').on('click', function() {
-      $(this)
-      .addClass('active')
-      .siblings()
-      .removeClass('active')
-      ;
-    });
+   $('th.not-sortable').on('click', function(evt) {
+    console.log("hi");
+    return false;
+  });
+   $('table').tablesort();
 
 
 
-    $('.ui.labeled.icon.button.bookmark').on('click', function() {
-      $(this).toggleClass('active');
-    });
+
+
+   $('.ui.circular.icon.button').on('click', function() {
+    $(this).toggleClass('active')
+  });
+
+   $('.ui.button.menu').on('click', function() {
+    $('.ui.sidebar').sidebar('toggle')
+    ;
+  });
+
+   $('.ui.dropdown').dropdown({
+    on: 'click'
+  });
+
+   $('.ui.menu a.item').on('click', function() {
+    $(this)
+    .addClass('active')
+    .siblings()
+    .removeClass('active')
+    ;
+  });
+
+
+
+   $('.ui.labeled.icon.button.bookmark').on('click', function() {
+    $(this).toggleClass('active');
+  });
 
 
      // TABS

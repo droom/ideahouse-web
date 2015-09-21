@@ -56,11 +56,12 @@ module.exports = function(grunt) {
           "dist/product.html": ["src/jade/product.jade"],
           "dist/clearance.html": ["src/jade/clearance.jade"],
           "dist/history.html": ["src/jade/history.jade"],
-          "dist/coming.html": ["src/jade/coming.jade"],
+          "dist/new.html": ["src/jade/new.jade"],
+          "dist/offer.html": ["src/jade/offer.jade"],
           "dist/bookmarks.html": ["src/jade/bookmarks.jade"],
 
-
           "dist/search-quick.html": ["src/jade/search-quick.jade"],
+          "dist/search-quick-results.html": ["src/jade/search-quick-results.jade"],
           "dist/search-advanced.html": ["src/jade/search-advanced.jade"],
           "dist/search-results.html": ["src/jade/search-results.jade"],
           "dist/search-results-none.html": ["src/jade/search-results-none.jade"]

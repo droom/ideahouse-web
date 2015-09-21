@@ -4,11 +4,13 @@ hr
   background: $grey
   border: none
 
+.swatch
+  display: block
+  margin-top: 10px
 
 .ui.circular.icon.button
   width: 40px
   height: 40px
-
 
 .ui.circular.icon.button:before
   content: ""
@@ -23,35 +25,59 @@ hr
 .ui.circular.icon.button + .ui.circular.icon.button
   margin-left: 3px
 
-
 .ui.input.as
   margin-right: 10px
   margin-bottom: 10px
 
+.ui.card
+  box-shadow: none
+  .extra.content
+    padding: 5px 15px
+  .label
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    z-index: 10
+    border-radius: 0 !important
 
+  .label.bookmark
+    padding: 10px 30px 30px 10px
+    font-size: 20px
+    top: 10px
+    left: 10px
+
+  .label.clearance,
+  .label.new,
+  .label.offer
+    font-size: 11px
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    padding: 3px 9px
+
+
+  .label.clearance
+    background: $green
+    color: white
+  .label.new
+    background: blue
+    color: white
+  .label.offer
+    background: $yellow
+    color: black
 
 
 .ui.input.gate
   display: block
   margin-bottom: 20px
 
-
 .ui.input.gate + .ui.input.gate
   margin-top: 5px
-
 
 .clearance
   .ui.card
     width: 44%
-    // float: left
     display: inline-block
-
-    // clear: left
-  // .ui.card:odd
-    // margin-right: 5%
-    // width: 45%
-    // float: left
-    // clear: none
   .ui.card:nth-child(even)
     margin-left: 6%
 
@@ -84,7 +110,7 @@ hr
     padding: 0 20px 30px 0
 
 
-.ui.multiple.search.selection.dropdown
+.ui.search.selection.dropdown
   .ui.avatar.image
     border-radius: 1px
 

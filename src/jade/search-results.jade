@@ -13,50 +13,90 @@ html
           i.right.angle.icon.divider
           .section Results (4)
 
-        table.ui.sortable.celled.table.unstackable
-            thead
-                tr
-                  th.sorted.descending Name
-                  th Code
-                  th Stock
-                  th Price (RM)
-              tbody
-                tr
-                  td Umbra 21 Inches Tri Fold Open / Close Automatic Umbrella
-                  td 3002A
-                  td 250
-                  td 60
-                tr
-                  td Baron Metal Ball Pen (Black Ink)
-                  td 936B
-                  td 10000
-                  td 80
-                tr
-                  td International Travel Dual USB Adaptor W/ PU Pouch
-                  td EZ264
-                  td 860
-                  td 15.50
-                tr
-                  td Dual USB Adaptor W/ PU Pouch
-                  td EZ264
-                  td 860
-                  td 15.50
+
+        .tiles
+          h3 Search results for {}
+          hr
+          .ui.grid
+            .three.column.row
+              .column
+                a(href="product.html").ui.card
+                  .image
+                    img.product(src="img/product/UM02.jpg")
+                  .content
+                    .description Umbra 24
+                  .extra.content
+                    small UM02
+              .column
+                .ui.card
+                  .image
+                    img.product(src="img/product/005.jpg")
+                  .content
+                    .description Minute - Push Action Ball Plastic Pen (Blue Ink)
+                  .extra.content
+                    small 005
+              .column
+                .ui.card
+                  .image
+                    img.product(src="img/product/1809.jpg")
+                  .content
+                    .description Phoenix-Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 1809
+
+            .three.column.row
+              .column
+                .ui.card
+                  .image
+                    img.product(src="img/product/1910.jpg")
+                  .content
+                    .description Cambridge - Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 1910
+              .column
+                .ui.card
+                  .image
+                    img.product(src="img/product/1926.jpg")
+                  .content
+                    .description Ringo - Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 1926
+              .column
+                .ui.card
+                  .image
+                    img.product(src="img/product/2009.jpg")
+                  .content
+                    .description Speedo - Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 2009
+
+            .three.column.row
+              .column
+                .ui.card
+                  .image
+                    img.product(src="img/product/2106.jpg")
+                  .content
+                    .description Admiral - Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 2106
+              .column
+                .ui.card
+                  .image
+                    img.product(src="img/product/2109.jpg")
+                  .content
+                    .description Swan - Twist Action Ball Plastic Pen (Black Ink
+                  .extra.content
+                    small 2106
+              .column
+                .ui.card
+                  .image
+                    img.product(src="img/product/2111.jpg")
+                  .content
+                    .description Galaxy - Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 2111
 
 
-
-
-              tfoot
-                tr
-                  th(colspan='4')
-                    .ui.pagination.menu
-                      a.icon.item
-                        i.left.chevron.icon
-                      a.item 1
-                      a.item 2
-                      a.item 3
-                      a.item 4
-                      a.icon.item
-                        i.right.chevron.icon
 
 
       include partials/_footer

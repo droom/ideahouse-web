@@ -16,7 +16,7 @@ html
 
         .content
           label.input Category
-          .ui.large.fluid.multiple.search.selection.dropdown
+          .ui.large.fluid.search.selection.dropdown
             input(type="hidden", name="receipt")
             i.dropdown.icon
             .default.text Category
@@ -39,10 +39,17 @@ html
           hr
           label.input Colour
 
-          button.ui.circular.red.icon.button
-          button.ui.circular.blue.icon.button
-          button.ui.circular.orange.icon.button
-          button.ui.circular.green.icon.button
+
+          .ui.checkbox
+            input(type="checkbox" tabindex="0" class="hidden")
+            label Specify colour
+
+
+          .swatch
+            button.ui.circular.red.icon.button
+            button.ui.circular.blue.icon.button
+            button.ui.circular.orange.icon.button
+            button.ui.circular.green.icon.button
 
           hr
           label.input Unit Quantity
@@ -75,7 +82,7 @@ html
 
 
           hr
-          a(href="search-results.html").ui.icon.black.button Search now
+          a(href="search-results.html").ui.icon.green.button Search now
 
 
       include partials/_footer

@@ -1,0 +1,54 @@
+- var authorised = true
+- var page = 'offer'
+
+html
+  include partials/_head
+  body
+    include partials/_brand
+    .wrap
+      include partials/_nav
+      .main
+        .ui.huge.breadcrumb
+          .section Offer items
+
+
+        .tiles
+          .ui.grid
+
+            .three.column.row
+              .column
+                .ui.card
+                  .label.offer
+                    small Offer
+                  .image
+                    img.product(src="img/product/2106.jpg")
+                  .content
+                    .description Admiral - Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 2106
+              .column
+                .ui.card
+                  .label.offer
+                    small Offer
+                  .image
+                    img.product(src="img/product/2109.jpg")
+                  .content
+                    .description Swan - Twist Action Ball Plastic Pen (Black Ink
+                  .extra.content
+                    small 2106
+              .column
+                .ui.card
+                  .label.offer
+                    small Offer
+                  .image
+                    img.product(src="img/product/2111.jpg")
+                  .content
+                    .description Galaxy - Push Action Ball Plastic Pen (Black Ink)
+                  .extra.content
+                    small 2111
+
+
+
+
+      include partials/_footer
+      include partials/_scripts

@@ -7,6 +7,13 @@
 
 .ui.two.item.menu
   box-shadow: none
+  background: none
+  .item
+    background: none
+  .item.active
+    background: $green
+    color: white
+    font-weight: 400
 
 
 .ui.icon.button + .ui.icon.button
@@ -29,6 +36,21 @@
     padding-left: 45px !important
 
 
+.ui.two.column.grid.cycle
+  margin: 14px
+
+.ui.cycle.button
+  background: none
+  border: 1px solid rgba(34, 36, 38, 0.1)
+
+
+
 @media (min-width: 601px)
   .ui.labeled.icon.button.bookmark
     background: #bbb
+
+  .ui.two.column.grid.cycle
+    margin: 0
+    .column
+      margin: 0
+      padding: 0

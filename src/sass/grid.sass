@@ -16,7 +16,23 @@ footer
 .content
   background: #eee
   padding: 15px
-  border-radius: 2px
+  border-radius: 5px
+  margin-bottom: 20px
+
+.tiles
+  padding: 0
+  .ui.grid
+    margin: 0
+    padding: 0
+    .three.column.row
+      padding: 0
+    .column
+      margin: 0
+      padding: 0 5px 5px 0
+    .column:last-child
+      padding: 0 0 5px 0
+
+
 
 .brand
   width: 100%
@@ -53,18 +69,18 @@ footer
   min-height: 100px
   display: block
 
-.browse
-  .ui.card
-    width: calc(100%/3)
-    display: inline-block
-    border: none
+// .browse
+//   .ui.card
+//     width: calc(100%/3)
+//     display: inline-block
+//     border: none
 
 
 @media (max-width: 600px)
   body
-    .browse
-      .ui.card
-        width: calc(100%/2)
+    // .browse
+    //   .ui.card
+    //     width: calc(100%/2)
 
     .ui.grid > .row
       padding: 0
@@ -73,11 +89,31 @@ footer
         width: 100%
         text-align: left
 
+
+
     .brand
       width: 100%
       float: left
       height: 100px
       display: none
+
+
+    .tiles
+      padding: 15px
+      .ui.grid
+        margin: 0
+        padding: 0
+        .three.column.row
+          padding: 0
+        .column
+          margin: 0
+          padding: 0 5px 5px 0
+          .ui.card > .content
+            // background: red
+            padding: 6px
+        .column:last-child
+          padding: 0 0 5px 0
+
 
     .main
       width: 100%
