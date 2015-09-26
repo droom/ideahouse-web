@@ -2,83 +2,93 @@ body
   padding: 0
   margin: 0
 
-footer
-  width: 30%
-  float: left
-  clear: left
-  margin-top: 140px
-  padding: 20px
+  footer
+    width: 30%
+    float: left
+    clear: left
+    margin-top: 140px
+    padding: 20px
 
-.wrap
-  max-width: 850px
-  margin: auto
+  .wrap
+    max-width: 850px
+    margin: auto
 
-.content
-  background: #eee
-  padding: 15px
-  border-radius: 5px
-  margin-bottom: 20px
+  .content
+    background: #eee
+    padding: 15px
+    border-radius: 5px
+    margin-bottom: 20px
 
-.tiles
-  padding: 0
-  .ui.grid
-    margin: 0
+  .tiles
     padding: 0
-    .three.column.row
-      padding: 0
-    .column
+    .ui.grid
       margin: 0
-      padding: 0 5px 5px 0
-    .column:last-child
-      padding: 0 0 5px 0
-
-
-
-.brand
-  width: 100%
-  float: left
-  min-height: 100px
-  padding: 15px
-  background: $blue
-  transition: all 400ms ease
-  .nav
-    padding: 0
-  .main
-    border: none
-    padding: 28px 10px 10px 10px
-
-.main
-  width: 70%
-  float: right
-  float: left
-  clear: none
-  border-left: 1px solid #ddd
-  padding: 15px
-
-.nav
-  width: 30%
-  float: left
-  clear: left
-  padding: 15px
-
-  .ui.two.column.grid
-    .row
+      padding: 0
+      .three.column.row
+        padding: 0
       .column
-        width: 100%
-        display: block
-        text-align: left
-      .column + .column
-        margin-top: 30px
+        margin: 0
+        padding: 0 5px 5px 0
+      .column:last-child
+        padding: 0 0 5px 0
 
-.ui.breadcrumb
-  min-height: 100px
-  display: block
 
-// .browse
-//   .ui.card
-//     width: calc(100%/3)
-//     display: inline-block
-//     border: none
+
+  .brand
+    width: 100%
+    float: left
+    min-height: 100px
+    padding: 15px
+    background: $brand-blue
+    transition: all 400ms ease
+    .nav
+      padding: 0
+    .main
+      border: none
+      padding: 28px 10px 10px 10px
+
+  .main
+    width: 70%
+    float: right
+    float: left
+    clear: none
+    border-left: 1px solid #ddd
+    padding: 15px
+
+  .nav
+    width: 30%
+    float: left
+    clear: left
+    padding: 15px
+
+    .ui.two.column.grid
+      .row
+        .column
+          width: 100%
+          display: block
+          text-align: left
+        .column + .column
+          margin-top: 30px
+
+  .ui.breadcrumb
+    min-height: 100px
+    display: block
+
+  .swatch
+    margin-top: 20px
+    display: flex
+    flex: 1 1 auto
+    flex-flow: row wrap
+
+
+    .unit
+      flex: calc(100%/3)
+      padding: 10px 0
+      small
+        padding-left: 5px
+
+
+
 
 
 @media (max-width: 600px)
@@ -107,11 +117,18 @@ footer
           margin: 0
           padding: 0 5px 5px 0
           .ui.card > .content
-            // background: red
             padding: 6px
         .column:last-child
           padding: 0 0 5px 0
 
+
+    .swatch
+      margin-top: 20px
+      display: flex
+      flex: 1 1 auto
+      flex-flow: row wrap
+      .unit
+        flex: calc(100%/2)
 
     .main
       width: 100%
@@ -127,7 +144,7 @@ footer
       float: left
       clear: left
       margin: 0 0 20px 0
-      background: $blue
+      background: $brand-blue
       padding: 15px
 
       .ui.two.column.grid
