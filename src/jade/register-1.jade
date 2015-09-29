@@ -1,0 +1,33 @@
+- var authorised = false
+- var page = 'register'
+
+html
+  include partials/_head
+  body
+    .wrap.register
+      img(src="img/logo-grey.png" class="ih-logo")
+      h1
+        = "Sign up to Idea House"
+
+      p All items marked asterisk(&#42;) are required.
+
+      form.ui.form
+        fieldset
+
+          h2 Please select your membership
+
+          .inline.fields
+            label.required.radio Sign up as a
+            .field.radio
+              .ui.radio.checkbox
+                input(type="radio", checked="", name="membership", id="membership-reseller")
+                label Reseller / Dealer
+            .field.radio
+              .ui.radio.checkbox
+                input(type="radio", name="membership", id="membership-corporate")
+                label Corporate / End user
+
+        a(href="register-2.html").ui.submit.green.button Next
+        .ui.error.message
+
+      include partials/_scripts
