@@ -1,6 +1,7 @@
   $(document).ready(function() {
 
-     // Semantic UI
+    $('.ui.radio.checkbox').checkbox();
+
     $('.ui.checkbox').checkbox('toggle');
 
     $('.ui.circular.icon.button').popup();
@@ -28,19 +29,18 @@
       $(this).toggleClass('active');
     });
 
-     // TABS
     $('table').tablesort();
 
-     // on load
-     $('table.stock').hide();
-
-     $('a.btn-details').on('click', function() {
+    $('table.stock').hide();
+    $('a.btn-details').on('click', function() {
       $('table.stock').hide();
       $('table.details').show();
     });
 
-     $('a.btn-stock').on('click', function() {
+    $('a.btn-stock').on('click', function() {
       $('table.stock').show();
       $('table.details').hide();
     });
-   });
+
+
+  });

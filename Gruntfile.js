@@ -73,6 +73,10 @@ module.exports = function(grunt) {
           }
         },
         files: {
+          "dist/register-1.html": ["src/jade/register-1.jade"],
+          "dist/register-2.html": ["src/jade/register-2.jade"],
+          "dist/register-3.html": ["src/jade/register-3.jade"],
+
           "dist/browse.html": ["src/jade/browse.jade"],
           "dist/gate.html": ["src/jade/gate.jade"],
           "dist/product.html": ["src/jade/product.jade"],
