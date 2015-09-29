@@ -1,3 +1,14 @@
-Today I approached a toll with a bunch of cars behind me, not knowing if i had enough credit on my SmartTag to pass. Never felt so alive.
+## Synopsis
+
+A responsive website for approved Ideahouse agents.
+Built using: Jade (http://jade-lang.com/), Sass (http://sass-lang.com/)
+Dependencies: jQuery, SemanticUI
+
+## Installation
+
+I would recommend using NPM to manage packages.
 
 
+## Tests
+
+No tests currently.
