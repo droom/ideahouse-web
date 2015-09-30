@@ -1,14 +1,48 @@
   $(document).ready(function() {
 
     $('.ui.radio.checkbox').checkbox();
+    $(".ui.radio.checkbox").prop("checked", false);
 
-    $('.ui.checkbox').checkbox('toggle');
 
     $('.ui.circular.icon.button').popup();
-
     $('.ui.circular.icon.button').on('click', function() {
       $(this).toggleClass('active')
     });
+
+
+    $('#account-private').on('click', function() {
+      $('input[name=\'company\']').prop('disabled', true);
+      $('input[name=\'address-1\']').prop('disabled', true);
+      $('input[name=\'address-2\']').prop('disabled', true);
+      $('input[name=\'address-3\']').prop('disabled', true);
+    });
+
+    $('#account-business').on('click', function() {
+      $('input[name=\'company\']').prop('disabled', false);
+      $('input[name=\'address-1\']').prop('disabled', false);
+      $('input[name=\'address-2\']').prop('disabled', false);
+      $('input[name=\'address-3\']').prop('disabled', false);
+    });
+
+
+
+
+
+    $('input#password')
+    .popup({
+      inline   : true,
+      hoverable: true,
+      position : 'bottom left',
+      delay: {
+        show: 300,
+        hide: 800
+      }
+    })
+    ;
+
+
+
+
 
     $('.ui.button.menu').on('click', function() {
       $('.ui.sidebar').sidebar('toggle');
@@ -31,6 +65,8 @@
 
     $('table').tablesort();
 
+
+    // product page
     $('table.stock').hide();
     $('a.btn-details').on('click', function() {
       $('table.stock').hide();

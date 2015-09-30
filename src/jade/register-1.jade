@@ -7,7 +7,7 @@ html
     .wrap.register
       img(src="img/logo-grey.png" class="ih-logo")
       h1
-        = "Sign up to Idea House"
+        = "Sign up to Ideahouse"
 
       p All items marked asterisk(&#42;) are required.
 
@@ -19,12 +19,12 @@ html
           .inline.fields
             label.required.radio Sign up as a
             .field.radio
-              .ui.radio.checkbox
-                input(type="radio", checked="", name="membership", id="membership-reseller")
+              .ui.radio.checkbox(id="membership-reseller")
+                input(type="radio", name="membership", required)
                 label Reseller / Dealer
             .field.radio
-              .ui.radio.checkbox
-                input(type="radio", name="membership", id="membership-corporate")
+              .ui.radio.checkbox(id="membership-corporate")
+                input(type="radio", name="membership", required)
                 label Corporate / End user
 
         a(href="register-2.html").ui.submit.green.button Next

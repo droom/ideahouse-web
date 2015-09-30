@@ -7,7 +7,7 @@ html
     .wrap.register
       img(src="img/logo-grey.png" class="ih-logo")
       h1
-        = "Sign up as an Idea House"
+        = "Sign up as an Ideahouse"
         br
         = "Corporate/End user"
 
@@ -19,30 +19,40 @@ html
           h2 Login information
           .inline.field
             label.static.required Login ID (email address)
-            input(name='email', type='email', placeholder='Email address')
-          .inline.field
-            label.static.required Re-enter Password
-            input(name='password', type='password', placeholder='Password')
+            input(name='email', type='email', placeholder='Email address', required)
           .inline.field
             label.static.required Password
-            input(name='password-retype', type='password', placeholder='Password')
+            input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}", required)
+            small.support 6&ndash;12 characters
 
         fieldset
-
           h2 Personal information
+          .inline.field
+            label.static.required Salutation
+            select.ui.dropdown.salutation
+              option(value="") Gender
+              option(value="1") Male
+              option(value="0") Female
+
+          .inline.field
+            label.static.required Name
+            input(name='name', type='text', placeholder='Name', required)
+
+          hr
 
           .inline.fields
-            label.required.radio I am a
+            label.static.required.radio I am a
             .field.radio
-              .ui.radio.checkbox
-                input(type="radio", name="account", checked="", id="account-private")
+              .ui.radio.checkbox(id="account-private")
+                input(type="radio", name="account", required)
                 label private individual
             .field.radio
-              .ui.radio.checkbox
-                input(type="radio", name="account", id="account-business")
+              .ui.radio.checkbox(id="account-business")
+                input(type="radio", name="account", required)
                 label business owner
 
           hr
+
           .inline.field
             label.static.required Company Name
             input(name='company', type='text', placeholder='Company Name')
@@ -68,8 +78,7 @@ html
                   | Singapore
                 .item(data-value="bn")
                   i.bn.flag
-                  | Brunei
-
+                  | Brune
                 .ui.divider
                 .item(data-value="af")
                   i.af.flag
@@ -799,12 +808,12 @@ html
                   | Zimbabwe
 
           .inline.field
-            label.static.required State
+            label.static State
             input(name='state', type='text', placeholder='State')
 
           .inline.field
             label.static.required Mobile Number
-            input(name='mobile', type='number', placeholder='Mobile Number')
+            input(name='mobile', type='number', placeholder='Mobile Number', required)
 
         fieldset
           img(src="img/catchpa-spoof.png")
@@ -818,6 +827,7 @@ html
             .ui.checkbox
               input(type='checkbox', name='checkbox')
               label SMS (WhatsApp)
+
 
         a(href="register-1.html").ui.submit.button Back
         a(href="register-3.html").ui.submit.green.button Register my account
