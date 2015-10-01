@@ -3,27 +3,25 @@
 
 html
   include partials/_head
-  body
+  body.gate
     include partials/_brand
     .wrap
       include partials/_nav
       .main
         .ui.huge.breadcrumb
           .section Welcome to the Approved Agent portal
-
         .content
           label.input Email
-          .ui.big.input.gate
+          .ui.big.input
             input(type="email", placeholder="Email")
           label.input Password
-          .ui.big.input.gate
+          .ui.big.input
             input(type="password", placeholder="Password")
-
           hr
           div.ui.checkbox
             input(type="checkbox" name="remember")
             label Remember me
           hr
-          a(href="browse.html").ui.big.green.button Sign in
+          a(href="browse.html").ui.green.button Sign in
 
       include partials/_scripts

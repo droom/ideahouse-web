@@ -1,34 +1,16 @@
-body
-
-  .wrap.register
-    margin: 0 auto
-    padding: 30px
-
-    .ih-logo
-      margin: 5px 0 25px -5px
-      padding: 0
-
-    .thank-you
-      background: none
-      border-radius: 2px
-      border: 0
-      padding: 15px 0 0 0
-      max-width: 360px
-      h2
-        font-size: 20px
-        line-height: 26px
-        display: block
-        margin-bottom: 40px
+body.gate
 
   form.ui.form
-    margin-top: 40px
+    margin-top: 0
+    padding: 0
 
     fieldset
-      background: #f9f9f9
+      // background: #f9f9f9
       margin: 15px 0
+      padding: 0
       border-radius: 2px
       border: 1px solid #eee
-      padding: 15px 15px 25px 15px
+
       h2
         font-size: 18px
         display: block
@@ -37,44 +19,26 @@ body
         margin-bottom: 25px
         max-width: 490px
 
+    label
+      font-weight: 400 !important
+      font-size: 1rem !important
+      padding-right: 10px
 
     label.static
       min-width: 164px
       display: inline-block
       text-align: right
-      font-size: 1rem !important
-      font-weight: 400 !important
-      padding-right: 12px
 
     label.required:after
       content: "*"
 
     small.support
       display: block
-      margin-left: 160px
+      margin-left: 178px
       margin-top: 5px
       line-height: 14px
       opacity: 0.7
 
-
-
-
-    // .ui.form input[type="password"]
-    //   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif
-    //   margin: 0em
-    //   outline: none
-    //   -webkit-appearance: none
-    //   tap-highlight-color: rgba(255, 255, 255, 0)
-    //   line-height: 1.2142em
-    //   padding: 0.67861429em 1em
-    //   font-size: 1em
-    //   background: #ffffff
-    //   border: 1px solid rgba(34, 36, 38, 0.15)
-    //   color: rgba(0, 0, 0, 0.87)
-    //   border-radius: 0.28571429rem
-    //   box-shadow: 0em 0em 0em 0em transparent inset
-    //   -webkit-transition: color 0.1s ease, border-color 0.1s ease
-    //   transition: color 0.1s ease, border-color 0.1s ease
 
     .inline.field
       input
@@ -90,16 +54,10 @@ body
       input.block:last-child
         border-bottom-left-radius: 0.28571429rem
         border-bottom-right-radius: 0.28571429rem
-
-
-
-
-
       input[name='mobile1'],
       input[name='mobile2'],
       input[name='mobile3']
         min-width: auto
-
       input[name='mobile1']::-webkit-inner-spin-button,
       input[name='mobile1']::-webkit-outer-spin-button,
       input[name='mobile2']::-webkit-inner-spin-button,
@@ -108,7 +66,6 @@ body
       input[name='mobile3']::-webkit-outer-spin-button,
         -webkit-appearance: none
         margin: 0
-
       input[name='mobile1']
         width: 55px
       input[name='mobile2']
@@ -118,11 +75,8 @@ body
         margin-left: 3px
         width: 94px
 
-
       .mobile-fields
         display: inline
-
-
 
 
     .field
@@ -142,30 +96,22 @@ body
       margin-left: 10px
 
 
-@media (max-width: 550px)
-  body
-    .wrap.register
-      margin: 0 auto
-      padding: 20px
-
+@media (max-width: 780px)
+  body.gate
     form.ui.form
-      margin-top: 40px
-
+      // margin-top: 40px
       label.static
         text-align: left
         padding: 0 15px 3px 0
         min-width: auto
-
       small.support
         display: block
         margin-left: 0
-
       fieldset
         background: none
         margin: 10px 0 40px 0
         border-radius: 2px
         border: 0
-        border-top: 1px solid #ccc
         padding: 10px 0 0 0
         h2
           font-size: 18px
@@ -204,9 +150,3 @@ body
           margin: 0 0 10px 0
           padding: 0
 
-
-@media (min-width: 900px)
-  body
-    form.ui.form
-      fieldset
-        margin-left: -15px
