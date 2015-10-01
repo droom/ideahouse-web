@@ -9,7 +9,6 @@
       $(this).toggleClass('active')
     });
 
-
     $('#account-private').on('click', function() {
       $('input[name=\'company\']').prop('disabled', true);
     });
@@ -17,22 +16,6 @@
     $('#account-business').on('click', function() {
       $('input[name=\'company\']').prop('disabled', false);
     });
-
-
-    $('input#password')
-    .popup({
-      inline   : true,
-      hoverable: true,
-      position : 'bottom left',
-      delay: {
-        show: 300,
-        hide: 800
-      }
-    })
-    ;
-
-
-
 
 
     $('.ui.button.menu').on('click', function() {
