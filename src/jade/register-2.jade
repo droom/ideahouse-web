@@ -30,7 +30,6 @@ html
           .inline.field
             label.static.required Salutation
             select.ui.dropdown.salutation
-              option(value="") Gender
               option(value="1") Male
               option(value="0") Female
 
@@ -57,11 +56,6 @@ html
             label.static.required Company Name
             input(name='company', type='text', placeholder='Company Name')
 
-          .inline.field
-            label.static.required Business Address
-            input.block-first(name='address-1', type='text', placeholder='Address 1')
-            input.block(name='address-2', type='text', placeholder='Address 2')
-            input.block(name='address-3', type='text', placeholder='Address 3')
 
           .inline.field
             label.static.required Country
@@ -78,7 +72,7 @@ html
                   | Singapore
                 .item(data-value="bn")
                   i.bn.flag
-                  | Brune
+                  | Brunei
                 .ui.divider
                 .item(data-value="af")
                   i.af.flag
@@ -813,7 +807,12 @@ html
 
           .inline.field
             label.static.required Mobile Number
-            input(name='mobile', type='number', placeholder='Mobile Number', required)
+            .mobile-fields
+              input(name='mobile1', class='no-stack', type='number', required)
+              input(name='mobile2', class='no-stack', type='number', required)
+              input(name='mobile3', class='no-stack', type='number', required)
+              small.support Country code, area code, number
+
 
         fieldset
           img(src="img/catchpa-spoof.png")
@@ -822,11 +821,11 @@ html
           h4 I would like to receive new products update, promotional offers, clearance sales and newsletters. Select options below.
           .inline.field
             .ui.checkbox
-              input(type='checkbox', name='checkbox')
+              input(type='checkbox', name='checkbox' checked="checked")
               label By email
             .ui.checkbox
-              input(type='checkbox', name='checkbox')
-              label SMS (WhatsApp)
+              input(type='checkbox', name='checkbox' checked="checked")
+              label Whatsapp
 
 
         a(href="register-1.html").ui.submit.button Back

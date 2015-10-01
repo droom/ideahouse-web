@@ -1,3 +1,5 @@
+
+
 body
 
   .wrap.register
@@ -56,22 +58,24 @@ body
       opacity: 0.7
 
 
-    .ui.form input[type="password"]
-      font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif
-      margin: 0em
-      outline: none
-      -webkit-appearance: none
-      tap-highlight-color: rgba(255, 255, 255, 0)
-      line-height: 1.2142em
-      padding: 0.67861429em 1em
-      font-size: 1em
-      background: #ffffff
-      border: 1px solid rgba(34, 36, 38, 0.15)
-      color: rgba(0, 0, 0, 0.87)
-      border-radius: 0.28571429rem
-      box-shadow: 0em 0em 0em 0em transparent inset
-      -webkit-transition: color 0.1s ease, border-color 0.1s ease
-      transition: color 0.1s ease, border-color 0.1s ease
+
+
+    // .ui.form input[type="password"]
+    //   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif
+    //   margin: 0em
+    //   outline: none
+    //   -webkit-appearance: none
+    //   tap-highlight-color: rgba(255, 255, 255, 0)
+    //   line-height: 1.2142em
+    //   padding: 0.67861429em 1em
+    //   font-size: 1em
+    //   background: #ffffff
+    //   border: 1px solid rgba(34, 36, 38, 0.15)
+    //   color: rgba(0, 0, 0, 0.87)
+    //   border-radius: 0.28571429rem
+    //   box-shadow: 0em 0em 0em 0em transparent inset
+    //   -webkit-transition: color 0.1s ease, border-color 0.1s ease
+    //   transition: color 0.1s ease, border-color 0.1s ease
 
     .inline.field
       input
@@ -88,12 +92,50 @@ body
         border-bottom-left-radius: 0.28571429rem
         border-bottom-right-radius: 0.28571429rem
 
+
+
+
+
+      input[name='mobile1'],
+      input[name='mobile2'],
+      input[name='mobile3']
+        min-width: auto
+
+      input[name='mobile1']::-webkit-inner-spin-button,
+      input[name='mobile1']::-webkit-outer-spin-button,
+      input[name='mobile2']::-webkit-inner-spin-button,
+      input[name='mobile2']::-webkit-outer-spin-button,
+      input[name='mobile3']::-webkit-inner-spin-button,
+      input[name='mobile3']::-webkit-outer-spin-button,
+        -webkit-appearance: none
+        margin: 0
+
+      input[name='mobile1']
+        width: 55px
+      input[name='mobile2']
+        margin-left: 3px
+        width: 94px
+      input[name='mobile3']
+        margin-left: 3px
+        width: 94px
+
+
+      .mobile-fields
+        display: inline
+
+
+
+
     .field
       margin: 0em 0em 10px
 
     .inline.fields .field > :first-child,
     .inline.field > :first-child
       margin: 0
+
+    .inline.fields > label
+      margin: 0
+
 
     .ui.checkbox + .ui.checkbox
       margin-left: 30px
@@ -132,7 +174,7 @@ body
           margin-bottom: 30px
 
       .inline.field
-        input,
+        input:not(.no-stack),
         input.block,
         input.block-first,
         input.block:last-child,
@@ -141,17 +183,17 @@ body
           display: block
           margin: 0
           width: 100%
-
         .ui.dropdown.salutation
           display: block
           width: 100px
           margin: 0
+        .mobile-fields
+          display: block
 
       .inline.fields
         padding: 0
         margin: 0
         width: 100%
-
         .field.radio
           width: 50%
           display: inline-block
@@ -162,7 +204,6 @@ body
           width: 100%
           margin: 0 0 10px 0
           padding: 0
-
 
 
 @media (min-width: 900px)
