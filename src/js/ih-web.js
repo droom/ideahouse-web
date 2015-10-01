@@ -17,7 +17,6 @@
       $('input[name=\'company\']').prop('disabled', false);
     });
 
-
     $('.ui.button.menu').on('click', function() {
       $('.ui.sidebar').sidebar('toggle');
     });
