@@ -1,0 +1,21 @@
+- var authorised = false
+- var page = 'gate'
+
+html
+  include partials/_head
+  body.gate
+    include partials/_brand
+    .wrap
+      include partials/_nav
+      .main
+        .ui.huge.breadcrumb
+          .section Send me a password reminder
+
+        .content
+          label.input Email
+          .ui.big.input
+            input(type="email", placeholder="Email")
+          hr
+          a(href="browse.html").ui.button Send password reminder
+
+      include partials/_scripts

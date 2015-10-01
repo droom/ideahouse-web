@@ -1,0 +1,35 @@
+- var authorised = false
+- var page = 'gate'
+
+html
+  include partials/_head
+  body.gate
+    include partials/_brand
+    .wrap
+      include partials/_nav
+      .main
+        .ui.huge.breadcrumb
+          .section Sign up to Ideahouse
+
+        .content
+          p All items marked asterisk(&#42;) are required.
+          hr
+          form.ui.form
+            fieldset
+              h2 Please select your account type
+              .inline.fields
+                label.required.radio Sign up as a
+                .field.radio
+                  .ui.radio.checkbox(id="membership-reseller")
+                    input(type="radio", name="membership", required)
+                    label Reseller / Dealer
+                .field.radio
+                  .ui.radio.checkbox(id="membership-corporate")
+                    input(type="radio", name="membership", required)
+                    label Corporate / End user
+
+            a(href="gate-register-2.html").ui.submit.green.button Next
+            .ui.error.message
+
+
+      include partials/_scripts
