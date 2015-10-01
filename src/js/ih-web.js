@@ -12,20 +12,11 @@
 
     $('#account-private').on('click', function() {
       $('input[name=\'company\']').prop('disabled', true);
-      $('input[name=\'address-1\']').prop('disabled', true);
-      $('input[name=\'address-2\']').prop('disabled', true);
-      $('input[name=\'address-3\']').prop('disabled', true);
     });
 
     $('#account-business').on('click', function() {
       $('input[name=\'company\']').prop('disabled', false);
-      $('input[name=\'address-1\']').prop('disabled', false);
-      $('input[name=\'address-2\']').prop('disabled', false);
-      $('input[name=\'address-3\']').prop('disabled', false);
     });
-
-
-
 
 
     $('input#password')
