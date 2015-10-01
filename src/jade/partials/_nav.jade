@@ -6,10 +6,8 @@
           .ui.labeled.icon.button IdeaHouse
             i.sidebar.download.icon
 
-
           .menu
             if authorised
-
               a(href="search-quick.html").item Quick Search
               a(href="search-advanced.html").item Advanced Search
               a(href="browse.html").item Browse by Category
@@ -17,15 +15,15 @@
               a(href="clearance.html").item Clearance
               a(href="new.html").item New
               a(href="offer.html").item Offer items
-
               hr
               a(href="bookmarks.html").item Bookmarks
               a(href="history.html").item View History
-              a(href="gate.html").item Sign Out
+              a(href="gate.html").item Sign out
 
             else
-              .item Resigter with Ideahouse
-              .item Forgot your password?
+              a(href="gate.html").item Sign in
+              a(href="gate-reminder.html").item Forgot your password?
+              a(href="gate-register-1.html").item Resigter with Ideahouse
 
       .column.right.aligned
         if page == 'product'
@@ -35,13 +33,15 @@
         if page == 'history'
           .ui.button.clear Clear history
 
-  unless page == 'search'
-    .ui.column.grid.mobile-quick-search
-      .row
-        .column
-          .ui.fluid.search.quick
-            .ui.icon.input
-              input.prompt(type="text" placeholder="Quick search...")
-              i.search.icon
-            .results
+
+  if authorised
+    unless page == 'search'
+      .ui.column.grid.mobile-quick-search
+        .row
+          .column
+            .ui.fluid.search.quick
+              .ui.icon.input
+                input.prompt(type="text" placeholder="Quick search...")
+                i.search.icon
+              .results
 

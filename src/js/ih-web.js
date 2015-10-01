@@ -3,7 +3,6 @@
     $('.ui.radio.checkbox').checkbox();
     $(".ui.radio.checkbox").prop("checked", false);
 
-
     $('.ui.circular.icon.button').popup();
     $('.ui.circular.icon.button').on('click', function() {
       $(this).toggleClass('active')

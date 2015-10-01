@@ -13,11 +13,9 @@ html
 
       form.ui.form
         fieldset
-
           h2 Please select your account type
-
           .inline.fields
-            label.required.radio Sign up as a
+            label.static.required.radio Sign up as a
             .field.radio
               .ui.radio.checkbox(id="membership-reseller")
                 input(type="radio", name="membership", required)
@@ -26,6 +24,7 @@ html
               .ui.radio.checkbox(id="membership-corporate")
                 input(type="radio", name="membership", required)
                 label Corporate / End user
+
 
         a(href="register-2.html").ui.submit.green.button Next
         .ui.error.message
