@@ -73,16 +73,13 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          "dist/register-1.html": ["src/jade/register-1.jade"],
-          "dist/register-2.html": ["src/jade/register-2.jade"],
-          "dist/register-3.html": ["src/jade/register-3.jade"],
-
           "dist/gate.html": ["src/jade/gate.jade"],
           "dist/gate-reminder.html": ["src/jade/gate-reminder.jade"],
-          "dist/gate-register-1.html": ["src/jade/gate-register-1.jade"],
-          "dist/gate-register-2.html": ["src/jade/gate-register-2.jade"],
-          "dist/gate-register-3.html": ["src/jade/gate-register-3.jade"],
 
+          "dist/gate-register-1.html": ["src/jade/gate-register-1.jade"],
+          "dist/gate-register-2-corporate.html": ["src/jade/gate-register-2-corporate.jade"],
+          "dist/gate-register-2-reseller.html": ["src/jade/gate-register-2-reseller.jade"],
+          "dist/gate-register-3.html": ["src/jade/gate-register-3.jade"],
 
           "dist/browse.html": ["src/jade/browse.jade"],
           "dist/product.html": ["src/jade/product.jade"],
