@@ -14,7 +14,9 @@
               hr
               a(href="clearance.html").item Clearance
               a(href="new.html").item New
-              a(href="offer.html").item Offer items
+              a(href="offer.html").item Offer
+              a(href="popular.html").item Popular
+
               hr
               a(href="bookmarks.html").item Bookmarks
               a(href="history.html").item View History
@@ -31,7 +33,8 @@
             i.remove.bookmark.icon
 
         if page == 'history'
-          .ui.button.clear Clear history
+          .ui.labeled.icon.button.clear Clear history
+            i.remove.icon
 
 
   if authorised

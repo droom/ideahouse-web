@@ -7,7 +7,7 @@ html
 
   body
     include partials/_brand
-    .wrap
+    .wrap.search-advanced
       include partials/_nav
 
       .main
@@ -19,78 +19,164 @@ html
           .ui.large.fluid.search.selection.dropdown
             input(type="hidden", name="receipt")
             i.dropdown.icon
-            .default.text Category
+            .default.text All
             .menu
-              .item(data-value="category-1", data-text="Plastic Pens")
-                img.ui.mini.avatar.image(src="img/cat-1.png")
-                p.label Plastic Pens
-              .item(data-value="category-2", data-text="Metal Pens")
-                img.ui.mini.avatar.image(src="img/cat-2.png")
+
+              .item(data-value="category-1", data-text="Metal Pens")
+                img.product(src="img/category/pens-metal.gif")
                 p.label Metal Pens
-              .item(data-value="category-2", data-text="Metal Pens")
-                img.ui.mini.avatar.image(src="img/cat-3.png")
+
+              .item(data-value="category-2", data-text="Plastic Pens")
+                img.product(src="img/category/pens-plastic.gif")
+                p.label Plastic Pens
+
+              .item(data-value="category-3", data-text="Multi Function Pens")
+                img.product(src="img/category/pens-multi.gif")
                 p.label Multi Function Pens
-              .item(data-value="category-2", data-text="Metal Pens")
-                img.ui.mini.avatar.image(src="img/cat-4.png")
+
+              .item(data-value="category-4", data-text="Pen Sets")
+                img.product(src="img/category/pens-sets.gif")
                 p.label Pen Sets
-              .item(data-value="category-2", data-text="Metal Pens")
-                img.ui.mini.avatar.image(src="img/cat-5.png")
-                p.label Eco-Friendly Gifts
+
+              .item(data-value="category-5", data-text="Eco Friendly Gifts")
+                img.product(src="img/category/eco.gif")
+                p.label Eco Friendly Gifts
+
+              .item(data-value="category-6", data-text="Pencils")
+                img.product(src="img/category/pencils.gif")
+                p.label Pencils
+
+              .item(data-value="category-7", data-text="Packaging")
+                img.product(src="img/category/packaging.gif")
+                p.label Packaging
+
+              .item(data-value="category-8", data-text="Key Holders")
+                img.product(src="img/category/keyholders.jpg")
+                p.label Key Holders
+
+              .item(data-value="category-9", data-text="Multi Function Key Holders")
+                img.product(src="img/category/keyholders-multi.jpg")
+                p.label Multi Function Key Holders
+
+              .item(data-value="category-10", data-text="Bags")
+                img.product(src="img/category/bags.jpg")
+                p.label Bags
+
+              .item(data-value="category-11", data-text="Drinkware")
+                img.product(src="img/category/mug.gif")
+                p.label Drinkware
+
+              .item(data-value="category-12", data-text="Corporate Gift Sets")
+                img.product(src="img/category/giftsets.jpg")
+                p.label Corporate Gift Sets
+
+              .item(data-value="category-13", data-text="Umbrellas")
+                img.product(src="img/category/umbrella.jpg")
+                p.label Umbrellas
+
+              .item(data-value="category-14", data-text="Name Card Holders")
+                img.product(src="img/category/namecard.gif")
+                p.label Name Card Holders
+
+              .item(data-value="category-15", data-text="Stationery Gifts")
+                img.product(src="img/category/stationery.gif")
+                p.label Stationery Gifts
+
+              .item(data-value="category-16", data-text="Daily Use Gift Items")
+                img.product(src="img/category/daily-use.jpg")
+                p.label Daily Use Gift Items
+
+              .item(data-value="category-17", data-text="Metal Pens")
+                img.product(src="img/category/travel.jpg")
+                p.label Travel Gifts
+
+              .item(data-value="category-18", data-text="Metal Pens")
+                img.product(src="img/category/usb.jpg")
+                p.label USB Flash Drives
+
+              .item(data-value="category-19", data-text="PU Leather")
+                img.product(src="img/category/leather.jpg")
+                p.label PU Leather
+
+              .item(data-value="category-20", data-text="Coin Banks &amp; Money Boxes")
+                img.product(src="img/category/coin-banks.gif")
+                p.label Coin Banks &amp; Money Boxes
+
+              .item(data-value="category-21", data-text="Smartphone Gadgets")
+                img.product(src="img/category/smartphone.jpg")
+                p.label Smartphone Gadgets
+
+              .item(data-value="category-22", data-text="Magnet Gifts")
+                img.product(src="img/category/magnets.jpg")
+                p.label Magnet Gifts
+
+              .item(data-value="category-23", data-text="Photo Frames")
+                img.product(src="img/category/photo.gif")
+                p.label Photo Frames
+
+              .item(data-value="category-24", data-text="Clocks &amp; Watches")
+                img.product(src="img/category/clocks.jpg")
+                p.label Clocks &amp; Watches
+
+              .item(data-value="category-25", data-text="Custom Made Gifts")
+                img.product(src="img/category/custom.jpg")
+                p.label Custom Made Gifts
+
+              .item(data-value="category-26", data-text="Party Gifts &amp; Games")
+                img.product(src="img/category/party.gif")
+                p.label Party Gifts &amp; Games
+
+
           hr
           label.input Colour
 
 
-          .ui.big.checkbox
-            input(type="checkbox" tabindex="0" class="hidden")
-            label Specify colour
 
-          .swatch
-            .unit
-              button.ui.circular.black.icon.button
-              small Black
-            .unit
-              button.ui.circular.white.icon.button
-              small White
-            .unit
-              button.ui.circular.grey.icon.button
-              small Grey
-            .unit
-              button.ui.circular.blue.icon.button
-              small Blue
-            .unit
-              button.ui.circular.lightBlue.icon.button
-              small Light Blue
-            .unit
-              button.ui.circular.red.icon.button
-              small Red
-            .unit
-              button.ui.circular.maroon.icon.button
-              small Maroon
-            .unit
-              button.ui.circular.green.icon.button
-              small Green
-            .unit
-              button.ui.circular.brightGreen.icon.button
-              small Bright Green
-            .unit
-              button.ui.circular.yellow.icon.button
-              small Yellow
-            .unit
-              button.ui.circular.purple.icon.button
-              small Purple
-            .unit
-              button.ui.circular.pink.icon.button
-              small Pink
-            .unit
-              button.ui.circular.orange.icon.button
-              small Orange
-            .unit
-              button.ui.circular.teal.icon.button
-              small Turquoise
-            .unit
-              button.ui.circular.silver.icon.button
-              small Silver
+          .inline.fields
+            .field.radio
+              .ui.radio.checkbox(id="colour-any")
+                input(type="radio", name="colour", checked, required)
+                label Any colour
+            .field.radio
+              .ui.radio.checkbox(id="colour-specify")
+                input(type="radio", name="colour", required)
+                label Specify colour
 
+          //- hr
+
+          table.ui.celled.table.unstackable.swatch.search
+            tr
+              td.swatch.black.inactive Black
+              td.swatch.white White
+              td.swatch.grey Grey
+            tr
+              td.swatch.blue Blue
+              td.swatch.lightBlue Light Blue
+              td.swatch.red Red
+            tr
+              td.swatch.maroon Maroon
+              td.swatch.green Green
+              td.swatch.brightGreen
+                | Bright
+                br
+                | Green
+            tr
+              td.swatch.yellow Yellow
+              td.swatch.purple Purple
+              td.swatch.pink Pink
+            tr
+              td.swatch.orange Orange
+              td.swatch.turquoise Turquoise
+              td.swatch.silver Silver
+            tr
+              td.swatch.gold Gold
+              td.swatch.glow
+                | Glow in
+                br
+                |the dark
+              td.swatch.wood Wood
+            tr
+              td.swatch.beige Beige
 
           hr
           label.input Unit Quantity
@@ -121,9 +207,8 @@ html
             button.ui.button &plus;
 
 
-
           hr
-          a(href="search-results.html").ui.icon.green.button Search now
+          a(href="search-results.html").ui.large.cta.button Search now
 
 
       include partials/_footer

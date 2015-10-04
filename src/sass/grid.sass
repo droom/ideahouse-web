@@ -13,6 +13,14 @@ body
     max-width: 850px
     margin: auto
 
+  .wrap.browse
+    .tiles
+      .ui.card
+        .description
+          min-height: 40px
+        .image
+          background: white
+
   .content
     background: #fcfcfc
     padding: 15px
@@ -20,20 +28,54 @@ body
     margin-bottom: 20px
 
   .tiles
-    padding: 0
-    .ui.grid
-      margin: 0
-      padding: 0
-      .three.column.row
-        padding: 0
-      .column
-        margin: 0
-        padding: 0 5px 5px 0
-      .column:last-child
-        padding: 0 0 5px 0
+    column-count: 3
+    column-gap: 10px
+    .ui.card
+      display: inline-block
+      box-shadow: none
+      margin: 0 0 1em
+      width: 100%
+      .extra.content
+        padding: 5px 15px
+      .label.bookmark
+        position: absolute
+        z-index: 2
+        font-size: 20px
+        top: 4px
+        left: 4px
 
+      &.offer:before,
+      &.clearance:before,
+      &.popular:before,
+      &.new:before
+        position: absolute
+        background: green
+        content: "Offer"
+        z-index: 2
+        color: white
+        text-transform: uppercase
+        letter-spacing: 0.15em
+        padding: 3px 8px
+        font-size: 10px
 
+      &.offer:before
+        background: yellow
+        color: black
+        content: "Offer"
 
+      &.clearance:before
+        background: green
+        content: "Clearance"
+
+      &.popular:before
+        background: red
+        content: "Popular"
+
+      &.new:before
+        background: blue
+        content: "New"
+
+  // desktop
   .brand
     width: 100%
     float: left
@@ -47,6 +89,7 @@ body
       border: none
       padding: 28px 10px 10px 10px
 
+
   .main
     width: 70%
     float: right
@@ -59,9 +102,10 @@ body
     width: 30%
     float: left
     clear: left
-    padding: 15px
 
-    .ui.two.column.grid
+    .ui.grid
+      margin: 0
+      padding: 0
       .row
         .column
           width: 100%
@@ -70,28 +114,20 @@ body
         .column + .column
           margin-top: 30px
 
+
+
   .ui.breadcrumb
     min-height: 100px
     display: block
-
-  .swatch
-    margin-top: 20px
-    display: flex
-    flex: 1 1 auto
-    flex-flow: row wrap
-
-
-    .unit
-      flex: calc(100%/3)
-      padding: 10px 0
-      small
-        padding-left: 5px
-
 
 
 
 @media (max-width: 600px)
   body
+
+    h3.pad
+      padding: 0 10px
+
     .ui.grid > .row
       padding: 0
       .column
@@ -104,30 +140,6 @@ body
       float: left
       height: 100px
       display: none
-
-    .tiles
-      padding: 15px
-      .ui.grid
-        margin: 0
-        padding: 0
-        .three.column.row
-          padding: 0
-        .column
-          margin: 0
-          padding: 0 5px 5px 0
-          .ui.card > .content
-            padding: 6px
-        .column:last-child
-          padding: 0 0 5px 0
-
-
-    .swatch
-      margin-top: 20px
-      display: flex
-      flex: 1 1 auto
-      flex-flow: row wrap
-      .unit
-        flex: calc(100%/2)
 
     .main
       width: 100%
@@ -144,7 +156,6 @@ body
       clear: left
       margin: 0 0 20px 0
       background: $brand-blue
-      padding: 15px
 
       .ui.two.column.grid
         .row
@@ -153,9 +164,24 @@ body
             display: inline
             text-align: left
             margin-top: 0
+            padding: 5px
+
           .column + .column
             margin-top: 0
             text-align: right
+
+
+    .ui.two.grid
+      height: 50px
+
+    .ui.column.grid.mobile-quick-search
+      height: 50px
+      .row
+        .column
+          .ui.fluid.search.quick
+            input.prompt
+              height: 100%
+
 
 
     .ui.breadcrumb

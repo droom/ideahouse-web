@@ -9,13 +9,15 @@ html
       include partials/_nav
       .main
         .ui.huge.breadcrumb
-          .section Send me a password reminder
+          .section Reset my password
 
         .content
+          p You'll be emailed instructions on how to reset your password.
+          hr
           label.input Email
           .ui.big.input
             input(type="email", placeholder="Email")
           hr
-          a(href="browse.html").ui.button Send password reminder
+          a(href="browse.html").ui.button Email me reset link
 
       include partials/_scripts
