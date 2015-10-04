@@ -9,7 +9,8 @@ hr
     min-width: 380px
   .ui.icon.input
     input.prompt
-      border-radius: 6px
+      border-radius: 4px
+      border: none
 
 .ui.column.grid.mobile-quick-search
   display: none
@@ -28,62 +29,16 @@ hr
           border-radius: 0
 
 
-.ui.circular.icon.button
-  width: 40px
-  height: 40px
+.search-advanced
+  .inline.fields .field.radio
+    width: 50%
+    display: inline-block
 
-.ui.circular.icon.button:before
-  content: ""
-  margin-left: -2px
-  font-size: 16px
 
-.ui.circular.icon.active.button:before
-  content: "\2713"
-  margin-left: -2px
-  font-size: 16px
-
-.ui.circular.icon.button + .ui.circular.icon.button
-  margin-left: 3px
 
 .ui.input.as
   margin-right: 10px
   margin-bottom: 10px
-
-.ui.card
-  box-shadow: none
-  .extra.content
-    padding: 5px 15px
-  .label
-    position: absolute
-    display: block
-    top: 0
-    left: 0
-    z-index: 10
-    border-radius: 0 !important
-
-  .label.bookmark
-    padding: 10px 30px 30px 10px
-    font-size: 20px
-    top: 10px
-    left: 10px
-
-  .label.clearance,
-  .label.new,
-  .label.offer
-    font-size: 11px
-    text-transform: uppercase
-    letter-spacing: 0.1em
-    padding: 3px 9px
-
-  .label.clearance
-    background: $green
-    color: white
-  .label.new
-    background: blue
-    color: white
-  .label.offer
-    background: $yellow
-    color: black
 
 .ui.input.gate
   display: block
@@ -91,29 +46,6 @@ hr
 
 .ui.input.gate + .ui.input.gate
   margin-top: 5px
-
-.clearance
-  .ui.card
-    width: 44%
-    display: inline-block
-  .ui.card:nth-child(even)
-    margin-left: 6%
-
-
-
-.browse
-  .ui.card
-    margin: 0
-    border-radius: 0
-    border: 0
-    .image
-      border-radius: 0
-      border: 0
-
-  .ui.cards > .card > :first-child,
-  .ui.card > :first-child
-    border-radius: 0 !important
-
 
 
 .ui.info.message,
@@ -123,7 +55,6 @@ hr
   border-radius: 0 !important
   box-shadow: none !important
   border: none !important
-
   .header
     padding: 0 20px 30px 0
 
@@ -131,24 +62,14 @@ hr
 .ui.search.selection.dropdown
   .ui.avatar.image
     border-radius: 1px
-
   p.label
     display: inline-block
 
 .item.dev
   background: grey
 
-.browse
-  .ui.card
-    width: calc(100%/3)
-    display: inline-block
-    border: none
-    box-shadow: none
 
 @media (max-width: 600px)
   .ui.column.grid.mobile-quick-search
     display: block
 
-  .browse
-    .ui.card
-      width: calc(100%/2)

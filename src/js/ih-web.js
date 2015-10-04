@@ -1,12 +1,37 @@
   $(document).ready(function() {
 
-    $('.ui.radio.checkbox').checkbox();
-    $(".ui.radio.checkbox").prop("checked", false);
+    var searchSwatch = $('table.ui.table.swatch.search')
+    var searchSwatchSelected = false
 
-    $('.ui.circular.icon.button').popup();
-    $('.ui.circular.icon.button').on('click', function() {
-      $(this).toggleClass('active')
+
+    $('.ui.radio.checkbox').checkbox();
+    $('.gate .ui.radio.checkbox').prop("checked", false);
+
+
+
+    // Advanced search
+     searchSwatch.hide();
+
+    $("#colour-specify").on('click', function() {
+      searchSwatch.show();
     });
+
+    $("#colour-any").on('click', function() {
+     searchSwatch.hide();
+    });
+
+
+
+    $('table.swatch.search td.swatch').on('click', function() {
+      $('table.swatch.search td.swatch').removeClass('selected');
+      $(this).toggleClass('selected');
+      // console.log("hello");
+    });
+
+
+
+
+
 
     $('#account-private').on('click', function() {
       $('input[name=\'company\']').prop('disabled', true);
@@ -36,7 +61,6 @@
     });
 
     $('table').tablesort();
-
 
     // product page
     $('table.stock').hide();

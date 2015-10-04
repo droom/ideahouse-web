@@ -1,11 +1,20 @@
 body
   .ui.dropdown.burger
+    .menu
+      top: 50px
+      left: 0
+      padding: 10px
+
+      border-top-left-radius: 0
+      border-top-right-radius: 0
+      border-top: 0
+
     .menu > .item
-      padding: 20px 1.14285714rem !important
+      padding: 10px 15px 10px 0 !important
 
 
 @media (min-width: 601px)
-  // EXPAND MENU
+  // Expand menu for desktop
   body
     .ui.dropdown.burger
       .ui.button
@@ -21,14 +30,15 @@ body
         background: none
         visibility: visible
         .selected.item
-          background: $yellow
+          background: $brand-green
+          color: $bg
           font-weight: 400
       .menu > .item
         visibility: visible
         border-radius: 2px
         padding: 7px !important
         &:hover
-          background: $yellow
-
+          background: $brand-green
+          color: $bg
 
 
