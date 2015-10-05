@@ -73,8 +73,9 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          "dist/gate.html": ["src/jade/gate.jade"],
-          "dist/gate-reminder.html": ["src/jade/gate-reminder.jade"],
+          "dist/gate-signin.html": ["src/jade/gate-signin.jade"],
+          "dist/gate-reset-send.html": ["src/jade/gate-reset-send.jade"],
+          "dist/gate-reset-action.html": ["src/jade/gate-reset-action.jade"],
 
           "dist/gate-register-1.html": ["src/jade/gate-register-1.jade"],
           "dist/gate-register-2-corporate.html": ["src/jade/gate-register-2-corporate.jade"],
