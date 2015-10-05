@@ -12,19 +12,19 @@ html
           .section Reset my password
 
         .content
-          p Create a new password for $USER_EMAIL
+          p
+            | Create a new password for $USER_EMAIL
+            br
+            | Passwords must be 6&ndash;12 characters
           hr
 
           label.input New Password
           .ui.big.input
-            input(type="password", placeholder="New password")
-
+            input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}", required)
           label.input Retype password
           .ui.big.input
-            input(type="password", placeholder="Retype password")
-
+            input(id='password' name='password', type='password', placeholder='Retype password', pattern=".{6,12}", required)
           hr
-
           a(href="gate-signin.html").ui.button Reset my password
 
 
