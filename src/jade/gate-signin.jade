@@ -1,0 +1,41 @@
+- var authorised = false
+- var page = 'gate'
+
+html
+  include partials/_head
+  body.gate
+    include partials/_brand
+    .wrap
+      include partials/_nav
+      .main
+        .ui.huge.breadcrumb
+          .section Welcome to Ideahouse
+
+        .ui.info.message
+          .header
+            | You've sucessfully changed your password.
+            br
+            | Please sign in using your new credentials.
+
+        .content
+          label.input Login
+          .ui.big.input
+            input(type="email", placeholder="Email / Login ID")
+          label.input Password
+          .ui.big.input
+            input(type="password", placeholder="Password")
+
+          a(href="gate-reset-send.html").forgot I've forgotten my password
+
+          hr
+
+          div.ui.checkbox
+            input(type="checkbox" name="remember")
+            label Remember me
+
+          hr
+
+          a(href="browse.html").ui.large.cta.button Sign in
+
+
+      include partials/_scripts
