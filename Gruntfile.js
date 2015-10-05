@@ -64,7 +64,6 @@ module.exports = function(grunt) {
       }
     },
 
-
     jade: {
       compile: {
         options: {
