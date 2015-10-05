@@ -1,0 +1,31 @@
+- var authorised = false
+- var page = 'gate'
+
+html
+  include partials/_head
+  body.gate
+    include partials/_brand
+    .wrap
+      include partials/_nav
+      .main
+        .ui.huge.breadcrumb
+          .section Reset my password
+
+        .content
+          p Create a new password for $USER_EMAIL
+          hr
+
+          label.input New Password
+          .ui.big.input
+            input(type="password", placeholder="New password")
+
+          label.input Retype password
+          .ui.big.input
+            input(type="password", placeholder="Retype password")
+
+          hr
+
+          a(href="gate-signin.html").ui.button Reset my password
+
+
+      include partials/_scripts
