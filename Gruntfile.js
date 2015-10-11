@@ -86,6 +86,7 @@ module.exports = function(grunt) {
             "dist/gate-register-3.html": ["src/jade/gate-register-3.jade"],
 
             "dist/browse.html": ["src/jade/browse.jade"],
+            "dist/category.html": ["src/jade/category.jade"],
             "dist/product.html": ["src/jade/product.jade"],
             "dist/clearance.html": ["src/jade/clearance.jade"],
             "dist/popular.html": ["src/jade/popular.jade"],
