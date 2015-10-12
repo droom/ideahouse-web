@@ -24,7 +24,6 @@ module.exports = function(grunt) {
         files: ['src/sass/*.sass'],
         tasks: ['postcss'],
       }
-
     },
 
     uglify: {
@@ -47,61 +46,71 @@ module.exports = function(grunt) {
 
     postcss: {
       options: {
-        map: true, // inline sourcemaps
-        map: {
-            inline: false, // save all sourcemaps as separate files...
-            annotation: 'dist/css/maps/' // ...to the specified directory
-        },
-
+        map: false,
         processors: [
           require('pixrem')(), // add fallbacks for rem units
           require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
           require('cssnano')() // minify the result
-        ]
-      },
-      dist: {
-        src: 'dist/css/style.css'
-      }
-    },
 
-    jade: {
-      compile: {
-        options: {
-          data: {
-            debug: false
-          }
+          ]
         },
-        files: {
-          "dist/gate-signin.html": ["src/jade/gate-signin.jade"],
-          "dist/gate-reset-send.html": ["src/jade/gate-reset-send.jade"],
-          "dist/gate-reset-action.html": ["src/jade/gate-reset-action.jade"],
+        dist: {
+          src: 'dist/css/style.css'
+        }
+      },
 
-          "dist/gate-register-1.html": ["src/jade/gate-register-1.jade"],
-          "dist/gate-register-2-corporate.html": ["src/jade/gate-register-2-corporate.jade"],
-          "dist/gate-register-2-reseller.html": ["src/jade/gate-register-2-reseller.jade"],
-          "dist/gate-register-3.html": ["src/jade/gate-register-3.jade"],
+      uncss: {
+        dist: {
+          files: {
+            'dist/css/style.css': ['dist/*.html']
+          }
+        }
+      },
 
-          "dist/browse.html": ["src/jade/browse.jade"],
-          "dist/product.html": ["src/jade/product.jade"],
-          "dist/clearance.html": ["src/jade/clearance.jade"],
-          "dist/popular.html": ["src/jade/popular.jade"],
-          "dist/history.html": ["src/jade/history.jade"],
-          "dist/new.html": ["src/jade/new.jade"],
-          "dist/offer.html": ["src/jade/offer.jade"],
-          "dist/bookmarks.html": ["src/jade/bookmarks.jade"],
 
-          "dist/search-quick.html": ["src/jade/search-quick.jade"],
-          "dist/search-quick-results.html": ["src/jade/search-quick-results.jade"],
-          "dist/search-advanced.html": ["src/jade/search-advanced.jade"],
-          "dist/search-results.html": ["src/jade/search-results.jade"],
-          "dist/search-results-none.html": ["src/jade/search-results-none.jade"]
+      jade: {
+        compile: {
+          options: {
+            data: {
+              debug: false
+            }
+          },
+          files: {
+            "dist/gate-signin.html": ["src/jade/gate-signin.jade"],
+            "dist/gate-reset-send.html": ["src/jade/gate-reset-send.jade"],
+            "dist/gate-reset-action.html": ["src/jade/gate-reset-action.jade"],
 
+            "dist/gate-register-1.html": ["src/jade/gate-register-1.jade"],
+            "dist/gate-register-2-corporate.html": ["src/jade/gate-register-2-corporate.jade"],
+            "dist/gate-register-2-reseller.html": ["src/jade/gate-register-2-reseller.jade"],
+            "dist/gate-register-3.html": ["src/jade/gate-register-3.jade"],
+
+            "dist/faq.html": ["src/jade/faq.jade"],
+            "dist/about.html": ["src/jade/about.jade"],
+            "dist/profile.html": ["src/jade/profile.jade"],
+
+            "dist/browse.html": ["src/jade/browse.jade"],
+            "dist/category.html": ["src/jade/category.jade"],
+            "dist/product.html": ["src/jade/product.jade"],
+            "dist/clearance.html": ["src/jade/clearance.jade"],
+            "dist/popular.html": ["src/jade/popular.jade"],
+            "dist/history.html": ["src/jade/history.jade"],
+            "dist/new.html": ["src/jade/new.jade"],
+            "dist/offer.html": ["src/jade/offer.jade"],
+            "dist/bookmarks.html": ["src/jade/bookmarks.jade"],
+
+            "dist/search-quick.html": ["src/jade/search-quick.jade"],
+            "dist/search-quick-results.html": ["src/jade/search-quick-results.jade"],
+            "dist/search-advanced.html": ["src/jade/search-advanced.jade"],
+            "dist/search-results.html": ["src/jade/search-results.jade"],
+            "dist/search-results-none.html": ["src/jade/search-results-none.jade"]
+
+          }
         }
       }
-    }
 
 
-  });
+    });
 
 
 grunt.loadNpmTasks('grunt-contrib-watch');
@@ -110,8 +119,8 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-postcss');
-
+grunt.loadNpmTasks('grunt-uncss');
 // Default task(s).
-grunt.registerTask('default', ['uglify', 'sass', 'postcss', 'jade']);
+grunt.registerTask('default', ['uglify', 'sass', 'postcss','jade']);
 
 };
