@@ -3,12 +3,24 @@ body
   margin: 0
 
   footer
-    width: 30%
+    width: 70%
     float: left
     clear: left
     margin-top: 140px
     padding: 20px
+    ul
+      margin: 15px 0
 
+    ul, li
+      list-style: none
+      padding: 0
+    ul.social
+      margin-top: 30px
+      li
+        display: inline
+        padding: 5px
+      li:first-child
+        padding-left: 0
   .wrap
     max-width: 850px
     margin: auto
@@ -119,16 +131,15 @@ body
         .column + .column
           margin-top: 30px
 
-
-
   .ui.breadcrumb
     min-height: 100px
     display: block
 
 
-
 @media (max-width: 600px)
   body
+    footer
+      padding: 10px
 
     h3.pad
       padding: 0 10px
