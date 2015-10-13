@@ -16,23 +16,83 @@ html
             h2 My Details
             fieldset
               .inline.field
-                label.static.required Salutation
+                label.static Salutation
                 select.ui.dropdown.salutation
                   option(value="1") Mr.
                   option(value="0") Ms.
               .inline.field
-                label.static.required Name
+                label.static Name
                 input(name='name', type='text', placeholder='Name', value='$NAME', required)
 
 
               .inline.field
-                label.static.required Login
+                label.static Login
                 input(name='email', type='email', placeholder='Email/Login ID', value='$EMAIL_ADDRESS', required)
 
             fieldset
               hr
+              .inline.field
+                label.static Default Currency
+                .ui.search.selection.dropdown
+                  input(type="hidden", name="currency")
+                  i.dropdown.icon
+                  .default.text Select Currency
+                  .menu
+                    .item(data-value="my")
+                      i.my.flag
+                      | Malaysia
+                    .item(data-value="sg")
+                      i.sg.flag
+                      | Singapore
+                    .item(data-value="bn")
+                      i.bn.flag
+                      | Brunei
+                    .ui.divider
+                    .item(data-value="ar")
+                      i.ar.flag
+                      | Burma
+                    .item(data-value="kh")
+                      i.kh.flag
+                      | Cambodia
+                    .item(data-value="id")
+                      i.id.flag
+                      | Indonesia
+                    .item(data-value="la")
+                      i.la.flag
+                      | Laos
+                    .item(data-value="ph")
+                      i.ph.flag
+                      | Philippines
+                    .item(data-value="th")
+                      i.th.flag
+                      | Thailand
+                    .item(data-value="vn")
+                      i.vn.flag
+                      | Vietnam
+              .inline.field
+                label.static Default Language
+                .ui.search.selection.dropdown
+                  input(type="hidden", name="language")
+                  i.dropdown.icon
+                  .default.text Select Language
+                  .menu
+                    .item(data-value="my")
+                      i.my.flag
+                      | Malay
+                    .item(data-value="cn")
+                      i.cn.flag
+                      | Chinese
+                    .item(data-value="gb")
+                      i.gb.flag
+                      | English
+                    .item(data-value="in")
+                      i.in.flag
+                      | Tamil
+
+            fieldset
+              hr
               .inline.fields
-                label.static.required.radio I am a
+                label.static.radio I am a
                 .field.radio
                   .ui.radio.checkbox(id="account-private")
                     input(type="radio", name="account", required)
@@ -42,13 +102,12 @@ html
                     input(type="radio", name="account", required)
                     label business owner
               hr
-
               .inline.field
-                label.static.required Company Name
+                label.static Company Name
                 input(name='company', type='text', placeholder='Company Name')
 
               .inline.field
-                label.static.required Country
+                label.static Country
                 .ui.search.selection.dropdown
                   input(type="hidden", name="country")
                   i.dropdown.icon
@@ -796,7 +855,7 @@ html
                 input(name='state', type='text', placeholder='State')
 
               .inline.field
-                label.static.required Mobile Number
+                label.static Mobile Number
                 .mobile-fields
                   input(name='mobile1', class='no-stack', type='number', required)
                   input(name='mobile2', class='no-stack', type='number', required)
@@ -806,13 +865,13 @@ html
             h2 Password
             fieldset
               .inline.field
-                label.static.required Current Password
+                label.static Current Password
                 input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}", required)
               .inline.field
-                label.static.required New Password
+                label.static New Password
                 input(id='password' name='password', type='password', placeholder='New Password', pattern=".{6,12}", required)
               .inline.field
-                label.static.required Retype Password
+                label.static Retype Password
                 input(id='password' name='password', type='password', placeholder='Retype Password', pattern=".{6,12}", required)
                 small.support 6&ndash;12 characters
 
@@ -832,4 +891,5 @@ html
             a(href="gate-register-3.html").ui.submit.large.button Cancel
             .ui.error.message
 
+      include partials/_footer
       include partials/_scripts

@@ -90,7 +90,6 @@ module.exports = function(grunt) {
             "dist/contact.html": ["src/jade/contact.jade"],
             "dist/onboard.html": ["src/jade/onboard.jade"],
             "dist/conditions.html": ["src/jade/conditions.jade"],
-
             "dist/profile.html": ["src/jade/profile.jade"],
 
             "dist/browse.html": ["src/jade/browse.jade"],
