@@ -1,0 +1,63 @@
+- var authorised = true
+- var page = 'contact'
+
+html
+  include partials/_head
+  body
+    include partials/_brand
+    .wrap
+      include partials/_nav
+
+      .main
+        .ui.huge.breadcrumb
+          .section Contact Us
+
+        h3.pad Ideahouse Corporation S/B (258221-K)
+        p.pad No. 20-2, Jalan Tanjung SD 13/2
+          br
+          | Bandar Sri Damansara
+          br
+          | 52200 Kuala Lumpur
+          br
+          | Selangor
+          br
+          | Malaysia / South-East Asia
+
+        iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31869.025806619917!2d101.621389!3d3.192022!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4f575c855f97%3A0xb249e1a7c577947c!2sIdeahouse+Corporation+Sdn+Bhd!5e0!3m2!1sen!2s!4v1444713493593" width="100%" height="450" frameborder="0" style="border:0" scrollable="no")
+
+        ul.details
+          li LAT/LON: N 03 11.270 / E 101 36.300
+          li
+            a(href="waze://?q=<Ideahouse Corporation Sdn Bhd>", target="_blank") Find us on Waze
+          li
+            a(href="https://foursquare.com/v/ideahouse-corporation-sdn-bhd/4ca41bb8d5a2a14303544f90", target="_blank") Find us on Foursquare
+        ul.details
+          strong Operating Hours
+          li 9.00am–6.00pm
+          li Monday–Friday (GMT+8)
+
+        ul.details
+          li
+            i.phone.icon
+            | tel: +603 6275 4648 (&times;5 hotlines)
+          li
+            i.fax.icon
+            | fax: +643 6272 1648
+          li
+            i.whatsapp.icon
+            | Whatsapp: 016-202-4648
+          li
+            i.mail.icon
+            = "email: "
+            a(href="sales@ideahouse.com.my") sales@ideahouse.com.my
+            = " ( "
+            a(href="") add vcard
+            = " ) "
+
+
+
+      include partials/_footer
+      include partials/_scripts
+
+
+
