@@ -12,6 +12,8 @@ html
         .ui.huge.breadcrumb
           .section Frequently Asked Questions
 
+
+
         ol
           li
             a(name="q0" href="#a0") Why register with Ideahouse?
@@ -51,6 +53,12 @@ html
             a(name="q17" href="#a17") What&#39;s Ideahouse Blog?
           li
             a(name="q18" href="#a18") Sample Policy
+
+        .ui.info.message
+          .header
+            = "If you have any further queries please email to "
+            a(href="sales@ideahouse.com.my") sales@ideahouse.com.my
+            = "."
 
         hr
 
@@ -207,8 +215,6 @@ html
             h3 Sample Policy
             = "We are able to supply in small quantity without a MOQ. Prices vary according with order quantity. In the product pages, the price table is displayed with corresponding order quantity. Generally, custom made orders do have a factory MOQ and production/delivery lead time."
           a(href="#q18").return Back
-
-
 
       include partials/_footer
       include partials/_scripts
