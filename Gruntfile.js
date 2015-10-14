@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         tasks: ['sass'],
       },
       jade: {
-        files: ['src/jade/*.jade'],
+        files: ['src/jade/*.jade', 'src/jade/partials/*.jade'],
         tasks: ['jade'],
       },
       uglify: {
