@@ -91,6 +91,7 @@ module.exports = function(grunt) {
             "dist/onboard.html": ["src/jade/onboard.jade"],
             "dist/conditions.html": ["src/jade/conditions.jade"],
             "dist/profile.html": ["src/jade/profile.jade"],
+            "dist/download.html": ["src/jade/download.jade"],
 
             "dist/browse.html": ["src/jade/browse.jade"],
             "dist/category.html": ["src/jade/category.jade"],
