@@ -8,21 +8,55 @@
 
           .menu
             if authorised
-              a(href="search-quick.html").item Quick Search
-              a(href="search-advanced.html").item Advanced Search
-              a(href="browse.html").item Browse by Category
-              hr
-              a(href="clearance.html").item Clearance
-              a(href="new.html").item New
-              a(href="offer.html").item Offer
-              a(href="popular.html").item Popular
+
+              a(href="browse.html").item
+                i.grid.layout.icon
+                = "Browse Categories"
+
+              a(href="search-advanced.html").item
+                i.icon.search
+                = "Advanced Search"
+
+              //- a(href="search-quick.html").item
+                //- i.icon.search
+                //- = "Quick Search"
 
               hr
-              a(href="bookmarks.html").item Bookmarks
-              a(href="history.html").item View History
-              a(href="profile.html").item My Profile
+
+              a(href="new.html").item
+                i.lightning.icon
+                = "New"
+              a(href="clearance.html").item
+                i.legal.icon
+                = "Clearance"
+              a(href="offer.html").item
+                i.star.icon
+                = "Offer"
+              a(href="popular.html").item
+                i.thumbs.up.icon
+                = "Popular"
+
               hr
-              a(href="gate-signin.html").item Sign out
+
+              a(href="bookmarks.html").item
+                i.heart.icon
+                = "Bookmarks"
+
+              a(href="history.html").item
+                i.history.icon
+                = "View History"
+
+              a(href="profile.html").item
+                i.setting.icon
+                = "My Profile"
+
+              //- hr
+              a(href="download.html").item.download
+                = "Download"
+                br
+                = "2015 Catalogue"
+                br
+                = "or Price List"
 
             else
               a(href="gate-signin.html").item Sign in
