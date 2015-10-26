@@ -1,10 +1,11 @@
 - var authorised = true
-- var page = 'contact'
+- var page = 'conditions'
 
 doctype html
 html(lang="en")
+  title = "$PAGE_TITLE"
   include partials/_head
-  body
+  body(class = page)
     include partials/_brand
     .wrap
       include partials/_nav

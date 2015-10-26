@@ -1,12 +1,11 @@
 - var authorised = true
 - var page = 'search'
 
-
 doctype html
 html(lang="en")
+  title = "$PAGE_TITLE"
   include partials/_head
-
-  body
+  body(class = page)
     include partials/_brand
     .wrap.search-advanced
       include partials/_nav

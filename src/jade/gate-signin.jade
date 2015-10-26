@@ -3,8 +3,9 @@
 
 doctype html
 html(lang="en")
+  title = "$PAGE_TITLE"
   include partials/_head
-  body.gate
+  body(class = page)
     include partials/_brand
     .wrap
       include partials/_nav
