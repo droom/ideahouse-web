@@ -1,12 +1,13 @@
   $(document).ready(function() {
 
+
+    // Advanced Search
+
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
 
-
     $('.ui.radio.checkbox').checkbox();
     $('.gate .ui.radio.checkbox').prop("checked", false);
-    // Advanced search
      searchSwatch.hide();
 
     $("#colour-specify").on('click', function() {
@@ -23,12 +24,21 @@
     });
 
 
+
+    // Register
+
     $('#account-private').on('click', function() {
       $('input[name=\'company\']').prop('disabled', true);
     });
 
     $('#account-business').on('click', function() {
       $('input[name=\'company\']').prop('disabled', false);
+    });
+
+
+
+    $('.ui.labeled.icon.button.bookmark').on('click', function() {
+      $(this).toggleClass('active');
     });
 
     $('.ui.button.menu').on('click', function() {
@@ -39,6 +49,9 @@
       on: 'click'
     });
 
+
+    // Navigation
+
     $('.ui.menu a.item').on('click', function() {
       $(this)
       .addClass('active')
@@ -46,13 +59,11 @@
       .removeClass('active');
     });
 
-    $('.ui.labeled.icon.button.bookmark').on('click', function() {
-      $(this).toggleClass('active');
-    });
+
+
 
     $('table').tablesort();
 
-    // product page
     $('table.stock').hide();
     $('a.btn-details').on('click', function() {
       $('table.stock').hide();
