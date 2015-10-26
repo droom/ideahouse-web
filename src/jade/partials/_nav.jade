@@ -6,7 +6,7 @@
           .ui.labeled.icon.button IdeaHouse
             i.sidebar.download.icon
 
-          .menu
+          .menu(role="navigation")
             if authorised
 
               a(href="browse.html").item
@@ -16,10 +16,6 @@
               a(href="search-advanced.html").item
                 i.icon.search
                 = "Advanced Search"
-
-              //- a(href="search-quick.html").item
-                //- i.icon.search
-                //- = "Quick Search"
 
               hr
 
@@ -77,7 +73,7 @@
       .ui.column.grid.mobile-quick-search
         .row
           .column
-            .ui.fluid.search.quick
+            .ui.fluid.search.quick(role="search")
               .ui.icon.input
                 input.prompt(type="text" placeholder="Quick search...")
                 i.search.icon
