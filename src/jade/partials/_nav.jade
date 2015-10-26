@@ -9,45 +9,45 @@
           .menu(role="navigation")
             if authorised
 
-              a(href="browse.html").item
+              a(href="browse.html" aria-label="Browse item categories").item
                 i.grid.layout.icon
                 = "Browse Categories"
 
-              a(href="search-advanced.html").item
+              a(href="search-advanced.html" aria-label="Search for an item").item
                 i.icon.search
                 = "Advanced Search"
 
               hr
 
-              a(href="new.html").item
+              a(href="new.html" aria-label="View new items").item
                 i.lightning.icon
                 = "New"
-              a(href="clearance.html").item
+              a(href="clearance.html" aria-label="View clearance items").item
                 i.legal.icon
                 = "Clearance"
-              a(href="offer.html").item
+              a(href="offer.html" aria-label="View offer items").item
                 i.star.icon
                 = "Offer"
-              a(href="popular.html").item
+              a(href="popular.html" aria-label="View popular items").item
                 i.thumbs.up.icon
                 = "Popular"
 
               hr
 
-              a(href="bookmarks.html").item
+              a(href="bookmarks.html" aria-label="View bookmarked items").item
                 i.heart.icon
                 = "Bookmarks"
 
-              a(href="history.html").item
+              a(href="history.html" aria-label="View your history").item
                 i.history.icon
                 = "View History"
 
-              a(href="profile.html").item
+              a(href="profile.html" aria-label="View or edit your profile").item
                 i.setting.icon
                 = "My Profile"
 
               //- hr
-              a(href="download.html").item.download
+              a(href="download.html" aria-label="Download print catalogue").item.download
                 = "Download"
                 br
                 = "2015 Price List"
@@ -55,8 +55,8 @@
                 = "or Catalogue"
 
             else
-              a(href="gate-signin.html").item Sign in
-              a(href="gate-register-1.html").item Register with Ideahouse
+              a(href="gate-signin.html" aria-label="Sign in to your account" ).item Sign in
+              a(href="gate-register-1.html" aria-label="Register with Ideahouse" ).item Register with Ideahouse
 
       .column.right.aligned
         if page == 'product'
@@ -74,6 +74,7 @@
           .column
             .ui.fluid.search.quick(role="search")
               .ui.icon.input
+                label Quick search
                 input.prompt(type="text" placeholder="Quick search...")
                 i.search.icon
               .results
