@@ -37,9 +37,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-              'src/lib/jquery.min.js',
-              'src/lib/semantic.js',
+              'src/lib/jquery.js',
               'src/lib/jquery.tablesort.js',
+              'src/lib/semantic.js',
               'src/js/ui.js'
               ],
         dest: 'src/js/main.js',
@@ -116,6 +116,6 @@ grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-postcss');
 grunt.loadNpmTasks('grunt-uncss');
 // Default task(s).
-grunt.registerTask('default', ['uglify', 'sass', 'postcss','jade']);
+grunt.registerTask('default', ['concat','uglify', 'sass', 'postcss','jade']);
 
 };

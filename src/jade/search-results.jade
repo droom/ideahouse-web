@@ -11,7 +11,7 @@ html(lang="en")
       include partials/_nav
       .main(role="main")
         .ui.huge.breadcrumb
-          a(href="search-advanced.html").section Advanced Search
+          a(href="search-advanced.html" aria-label="Return to Advanced Search").section Advanced Search
           i.right.angle.icon.divider
           .section Results (4)
 
@@ -20,21 +20,21 @@ html(lang="en")
 
         hr
         .tiles
-          a(href="product.html").ui.card
+          a(href="product.html" aria-label="View &PRODUCT_NAME").ui.card
             .image
               img.product(alt="" src="img/product/UM02.jpg")
             .content
               .description Umbra 24
             .extra.content
               small UM02
-          .ui.card
+          a(href="product.html" aria-label="View &PRODUCT_NAME").ui.card
             .image
               img.product(alt="" src="img/product/005.jpg")
             .content
               .description Minute - Push Action Ball Plastic Pen (Blue Ink)
             .extra.content
               small 005
-          .ui.card
+          a(href="product.html" aria-label="View &PRODUCT_NAME").ui.card
             .image
               img.product(alt="" src="img/product/1809.jpg")
             .content
@@ -63,7 +63,6 @@ html(lang="en")
               .description Speedo - Push Action Ball Plastic Pen (Black Ink)
             .extra.content
               small 2009
-
           .ui.card
             .image
               img.product(alt="" src="img/product/2106.jpg")
