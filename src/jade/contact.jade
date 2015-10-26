@@ -1,14 +1,16 @@
 - var authorised = true
 - var page = 'contact'
 
-html
+doctype html
+html(lang="en")
+  title = "$PAGE_TITLE"
   include partials/_head
   body
     include partials/_brand
     .wrap
       include partials/_nav
 
-      .main
+      .main(role="main")
         .ui.huge.breadcrumb
           .section Contact Us
 
@@ -42,9 +44,10 @@ html
           tbody
             tr
               td
-                h3 Switchboard
-                &times;
-                = "5 hotlines"
+                h3
+                  = Switchboard
+                  &times;
+                  = "5 hotlines"
               td
                 i.phone.icon
                 | +603 6275 4648

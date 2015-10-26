@@ -1,13 +1,15 @@
 - var authorised = true
-- var page = 'settings'
+- var page = 'profile'
 
-html
+doctype html
+html(lang="en")
   include partials/_head
-  body.gate
+  title = "$PAGE_TITLE"
+  body(class = page)
     include partials/_brand
     .wrap
       include partials/_nav
-      .main
+      .main(role="main")
         .ui.huge.breadcrumb
           .section $FIRST_NAME's Profile
 

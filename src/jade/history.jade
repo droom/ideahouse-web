@@ -1,13 +1,15 @@
 - var authorised = true
 - var page = 'history'
 
-html
+doctype html
+html(lang="en")
+  title = "$PAGE_TITLE"
   include partials/_head
-  body
+  body(class = page)
     include partials/_brand
     .wrap
       include partials/_nav
-      .main
+      .main(role="main")
         .ui.huge.breadcrumb
           .section View recent history
 

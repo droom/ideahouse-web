@@ -6,9 +6,6 @@
 
     $('.ui.radio.checkbox').checkbox();
     $('.gate .ui.radio.checkbox').prop("checked", false);
-
-
-
     // Advanced search
      searchSwatch.hide();
 
@@ -20,17 +17,10 @@
      searchSwatch.hide();
     });
 
-
-
     $('table.swatch.search td.swatch').on('click', function() {
       $('table.swatch.search td.swatch').removeClass('selected');
       $(this).toggleClass('selected');
-      // console.log("hello");
     });
-
-
-
-
 
 
     $('#account-private').on('click', function() {

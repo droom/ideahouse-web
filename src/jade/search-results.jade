@@ -1,13 +1,15 @@
 - var authorised = true
 - var page = 'search'
 
-html
+doctype html
+html(lang="en")
+  title = "$PAGE_TITLE"
   include partials/_head
-  body
+  body(class = page)
     include partials/_brand
     .wrap
       include partials/_nav
-      .main
+      .main(role="main")
         .ui.huge.breadcrumb
           a(href="search-advanced.html").section Advanced Search
           i.right.angle.icon.divider
@@ -20,21 +22,21 @@ html
         .tiles
           a(href="product.html").ui.card
             .image
-              img.product(src="img/product/UM02.jpg")
+              img.product(alt="" src="img/product/UM02.jpg")
             .content
               .description Umbra 24
             .extra.content
               small UM02
           .ui.card
             .image
-              img.product(src="img/product/005.jpg")
+              img.product(alt="" src="img/product/005.jpg")
             .content
               .description Minute - Push Action Ball Plastic Pen (Blue Ink)
             .extra.content
               small 005
           .ui.card
             .image
-              img.product(src="img/product/1809.jpg")
+              img.product(alt="" src="img/product/1809.jpg")
             .content
               .description Phoenix-Push Action Ball Plastic Pen (Black Ink)
             .extra.content
@@ -42,21 +44,21 @@ html
 
           .ui.card
             .image
-              img.product(src="img/product/1910.jpg")
+              img.product(alt="" src="img/product/1910.jpg")
             .content
               .description Cambridge - Push Action Ball Plastic Pen (Black Ink)
             .extra.content
               small 1910
           .ui.card
             .image
-              img.product(src="img/product/1926.jpg")
+              img.product(alt="" src="img/product/1926.jpg")
             .content
               .description Ringo - Push Action Ball Plastic Pen (Black Ink)
             .extra.content
               small 1926
           .ui.card
             .image
-              img.product(src="img/product/2009.jpg")
+              img.product(alt="" src="img/product/2009.jpg")
             .content
               .description Speedo - Push Action Ball Plastic Pen (Black Ink)
             .extra.content
@@ -64,21 +66,21 @@ html
 
           .ui.card
             .image
-              img.product(src="img/product/2106.jpg")
+              img.product(alt="" src="img/product/2106.jpg")
             .content
               .description Admiral - Push Action Ball Plastic Pen (Black Ink)
             .extra.content
               small 2106
           .ui.card
             .image
-              img.product(src="img/product/2109.jpg")
+              img.product(alt="" src="img/product/2109.jpg")
             .content
               .description Swan - Twist Action Ball Plastic Pen (Black Ink
             .extra.content
               small 2106
           .ui.card
             .image
-              img.product(src="img/product/2111.jpg")
+              img.product(alt="" src="img/product/2111.jpg")
             .content
               .description Galaxy - Push Action Ball Plastic Pen (Black Ink)
             .extra.content

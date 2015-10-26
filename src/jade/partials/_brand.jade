@@ -1,12 +1,12 @@
-.brand
+.brand(role="banner")
   .wrap
     .nav
-      img(src="img/logo-white.png" class="ih-logo")
+      img(src="img/logo-white.png" class="ih-logo" alt="Ideahouse logo")
 
     if authorised
       unless page == 'search'
         .main
-          .ui.search.quick
+          .ui.search.quick(role="search")
             .ui.icon.input
               input.prompt(type="text" placeholder="Quick search...")
               i.search.icon
