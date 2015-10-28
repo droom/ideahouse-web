@@ -58,14 +58,6 @@
               a(href="gate-signin.html" aria-label="Sign in to your account" ).item Sign in
               a(href="gate-register-1.html" aria-label="Register with Ideahouse" ).item Register with Ideahouse
 
-      .column.right.aligned
-        if page == 'product'
-          .ui.labeled.icon.button.bookmark Bookmark
-            i.remove.heart.icon
-
-        if page == 'history'
-          .ui.labeled.icon.button.clear Clear history
-            i.ban.icon
 
   if authorised
     unless page == 'search'
