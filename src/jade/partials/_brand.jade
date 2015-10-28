@@ -1,11 +1,11 @@
 .brand(role="banner")
   .wrap
-    .nav
+    .col-main-left
       img(src="img/logo-white.png" class="ih-logo" alt="Ideahouse")
 
     if authorised
       unless page == 'search'
-        .main
+        .col-main-right
           .ui.search.quick(role="search")
             .ui.icon.input
               input.prompt(type="text" placeholder="Quick search...")
