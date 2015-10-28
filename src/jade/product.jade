@@ -32,7 +32,6 @@ html(lang="en")
                 i.right.arrow.icon
                 p Next item
 
-        hr
         .product-wrap.no-select
           .product-carousel
             .div
@@ -43,11 +42,13 @@ html(lang="en")
               img(alt="Image of $PRODUCT_NAME" src="img/product-3.jpg", class="product-hero product-3")
 
         hr
-
-        .ui.icon.button.bookmark
-          i.remove.heart.icon
-        .ui.labeled.icon.black.button.download Download
-          i.cloud.download.icon
+        .ui.one.column.grid.cycle
+          .row
+            .column
+              .ui.icon.button.bookmark.pad
+                i.remove.heart.icon
+              .ui.labeled.icon.black.button.download Download
+                i.cloud.download.icon
         hr
 
         .ui.three.item.menu
