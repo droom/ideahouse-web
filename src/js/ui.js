@@ -54,8 +54,6 @@
       .removeClass('active');
     });
 
-
-
     // Table
     $('table').tablesort();
 
@@ -81,16 +79,15 @@
       $('table.price').show();
     });
 
-
-
     $('.menu .item').tab();
 
 
+    $(".content .description").dotdotdot({});
 
-    $(".content .description").dotdotdot({
-        // configuration goes here
+    $('.your-class').slick({
+      dots: true
+
     });
-
 
 
   });

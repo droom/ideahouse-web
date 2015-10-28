@@ -31,11 +31,20 @@ html(lang="en")
               button.ui.right.labeled.icon.tiny.cycle.button
                 i.right.arrow.icon
                 p Next item
+
         hr
-        .product-wrap
+        .product-wrap.no-select
+          .your-class
+            .div
+              img(alt="Image of $PRODUCT_NAME" src="img/product-1.jpg", class="product-hero product-1")
+            .div
+              img(alt="Image of $PRODUCT_NAME" src="img/product-2.jpg", class="product-hero product-2")
+            .div
+              img(alt="Image of $PRODUCT_NAME" src="img/product-3.jpg", class="product-hero product-3")
+
           .ui.labeled.icon.black.button.download Download
             i.cloud.download.icon
-          img(alt="Image of $PRODUCT_NAME" src="img/product.jpg", class="product-hero")
+
 
         .ui.three.item.menu
           a.item.active(class="btn-details") Product
