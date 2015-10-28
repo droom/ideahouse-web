@@ -1,0 +1,89 @@
+body
+  padding: 0
+  margin: 0
+
+  &.browse
+    .tiles
+      .ui.card
+        .description
+          min-height: 40px
+        .image
+          background: white
+
+  footer
+    width: 70%
+    float: left
+    clear: left
+    margin-top: 80px
+    padding: 20px 30px
+
+  .wrap
+    max-width: 850px
+    margin: auto
+    .product-wrap
+      position: relative
+      margin-top: 25px
+      img
+        margin-top: -50px
+
+  .content
+    background: #fcfcfc
+    padding: 15px
+    border-radius: 5px
+    margin-bottom: 20px
+
+  .tiles
+    column-count: 3
+    column-gap: 10px
+    .ui.card
+      display: inline-block
+      box-shadow: none
+      margin: 0 0 1em
+      width: 100%
+      .extra.content
+        padding: 5px 15px
+      .label.bookmark
+        position: absolute
+        z-index: 2
+        font-size: 20px
+        top: 4px
+        left: 4px
+
+      &.offer:before,
+      &.clearance:before,
+      &.popular:before,
+      &.new:before
+        z-index: 3
+        color: white
+        text-transform: uppercase
+        letter-spacing: 0.15em
+        padding: 6px 14px 5px 14px
+        margin-top: -1
+
+        font-size: 10px
+        line-height: 12px
+        height: 25px
+        width: 100%
+        display: block
+        border-radius-top-left: 0.28571429rem
+        border-radius-top-right: 0.28571429rem
+        // position: absolute
+        // top: 0
+        // left: 0
+
+      &.offer:before
+        background: yellow
+        color: black
+        content: "Offer"
+
+      &.clearance:before
+        background: green
+        content: "Clearance"
+
+      &.popular:before
+        background: red
+        content: "Popular"
+
+      &.new:before
+        background: blue
+        content: "New"
