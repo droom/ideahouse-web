@@ -81,10 +81,11 @@
 
     $('.menu .item').tab();
 
-
+    // Elipsis
     $(".content .description").dotdotdot({});
 
-    $('.your-class').slick({
+    // Touch swipe
+    $('.product-carousel').slick({
       dots: true
 
     });
