@@ -32419,7 +32419,6 @@ $.fn.visibility.settings = {
       $(this).toggleClass('selected');
     });
 
-
     // Register
 
     $('#account-private').on('click', function() {
@@ -32429,8 +32428,6 @@ $.fn.visibility.settings = {
     $('#account-business').on('click', function() {
       $('input[name=\'company\']').prop('disabled', false);
     });
-
-
 
     $('.ui.labeled.icon.button.bookmark').on('click', function() {
       $(this).toggleClass('active');
@@ -32455,21 +32452,35 @@ $.fn.visibility.settings = {
     });
 
 
+
+    // Table
     $('table').tablesort();
 
+    // Dry this out
     $('table.stock').hide();
+    $('table.price').hide();
+
     $('a.btn-details').on('click', function() {
       $('table.stock').hide();
       $('table.details').show();
+      $('table.price').hide();
     });
-
-
-    $('.menu .item').tab();
 
     $('a.btn-stock').on('click', function() {
       $('table.stock').show();
       $('table.details').hide();
+      $('table.price').hide();
     });
+
+    $('a.btn-price').on('click', function() {
+      $('table.stock').hide();
+      $('table.details').hide();
+      $('table.price').show();
+    });
+
+
+
+    $('.menu .item').tab();
 
 
 

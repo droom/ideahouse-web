@@ -37,9 +37,10 @@ html(lang="en")
             i.cloud.download.icon
           img(alt="Image of $PRODUCT_NAME" src="img/product.jpg", class="product-hero")
 
-        .ui.two.item.menu
-          a.item.active(class="btn-details") Product Details
-          a.item(class="btn-stock") Stock Details
+        .ui.three.item.menu
+          a.item.active(class="btn-details") Product
+          a.item(class="btn-stock") Stock
+          a.item(class="btn-price") Price
 
         table.ui.celled.table.unstackable.details
           tbody
@@ -106,29 +107,14 @@ html(lang="en")
                 | Material: Brass;
                 br
                 | These executive promotional metal pens are elegantly durable. Logo will have silver chrome finishing if by laser.
-            tr
-              td(colspan="2")
-                | READ MORE
-                br
-                a(href="http://www.ideahouse.com.my/proddetail.asp?id=PM&pid=5059572B&productid=903B#sthash.uVYeJNWv.dpuf") AMBASSADOR - Ball Pen (Black Ink)
-
-
-
-
 
         table.ui.sortable.celled.table.unstackable.stock
           thead
-            tr
-              th.not-sortable
-              th.not-sortable(colspan="3") Stock
-              th.not-sortable.seperate(colspan="2") Price (MYR)
             tr
               th.sorted.descending Colour
               th Available
               th Reserved
               th Total
-              th.seperate QTY
-              th Price
 
           tbody
             tr
@@ -136,151 +122,174 @@ html(lang="en")
               td 10
               td 05
               td 05
-              td 200
-              td 440
             tr
               td.swatch.black Black
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.white White
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.grey Grey
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.blue Blue
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.lightBlue Light Blue
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.red Red
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.maroon Maroon
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.green Green
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.brightGreen Bright Green
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.yellow Yellow
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.purple Purple
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.pink Pink
               td 108
               td 05
               td 110
-              td 500
-              td 400
             tr
               td.swatch.orange Orange
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.turquoise Turquoise
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.silver Silver
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.gold Gold
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.glow Glow in the dark
               td 10
               td 05
               td 200
-              td 200
-              td 440
             tr
               td.swatch.wood Wood
               td 108
               td 05
               td 10
-              td 110
-              td 400
             tr
               td.swatch.beige Beige
               td 10
               td 05
               td 200
-              td 200
-              td 440
           tfoot
             tr
               td Total
               td 5181
               td 5181
               td 5181
-              td 5181
-              td 5181
 
-
+        table.ui.sortable.celled.table.unstackable.price
+          thead
+            tr
+              th QTY
+              th Price
+          tbody
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 500
+              td 400
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 200
+              td 440
+            tr
+              td 110
+              td 400
+            tr
+              td 200
+              td 440
 
 
       include partials/_footer
