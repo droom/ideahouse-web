@@ -75,4 +75,11 @@
     });
 
 
+
+    $(".content .description").dotdotdot({
+        // configuration goes here
+    });
+
+
+
   });
