@@ -38,6 +38,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
               'src/lib/jquery-1.11.3.js',
+              'src/lib/slick.js',
               'src/lib/jquery.tablesort.js',
               'src/lib/jquery.dotdotdot.js',
               'src/lib/semantic.js',
