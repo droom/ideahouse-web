@@ -38,16 +38,26 @@ body
     .ui.card
       display: inline-block
       box-shadow: none
+      border: 1px solid $bg
+
       margin: 0 0 1em
       width: 100%
+      &:hover
+        transform: none
+        border: 1px solid #ccc
+        // -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+        // -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+        // box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
 
       .content
         padding: 10px
         .description
           height: 3em
+          overflow: hidden
 
       .extra.content
         padding: 5px 10px
+
       .label.bookmark
         position: absolute
         z-index: 2
@@ -63,16 +73,16 @@ body
         color: white
         text-transform: uppercase
         letter-spacing: 0.15em
-        padding: 6px 14px 5px 14px
+        padding: 6px 10px
         margin-top: -1
 
         font-size: 10px
         line-height: 12px
-        height: 25px
+        height: 24px
         width: 100%
         display: block
-        border-radius-top-left: 0.28571429rem
-        border-radius-top-right: 0.28571429rem
+        border-top-left-radius: 3px
+        border-top-right-radius: 3px
 
       &.offer:before
         background: yellow
