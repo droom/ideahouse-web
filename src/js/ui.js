@@ -1,6 +1,5 @@
   $(document).ready(function() {
 
-
     // Advanced Search
 
     var searchSwatch = $('table.ui.table.swatch.search')
@@ -22,7 +21,6 @@
       $('table.swatch.search td.swatch').removeClass('selected');
       $(this).toggleClass('selected');
     });
-
 
 
     // Register
@@ -60,8 +58,6 @@
     });
 
 
-
-
     $('table').tablesort();
 
     $('table.stock').hide();
@@ -69,6 +65,9 @@
       $('table.stock').hide();
       $('table.details').show();
     });
+
+
+    $('.menu .item').tab();
 
     $('a.btn-stock').on('click', function() {
       $('table.stock').show();

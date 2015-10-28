@@ -37,7 +37,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-              'src/lib/jquery.js',
+              'src/lib/jquery-1.11.3.js',
               'src/lib/jquery.tablesort.js',
               'src/lib/semantic.js',
               'src/js/ui.js'
