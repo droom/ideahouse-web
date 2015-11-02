@@ -1,53 +1,15 @@
 body
-  // padding: 0
-  // margin: 0
-
-  // &.browse
-  //   .tiles
-  //     .ui.card
-  //       .description
-  //         min-height: 40px
-  //       .image
-  //         background: white
-
-  // footer
-  //   width: 70%
-  //   float: left
-  //   clear: left
-  //   margin-top: 80px
-  //   padding: 20px 30px
-
-  // .wrap
-  //   max-width: 850px
-  //   margin: auto
-  //   .product-wrap
-  //     position: relative
-  //     margin-top: 25px
-  //     img
-  //       margin-top: -50px
-
-  .content
-    background: #fcfcfc
-    padding: 15px
-    border-radius: 5px
-    margin-bottom: 20px
-
   .tiles
-    column-count: 3
-    column-gap: 10px
     .ui.card
       display: inline-block
+      vertical-align: top
       box-shadow: none
       border: 1px solid $bg
-
-      margin: 0 0 1em
-      width: 100%
+      width: calc(100%/3)
+      margin: 0 0 10px 0
       &:hover
         transform: none
         border: 1px solid #ccc
-        // -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
-        // -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
-        // box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
 
       .content
         padding: 10px

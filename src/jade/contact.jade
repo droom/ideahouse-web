@@ -30,6 +30,8 @@ html(lang="en")
         ul.details
           li LAT/LON: N 03 11.270 / E 101 36.300
           li
+            a(href="http://www.instantstreetview.com/@3.1878,101.604853,82.7h,18.1p,0.34z") Find us on Google Street View
+          li
             a(href="waze://?q=<Ideahouse Corporation Sdn Bhd>", target="_blank") Find us on Waze
           li
             a(href="https://foursquare.com/v/ideahouse-corporation-sdn-bhd/4ca41bb8d5a2a14303544f90", target="_blank") Find us on Foursquare
@@ -45,7 +47,8 @@ html(lang="en")
             tr
               td
                 h3
-                  = Switchboard
+                  = "Main Switchboard"
+                  br
                   &times;
                   = "5 hotlines"
               td
@@ -60,49 +63,57 @@ html(lang="en")
                 br
                 i.mail.icon
                 a(href="sales@ideahouse.com.my" aria-label="Email Ideahouse") sales@ideahouse.com.my
-                = " ( "
-                a(href="") add vcard
-                = " ) "
-            tr
-              td
-                h3 Ms. Ashikin
-                = "(add role here)"
-              td
+
+
+        .ui.contact.cards
+          .card
+            .content
+              img.right.floated.mini.ui.image(src="img/editorial/ashikin.png")
+              .header Ms. Ashikin
+              .meta Sales Assistant
+              .description
                 i.phone.icon
-                = "016 668 4648"
+                a(href="tel:016668464") 016 668 464
                 br
                 i.mail.icon
                 a(href="ashikin@ideahouse.com.my" aria-label="Email Ms. Ashikin") ashikin@ideahouse.com.my
 
-            tr
-              td
-                h3 Mr. Zabri/Bee
-                = "(add role here)"
-              td
+          .card
+            .content
+              img.right.floated.mini.ui.image(src="img/editorial/bee.png")
+              .header Mr. Zabri/Bee
+              .meta Sales Assistant
+              .description
+                .hr
                 i.phone.icon
-                | 016 229 1648
+                a(href="tel:016 229 1648") 016 229 1648
                 br
                 i.mail.icon
                 a(href="zabri@ideahouse.com.my" aria-label="Email Mr. Zabri/Bee") zabri@ideahouse.com.my
 
-            tr
-              td
-                h3 Mr. Jerry
-                = "(add role here)"
-              td
+
+          .card
+            .content
+              img.right.floated.mini.ui.image(src="img/editorial/jerry.png")
+              .header Mr. Jerry
+              .meta Sales Assistant
+              .description
+                .hr
                 i.phone.icon
-                | 016 225 4648
+                a(href="tel:0162254648") 016 225 4648
                 br
                 i.mail.icon
                 a(href="jerry@ideahouse.com.my" aria-label="Email Ms. Nurul") jerry@ideahouse.com.my
 
-            tr
-              td
-                h3 Ms. Nurul
-                = "(add role here)"
-              td
+          .card
+            .content
+              img.right.floated.mini.ui.image(src="img/editorial/nurul.png")
+              .header Ms. Nurul
+              .meta Sales Assistant
+              .description
+                .hr
                 i.phone.icon
-                | 012 604 4648
+                a(href="tel:0126044648") 012 604 4648
                 br
                 i.mail.icon
                 a(href="nurul@ideahouse.com.my" aria-label="Email Ms. Nurul") nurul@ideahouse.com.my

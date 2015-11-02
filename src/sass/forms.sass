@@ -1,143 +1,145 @@
-// form.ui.form
-//   margin: 0
-//   padding: 0
+label.hide
+  display: none
 
-//   h2
-//     font-size: 18px
-//     display: block
-//     margin-bottom: 25px
+form.ui.form
+  margin: 0
+  padding: 0
 
-//   fieldset
-//     margin: 15px 0 0 0
-//     padding: 0
-//     border: none
+  h2
+    font-size: 18px
+    display: block
+    margin-bottom: 25px
 
-//     h4
-//       margin-bottom: 25px
-//       max-width: 490px
+  fieldset
+    margin: 15px 0 0 0
+    padding: 0
+    border: none
 
-//   label
-//     font-weight: 400 !important
-//     font-size: 1rem !important
-//     padding-right: 10px
+    h4
+      margin-bottom: 25px
+      max-width: 490px
 
-//   label.static
-//     min-width: 164px
-//     display: inline-block
-//     text-align: right
+  label
+    font-weight: 400 !important
+    font-size: 1rem !important
+    padding-right: 10px
 
-//   label.required:after
-//     content: "*"
+  label.static
+    min-width: 164px
+    display: inline-block
+    text-align: right
 
-//   small.support
-//     display: block
-//     margin-left: 178px
-//     margin-top: 5px
-//     line-height: 14px
-//     opacity: 0.7
+  label.required:after
+    content: "*"
 
-
-//   .inline.field
-//     input
-//       min-width: 250px
-//     input.block
-//       display: block !important
-//       margin-left: 160px
-//       border-top: 0px
-//       border-radius: 0
-//     input.block-first
-//       border-bottom-left-radius: 0
-//       border-bottom-right-radius: 0
-//     input.block:last-child
-//       border-bottom-left-radius: 0.28571429rem
-//       border-bottom-right-radius: 0.28571429rem
-//     input[name='mobile1'],
-//     input[name='mobile2'],
-//     input[name='mobile3']
-//       min-width: auto
-//     input[name='mobile1']::-webkit-inner-spin-button,
-//     input[name='mobile1']::-webkit-outer-spin-button,
-//     input[name='mobile2']::-webkit-inner-spin-button,
-//     input[name='mobile2']::-webkit-outer-spin-button,
-//     input[name='mobile3']::-webkit-inner-spin-button,
-//     input[name='mobile3']::-webkit-outer-spin-button,
-//       -webkit-appearance: none
-//       margin: 0
-//     input[name='mobile1']
-//       width: 55px
-//     input[name='mobile2']
-//       margin-left: 3px
-//       width: 94px
-//     input[name='mobile3']
-//       margin-left: 3px
-//       width: 94px
-
-//     .mobile-fields
-//       display: inline
+  small.support
+    display: block
+    margin-left: 178px
+    margin-top: 5px
+    line-height: 14px
+    opacity: 0.7
 
 
-//   .field
-//     margin: 0em 0em 10px
+  .inline.field
+    input
+      min-width: 250px
+    input.block
+      display: block !important
+      margin-left: 160px
+      border-top: 0px
+      border-radius: 0
+    input.block-first
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+    input.block:last-child
+      border-bottom-left-radius: 0.28571429rem
+      border-bottom-right-radius: 0.28571429rem
+    input[name='mobile1'],
+    input[name='mobile2'],
+    input[name='mobile3']
+      min-width: auto
+    input[name='mobile1']::-webkit-inner-spin-button,
+    input[name='mobile1']::-webkit-outer-spin-button,
+    input[name='mobile2']::-webkit-inner-spin-button,
+    input[name='mobile2']::-webkit-outer-spin-button,
+    input[name='mobile3']::-webkit-inner-spin-button,
+    input[name='mobile3']::-webkit-outer-spin-button,
+      -webkit-appearance: none
+      margin: 0
+    input[name='mobile1']
+      width: 55px
+    input[name='mobile2']
+      margin-left: 3px
+      width: 94px
+    input[name='mobile3']
+      margin-left: 3px
+      width: 94px
 
-//   .inline.fields .field > :first-child,
-//   .inline.field > :first-child
-//     margin: 0
-
-//   .inline.fields > label
-//     margin: 0
+    .mobile-fields
+      display: inline
 
 
-//   .ui.checkbox + .ui.checkbox
-//     margin-left: 30px
-//   .ui.button + .ui.button
-//     margin-left: 10px
+  .field
+    margin: 0em 0em 10px
 
-// @media (max-width: 780px)
-//   form.ui.form
-//     label.static
-//       text-align: left
-//       padding: 0 15px 3px 0
-//       min-width: auto
-//     small.support
-//       display: block
-//       margin-left: 0
-//     fieldset
-//       margin: 10px 0
-//       padding: 10px 0 0 0
-//       h2
-//         font-size: 18px
-//         display: block
-//         margin-bottom: 30px
+  .inline.fields .field > :first-child,
+  .inline.field > :first-child
+    margin: 0
 
-//     .inline.field
-//       input:not(.no-stack),
-//       input.block,
-//       input.block-first,
-//       input.block:last-child,
-//       .ui.search.selection.dropdown
-//         min-width: 250px
-//         display: block
-//         margin: 0
-//         width: 100%
-//       .ui.dropdown.salutation
-//         display: block
-//         width: 100px
-//         margin: 0
-//       .mobile-fields
-//         display: block
+  .inline.fields > label
+    margin: 0
 
-//     .inline.fields
-//       padding: 0
-//       margin: 0
-//       width: 100%
-//       .field.radio
-//         width: 50%
-//         display: inline-block
-//       input[type="radio"]
-//         // background: yellow
-//       label.radio
-//         display: block
-//         width: 100%
-//         margin: 0 0 10px 0
-//         padding: 0
+  .ui.checkbox + .ui.checkbox
+    margin-left: 30px
+  .ui.button + .ui.button
+    margin-left: 10px
+
+@media (max-width: 780px)
+  form.ui.form
+    label.static
+      text-align: left
+      padding: 0 15px 3px 0
+      min-width: auto
+    small.support
+      display: block
+      margin-left: 0
+    fieldset
+      margin: 10px 0
+      padding: 10px 0 0 0
+      h2
+        font-size: 18px
+        display: block
+        margin-bottom: 30px
+
+    .inline.field
+      input:not(.no-stack),
+      input.block,
+      input.block-first,
+      input.block:last-child,
+      .ui.search.selection.dropdown
+        min-width: 250px
+        display: block
+        margin: 0
+        width: 100%
+      .ui.dropdown.salutation
+        display: block
+        width: 100px
+        margin: 0
+      .mobile-fields
+        display: block
+
+    .inline.fields
+      padding: 0
+      margin: 0
+      width: 100%
+      .field.radio
+        width: 50%
+        display: inline-block
+      input[type="radio"]
+        // background: yellow
+      label.radio
+        display: block
+        width: 100%
+        margin: 0 0 10px 0
+        padding: 0
 
