@@ -55,7 +55,7 @@
     });
 
     // Table
-    $('table').tablesort();
+    $('table.sortable').tablesort();
 
     // Dry this out
     $('table.stock').hide();
