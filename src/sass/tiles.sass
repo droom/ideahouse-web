@@ -1,3 +1,10 @@
+@keyframes fadeaway
+  0%
+    opacity: 100
+  100%
+    opacity: 0
+
+
 body
   .tiles
     .ui.card
@@ -20,12 +27,7 @@ body
       .extra.content
         padding: 5px 10px
 
-      .label.bookmark
-        position: absolute
-        z-index: 2
-        font-size: 20px
-        top: 4px
-        left: 4px
+
 
       &.offer:before,
       &.clearance:before,
@@ -62,3 +64,28 @@ body
       &.new:before
         background: blue
         content: "New"
+
+
+      &.bookmark
+        transition: all 300ms ease
+        &.removed
+
+        .ui.icon.button.remove-bookmark
+          background: none
+          text-align: left
+          border-bottom: 1px solid rgba(34,36,38,.1)
+          font-size: 16px
+          padding: 7px 7px
+
+
+
+
+        .image
+          img
+            width: 100%
+            padding: 2px 0
+        .content
+          margin: 0
+          border-top: 1px solid rgba(34,36,38,.1)
+          border-radius: 0
+
