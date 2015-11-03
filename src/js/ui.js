@@ -91,9 +91,20 @@
       dots: true
     });
 
+    $('.label.bookmark i.red.heart.label.icon').on('click', function() {
+      console.log("hello")
+    });
 
 
+    $('#toggle-bookmark').click(function(e){
+      e.preventDefault();
+      $(this).find('i.heart.icon').toggleClass('empty');
+    });
 
+    $('.remove-bookmark').click(function(e){
+      e.preventDefault();
+      $(this).find('i.heart.icon').toggleClass('empty');
+    });
 
 
     $(window).scroll(function () {
