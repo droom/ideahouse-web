@@ -7,25 +7,25 @@
       img(src="img/logo-white.svg" class="ih-logo" alt="Ideahouse")
 
     section.profile
+      if authorised
+        .ui.icon.top.right.pointing.dropdown.button
+          i.user.icon
+          .menu
+            a(href="profile.html" aria-label="View or edit your profile").item
+              i.setting.icon
+              = "My Profile"
 
-      .ui.icon.top.right.pointing.dropdown.button
-        i.user.icon
-        .menu
-          a(href="profile.html" aria-label="View or edit your profile").item
-            i.setting.icon
-            = "My Profile"
+            a(href="bookmarks.html" aria-label="View bookmarked items").item
+              i.heart.icon
+              = "Liked items"
 
-          a(href="bookmarks.html" aria-label="View bookmarked items").item
-            i.heart.icon
-            = "Liked items"
-
-          a(href="history.html" aria-label="View your history").item
-            i.history.icon
-            = "View History"
-          hr
-          a(href="gate-signin.html" aria-label="Sign out of Ideahouse").item
-            i.sign.out.icon
-            = "Sign out"
+            a(href="history.html" aria-label="View your history").item
+              i.history.icon
+              = "View History"
+            hr
+            a(href="gate-signin.html" aria-label="Sign out of Ideahouse").item
+              i.sign.out.icon
+              = "Sign out"
 
 
     section.search
