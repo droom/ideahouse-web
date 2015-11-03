@@ -10,42 +10,131 @@ body
     .menu > .item
       padding: 10px 15px 10px 0 !important
 
+  .ui.dropdown.burger.active
+    i.icon
+      background: none
+
+#nav_bar.navbar-fixed
+  position: fixed
+  top: 0
+
+.menu
+  a
+    display: block
+    padding: 3px
+    border-radius: 2px
+    color: $black
+  a:hover
+    background: $brand-blue
+    color: $bg
+
+
+.ui.search.quick
+  .ui.icon.input
+    width: 100%
+    input.prompt
+      border: none
+      border-radius: 0
+      width: 100%
+      padding: 9px 10px
+
+.text.hello
+  background-color: pink
+
+
+section.profile
+  .ui.icon.button
+    background: none
+    border: 1px solid $bg
+    color: $bg
+
+    &.active
+      color: $black
+      background: $bg
+
+section.menu
+  .ui.icon.button
+    background: none
+    border: 1px solid $bg
+    color: $bg
+
+  .ui.dropdown.burger.active
+    .ui.icon.button
+      color: $black
+      background: $bg
+
+
+
+
+// Mobile
+@media (max-width: 600px)
+  #nav_bar
+    display: none
+  .brand
+    background: $brand-blue
+    display: block
+    min-height: 60px
+
+    section.menu
+      width: calc(100%/3)
+      float: left
+      text-align: left
+      display: block
+      padding: 9px
+
+    section.logo
+      width: calc(100%/3)
+      float: left
+      text-align: center
+      padding: 10px 0 0 0
+      img
+        width: 50px
+
+    section.profile
+      width: calc(100%/3)
+      float: right
+      text-align: right
+      clear: none
+      padding: 9px 7px
+
+    section.search
+      width: 100%
+      float: right
+      display: block
+      text-align: right
+
+
 @media (min-width: 601px)
-  // Expand menu for desktop
-  body
-    .ui.dropdown.burger
-      .ui.button
-        display: none
-      .menu
-        position: static !important
-        cursor: auto
-        position: absolute
-        display: block !important
-        width: 100%
-        box-shadow: none
-        border: none
-        background: none
-        visibility: visible
-        .selected.item
-          background: $brand-green
-          color: $bg
-          font-weight: 400
+  .brand
+    background: $brand-blue
+    display: block
+    height: 100px
 
+    section.menu
+      display: none
 
-      .menu > .item
-        visibility: visible
-        border-radius: 2px
-        padding: 2px !important
-        line-height: 1.4em
-        &.download
-          margin-top: 25px
-          background: rgba(34,36,30,0.1)
-          height: 100px
-          padding: 8px 10px !important
+    section.logo
+      float: left
+      width: 30%
+      height: 80px
+      padding: 22px 0 0 18px
+      img
+        width: 70px
 
+    section.profile
+      float: right
+      text-align: right
+      width: 22%
+      padding: 30px 15px 15px 15px
 
-        &:hover
-          background: $brand-green
-          color: $bg
+    section.search
+      float: left
+      width: 48%
+      padding: 30px 15px 15px 15px
+
+      .ui.search.quick
+        .ui.icon.input
+          input.prompt
+            border-radius: 3px
 
 

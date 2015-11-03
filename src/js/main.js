@@ -35047,7 +35047,7 @@ $.fn.visibility.settings = {
 
     $('.ui.radio.checkbox').checkbox();
     $('.gate .ui.radio.checkbox').prop("checked", false);
-     searchSwatch.hide();
+    searchSwatch.hide();
 
     $("#colour-specify").on('click', function() {
       searchSwatch.show();
@@ -35055,7 +35055,7 @@ $.fn.visibility.settings = {
 
     $("#colour-any").on('click', function() {
      searchSwatch.hide();
-    });
+   });
 
     $('table.swatch.search td.swatch').on('click', function() {
       $('table.swatch.search td.swatch').removeClass('selected');
@@ -35129,6 +35129,18 @@ $.fn.visibility.settings = {
       dots: true
 
     });
+
+
+    $(window).scroll(function () {
+      console.log($(window).scrollTop())
+      if ($(window).scrollTop() > 99) {
+        $('#nav_bar').addClass('navbar-fixed');
+      }
+      if ($(window).scrollTop() < 100) {
+        $('#nav_bar').removeClass('navbar-fixed');
+      }
+    });
+
 
 
   });

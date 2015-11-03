@@ -6,16 +6,12 @@ html(lang="en")
   title = "$PAGE_TITLE"
   include partials/_head
   body(class = page)
-    include partials/_brand
+    include partials/_nav
     .wrap
-      include partials/_nav
       .col-main-right(role="main")
         .ui.huge.breadcrumb
           .section Clearance items
-
-
         .tiles
-
           a(href="product.html").ui.card.clearance
             .image
               img.product(alt="" src="img/product/1809.jpg")
