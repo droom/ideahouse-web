@@ -1,18 +1,43 @@
 body
   .ui.dropdown.burger
+    hr
+      margin: 0
+
+    &.active
+      i.icon
+        background: $bg
+        color: $brand-blue
+        border-radius: 2px
+
+    .ui.labeled.icon.button
+      background: none
+      color: #fff
+      font-size: 15px
+      font-weight: 400
+      padding-left: 48px!important
+
     .menu
       top: 50px
       left: 0
-      padding: 10px
-      border-top-left-radius: 0
-      border-top-right-radius: 0
-      border-top: 0
     .menu > .item
-      padding: 10px 15px 10px 0 !important
+      padding: 8px 15px 8px 7px !important
+      line-height: 1.3em
+      i.icon
+        background: none
 
-  .ui.dropdown.burger.active
+
+.ui.icon.top.right.pointing.dropdown.button
+  hr
+    margin: 0
+  .menu > .item
+    padding: 8px 15px 8px 7px !important
+    line-height: 1.3em
+  &.active
     i.icon
-      background: none
+      color: $brand-blue
+      border-radius: 2px
+
+
 
 #nav_bar.navbar-fixed
   position: fixed
@@ -68,6 +93,12 @@ section.menu
 
 // Mobile
 @media (max-width: 600px)
+  .ui.search.quick
+    .ui.icon.input
+      input.prompt
+        padding: 13px 10px
+
+
   #nav_bar
     display: none
   .brand
