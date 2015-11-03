@@ -13,11 +13,11 @@ html(lang="en")
           .section $FIRST_NAME's Profile
 
         .ui.top.attached.tabular.menu
-          a.item(data-tab='first') My Details
+          a.item.active(data-tab='first') My Details
           a.item(data-tab='second') Password
-          a.item.active(data-tab='third') Notices
-        .ui.bottom.attached.tab.segment(data-tab='first')
+          a.item(data-tab='third') Notices
 
+        .ui.bottom.attached.tab.segment.active(data-tab='first')
           form.ui.form
             fieldset
               .inline.field
@@ -869,8 +869,6 @@ html(lang="en")
 
             a(href="gate-register-1.html" aria-label="Update Profile").ui.submit.large.cta.button Update Profile
             .ui.error.message
-
-
         .ui.bottom.attached.tab.segment(data-tab='second')
           form.ui.form
             fieldset
@@ -890,8 +888,7 @@ html(lang="en")
             a(href="gate-register-1.html" aria-label="Update Password").ui.submit.large.cta.button Update Profile
 
             .ui.error.message
-
-        .ui.bottom.attached.tab.segment.active(data-tab='third')
+        .ui.bottom.attached.tab.segment(data-tab='third')
           form.ui.form
             fieldset
               h4 I would like to receive new products update, promotional offers, clearance sales and newsletters. Select options below.
@@ -906,8 +903,6 @@ html(lang="en")
             hr
             a(href="gate-register-1.html" aria-label="Update Notices").ui.submit.large.cta.button Update Profile
             .ui.error.message
-
-
 
       include partials/_footer
       include partials/_scripts

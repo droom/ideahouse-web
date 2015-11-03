@@ -5,11 +5,9 @@ doctype html
 html(lang="en")
   title = "$PAGE_TITLE"
   include partials/_head
-  body
-    include partials/_brand
+  body(class = page)
+    include partials/_nav
     .wrap
-      include partials/_nav
-
       .col-main-right(role="main")
         .ui.huge.breadcrumb
           .section Contact Us
