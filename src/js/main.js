@@ -35119,6 +35119,8 @@ $.fn.visibility.settings = {
       $('table.price').show();
     });
 
+
+
     $('.menu .item').tab();
 
     // Elipsis
@@ -35127,8 +35129,11 @@ $.fn.visibility.settings = {
     // Touch swipe
     $('.product-carousel').slick({
       dots: true
-
     });
+
+
+
+
 
 
     $(window).scroll(function () {

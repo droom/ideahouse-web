@@ -79,6 +79,8 @@
       $('table.price').show();
     });
 
+
+
     $('.menu .item').tab();
 
     // Elipsis
@@ -87,8 +89,11 @@
     // Touch swipe
     $('.product-carousel').slick({
       dots: true
-
     });
+
+
+
+
 
 
     $(window).scroll(function () {
