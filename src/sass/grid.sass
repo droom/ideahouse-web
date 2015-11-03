@@ -12,9 +12,8 @@ body
 
   footer
     width: 70%
-    float: left
-    clear: left
     margin-top: 80px
+    margin-left: 30%
     padding: 20px 30px
 
   .wrap
@@ -31,33 +30,15 @@ body
     border-radius: 5px
     margin-bottom: 20px
 
-  // desktop
-  .brand
-    width: 100%
-    float: left
-    min-height: 100px
-    padding: 15px
-    background: $brand-blue
-    transition: all 400ms ease
-    .col-main-left
-      padding: 0
-    .col-main-right
-      border: none
-      padding: 28px 10px 10px 10px
-
-
   .col-main-right
     width: 70%
-    float: right
-    float: left
-    clear: none
-    border-left: 1px solid #ddd
+    margin-left: 30%
     padding: 15px
 
   .col-main-left
     width: 30%
     float: left
-    clear: left
+    padding: 15px
 
     .ui.grid
       margin: 0
@@ -71,7 +52,7 @@ body
           margin-top: 30px
 
   .ui.breadcrumb
-    min-height: 100px
+    min-height: 62px
     display: block
 
 
@@ -89,11 +70,11 @@ body
         width: 100%
         text-align: left
 
-    .brand
-      width: 100%
-      float: left
-      height: 100px
-      display: none
+    // .brand
+    //   width: 100%
+    //   float: left
+    //   height: 100px
+    //   display: none
 
     .col-main-right
       width: 100%
@@ -109,7 +90,6 @@ body
       float: left
       clear: left
       margin: 0 0 20px 0
-      background: $brand-blue
 
       .ui.two.column.grid
         .row
@@ -128,15 +108,13 @@ body
     .ui.two.grid
       height: 50px
 
-    .ui.column.grid.mobile-quick-search
-      height: 50px
-      .row
-        .column
-          .ui.fluid.search.quick
-            input.prompt
-              height: 100%
-
-
+    // .ui.column.grid.mobile-quick-search
+    //   height: 50px
+    //   .row
+    //     .column
+    //       .ui.fluid.search.quick
+    //         input.prompt
+    //           height: 100%
 
     .ui.breadcrumb
       padding: 12px
