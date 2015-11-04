@@ -8,7 +8,6 @@ html(lang="en")
   body(class = page)
     include partials/_nav
     .wrap
-      include partials/_col-main-left
       .col-main-right(role="main")
         .ui.huge.breadcrumb
           .section $FIRST_NAME's Profile
@@ -44,35 +43,13 @@ html(lang="en")
                   .menu
                     .item(data-value="my")
                       i.my.flag
-                      | Malaysia
+                      | MYR
                     .item(data-value="sg")
                       i.sg.flag
-                      | Singapore
-                    .item(data-value="bn")
-                      i.bn.flag
-                      | Brunei
-                    .ui.divider
-                    .item(data-value="ar")
-                      i.ar.flag
-                      | Burma
-                    .item(data-value="kh")
-                      i.kh.flag
-                      | Cambodia
-                    .item(data-value="id")
-                      i.id.flag
-                      | Indonesia
-                    .item(data-value="la")
-                      i.la.flag
-                      | Laos
-                    .item(data-value="ph")
-                      i.ph.flag
-                      | Philippines
-                    .item(data-value="th")
-                      i.th.flag
-                      | Thailand
-                    .item(data-value="vn")
-                      i.vn.flag
-                      | Vietnam
+                      | SGD
+                    .item(data-value="us")
+                      i.us.flag
+                      | USD
               .inline.field
                 label.static Default Language
                 .ui.search.selection.dropdown
