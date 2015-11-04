@@ -8,12 +8,13 @@ html(lang="en")
   body(class = page)
     include partials/_nav
     .wrap
+      include partials/_col-main-left
       .col-main-right(role="main")
         .ui.huge.breadcrumb
           .section Contact Us
 
-        h3.pad Ideahouse Corporation S/B (258221-K)
-        p.pad No. 20-2, Jalan Tanjung SD 13/2
+        h3 Ideahouse Corporation S/B (258221-K)
+        p No. 20-2, Jalan Tanjung SD 13/2
           br
           | Bandar Sri Damansara
           br
@@ -38,7 +39,7 @@ html(lang="en")
 
         hr
 
-        table.ui.very.basic.unstackable.celled.table.contact.pad
+        table.ui.very.basic.unstackable.celled.table.contact
           tbody
             tr
               td
@@ -86,7 +87,6 @@ html(lang="en")
                 br
                 i.mail.icon
                 a(href="zabri@ideahouse.com.my" aria-label="Email Mr. Zabri/Bee") zabri@ideahouse.com.my
-
 
           .card
             .content

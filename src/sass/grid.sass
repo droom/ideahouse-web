@@ -9,7 +9,6 @@ body
           min-height: 40px
         .image
           background: white
-
   footer
     width: 70%
     margin-top: 80px
@@ -36,9 +35,8 @@ body
     padding: 15px
 
   .col-main-left
-    width: 30%
     float: left
-    padding: 15px
+    padding: 15px 0 15px 15px
 
     .ui.grid
       margin: 0
@@ -55,13 +53,21 @@ body
     min-height: 62px
     display: block
 
+@media (min-width: 601px)
+  body
+    footer
+      display: none
 
 @media (max-width: 600px)
   body
     footer
-      padding: 0
+      padding: 10px
       margin-top: 20px
       border-top: $grey-border 1px solid
+      margin: 1em 0
+      width: 100%
+      float: left
+      clear: left
 
     .ui.grid > .row
       padding: 0
@@ -70,20 +76,13 @@ body
         width: 100%
         text-align: left
 
-    // .brand
-    //   width: 100%
-    //   float: left
-    //   height: 100px
-    //   display: none
-
     .col-main-right
       width: 100%
       float: right
       float: left
       clear: none
-      margin: 0
-      padding: 0
-      border-left: none
+      margin-left: 0
+      padding: 10px
 
     .col-main-left
       width: 100%
@@ -104,26 +103,11 @@ body
             margin-top: 0
             text-align: right
 
-
     .ui.two.grid
       height: 50px
-
-    // .ui.column.grid.mobile-quick-search
-    //   height: 50px
-    //   .row
-    //     .column
-    //       .ui.fluid.search.quick
-    //         input.prompt
-    //           height: 100%
-
-    .ui.breadcrumb
       padding: 12px
       min-height: auto
       margin-bottom: 15px
 
-    footer
-      margin: 1em 0
-      width: 100%
-      float: left
-      clear: left
+
 
