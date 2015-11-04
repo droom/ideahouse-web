@@ -1,24 +1,50 @@
 .brand
   .wrap
     section.menu
-      include _menu
+      .ui.dropdown.burger
+        .ui.icon.button
+          i.sidebar.download.icon
+        .menu(role="navigation")
+          a(href="browse.html" aria-label="Browse item categories").item
+            i.grid.layout.icon
+            = "Browse Categories"
+          a(href="search-advanced.html" aria-label="Search for an item").item
+            i.icon.search
+            = "Advanced Search"
+          hr
+          a(href="new.html" aria-label="View new items").item
+            i.lightning.icon
+            = "New"
+          a(href="clearance.html" aria-label="View clearance items").item
+            i.legal.icon
+            = "Clearance"
+          a(href="offer.html" aria-label="View offer items").item
+            i.star.icon
+            = "Offer"
+          a(href="popular.html" aria-label="View popular items").item
+            i.thumbs.up.icon
+            = "Popular"
+          a(href="download.html" aria-label="Download print catalogue").item.download
+            = "Download"
+            br
+            = "2015 Price List"
+            br
+            = "or Catalogue"
 
     section.logo
       img(src="img/logo-white.svg" class="ih-logo" alt="Ideahouse")
 
-    section.profile
-      if authorised
+    if authorised
+      section.profile
         .ui.icon.top.right.pointing.dropdown.button
           i.user.icon
           .menu
             a(href="profile.html" aria-label="View or edit your profile").item
               i.setting.icon
               = "My Profile"
-
             a(href="bookmarks.html" aria-label="View bookmarked items").item
               i.heart.icon
               = "Liked items"
-
             a(href="history.html" aria-label="View your history").item
               i.history.icon
               = "View History"
@@ -26,82 +52,18 @@
             a(href="gate-signin.html" aria-label="Sign out of Ideahouse").item
               i.sign.out.icon
               = "Sign out"
+    else
+      section.profile
+        a(href="gate-signin.html" aria-label="Sign in to Ideahouse").item.gate
+          = "Sign in"
+        a(href="gate-register-1.html" aria-label="Register with Ideahouse").item.gate
+          = "Register"
 
 
-    section.search
-      if authorised
-        unless page == 'search'
-          .ui.fluid.search.quick(role="search")
-            .ui.icon.input
-              label.hide Quick search
-              i.search.icon
-              input.prompt(type="text" placeholder="Quick search...")
-            .results
-
-
-//- .wrap
-//-   .col-main-left(id="nav_bar")
-//-     .menu(role="navigation")
-//-       if authorised
-//-         a(href="browse.html" aria-label="Browse item categories").item.browse
-//-           i.grid.layout.icon
-//-           = "Browse Categories"
-//-         a(href="search-advanced.html" aria-label="Search for an item").item.search-ad
-//-           i.icon.search
-//-           = "Advanced Search"
-//-         hr
-//-         a(href="new.html" aria-label="View new items").item.new
-//-           i.lightning.icon
-//-           = "New"
-//-         a(href="clearance.html" aria-label="View clearance items").item.clearance
-//-           i.legal.icon
-//-           = "Clearance"
-//-         a(href="offer.html" aria-label="View offer items").item.offer
-//-           i.star.icon
-//-           = "Offer"
-//-         a(href="popular.html" aria-label="View popular items").item.popular
-//-           i.thumbs.up.icon
-//-           = "Popular"
-
-//-         hr
-//-         a(href="download.html" aria-label="Download print catalogue").item.download
-//-           = "Download"
-//-           br
-//-           = "2015 Price List"
-//-           br
-//-           = "or Catalogue"
-
-//-       else
-//-         a(href="gate-signin.html" aria-label="Sign in to your account" ).item Sign in
-//-         a(href="gate-register-1.html" aria-label="Register with Ideahouse" ).item Register with Ideahouse
-
-
-//-     ul.details
-//-       li
-//-         a(href="about.html").item About Ideahouse
-//-       li
-//-         a(href="onboard.html").item Become a Gifts Agent &amp; Reseller
-//-       li
-//-         a(href="faq.html").item FAQ
-//-       li
-//-         a(href="contact.html").item Contact Us
-//-       li
-//-         a(href="conditions.html").item Conditions of Use
-
-//-     ul.details
-//-       li &copy; Ideahouse Corp. S/B
-//-       li t: +603 6275 4648
-//-       li f: +603 6272 1648
-//-       li
-//-         a(href="mailto:sales@ideahouse.com.my?subject=inquiry_via_ideahouse.com.my-site") e: sales@ideahouse.com.my
-//-       li Kuala Lumpur, Malaysia
-
-//-     ul.social
-//-       li
-//-         a(href="https://www.facebook.com/ideahouse.malaysia", target="_new" title="Follow us on Facebook")
-//-           i(alt="").facebook.icon
-//-       li
-//-         a(href="https://www.instagram.com/ideahousegifts" target="_new" title="Follow us on instagram")
-//-           i(alt="").instagram.icon
-
-
+    unless page == 'search-ad'
+      section.search
+        .ui.fluid.search.quick(role="search")
+          .ui.icon.input
+            label.hide Quick search
+            i.search.icon
+            input.prompt(type="text" placeholder="Quick search...")
