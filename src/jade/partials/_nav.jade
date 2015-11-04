@@ -59,11 +59,9 @@
         a(href="gate-register-1.html" aria-label="Register with Ideahouse").item.gate
           = "Register"
 
-
-    unless page == 'search-ad'
-      section.search
-        .ui.fluid.search.quick(role="search")
-          .ui.icon.input
-            label.hide Quick search
-            i.search.icon
-            input.prompt(type="text" placeholder="Quick search...")
+    section.search
+      .ui.fluid.search.quick(role="search")
+        .ui.icon.input
+          label.hide Quick search
+          i.search.icon
+          input.prompt(type="text" placeholder="Quick search...")
