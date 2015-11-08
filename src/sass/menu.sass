@@ -58,32 +58,29 @@ body
   .ui.icon.input
     width: 100%
     input.prompt
-      border: none
       border-radius: 0
       width: 100%
       padding: 9px 10px
 
-
 section.profile
   .ui.icon.button
     background: none
-    border: 1px solid $bg
-    color: $bg
+    border: 1px solid #666
+    color: #666
 
     &.active
       color: $black
-      background: $bg
 
 section.menu
   .ui.icon.button
     background: none
-    border: 1px solid $bg
-    color: $bg
+    border: 1px solid #666
+    color: #666
 
-  .ui.dropdown.burger.active
+  .ui.dropdown.burger
     .ui.icon.button
       color: $black
-      background: $bg
+      background: none
 
 
 // Mobile
@@ -95,7 +92,7 @@ section.menu
   #nav_bar
     display: none
   .brand
-    background: $brand-blue
+    background: white
     display: block
     min-height: 60px
 
@@ -129,7 +126,7 @@ section.menu
 
 @media (min-width: 601px)
   .brand
-    background: $brand-blue
+    background: white
     display: block
     height: 100px
 

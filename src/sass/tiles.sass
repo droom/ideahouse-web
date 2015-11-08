@@ -20,7 +20,7 @@ body
         &:nth-child(9n+5),
         &:nth-child(9n+6)
           .image
-            background: #60af74
+            background: $brand-green
 
         &:nth-child(9n+7),
         &:nth-child(9n+8),
@@ -78,21 +78,21 @@ body
         border-top-right-radius: 3px
 
       &.offer:before
-        background: green
+        background: $brand-blue
         content: "Offer"
 
       &.clearance:before
-        background: blue
+        background: $brand-green
         content: "Clearance"
 
       &.popular:before
-        background: yellow
+        background: $brand-red
         content: "Popular"
-        color: $black
 
       &.new:before
-        background: red
+        background: #ffed1f
         content: "New"
+        color: #444
 
       &.bookmark
         transition: all 300ms ease
