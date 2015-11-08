@@ -20,18 +20,27 @@ html(lang="en")
           i.right.angle.icon.divider
           .section OMEGA - Ball Pen (Black Ink)
 
-        .ui.two.column.grid.cycle
-          .row
-            .column
-              button.ui.labeled.icon.tiny.cycle.button
-                i.left.arrow.icon
-                p Previous item
-            .column.right.aligned
-              button.ui.right.labeled.icon.tiny.cycle.button
-                i.right.arrow.icon
-                p Next item
 
         .product-wrap.no-select
+          .grid-half-set
+            button.ui.labeled.icon.tiny.cycle.button
+              i.left.arrow.icon
+              p AMBASSADOR Ball Pen (Black Ink)
+          .grid-half-set
+            button.ui.right.labeled.icon.tiny.cycle.button
+              i.right.arrow.icon
+              p BARON Ball Pen (Black Ink)
+
+        hr
+
+        .product-wrap.no-select
+
+          .product-actions
+            .ui.icon.button.bookmark.cta(id="toggle-bookmark")
+              i.empty.white.heart.icon
+            .ui.icon.button.download.cta
+              i.cloud.download.icon
+
           .product-carousel
             .div
               img(alt="Image of $PRODUCT_NAME" src="img/product-1.jpg", class="product-hero product-1")
@@ -40,15 +49,7 @@ html(lang="en")
             .div
               img(alt="Image of $PRODUCT_NAME" src="img/product-3.jpg", class="product-hero product-3")
 
-        hr
 
-        .ui.one.column.grid.cycle
-          .row
-            .column
-              .ui.icon.button.bookmark.pad(id="toggle-bookmark")
-                i.empty.red.heart.icon
-              .ui.labeled.icon.button.download Download
-                i.cloud.download.icon
         hr
 
         .ui.three.item.menu

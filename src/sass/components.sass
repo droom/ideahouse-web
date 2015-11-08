@@ -15,8 +15,37 @@ button.slick-prev.slick-arrow
   margin-top: 0
 
 .product-wrap
+  position: relative
+
+  .grid-half-set
+    width: 50%
+    display: inline-block
+
+  .grid-half-set:nth-child(1)
+    text-align: left
+
+    .ui.button.icon.button
+      padding: 3px 7px 3px 25px !important
+      p
+        text-align: left
+
+  .grid-half-set:nth-child(2)
+    text-align: right
+    .ui.button.icon.button
+      padding: 3px 25px 3px 7px !important
+      p
+        text-align: right
+
+  .product-actions
+    position: absolute
+    z-index: 2
+    top: 10px
+    left: 10px
+
   .product-hero
     width: 100%
+
+
 
 .ui.column.grid.mobile-quick-search
   display: none
@@ -51,6 +80,19 @@ button.slick-prev.slick-arrow
 .ui.input.gate + .ui.input.gate
   margin-top: 5px
 
+.ui.info.message
+  background: $brand-green
+  color: white
+  .header
+    color: white
+  .ui.toggle.button
+    background: none
+    color: white
+    border: 2px solid white
+    &:hover
+      background: white
+      color: #444
+
 .ui.info.message,
 .ui.attached.info.message
   margin-top: 0
@@ -67,7 +109,6 @@ button.slick-prev.slick-arrow
     line-height: 22px
   .button
     margin-top: 30px
-
 
 
 .ui.search.selection.dropdown
