@@ -31,7 +31,7 @@ html(lang="en")
                 i.right.arrow.icon
                 p Next item
 
-        .product-wrap.no-select
+        .boundary.no-select
           .product-carousel
             .div
               img(alt="Image of $PRODUCT_NAME" src="img/product-1.jpg", class="product-hero product-1")
@@ -319,10 +319,8 @@ html(lang="en")
           else
             .ui.info.message
               .header To view this item's prices, please sign in. If you don't have an account with Ideahouse, register now for a free account.
-              button.ui.toggle.button Sign in
-              button.ui.toggle.button Register
-
-
+              .ui.button Sign in
+              .ui.button Register
 
 
       include partials/_footer

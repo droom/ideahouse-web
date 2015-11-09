@@ -14,21 +14,44 @@ body
     margin-left: 30%
     padding: 20px 30px
 
-
-
-
-
-
-  .view-more
+  .center
     text-align: center
 
   .wrap
     max-width: 850px
     margin: auto
 
-    .product-wrap
+    .boundary
       position: relative
       margin-top: 15px
+
+      .grid-half-set
+        width: 50%
+        display: inline-block
+
+      .grid-half-set:nth-child(1)
+        text-align: left
+
+        .ui.button.icon.button
+          padding: 3px 7px 3px 25px !important
+          p
+            text-align: left
+
+      .grid-half-set:nth-child(2)
+        text-align: right
+        .ui.button.icon.button
+          padding: 3px 25px 3px 7px !important
+          p
+            text-align: right
+
+    .product-actions
+      position: absolute
+      z-index: 2
+      top: 10px
+      left: 10px
+
+    .product-hero
+      width: 100%
 
   .content
     background: #fcfcfc
@@ -45,25 +68,24 @@ body
     float: left
     padding: 15px 0 15px 15px
 
-    .ui.grid
-      margin: 0
-      padding: 0
-      .row
-        .column
-          width: 100%
-          display: block
-          text-align: left
-        .column + .column
-          margin-top: 30px
+    // .ui.grid
+    //   margin: 0
+    //   padding: 0
+    //   .row
+    //     .column
+    //       width: 100%
+    //       display: block
+    //       text-align: left
+    //     .column + .column
+    //       margin-top: 30px
 
-  .ui.breadcrumb
-    min-height: 62px
-    display: block
+
 
 @media (min-width: 601px)
   body
     footer
       display: none
+
     .col-main-right
       margin-bottom: 30px
 
@@ -78,12 +100,12 @@ body
       float: left
       clear: left
 
-    .ui.grid > .row
-      padding: 0
-      .column
-        padding: 0
-        width: 100%
-        text-align: left
+    // .ui.grid > .row
+    //   padding: 0
+    //   .column
+    //     padding: 0
+    //     width: 100%
+    //     text-align: left
 
     .col-main-right
       width: 100%
@@ -99,24 +121,24 @@ body
       clear: left
       margin: 0 0 20px 0
 
-      .ui.two.column.grid
-        .row
-          .column
-            width: 50%
-            display: inline
-            text-align: left
-            margin-top: 0
-            padding: 5px
+      // .ui.two.column.grid
+      //   .row
+      //     .column
+      //       width: 50%
+      //       display: inline
+      //       text-align: left
+      //       margin-top: 0
+      //       padding: 5px
 
-          .column + .column
-            margin-top: 0
-            text-align: right
+      //     .column + .column
+      //       margin-top: 0
+      //       text-align: right
 
-    .ui.two.grid
-      height: 50px
-      padding: 12px
-      min-height: auto
-      margin-bottom: 15px
+    // .ui.two.grid
+    //   height: 50px
+    //   padding: 12px
+    //   min-height: auto
+    //   margin-bottom: 15px
 
 
 

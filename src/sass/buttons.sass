@@ -1,24 +1,32 @@
 .ui.button
+  margin: 0
 
   &.cta
     background: $brand-blue
     color: white
     font-weight: 400
     text-transform: capitalize
-
-  &.download
-    margin-bottom: 5px
+    &:hover
+      background-color: lighten($brand-blue, 20%)
 
   &.clear
     background: none
     color: white
     font-weight: 400
 
+  &.load
+    min-width: 110px
+  &.load + &.load
+    margin-left: 10px
+
   &.cycle
     background: none
     border: 1px solid $stroke
     margin: 0
     padding: 4px 0
+
+    &:hover
+      background: $hover
 
     .arrow.icon
       background: none
@@ -31,76 +39,6 @@
         top: 1.1em
         font-size: 10px
 
-    // &:nth-child(1)
-      // text-align: left
-
-      // .arrow.icon
-        // margin: 0
-
-    // &:nth-child(2)
-      // text-align: right
-
-      // &.icon.button
-      //   padding: 3px 25px 3px 7px !important
 
 
 
-
-
-.view-more
-  .ui.button
-    min-width: 110px
-
-
-.ui.item.menu
-  box-shadow: none
-  background: none
-  .item
-    background: none
-  .item.active
-    background: $brand-blue
-    color: $bg
-    font-weight: 400
-
-
-
-.ui.labeled.icon.button.clear,
-.ui.labeled.icon.button.bookmark
-  background: rgba(0, 0, 0, 0.1)
-  color: white
-  font-weight: 400
-  margin: 2px !important
-
-
-.ui.labeled.icon.button.bookmark.active
-  background: $green
-
-
-.ui.column.grid.cycle
-  margin: 14px
-
-
-
-@media (min-width: 601px)
-  .ui.labeled.icon.button.clear,
-  .ui.labeled.icon.button.bookmark
-    background: #bbb
-    margin-left: 14px !important
-
-  .ui.column.grid.cycle,
-  .ui.two.column.grid.cycle
-    margin: 0
-    .column
-      margin: 0
-      padding: 0
-
-@media (max-width: 600px)
-  .ui.two.item.menu
-    box-shadow: none
-    background: none
-    border-radius: 0
-    border-right: 0
-    border-left: 0
-
-    .item.btn-details
-      border-radius: 0
