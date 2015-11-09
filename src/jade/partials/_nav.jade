@@ -15,13 +15,13 @@
         .ui.icon.top.right.pointing.dropdown.button
           i.user.icon
           .menu
-            a(href="profile.html" aria-label="View or edit your profile").item
+            a(href="profile.html" aria-label="View or edit your profile").item.profile
               i.setting.icon
               = "My Profile"
-            a(href="bookmarks.html" aria-label="View bookmarked items").item
+            a(href="bookmarks.html" aria-label="View bookmarked items").item.bookmarks
               i.heart.icon
               = "Liked items"
-            a(href="history.html" aria-label="View your history").item
+            a(href="history.html" aria-label="View your history").item.history
               i.history.icon
               = "View History"
             hr
@@ -31,8 +31,8 @@
     else
       section.profile
         a(href="gate-signin.html" aria-label="Sign in to Ideahouse").item.gate
-          = "Sign in"
-        a(href="gate-register-1.html" aria-label="Register with Ideahouse").item.gate
+          = "Sign in / up"
+        //- a(href="gate-register-1.html" aria-label="Register with Ideahouse").item.gate
           = "Register"
 
     section.search

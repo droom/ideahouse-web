@@ -10,8 +10,14 @@ html(lang="en")
     .wrap
       include partials/_col-main-left
       .col-main-right(role="main")
+
         .ui.huge.breadcrumb
           .section Welcome to Ideahouse
+
+        .ui.info.message
+          i.close.icon
+          .header Don't have an Ideahouse account? Register an account now for free.
+          a(href="gate-register-1.html").ui.button Register
 
         .ui.info.message
           .header
@@ -37,5 +43,5 @@ html(lang="en")
 
           a(href="browse.html").ui.large.cta.button Sign in
 
-
+      include partials/_footer
       include partials/_scripts

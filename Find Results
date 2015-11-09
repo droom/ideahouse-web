@@ -1,0 +1,186 @@
+Searching 52 files for ".ui.info.message" (case sensitive)
+
+/Users/droom/GIT/ideahouse-web/src/jade/browse.jade:
+   14            .section Welcome back, $FIRST_NAME
+   15
+   16:         .ui.info.message
+   17            i.close.icon
+   18            .header There are 10 new products since your last visit.
+
+/Users/droom/GIT/ideahouse-web/src/jade/download-noauth.jade:
+   26
+   27            else
+   28:             .ui.info.message
+   29                .header To download Ideahouse 2015 Agent Price List (PDF), please sign in. If you don't have an account with Ideahouse, register now for a free account.
+   30                button.ui.toggle.button Sign in
+
+/Users/droom/GIT/ideahouse-web/src/jade/download.jade:
+   26
+   27            else
+   28:             .ui.info.message
+   29                .header To download Ideahouse 2015 Agent Price List (PDF), please sign in. If you don't have an account with Ideahouse, register now for a free account.
+   30                button.ui.toggle.button Sign in
+
+/Users/droom/GIT/ideahouse-web/src/jade/faq.jade:
+   54              a(name="q18" href="#a18") Sample Policy
+   55
+   56:         .ui.info.message
+   57            .header
+   58              = "If you have any further queries please email to "
+
+/Users/droom/GIT/ideahouse-web/src/jade/gate-register-2-reseller.jade:
+   14            .section Register as an Ideahouse Reseller/Agent
+   15
+   16:         .ui.info.message
+   17            .header
+   18              | Reseller recruitment promotional program is now on until 31st Dec 2015. New Resellers registered with us will be eligible for RM50* credit. Registration is FREE!
+
+/Users/droom/GIT/ideahouse-web/src/jade/gate-reset-send.jade:
+   14            .section Reset my password
+   15
+   16:         .ui.info.message
+   17            .header
+   18              | Please check your email for further instructions.
+
+/Users/droom/GIT/ideahouse-web/src/jade/gate-signin.jade:
+   15            .section Welcome to Ideahouse
+   16
+   17:         .ui.info.message
+   18            i.close.icon
+   19            .header Don't have an Ideahouse account? Register an account now for free.
+   ..
+   21
+   22
+   23:         .ui.info.message
+   24            .header
+   25              | You've sucessfully changed your password. Please sign in using your new credentials.
+
+/Users/droom/GIT/ideahouse-web/src/jade/product-noauth.jade:
+  318
+  319            else
+  320:             .ui.info.message
+  321                .header To view this item's prices, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+  322                button.ui.toggle.button Sign in
+
+/Users/droom/GIT/ideahouse-web/src/jade/product.jade:
+  318
+  319            else
+  320:             .ui.info.message
+  321                .header To view this item's prices, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+  322                button.ui.toggle.button Sign in
+
+/Users/droom/GIT/ideahouse-web/src/jade/profile.jade:
+   14            .section $FIRST_NAME's Profile
+   15
+   16:         .ui.info.message
+   17            i.close.icon
+   18            .header Your details have been updated.
+   19:         .ui.info.message
+   20            i.close.icon
+   21            .header Your password has been updated.
+   22:         .ui.info.message
+   23            i.close.icon
+   24            .header Your notices have been updated.
+
+/Users/droom/GIT/ideahouse-web/src/jade/search-advanced-noauth.jade:
+  212
+  213          else
+  214:           .ui.info.message
+  215              .header To use the Advanced Search feature, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+  216              button.ui.toggle.button Sign in
+
+/Users/droom/GIT/ideahouse-web/src/jade/search-advanced.jade:
+  212
+  213          else
+  214:           .ui.info.message
+  215              .header To use the Advanced Search feature, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+  216              button.ui.toggle.button Sign in
+
+/Users/droom/GIT/ideahouse-web/src/jade/search-results-none.jade:
+   17
+   18
+   19:         .ui.info.message
+   20            i.close.icon
+   21            .header No results found. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+
+/Users/droom/GIT/ideahouse-web/src/sass/components.sass:
+   47    margin-top: 5px
+   48
+   49: .ui.info.message
+   50    background: $brand-green
+   51    color: white
+   ..
+   62      margin-left: 6px
+   63
+   64: .ui.info.message,
+   65  .ui.attached.info.message
+   66    margin-top: 0
+
+18 matches across 14 files
+
+
+Searching 52 files for "button.ui.toggle.button" (case sensitive)
+
+/Users/droom/GIT/ideahouse-web/src/jade/browse.jade:
+   17            i.close.icon
+   18            .header There are 10 new products since your last visit.
+   19:           button.ui.toggle.button View
+   20
+   21          .tiles.browse
+
+/Users/droom/GIT/ideahouse-web/src/jade/download-noauth.jade:
+   28              .ui.info.message
+   29                .header To download Ideahouse 2015 Agent Price List (PDF), please sign in. If you don't have an account with Ideahouse, register now for a free account.
+   30:               button.ui.toggle.button Sign in
+   31:               button.ui.toggle.button Register
+   32
+   33          .content
+
+/Users/droom/GIT/ideahouse-web/src/jade/download.jade:
+   28              .ui.info.message
+   29                .header To download Ideahouse 2015 Agent Price List (PDF), please sign in. If you don't have an account with Ideahouse, register now for a free account.
+   30:               button.ui.toggle.button Sign in
+   31:               button.ui.toggle.button Register
+   32
+   33          .content
+
+/Users/droom/GIT/ideahouse-web/src/jade/gate-signin.jade:
+   18            i.close.icon
+   19            .header Don't have an Ideahouse account? Register an account now for free.
+   20:           button.ui.toggle.button Register
+   21
+   22
+
+/Users/droom/GIT/ideahouse-web/src/jade/product-noauth.jade:
+  320              .ui.info.message
+  321                .header To view this item's prices, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+  322:               button.ui.toggle.button Sign in
+  323:               button.ui.toggle.button Register
+  324
+  325
+
+/Users/droom/GIT/ideahouse-web/src/jade/product.jade:
+  320              .ui.info.message
+  321                .header To view this item's prices, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+  322:               button.ui.toggle.button Sign in
+  323:               button.ui.toggle.button Register
+  324
+  325
+
+/Users/droom/GIT/ideahouse-web/src/jade/search-advanced-noauth.jade:
+  214            .ui.info.message
+  215              .header To use the Advanced Search feature, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+  216:             button.ui.toggle.button Sign in
+  217:             button.ui.toggle.button Register
+  218
+  219        include partials/_footer
+
+/Users/droom/GIT/ideahouse-web/src/jade/search-advanced.jade:
+  214            .ui.info.message
+  215              .header To use the Advanced Search feature, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+  216:             button.ui.toggle.button Sign in
+  217:             button.ui.toggle.button Register
+  218
+  219        include partials/_footer
+
+14 matches across 8 files

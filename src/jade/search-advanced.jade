@@ -15,206 +15,208 @@ html(lang="en")
 
         if authorised
           .content
-            label.input Category
-            .ui.large.fluid.search.selection.dropdown
-              input(type="hidden", name="receipt")
-              i.dropdown.icon
-              .default.text All
-              .menu
+            form.ui.form
+              fieldset
+                label.input Category
+                .ui.large.fluid.search.selection.dropdown
+                  input(type="hidden", name="receipt")
+                  i.dropdown.icon
+                  .default.text All
+                  .menu
 
-                .item(data-value="category-1", data-text="Metal Pens")
-                  img.product(src="img/category/pens-metal.svg")
-                  p.label Metal Pens
+                    .item(data-value="category-0", data-text="All")
+                      //- img.product(src="img/category/pens-metal.svg")
+                      p.label All
 
-                .item(data-value="category-2", data-text="Plastic Pens")
-                  img.product(src="img/category/pens-plastic.svg")
-                  p.label Plastic Pens
+                    .item(data-value="category-1", data-text="Metal Pens")
+                      img.product(src="img/category/pens-metal.svg")
+                      p.label Metal Pens
 
-                .item(data-value="category-3", data-text="Multi Function Pens")
-                  img.product(src="img/category/pens-multi.svg")
-                  p.label Multi Function Pens
+                    .item(data-value="category-2", data-text="Plastic Pens")
+                      img.product(src="img/category/pens-plastic.svg")
+                      p.label Plastic Pens
 
-                .item(data-value="category-4", data-text="Pen Sets")
-                  img.product(src="img/category/pens-sets.svg")
-                  p.label Pen Sets
+                    .item(data-value="category-3", data-text="Multi Function Pens")
+                      img.product(src="img/category/pens-multi.svg")
+                      p.label Multi Function Pens
 
-                .item(data-value="category-5", data-text="Eco Friendly Gifts")
-                  img.product(src="img/category/eco.svg")
-                  p.label Eco Friendly Gifts
+                    .item(data-value="category-4", data-text="Pen Sets")
+                      img.product(src="img/category/pens-sets.svg")
+                      p.label Pen Sets
 
-                .item(data-value="category-6", data-text="Pencils")
-                  img.product(src="img/category/pencils.svg")
-                  p.label Pencils
+                    .item(data-value="category-5", data-text="Eco Friendly Gifts")
+                      img.product(src="img/category/eco.svg")
+                      p.label Eco Friendly Gifts
 
-                .item(data-value="category-7", data-text="Packaging")
-                  img.product(src="img/category/packaging.svg")
-                  p.label Packaging
+                    .item(data-value="category-6", data-text="Pencils")
+                      img.product(src="img/category/pencils.svg")
+                      p.label Pencils
 
-                .item(data-value="category-8", data-text="Key Holders")
-                  img.product(src="img/category/keyholders.svg")
-                  p.label Key Holders
+                    .item(data-value="category-7", data-text="Packaging")
+                      img.product(src="img/category/packaging.svg")
+                      p.label Packaging
 
-                .item(data-value="category-9", data-text="Multi Function Key Holders")
-                  img.product(src="img/category/keyholders-multi.svg")
-                  p.label Multi Function Key Holders
+                    .item(data-value="category-8", data-text="Key Holders")
+                      img.product(src="img/category/keyholders.svg")
+                      p.label Key Holders
 
-                .item(data-value="category-10", data-text="Bags")
-                  img.product(src="img/category/bags.svg")
-                  p.label Bags
+                    .item(data-value="category-9", data-text="Multi Function Key Holders")
+                      img.product(src="img/category/keyholders-multi.svg")
+                      p.label Multi Function Key Holders
 
-                .item(data-value="category-11", data-text="Drinkware")
-                  img.product(src="img/category/drinkware.svg")
-                  p.label Drinkware
+                    .item(data-value="category-10", data-text="Bags")
+                      img.product(src="img/category/bags.svg")
+                      p.label Bags
 
-                .item(data-value="category-12", data-text="Corporate Gift Sets")
-                  img.product(src="img/category/corporate.svg")
-                  p.label Corporate Gift Sets
+                    .item(data-value="category-11", data-text="Drinkware")
+                      img.product(src="img/category/drinkware.svg")
+                      p.label Drinkware
 
-                .item(data-value="category-13", data-text="Umbrellas")
-                  img.product(src="img/category/umbrella.svg")
-                  p.label Umbrellas
+                    .item(data-value="category-12", data-text="Corporate Gift Sets")
+                      img.product(src="img/category/corporate.svg")
+                      p.label Corporate Gift Sets
 
-                .item(data-value="category-14", data-text="Name Card Holders")
-                  img.product(src="img/category/namecard.svg")
-                  p.label Name Card Holders
+                    .item(data-value="category-13", data-text="Umbrellas")
+                      img.product(src="img/category/umbrella.svg")
+                      p.label Umbrellas
 
-                .item(data-value="category-15", data-text="Stationery Gifts")
-                  img.product(src="img/category/stationery.svg")
-                  p.label Stationery Gifts
+                    .item(data-value="category-14", data-text="Name Card Holders")
+                      img.product(src="img/category/namecard.svg")
+                      p.label Name Card Holders
 
-                .item(data-value="category-16", data-text="Daily Use Gift Items")
-                  img.product(src="img/category/daily-use.svg")
-                  p.label Daily Use Gift Items
+                    .item(data-value="category-15", data-text="Stationery Gifts")
+                      img.product(src="img/category/stationery.svg")
+                      p.label Stationery Gifts
 
-                .item(data-value="category-17", data-text="Metal Pens")
-                  img.product(src="img/category/travel.svg")
-                  p.label Travel Gifts
+                    .item(data-value="category-16", data-text="Daily Use Gift Items")
+                      img.product(src="img/category/daily-use.svg")
+                      p.label Daily Use Gift Items
 
-                .item(data-value="category-18", data-text="Metal Pens")
-                  img.product(src="img/category/usb.svg")
-                  p.label USB Flash Drives
+                    .item(data-value="category-17", data-text="Metal Pens")
+                      img.product(src="img/category/travel.svg")
+                      p.label Travel Gifts
 
-                .item(data-value="category-19", data-text="PU Leather")
-                  img.product(src="img/category/leather.svg")
-                  p.label PU Leather
+                    .item(data-value="category-18", data-text="Metal Pens")
+                      img.product(src="img/category/usb.svg")
+                      p.label USB Flash Drives
 
-                .item(data-value="category-20", data-text="Coin Banks &amp; Money Boxes")
-                  img.product(src="img/category/coinbanks.svg")
-                  p.label Coin Banks &amp; Money Boxes
+                    .item(data-value="category-19", data-text="PU Leather")
+                      img.product(src="img/category/leather.svg")
+                      p.label PU Leather
 
-                .item(data-value="category-21", data-text="Smartphone Gadgets")
-                  img.product(src="img/category/smartphone.svg")
-                  p.label Smartphone Gadgets
+                    .item(data-value="category-20", data-text="Coin Banks &amp; Money Boxes")
+                      img.product(src="img/category/coinbanks.svg")
+                      p.label Coin Banks &amp; Money Boxes
 
-                .item(data-value="category-22", data-text="Magnet Gifts")
-                  img.product(src="img/category/magnets.svg")
-                  p.label Magnet Gifts
+                    .item(data-value="category-21", data-text="Smartphone Gadgets")
+                      img.product(src="img/category/smartphone.svg")
+                      p.label Smartphone Gadgets
 
-                .item(data-value="category-23", data-text="Photo Frames")
-                  img.product(src="img/category/photo.svg")
-                  p.label Photo Frames
+                    .item(data-value="category-22", data-text="Magnet Gifts")
+                      img.product(src="img/category/magnets.svg")
+                      p.label Magnet Gifts
 
-                .item(data-value="category-24", data-text="Clocks &amp; Watches")
-                  img.product(src="img/category/clocks.svg")
-                  p.label Clocks &amp; Watches
+                    .item(data-value="category-23", data-text="Photo Frames")
+                      img.product(src="img/category/photo.svg")
+                      p.label Photo Frames
 
-                .item(data-value="category-25", data-text="Custom Made Gifts")
-                  img.product(src="img/category/custom.svg")
-                  p.label Custom Made Gifts
+                    .item(data-value="category-24", data-text="Clocks &amp; Watches")
+                      img.product(src="img/category/clocks.svg")
+                      p.label Clocks &amp; Watches
 
-                .item(data-value="category-26", data-text="Party Gifts &amp; Games")
-                  img.product(src="img/category/party.svg")
-                  p.label Party Gifts &amp; Games
+                    .item(data-value="category-25", data-text="Custom Made Gifts")
+                      img.product(src="img/category/custom.svg")
+                      p.label Custom Made Gifts
 
+                    .item(data-value="category-26", data-text="Party Gifts &amp; Games")
+                      img.product(src="img/category/party.svg")
+                      p.label Party Gifts &amp; Games
 
-            hr
-            label.input Colour
+                hr
 
+                label.input Colour
 
+                .inline.fields
+                  .field.radio
+                    .ui.radio.checkbox(id="colour-any")
+                      input(type="radio", name="colour", checked, required)
+                      label Any colour
+                  .field.radio
+                    .ui.radio.checkbox(id="colour-specify")
+                      input(type="radio", name="colour", required)
+                      label Specify colour
 
-            .inline.fields
-              .field.radio
-                .ui.radio.checkbox(id="colour-any")
-                  input(type="radio", name="colour", checked, required)
-                  label Any colour
-              .field.radio
-                .ui.radio.checkbox(id="colour-specify")
-                  input(type="radio", name="colour", required)
-                  label Specify colour
+                table.ui.celled.table.unstackable.swatch.search
+                  tr
+                    td.swatch.black.inactive Black
+                    td.swatch.white White
+                    td.swatch.grey Grey
+                  tr
+                    td.swatch.blue Blue
+                    td.swatch.lightBlue Light Blue
+                    td.swatch.red Red
+                  tr
+                    td.swatch.maroon Maroon
+                    td.swatch.green Green
+                    td.swatch.brightGreen
+                      | Bright
+                      br
+                      | Green
+                  tr
+                    td.swatch.yellow Yellow
+                    td.swatch.purple Purple
+                    td.swatch.pink Pink
+                  tr
+                    td.swatch.orange Orange
+                    td.swatch.turquoise Turquoise
+                    td.swatch.silver Silver
+                  tr
+                    td.swatch.gold Gold
+                    td.swatch.glow
+                      | Glow in
+                      br
+                      |the dark
+                    td.swatch.wood Wood
+                  tr
+                    td.swatch.beige Beige
 
-            //- hr
+                hr
 
-            table.ui.celled.table.unstackable.swatch.search
-              tr
-                td.swatch.black.inactive Black
-                td.swatch.white White
-                td.swatch.grey Grey
-              tr
-                td.swatch.blue Blue
-                td.swatch.lightBlue Light Blue
-                td.swatch.red Red
-              tr
-                td.swatch.maroon Maroon
-                td.swatch.green Green
-                td.swatch.brightGreen
-                  | Bright
-                  br
-                  | Green
-              tr
-                td.swatch.yellow Yellow
-                td.swatch.purple Purple
-                td.swatch.pink Pink
-              tr
-                td.swatch.orange Orange
-                td.swatch.turquoise Turquoise
-                td.swatch.silver Silver
-              tr
-                td.swatch.gold Gold
-                td.swatch.glow
-                  | Glow in
-                  br
-                  |the dark
-                td.swatch.wood Wood
-              tr
-                td.swatch.beige Beige
+                label.input Unit Quantity
 
-            hr
-            label.input Unit Quantity
+                .ui.large.input.as
+                  input(type="number", placeholder="Quantity")
+                .ui.large.buttons.increment
+                  button.ui.button &minus;
+                  .or
+                  button.ui.button &plus;
 
-            .ui.large.input.as
-              input(type="number", placeholder="Quantity")
-            .ui.large.buttons.increment
-              button.ui.button &minus;
-              .or
-              button.ui.button &plus;
+                hr
 
+                label.input Unit Price Range (MYR)
 
-            hr
-            label.input Unit Price Range (MYR)
+                .ui.large.input.as
+                  input(type="number", placeholder="From")
+                .ui.large.buttons.increment
+                  button.ui.button &minus;
+                  .or
+                  button.ui.button &plus;
 
-            .ui.large.input.as
-              input(type="number", placeholder="From")
-            .ui.large.buttons.increment
-              button.ui.button &minus;
-              .or
-              button.ui.button &plus;
+                .ui.large.input.as
+                  input(type="number", placeholder="To")
+                .ui.large.buttons.increment
+                  button.ui.button &minus;
+                  .or
+                  button.ui.button &plus;
 
-            .ui.large.input.as
-              input(type="number", placeholder="To")
-            .ui.large.buttons.increment
-              button.ui.button &minus;
-              .or
-              button.ui.button &plus;
-
-
-            hr
-            a(href="search-results.html").ui.large.cta.button Search now
+                hr
+                a(href="search-results.html").ui.large.cta.button Search now
 
         else
           .ui.info.message
             .header To use the Advanced Search feature, please sign in. If you don't have an account with Ideahouse, register now for a free account.
-            button.ui.toggle.button Sign in
-            button.ui.toggle.button Register
+            .ui.button Sign in
+            .ui.button Register
 
       include partials/_footer
       include partials/_scripts
