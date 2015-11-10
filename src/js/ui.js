@@ -5,6 +5,9 @@
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
 
+
+
+
     $('.ui.radio.checkbox').checkbox();
     $('.gate .ui.radio.checkbox').prop("checked", false);
     searchSwatch.hide();
@@ -55,7 +58,7 @@
     });
 
     // Table
-    $('table.sortable').tablesort();
+
 
     // Dry this out
     $('table.stock').hide();
@@ -107,6 +110,10 @@
     });
 
 
+
+
+
+
     $(window).scroll(function () {
       console.log($(window).scrollTop())
       if ($(window).scrollTop() > 99) {
@@ -117,6 +124,9 @@
       }
     });
 
+
+
+    $('table.sortable').tablesort();
 
 
   });

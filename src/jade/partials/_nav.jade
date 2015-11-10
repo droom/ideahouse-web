@@ -1,5 +1,6 @@
-.brand
+.brand(id="topbar")
   .wrap
+
     section.menu
       .ui.dropdown.burger
         .ui.icon.button
@@ -28,12 +29,15 @@
             a(href="gate-signin.html" aria-label="Sign out of Ideahouse").item
               i.sign.out.icon
               = "Sign out"
+
+        .ui.icon.top.right.pointing.dropdown.button
+          i.search.icon
+
     else
       section.profile
         a(href="gate-signin.html" aria-label="Sign in to Ideahouse").item.gate
           = "Sign in / up"
-        //- a(href="gate-register-1.html" aria-label="Register with Ideahouse").item.gate
-          = "Register"
+
 
     section.search
       .ui.fluid.search.quick(role="search")

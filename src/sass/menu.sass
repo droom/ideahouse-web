@@ -53,7 +53,6 @@
       font-size: 12px
       display: inline-block
       padding: 9px 12px
-      // margin-top: 3px
 
       &:hover
         background: $hover
@@ -61,10 +60,13 @@
     a.item.gate + a.item.gate
       margin-left: 5px
 
+    .ui.button + .ui.button
+      margin-left: 3px
+
     .ui.icon.top.right.pointing.dropdown.button
       background: none
-      border: 1px solid #666
-      color: #666
+      // border: 1px solid #666
+      // color: #666
 
       &:hover,
       &.active
@@ -102,9 +104,18 @@
   #nav_bar
     display: none
 
+  .col-main-right
+    margin-top: 56px
+
   .brand
-    height: 60px
-    background: $bg
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: rgba(255, 255, 255, 0.9)
+    z-index: 99
+    border-bottom: 1px solid $stroke
+    height: 55px
 
     section.menu
       width: calc(100%/3)
@@ -129,10 +140,7 @@
       padding: 9px 7px
 
     section.search
-      width: 100%
-      float: right
-      display: block
-      text-align: right
+      display: none
 
 
 @media (min-width: 601px)
