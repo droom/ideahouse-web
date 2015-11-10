@@ -7,7 +7,8 @@
   .item
     background: none
   .item.active
-    background: $active
+    color: $bg
+    background: $brand-blue
     font-weight: 400
 
 .ui.breadcrumb
@@ -21,9 +22,8 @@
   a
     border-bottom: 2px solid $copy
     &:hover
-      color: $copy
-      background: $active
-      border-bottom: 2px solid $copy
+      color: $brand-blue
+      border-bottom: 2px solid $brand-blue
 
 .ui.breadcrumb + .boundary
   margin-top: 24px
@@ -85,10 +85,17 @@
     display: inline-block
 
 
-.slick-slider
-  margin-bottom: 40px
-
-button.slick-next.slick-arrow,
-button.slick-prev.slick-arrow
-  display: none !important
+.slider.slider-nav
+  .slick-slide
+    border-radius: 3px
+    &.slick-current
+      background-color: $brand-blue
+    &:focus
+      outline: none
+    img
+      border-radius: 2px
+      cursor: pointer
+      padding: 3px
+      &:focus
+        outline: none
 

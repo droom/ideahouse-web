@@ -1,12 +1,7 @@
   $(document).ready(function() {
 
-    // Advanced Search
-
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
-
-
-
 
     $('.ui.radio.checkbox').checkbox();
     $('.gate .ui.radio.checkbox').prop("checked", false);
@@ -24,6 +19,8 @@
       $('table.swatch.search td.swatch').removeClass('selected');
       $(this).toggleClass('selected');
     });
+
+
 
     // Register
 
@@ -94,6 +91,37 @@
       dots: true
     });
 
+
+    // $('.product-thumbs').slick({
+    //   slidesToShow: 3,
+    //   slidesToScroll: 1,
+    //   asNavFor: '.product-carousel',
+    //   dots: true,
+    //   centerMode: true,
+    //   focusOnSelect: true
+    // });
+
+
+     $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: false,
+      asNavFor: '.slider-nav'
+    });
+
+    $('.slider-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true
+    });
+
+
+
+
     $('.label.bookmark i.red.heart.label.icon').on('click', function() {
       console.log("hello")
     });
@@ -108,9 +136,6 @@
       e.preventDefault();
       $(this).find('i.heart.icon').toggleClass('empty');
     });
-
-
-
 
 
 
