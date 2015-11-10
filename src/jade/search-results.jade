@@ -16,7 +16,17 @@ html(lang="en")
           .section Results (4)
 
         h3 Search results for $SEARCH_QUERY
-        P SORT BY $PRODUCT_NAME, $CODE, $PRICE
+
+        .ui.selection.dropdown.currency
+          .text SORT BY
+          i.dropdown.icon
+          .menu
+            .item $PRODUCT_NAME (default)
+            .item $CODE
+            .item $PRICE
+
+
+
 
         hr
         .tiles
