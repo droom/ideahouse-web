@@ -35045,6 +35045,9 @@ $.fn.visibility.settings = {
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
 
+
+
+
     $('.ui.radio.checkbox').checkbox();
     $('.gate .ui.radio.checkbox').prop("checked", false);
     searchSwatch.hide();
@@ -35095,7 +35098,7 @@ $.fn.visibility.settings = {
     });
 
     // Table
-    $('table.sortable').tablesort();
+
 
     // Dry this out
     $('table.stock').hide();
@@ -35147,6 +35150,10 @@ $.fn.visibility.settings = {
     });
 
 
+
+
+
+
     $(window).scroll(function () {
       console.log($(window).scrollTop())
       if ($(window).scrollTop() > 99) {
@@ -35157,6 +35164,9 @@ $.fn.visibility.settings = {
       }
     });
 
+
+
+    $('table.sortable').tablesort();
 
 
   });
