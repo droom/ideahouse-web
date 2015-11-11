@@ -88,36 +88,35 @@
 
     // Touch swipe
     $('.product-carousel').slick({
-      dots: true
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      lazyLoad: 'progressive',
+      arrows: true,
+      fade: false,
+      dots: true,
+      focusOnSelect: true,
+      nextArrow: '.slick-slide'
     });
 
 
-    // $('.product-thumbs').slick({
+
+    //  $('.slider-for').slick({
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   arrows: false,
+    //   fade: false,
+    //   asNavFor: '.slider-nav'
+    // });
+
+    // $('.slider-nav').slick({
     //   slidesToShow: 3,
     //   slidesToScroll: 1,
-    //   asNavFor: '.product-carousel',
+    //   asNavFor: '.slider-for',
     //   dots: true,
     //   centerMode: true,
     //   focusOnSelect: true
     // });
-
-
-     $('.slider-for').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: false,
-      asNavFor: '.slider-nav'
-    });
-
-    $('.slider-nav').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      asNavFor: '.slider-for',
-      dots: true,
-      centerMode: true,
-      focusOnSelect: true
-    });
 
 
 
