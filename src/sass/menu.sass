@@ -13,7 +13,6 @@
       margin: 5px 0
       background: none
   .item
-
     &:hover
       background: $active
     &.download
@@ -23,15 +22,13 @@
 
 .brand
   background: white
-  display: block
-
   section.menu
     .ui.dropdown.burger
       border-radius: 3px
 
       &:hover,
       &.active
-        background: $hover
+        background: $active
 
       .ui.icon.button
         background: none
@@ -46,7 +43,6 @@
           margin: 0
 
   section.profile
-
     a.item.gate
       color: $copy
       border: 1px solid #666
@@ -58,21 +54,18 @@
       &:hover
         background: $hover
 
+
     a.item.gate + a.item.gate
       margin-left: 5px
-
     .ui.button + .ui.button
       margin-left: 3px
-
     .ui.icon.top.right.pointing.dropdown.button
       background: none
       border: 1px solid #666
       color: #666
-
       &:hover,
       &.active
-        background: $hover
-
+        background: $active
       .menu
         margin: 4px 0 0 0
         .item
@@ -93,7 +86,8 @@
           padding: 9px 10px
 
 
-// Mobile
+// // Mobile
+
 @media (max-width: 600px)
   .ui.search.quick
     .ui.icon.input
@@ -106,50 +100,32 @@
     display: none
 
   .brand
-    background: white
-
-    // position: fixed
-    // top: 0
-    // left: 0
-    // width: 100%
-    // background: rgba(255, 255, 255, 0.9)
-    // z-index: 99
-    // border-bottom: 1px solid $stroke
-    // height: 55px
-
     section.menu
       width: calc(100%/3)
-      float: left
       text-align: left
-      display: block
-      padding: 9px
-
+      display: inline-block
+      vertical-align: top
+      padding: 6px 10px
     section.logo
       width: calc(100%/3)
-      float: left
       text-align: center
-      padding: 10px 0 0 0
+      display: inline-block
+      vertical-align: middle
+      padding: 4px 6px
       img
-        width: 50px
-
+        width: 48px
     section.profile
       width: calc(100%/3)
-      float: right
       text-align: right
-      clear: none
-      padding: 9px 7px
-
-    // section.search
-      // display: none
+      display: inline-block
+      vertical-align: top
+      padding: 6px 10px
 
 @media (min-width: 601px)
-
   .brand
     height: 100px
-
     section.menu
       display: none
-
     section.logo
       float: left
       width: 30%
@@ -157,13 +133,11 @@
       padding: 22px 0 0 18px
       img
         width: 70px
-
     section.profile
       float: right
       text-align: right
       width: 22%
       padding: 30px 15px 15px 0
-
     section.search
       float: left
       width: 48%
