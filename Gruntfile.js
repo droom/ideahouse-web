@@ -42,7 +42,7 @@ module.exports = function(grunt) {
               'src/lib/jquery.tablesort.js',
               'src/lib/jquery.dotdotdot.js',
               'src/lib/semantic.js',
-              'src/js/ui.js'
+              'src/js/*.js'
               ],
         dest: 'src/js/main.js',
       },
