@@ -86,8 +86,16 @@ body
 
       &.bookmark
         transition: all 300ms ease
+        .remove-bookmark
 
-        &.removed
+          &:hover
+            background: #ECECEC
+
+            &:after
+              content: "Remove item"
+              font-size: 11px
+              float: right
+              color: #999
 
         .ui.icon.button.remove-bookmark
           background: none

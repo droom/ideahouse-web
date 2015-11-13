@@ -13,14 +13,14 @@ html(lang="en")
         .ui.huge.breadcrumb
           .section Liked items
 
-        .ui.info.message
-          i.close.icon
-          .header You removed $PRODUCT_NAME from your liked items.
-          .ui.button Undo
+        //- .ui.info.message
+        //-   i.close.icon
+        //-   .header You removed $PRODUCT_NAME from your liked items.
+        //-   .ui.button Undo
 
 
         .tiles
-          .ui.card.bookmark
+          .ui.card.bookmark.animated
             .ui.icon.button.remove-bookmark
               i.red.heart.icon
             a(href="product.html")
@@ -31,7 +31,7 @@ html(lang="en")
               .extra.content
                 small UM02
 
-          .ui.card.bookmark
+          .ui.card.bookmark.animated
             .ui.icon.button.remove-bookmark
               i.red.heart.icon
             a(href="product.html")
@@ -42,7 +42,7 @@ html(lang="en")
               .extra.content
                 small 005
 
-          .ui.card.bookmark
+          .ui.card.bookmark.animated
             .ui.icon.button.remove-bookmark
               i.red.heart.icon
             a(href="product.html")
@@ -52,6 +52,34 @@ html(lang="en")
                 .description Cambridge - Push Action Ball Plastic Pen (Black Ink)
               .extra.content
                 small 1910
+
+          .ui.card.bookmark.animated
+            .ui.icon.button.remove-bookmark
+              i.red.heart.icon
+            a(href="product.html")
+              .image
+                img.product(alt="" src="img/product/005.jpg")
+              .content
+                .description Push Action Ball
+              .extra.content
+                small 005
+
+          .ui.card.bookmark.animated
+            .ui.icon.button.remove-bookmark
+              i.red.heart.icon
+            a(href="product.html")
+              .image
+                img.product(alt="" src="img/product/1910.jpg")
+              .content
+                .description Cambridge - Push Action Ball Plastic Pen (Black Ink)
+              .extra.content
+                small 1910
+
+      .notify
+        .ui.info.message
+          .header You removed $PRODUCT_NAME from your liked items.
+          .ui.tiny.button Undo
+
 
 
       include partials/_footer
