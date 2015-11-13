@@ -3,6 +3,7 @@
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
 
+
     $('.ui.radio.checkbox').checkbox();
     $('.gate .ui.radio.checkbox').prop("checked", false);
     searchSwatch.hide();
@@ -54,7 +55,6 @@
       .removeClass('active');
     });
 
-    // Table
 
 
     // Dry this out
@@ -104,7 +104,9 @@
       console.log("hello")
     });
 
-    $('#toggle-bookmark').click(function(e){
+
+
+    $('#bookmark-toggle').click(function(e){
       e.preventDefault();
       $(this).find('i.heart.icon').toggleClass('empty');
     });
@@ -113,6 +115,8 @@
       e.preventDefault();
       $(this).find('i.heart.icon').toggleClass('empty');
     });
+
+
 
 
     $(window).scroll(function () {
@@ -124,7 +128,6 @@
         $('#nav_bar').removeClass('navbar-fixed');
       }
     });
-
 
     // smooth scrolling
     $(function() {
@@ -143,8 +146,12 @@
     });
 
 
-
     $('table.sortable').tablesort();
 
+    // $('.ui.icon.button.remove-bookmark').click(function(e){
+    //   var tileRemoved = $(this).parent()
+    //   tileRemoved.addClass('bounceOutDown')
+    //   setTimeout(function() { tileRemoved.remove(); }, 1600);
+    // });
 
   });

@@ -33,15 +33,10 @@ html(lang="en")
 
         .boundary.no-select
           .product-actions
-            .ui.icon.button.bookmark.cta(id="toggle-bookmark")
+            .ui.icon.button.bookmark.cta(id="bookmark-toggle")
               i.empty.white.heart.icon
             .ui.icon.button.download.cta
               i.cloud.download.icon
-            //- .ui.tiny.button Item added to your likes
-            //- .notify
-              //- .ui.tiny.button Item added to your likes
-              //- .ui.labeled.icon.tiny.button.basic Removed from your liked items.
-              //-   i.asterisk.loading.icon
 
 
           .product-carousel.tooltip(title="Click for the next image in this set.")
@@ -324,6 +319,10 @@ html(lang="en")
               .header To view this item's prices, please sign in. If you don't have an account with Ideahouse, register now for a free account.
               .ui.button Sign in
               .ui.button Register
+
+      .notify
+        .ui.info.message
+          .header Item added to your likes
 
 
       include partials/_footer

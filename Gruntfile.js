@@ -42,15 +42,15 @@ module.exports = function(grunt) {
               'src/lib/jquery.tablesort.js',
               'src/lib/jquery.dotdotdot.js',
               'src/lib/semantic.js',
-              'src/js/ui.js'
+              'src/js/ih.js'
               ],
-        dest: 'src/js/main.js',
+        dest: 'dist/js/main.js',
       },
     },
 
     uglify: {
       build: {
-        src: 'src/js/main.js',
+        src: 'dist/js/main.js',
         dest:'dist/js/main.min.js'
       }
     },
@@ -88,7 +88,6 @@ module.exports = function(grunt) {
           }
         }
       },
-
 
     jade: {
       compile: {

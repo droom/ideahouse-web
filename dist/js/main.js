@@ -35043,6 +35043,7 @@ $.fn.visibility.settings = {
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
 
+
     $('.ui.radio.checkbox').checkbox();
     $('.gate .ui.radio.checkbox').prop("checked", false);
     searchSwatch.hide();
@@ -35094,7 +35095,6 @@ $.fn.visibility.settings = {
       .removeClass('active');
     });
 
-    // Table
 
 
     // Dry this out
@@ -35144,7 +35144,9 @@ $.fn.visibility.settings = {
       console.log("hello")
     });
 
-    $('#toggle-bookmark').click(function(e){
+
+
+    $('#bookmark-toggle').click(function(e){
       e.preventDefault();
       $(this).find('i.heart.icon').toggleClass('empty');
     });
@@ -35153,6 +35155,8 @@ $.fn.visibility.settings = {
       e.preventDefault();
       $(this).find('i.heart.icon').toggleClass('empty');
     });
+
+
 
 
     $(window).scroll(function () {
@@ -35164,7 +35168,6 @@ $.fn.visibility.settings = {
         $('#nav_bar').removeClass('navbar-fixed');
       }
     });
-
 
     // smooth scrolling
     $(function() {
@@ -35183,8 +35186,12 @@ $.fn.visibility.settings = {
     });
 
 
-
     $('table.sortable').tablesort();
 
+    // $('.ui.icon.button.remove-bookmark').click(function(e){
+    //   var tileRemoved = $(this).parent()
+    //   tileRemoved.addClass('bounceOutDown')
+    //   setTimeout(function() { tileRemoved.remove(); }, 1600);
+    // });
 
   });
