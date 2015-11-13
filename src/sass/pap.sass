@@ -1,0 +1,85 @@
+.cost
+  font-size: 14px
+  text-align: center
+  .to
+    display: block
+
+i.icon.mail:before
+  content: "\f0e0"
+  padding: 0 8px 0 0
+
+p.terms
+  font-size: 10px
+  text-align: left
+
+
+
+ul.split
+  margin: none
+  padding: 0
+
+  -moz-column-count: 3
+  -moz-column-gap: 20px
+  -webkit-column-count: 3
+  -webkit-column-gap: 20px
+
+  li
+    list-style: none
+
+.pap-col
+  position: relative
+  width: 20%
+  background: lightblue
+  display: inline-block
+  margin-top: 40px
+
+  &.pap-col-1
+    background: #5dbfec
+    &::before
+      background: #5dbfec
+  &.pap-col-2
+    background: #94c120
+    &::before
+      background: #94c120
+  &.pap-col-3
+    background: #383a60
+    &::before
+      background: #383a60
+  &.pap-col-4
+    background: #c72652
+    &::before
+      background: #c72652
+  &.pap-col-5
+    background: #31a7b3
+    &::before
+      background: #31a7b3
+
+  .inner
+    font-size: 11px
+    padding: 10px
+    margin-top: 0
+    color: $bg
+    text-align: center
+
+    .head
+      min-height: 70px
+      margin-top: 2px
+
+      h5
+        margin-top: -37px
+        color: black
+        font-size: 16px
+      img
+        padding: 0 12px
+
+
+.pap-col:before
+  content: ''
+  position: absolute
+  left: 0
+  top: -15px
+  width: 100%
+  height: 26px
+  transform: skewY(-5deg)
+  -webkit-backface-visibility: hidden
+
