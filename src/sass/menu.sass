@@ -22,59 +22,58 @@
 
 .brand
   background: white
-  section.menu
-    .ui.dropdown.burger
-      border-radius: 3px
+  .controls
+    section.menu
+      .ui.dropdown.burger
+        border-radius: 3px
+        &:hover,
+        &.active
+          background: $active
+        .ui.icon.button
+          background: none
+          border: 1px solid #666
+          color: #666
+        .menu
+          margin: 4px 0 0 0
+          .item
+            padding: 8px 15px 8px 7px !important
+            line-height: 17px
+          hr
+            margin: 0
 
-      &:hover,
-      &.active
-        background: $active
+    section.profile
+      a.item.gate
+        color: $copy
+        border: 1px solid #666
+        border-radius: 3px
+        font-size: 12px
+        display: inline-block
+        padding: 9px 12px
 
-      .ui.icon.button
+        &:hover
+          background: $hover
+
+
+      a.item.gate + a.item.gate
+        margin-left: 5px
+      .ui.button + .ui.button
+        margin-left: 3px
+      .ui.icon.top.right.pointing.dropdown.button
         background: none
         border: 1px solid #666
         color: #666
-      .menu
-        margin: 4px 0 0 0
-        .item
-          padding: 8px 15px 8px 7px !important
-          line-height: 17px
-        hr
-          margin: 0
-
-  section.profile
-    a.item.gate
-      color: $copy
-      border: 1px solid #666
-      border-radius: 3px
-      font-size: 12px
-      display: inline-block
-      padding: 9px 12px
-
-      &:hover
-        background: $hover
-
-
-    a.item.gate + a.item.gate
-      margin-left: 5px
-    .ui.button + .ui.button
-      margin-left: 3px
-    .ui.icon.top.right.pointing.dropdown.button
-      background: none
-      border: 1px solid #666
-      color: #666
-      &:hover,
-      &.active
-        background: $active
-      .menu
-        margin: 4px 0 0 0
-        .item
-          padding: 8px 15px 8px 7px !important
-          line-height: 17px
-        hr
-          margin: 0
-      .menu:after
-        display: none
+        &:hover,
+        &.active
+          background: $active
+        .menu
+          margin: 4px 0 0 0
+          .item
+            padding: 8px 15px 8px 7px !important
+            line-height: 17px
+          hr
+            margin: 0
+        .menu:after
+          display: none
 
   section.search
     .ui.search.quick
@@ -100,44 +99,66 @@
     display: none
 
   .brand
-    section.menu
-      width: calc(100%/3)
-      text-align: left
-      display: inline-block
-      vertical-align: top
-      padding: 6px 10px
-    section.logo
-      width: calc(100%/3)
-      text-align: center
-      display: inline-block
-      vertical-align: bottom
-      padding: 3px 6px
-      img
-        width: 48px
-    section.profile
-      width: calc(100%/3)
-      text-align: right
-      display: inline-block
-      vertical-align: top
-      padding: 6px 10px
+    .controls
+      position: fixed !important
+      background: white
+      border-bottom: 1px solid $stroke
+      width: 100%
+      top: 0
+      left: 0
+      z-index: 999999 !important
+      height: 52px
+
+      section.menu
+        width: calc(100%/3)
+        text-align: left
+        display: inline-block
+        vertical-align: top
+        padding: 7px 8px
+      section.logo
+        width: calc(100%/3)
+        text-align: center
+        display: inline-block
+        vertical-align: bottom
+        padding: 3px 6px
+        img
+          width: 48px
+      section.profile
+        width: calc(100%/3)
+        text-align: right
+        display: inline-block
+        vertical-align: top
+        padding: 7px 8px
+
+    section.search
+      margin-top: 52px
+      input.prompt
+        border-top: 0
+        &:active,
+        &:hover,
+        &:focus
+          border-bottom: 1px solid $stroke
 
 @media (min-width: 601px)
   .brand
     height: 100px
-    section.menu
-      display: none
-    section.logo
-      float: left
-      width: 30%
-      height: 80px
-      padding: 22px 0 0 18px
-      img
-        width: 70px
-    section.profile
-      float: right
-      text-align: right
-      width: 22%
-      padding: 30px 15px 15px 0
+
+    .controls
+      section.menu
+        display: none
+      section.logo
+        float: left
+        width: 30%
+        height: 80px
+        padding: 22px 0 0 18px
+        img
+          width: 70px
+      section.profile
+        float: right
+        text-align: right
+        width: 22%
+        padding: 30px 15px 15px 0
+
     section.search
       float: left
       width: 48%

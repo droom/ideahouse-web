@@ -13,15 +13,15 @@ html(lang="en")
         .ui.huge.breadcrumb
           .section $FIRST_NAME's Profile
 
-        .ui.info.message
-          i.close.icon
-          .header Your details have been updated.
-        .ui.info.message
-          i.close.icon
-          .header Your password has been updated.
-        .ui.info.message
-          i.close.icon
-          .header Your notices have been updated.
+        //- .ui.info.message
+        //-   i.close.icon
+        //-   .header Your details have been updated.
+        //- .ui.info.message
+        //-   i.close.icon
+        //-   .header Your password has been updated.
+        //- .ui.info.message
+        //-   i.close.icon
+        //-   .header Your notices have been updated.
 
         .ui.top.attached.tabular.menu
           a.item.active(data-tab='first') My Details
@@ -860,7 +860,7 @@ html(lang="en")
 
             hr
 
-            a(href="gate-register-1.html" aria-label="Update Profile").ui.submit.large.cta.button Update Details
+            a(href="#" aria-label="Update Profile" id="profile-details").ui.submit.large.cta.button Update Details
             .ui.error.message
         .ui.bottom.attached.tab.segment(data-tab='second')
           form.ui.form
@@ -878,7 +878,7 @@ html(lang="en")
 
             hr
 
-            a(href="gate-register-1.html" aria-label="Update Password").ui.submit.large.cta.button Update Password
+            a(href="#" aria-label="Update Password" id="profile-password").ui.submit.large.cta.button Update Password
 
             .ui.error.message
         .ui.bottom.attached.tab.segment(data-tab='third')
@@ -894,7 +894,7 @@ html(lang="en")
                   label Whatsapp
 
             hr
-            a(href="gate-register-1.html" aria-label="Update Notices").ui.submit.large.cta.button Update Notices
+            a(href="#" aria-label="Update Notices" id="profile-notices").ui.submit.large.cta.button Update Notices
             .ui.error.message
 
       include partials/_footer

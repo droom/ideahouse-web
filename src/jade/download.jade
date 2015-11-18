@@ -7,20 +7,19 @@ html(lang="en")
   include partials/_head
   body(class = page)
     include partials/_nav
-    .wrap
+    .wrap.main
       include partials/_col-main-left
       .col-main-right(role="main")
         .ui.huge.breadcrumb
           .section Download 2015 Price List / Catalogue
 
         .content
-
           h3
             = "Ideahouse 2015 Agent Price List (PDF)"
           hr
 
           if authorised
-            .ui.cta.button
+            .ui.cta.tiny.button
               i.icon.download
               = "Download full price list"
 
@@ -34,28 +33,21 @@ html(lang="en")
           h3
             = "Ideahouse 2015 print catalogue (PDF)"
           hr
-          .ui.cta.button
+          .ui.cta.tiny.button
             i.icon.download
             = "Download full Catalogue"
+
+          .ui.tiny.button.basic Download Catalogue Index
 
           table.ui.very.basic.unstackable.celled.table.download
             tbody
               tr
                 td
                   h4.ui.image.header
-                    i.list.layout.icon
-                    = "Catalogue Index"
-                td
-                  .ui.basic.button
-                    i.icon.download
-                    = "Download section"
-              tr
-                td
-                  h4.ui.image.header
                     img.ui.mini.rounded.image(src="img/category/pens-metal.svg")
                     = "Metal Pens"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -64,7 +56,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/pens-plastic.svg")
                     = "Plastic Pens"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
 
@@ -74,7 +66,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/pens-multi.svg")
                     = "Multi Function Pens"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
 
@@ -84,7 +76,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/pens-sets.svg")
                     = "Pen Sets"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -93,7 +85,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/eco.svg")
                     = "Eco Friendly Gifts"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -102,7 +94,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/pencils.svg")
                     = "Pencils"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -111,7 +103,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/packaging.svg")
                     = "Packaging"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -120,7 +112,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/keyholders.svg")
                     = "Key Holders"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -129,7 +121,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/keyholders-multi.svg")
                     = "Multi Function Key Holders"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -138,7 +130,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/bags.svg")
                     = "Bags"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -147,7 +139,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/drinkware.svg")
                     = "Drinkware"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -156,7 +148,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/corporate.svg")
                     = "Corporate Gift Sets"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
 
@@ -166,7 +158,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/umbrella.svg")
                     = "Umbrellas"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -175,7 +167,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/namecard.svg")
                     = "Name Card Holders"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
 
@@ -185,7 +177,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/stationery.svg")
                     = "Stationery Gifts"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -194,7 +186,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/daily-use.svg")
                     = "Daily Use Gift Items"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -203,7 +195,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/travel.svg")
                     = "Travel Gifts"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -212,7 +204,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/usb.svg")
                     = "USB Flash Drives"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
 
@@ -222,34 +214,52 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/leather.svg")
                     = "PU Leather"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
+
+
+              tr
+                td
+                  h4.ui.image.header
+                    img.ui.mini.rounded.image(src="img/category/smartphone-gadgets.svg")
+                    = "Smartphone Gadgets"
+                td
+                  .ui.basic.tiny.button
+                    i.icon.download
+                    = "Download section"
+
+              tr
+                td
+                  h4.ui.image.header
+                    img.ui.mini.rounded.image(src="img/category/smartphone-powerbanks.svg")
+                    = "Smartphone Powerbanks"
+                td
+                  .ui.basic.tiny.button
+                    i.icon.download
+                    = "Download section"
+
               tr
                 td
                   h4.ui.image.header
                     img.ui.mini.rounded.image(src="img/category/coinbanks.svg")
                     = "Coin Banks & Money Boxes"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
-              tr
-                td
-                  h4.ui.image.header
-                    img.ui.mini.rounded.image(src="img/category/smartphone.svg")
-                    = "Smartphone Gadgets"
-                td
-                  .ui.basic.button
-                    i.icon.download
-                    = "Download section"
+
+
+
+
+
               tr
                 td
                   h4.ui.image.header
                     img.ui.mini.rounded.image(src="img/category/magnets.svg")
                     = "Magnet Gifts"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -258,7 +268,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/photo.svg")
                     = "Photo Frames"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -267,7 +277,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/clocks.svg")
                     = "Clocks & Watches"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -276,7 +286,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/custom.svg")
                     = "Custom Made Gifts"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
               tr
@@ -285,7 +295,7 @@ html(lang="en")
                     img.ui.mini.rounded.image(src="img/category/party.svg")
                     = "Party Gifts & Games"
                 td
-                  .ui.basic.button
+                  .ui.basic.tiny.button
                     i.icon.download
                     = "Download section"
 

@@ -1,0 +1,78 @@
+- var authorised = true
+- var page = 'imprint'
+
+doctype html
+html(lang="en")
+  title = "$PAGE_TITLE"
+  include partials/_head
+  body(class = page)
+    include partials/_nav
+    .wrap
+      include partials/_col-main-left
+      .col-main-right(role="main")
+        .ui.huge.breadcrumb
+          .section Imprinting Guide
+
+        .ui.styled.accordion
+          .title
+            i.dropdown.icon
+            = "Pad Printing"
+          .content
+            img(src="img/editorial/imprint-0.gif").imprint.ui.rounded.image.half.transition.hidden
+            img(src="img/editorial/imprint-1.jpg").imprint.ui.rounded.image.half.transition.hidden
+            p.transition.hidden Pad printing is the process used to transfer ink from an etched printing plate onto any kind of surface using a silicone rubber pad. The main advantage of this method of printing is it has the ability to print on any kind of irregular surface. A block charge is applicable to produce the etched printing plate. GIF: http://www.epsvt.com/support/generalIssue.cfm?issID=15
+
+          .title
+            i.dropdown.icon
+            = "Silkscreen Printing"
+          .content
+            img(src="img/editorial/imprint-2.png").imprint.ui.rounded.image.half.transition.hidden
+            img(src="img/editorial/imprint-3.jpg").imprint.ui.rounded.image.half.transition.hidden
+            p.transition.hidden Silkscreen printing uses a fine mesh stretched tightly onto a frame. A negative design is created on the screen and ink is pushed through with a squeegee, making direct contact on the object.
+            p.transition.hidden A block charge is applicable to create the silkscreen.
+
+          .title
+            i.dropdown.icon
+            = "Roller Printing"
+          .content
+            img(src="img/editorial/imprint-4.jpg").imprint.ui.rounded.image.transition.hidden
+            p.transition.hidden A slight variation on silkscreen printing. However, a special attachment is used to roll the print onto curved/rounded surfaces.
+            p.transition.hidden A block charge is applicable to create the silkscreen.
+
+          .title
+            i.dropdown.icon
+            = "UV Printing"
+          .content
+            img(src="img/editorial/imprint-5.jpg").imprint.ui.rounded.image.transition.hidden
+            p.transition.hidden Ultraviolet (UV) printing is the process of using UV inks instead of traditional inks. While traditional inks are solvent based and dried via evaporation, UV inks are cured with UV light.
+            p.transition.hidden No block charge applicable.
+
+          .title
+            i.dropdown.icon
+            = "Heat Transfer Printing"
+          .content
+            img(src="img/editorial/imprint-6.jpg").imprint.ui.rounded.image.transition.hidden
+            p.transition.hidden Heat-transfer printing uses heat to transfer pre-printed images on a wax based ink ribbon to an object.
+            p.transition.hidden No block charge applicable for this type of printing.
+
+          .title
+            i.dropdown.icon
+            = "Laser Engraving"
+          .content
+            img(src="img/editorial/imprint-7.jpg").imprint.ui.rounded.image.transition.hidden
+            p.transition.hidden A focused laser beam is directed at a material, which then either melts, burns, vaporizes away, leaving an edge with a high-quality surface finish. The final finish look will be dependent on the base material of the object.
+            p.transition.hidden Enjoy special prices for laser engraving services at Ideahouse.
+            p.transition.hidden No block charge applicable for this type of printing.
+
+          .title
+            i.dropdown.icon
+            = "Debossing / Embossing"
+          .content
+            img(src="img/editorial/imprint-8.jpg").imprint.ui.rounded.image.transition.hidden
+            p.transition.hidden Debossing is a process of creating an indentation on a surface with a metal plate. Resulting in a depressed impression. Embossing is the reverse of it, creating a raised impression.
+            p.transition.hidden A block charge is applicable for this type of printing.
+
+
+
+      include partials/_footer
+      include partials/_scripts

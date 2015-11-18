@@ -13,7 +13,6 @@ p.terms
   text-align: left
 
 
-
 ul.split
   margin: none
   padding: 0
@@ -26,16 +25,44 @@ ul.split
   li
     list-style: none
 
+img.pap
+  width: 100%
+
+
+table.dispatch
+  margin-bottom: 10px
+  th, td
+    border: 1px solid $grey-border
+    font-size: 11px
+    line-height: 15px
+  th
+    background: lighten($grey-border, 10%)
+    padding: 5px 4px
+  td
+    padding: 4px
+    vertical-align: top
+  tbody
+    tr:nth-child(even)
+      background: white
+
+    td
+      text-align: right
+      width: calc(100%/8)
+    td:first-child
+      font-weight: bold
+      text-align: left
+
 .pap-col
   position: relative
-  width: 20%
+  width: 100%
   background: lightblue
   display: inline-block
   margin-top: 40px
 
   &.pap-col-1
     background: #5dbfec
-    &::before
+    &::before,
+    &::after
       background: #5dbfec
   &.pap-col-2
     background: #94c120
@@ -59,7 +86,7 @@ ul.split
     padding: 10px
     margin-top: 0
     color: $bg
-    text-align: center
+    text-align: left
 
     .head
       min-height: 70px
@@ -72,6 +99,15 @@ ul.split
       img
         padding: 0 12px
 
+.pap-col:after
+  content: ''
+  position: absolute
+  left: 0
+  bottom: -15px
+  width: 100%
+  height: 26px
+  transform: skewY(-2deg)
+  -webkit-backface-visibility: hidden
 
 .pap-col:before
   content: ''
@@ -80,6 +116,7 @@ ul.split
   top: -15px
   width: 100%
   height: 26px
-  transform: skewY(-5deg)
+  transform: skewY(-2deg)
   -webkit-backface-visibility: hidden
+
 
