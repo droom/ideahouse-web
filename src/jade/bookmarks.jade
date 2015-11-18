@@ -13,15 +13,12 @@ html(lang="en")
         .ui.huge.breadcrumb
           .section Liked items
 
-        //- .ui.info.message
-        //-   i.close.icon
-        //-   .header You removed $PRODUCT_NAME from your liked items.
-        //-   .ui.button Undo
+        .ui.info.message(id="bookmark-msg")
+          .header Your liked items will appear here. Click the heart next to each product to add items.
 
-
-        .tiles
+        .tiles(id="bookmark-tiles")
           .ui.card.bookmark.animated
-            .ui.icon.button.remove-bookmark
+            .ui.icon.button.remove
               i.red.heart.icon
             a(href="product.html")
               .image
@@ -32,7 +29,7 @@ html(lang="en")
                 small UM02
 
           .ui.card.bookmark.animated
-            .ui.icon.button.remove-bookmark
+            .ui.icon.button.remove
               i.red.heart.icon
             a(href="product.html")
               .image
@@ -43,7 +40,7 @@ html(lang="en")
                 small 005
 
           .ui.card.bookmark.animated
-            .ui.icon.button.remove-bookmark
+            .ui.icon.button.remove
               i.red.heart.icon
             a(href="product.html")
               .image
@@ -54,7 +51,7 @@ html(lang="en")
                 small 1910
 
           .ui.card.bookmark.animated
-            .ui.icon.button.remove-bookmark
+            .ui.icon.button.remove
               i.red.heart.icon
             a(href="product.html")
               .image
@@ -65,7 +62,7 @@ html(lang="en")
                 small 005
 
           .ui.card.bookmark.animated
-            .ui.icon.button.remove-bookmark
+            .ui.icon.button.remove
               i.red.heart.icon
             a(href="product.html")
               .image

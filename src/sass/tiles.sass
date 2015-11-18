@@ -33,6 +33,7 @@ body
       &:hover
         transform: none
         border: 1px solid #ccc
+        z-index: 2 !important
 
       .image
         background: none
@@ -87,23 +88,19 @@ body
 
       &.bookmark
         transition: all 300ms ease
-        .remove-bookmark
-
-          &:hover
-            background: #ECECEC
-
-            &:after
-              content: "Remove item"
-              font-size: 11px
-              float: right
-              color: #999
-
-        .ui.icon.button.remove-bookmark
+        .remove
           background: none
           text-align: left
           border-bottom: 1px solid rgba(34,36,38,0.1)
           font-size: 16px
           padding: 7px 7px
+
+          &:hover
+            &:after
+              content: "Remove item"
+              font-size: 11px
+              float: right
+              color: #999
 
         .image
           background: none

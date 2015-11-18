@@ -5,6 +5,12 @@
 
 
     $('.ui.radio.checkbox').checkbox();
+    $('.ui.accordion').accordion(
+    {
+      exclusive : false
+    }
+    );
+
     $('.gate .ui.radio.checkbox').prop("checked", false);
     searchSwatch.hide();
 
@@ -20,6 +26,9 @@
       $('table.swatch.search td.swatch').removeClass('selected');
       $(this).toggleClass('selected');
     });
+
+
+
 
 
 
@@ -100,58 +109,116 @@
     });
 
 
-    $('.label.bookmark i.red.heart.label.icon').on('click', function() {
-      console.log("hello")
-    });
 
+  $('table.sortable').tablesort();
 
+  $(window).scroll(function () {
 
-    $('#bookmark-toggle').click(function(e){
-      e.preventDefault();
-      $(this).find('i.heart.icon').toggleClass('empty');
-    });
+    if ($(window).scrollTop() > 99) {
+      $('#nav_bar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < 100) {
+      $('#nav_bar').removeClass('navbar-fixed');
+    }
+  });
 
-    $('.remove-bookmark').click(function(e){
-      e.preventDefault();
-      $(this).find('i.heart.icon').toggleClass('empty');
-    });
-
-
-
-
-    $(window).scroll(function () {
-
-      if ($(window).scrollTop() > 99) {
-        $('#nav_bar').addClass('navbar-fixed');
-      }
-      if ($(window).scrollTop() < 100) {
-        $('#nav_bar').removeClass('navbar-fixed');
-      }
-    });
-
-    // smooth scrolling
-    $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 300);
-            return false;
-          }
+  // smooth scrolling
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 300);
+          return false;
         }
-      });
+      }
     });
+  });
 
 
-    $('table.sortable').tablesort();
 
-    // $('.ui.icon.button.remove-bookmark').click(function(e){
-    //   var tileRemoved = $(this).parent()
-    //   tileRemoved.addClass('bounceOutDown')
-    //   setTimeout(function() { tileRemoved.remove(); }, 1600);
-    // });
+
+  var bookmarkAdded = false;
+
+  $('#bookmark-toggle').click(function(e){
+
+    productTitle = $('#product-title').text();
+
+    e.preventDefault();
+    if (!bookmarkAdded){
+      $.notify(productTitle+" added to your likes." , "success");
+    } else {
+      $.notify(productTitle+" removed from your likes.", "success");
+    }
+    $(this).find('i.heart.icon').toggleClass('empty');
+    bookmarkAdded = !bookmarkAdded;
+  });
+
+
+
+
+
+
+  $('.ui.icon.button.remove').click(function(e){
+    var tileRemoved = $(this).parent()
+    var tileDesc =  $(tileRemoved).find('.description').text();
+
+    $(this).find('i').addClass('empty');
+
+    tileRemoved.addClass('rotateOutDownRight')
+    setTimeout(function() {
+
+      tileRemoved.remove();
+      checkBookmarkTiles();
+
+    }, 800);
+
+    $.notify(tileDesc+" removed from your likes.", "success");
 
   });
+
+
+  function checkBookmarkTiles(){
+
+    if ($('#bookmark-tiles').is(':empty')){
+      console.log("empty");
+      $('#bookmark-msg').show();
+
+    } else {
+      console.log("not empty");
+      $('#bookmark-msg').hide();
+    }
+  }
+
+
+  if ($('body.bookmarks').length > 0)
+  {
+    checkBookmarkTiles();
+  }
+
+
+
+  $('#change-currency .item').click(function(e){
+    $.notify("Did you know, you can change the default currency in your profile settings?", "success");
+  });
+
+  $('#profile-details').click(function(e){
+    $.notify("Your details have been updated", "success");
+  });
+
+  $('#profile-password').click(function(e){
+    console.log("Your password has been updated")
+  });
+
+  $('#profile-notices').click(function(e){
+    console.log("Your notices have been updated")
+  });
+
+
+
+
+
+});
