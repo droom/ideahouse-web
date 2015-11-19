@@ -807,11 +807,8 @@ html(lang="en")
 
               .inline.field
                 label.static.required Mobile Number
-                .mobile-fields
-                  input(name='mobile1', class='no-stack', type='number', required)
-                  input(name='mobile2', class='no-stack', type='number', required)
-                  input(name='mobile3', class='no-stack', type='number', required)
-                  small.support Country code, area code, number
+                input(name='tel', type='tel', required)
+
 
             fieldset
               img(src="img/catchpa-spoof.png")
