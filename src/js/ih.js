@@ -208,11 +208,11 @@
   });
 
   $('#profile-password').click(function(e){
-    console.log("Your password has been updated")
+    console.log("Your password has been updated", "success")
   });
 
   $('#profile-notices').click(function(e){
-    console.log("Your notices have been updated")
+    console.log("Your notices have been updated", "success")
   });
 
 
