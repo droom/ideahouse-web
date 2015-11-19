@@ -16,32 +16,39 @@ html(lang="en")
 
         .ui.info.message
           i.close.icon
-          .header Don't have an Ideahouse account? Register an account now for free.
+          .header
+            = "Don't have an Ideahouse account?"
+            br
+            = "Register an account now for free."
           a(href="gate-register-1.html").ui.button Register
 
-        .ui.info.message
-          .header
-            | You've sucessfully changed your password. Please sign in using your new credentials.
+        //- .ui.info.message
+        //-   .header
+        //-     | You've sucessfully changed your password. Please sign in using your new credentials.
 
         .content
-          label.input Login
-          .ui.big.input
-            input(type="email", placeholder="Email / Login ID")
-          label.input Password
-          .ui.big.input
-            input(type="password", placeholder="Password")
+          form.ui.form.login
+            fieldset
+              .field
+                label.input Login
+                input(type="email", name="email", placeholder="Email / Login ID")
+              .field
+                label.input Password
+                input(type="password", name="password", placeholder="Password")
+              .field
+                a(href="gate-reset-send.html").forgot I've forgotten my password
+            fieldset
+              .field
+                .ui.checkbox
+                  input(type="checkbox" tabindex="0" class="hidden")
+                  label Remember me
 
-          a(href="gate-reset-send.html").forgot I've forgotten my password
+            hr
+            .ui.error.message
+            button.ui.submit.button(type="submit") {Check Validation}
+            a(href="index.html").ui.button.cta Sign in
 
-          hr
 
-          div.ui.checkbox
-            input(type="checkbox" name="remember")
-            label Remember me
-
-          hr
-
-          a(href="index.html").ui.large.cta.button Sign in
 
       include partials/_footer
       include partials/_scripts

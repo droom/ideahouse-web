@@ -15,7 +15,6 @@ html(lang="en")
 
         .content
           p All items marked asterisk(&#42;) are required.
-          hr
           form.ui.form
             fieldset
               h2 Please select your account type
@@ -23,16 +22,18 @@ html(lang="en")
                 label.required.radio Sign up as a
                 .field.radio
                   .ui.radio.checkbox(id="membership-reseller")
-                    input(type="radio", name="membership", required)
+                    input(type="radio", name="membership")
                     label Reseller / Agent
                 .field.radio
                   .ui.radio.checkbox(id="membership-corporate")
-                    input(type="radio", name="membership", required)
+                    input(type="radio", name="membership")
                     label Corporate / End user
 
             hr
-            a(href="gate-register-2-reseller.html").ui.submit.large.cta.button Next
+
             .ui.error.message
+            button.ui.submit.button(type="submit") {Check Validation}
+            a(href="gate-register-2-reseller.html").ui.button.cta Sign in
 
 
       include partials/_footer

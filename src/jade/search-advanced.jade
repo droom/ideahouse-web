@@ -23,7 +23,6 @@ html(lang="en")
                   i.dropdown.icon
                   .default.text All
                   .menu
-
                     .item(data-value="category-0", data-text="All")
                       p.label All
 
@@ -136,7 +135,7 @@ html(lang="en")
                       p.label Party Gifts &amp; Games
 
                 hr
-
+              fieldset
                 label.input Colour
 
                 .inline.fields
@@ -144,7 +143,7 @@ html(lang="en")
                     .ui.radio.checkbox(id="colour-any")
                       input(type="radio", name="colour", checked, required)
                       label Any colour
-
+                  .field.radio
                     .ui.radio.checkbox(id="colour-specify")
                       input(type="radio", name="colour", required)
                       label Specify colour
@@ -183,10 +182,10 @@ html(lang="en")
                   tr
                     td.swatch.beige Beige
 
-                hr
+              hr
 
+              fieldset
                 label.input Unit Quantity
-
                 .ui.large.input.as
                   input(type="number", placeholder="Quantity")
                 .ui.large.buttons.increment
@@ -194,10 +193,10 @@ html(lang="en")
                   .or
                   button.ui.button &plus;
 
-                hr
+              hr
 
+              fieldset
                 label.input Unit Price Range (MYR)
-
                 .ui.large.input.as
                   input(type="number", placeholder="From")
                 .ui.large.buttons.increment
@@ -212,8 +211,11 @@ html(lang="en")
                   .or
                   button.ui.button &plus;
 
-                hr
-                a(href="search-results.html").ui.large.cta.button Search now
+              hr
+              .ui.error.message
+
+              a(href="search-results.html").ui.large.cta.button Search now
+              button.ui.submit.button(type="submit") {DEV: Check Validation}
 
         else
           .ui.info.message

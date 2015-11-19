@@ -81,11 +81,11 @@ html(lang="en")
                 label.static.radio I am a
                 .field.radio
                   .ui.radio.checkbox(id="account-private")
-                    input(type="radio", name="account", required)
+                    input(type="radio", name="account")
                     label private individual
                 .field.radio
                   .ui.radio.checkbox(id="account-business")
-                    input(type="radio", name="account", required)
+                    input(type="radio", name="account")
                     label business owner
 
               hr
@@ -844,29 +844,41 @@ html(lang="en")
 
               .inline.field
                 label.static Mobile Number
-                input(name='tel', type='tel', required)
+                input(name='telephone', type='tel')
 
             hr
-            a(href="#" aria-label="Update Details" id="profile-details").ui.submit.small.cta.button Update Details
-            a(href="#" aria-label="Cancel").ui.submit.small.basic.button Cancel
+
+            .ui.error.message
+
+            a(href="#" aria-label="Update Details" id="profile-details").ui.small.cta.button Update Details
+            a(href="#" aria-label="Cancel").ui.small.basic.button Cancel
+            hr
+            button.ui.submit.small.button(type="submit") {Check Validation}
+
+
 
         .ui.bottom.attached.tab.segment(data-tab='second')
           form.ui.form
             fieldset
               .inline.field
                 label.static Current Password
-                input(class='password' name='password', type='password', placeholder='Password', pattern=".{6,12}", required)
+                input(class='password' name='password', type='password', placeholder='Password', pattern=".{6,12}")
               .inline.field
                 label.static New Password
-                input(class='password' name='password', type='password', placeholder='New Password', pattern=".{6,12}", required)
+                input(class='password' name='passwordNew', type='password', placeholder='New Password', pattern=".{6,12}")
               .inline.field
                 label.static Retype Password
-                input(class='password' name='password', type='password', placeholder='Retype Password', pattern=".{6,12}", required)
+                input(class='password' name='passwordNewRetype', type='password', placeholder='Retype Password', pattern=".{6,12}")
                 small.support 6&ndash;12 characters
 
             hr
-            a(href="#" aria-label="Update Password" id="profile-password").ui.submit.small.cta.button Update Password
-            a(href="#" aria-label="Cancel").ui.submit.small.basic.button Cancel
+            .ui.error.message
+            a(href="#" aria-label="Update Details" id="profile-details").ui.small.cta.button Update Details
+            a(href="#" aria-label="Cancel").ui.small.basic.button Cancel
+            hr
+            button.ui.submit.small.button(type="submit") {Check Validation}
+
+
 
         .ui.bottom.attached.tab.segment(data-tab='third')
           form.ui.form
@@ -881,8 +893,12 @@ html(lang="en")
                   label Whatsapp
 
             hr
-            a(href="#" aria-label="Update Notices" id="profile-notices").ui.submit.small.cta.button Update Notices
-            a(href="#" aria-label="Cancel").ui.submit.small.basic.button Cancel
+            .ui.error.message
+
+            a(href="#" aria-label="Update Notices" id="profile-notices").ui.small.cta.button Update Notices
+            a(href="#" aria-label="Cancel").ui.small.basic.button Cancel
+            hr
+            button.ui.submit.small.button(type="submit") {Check Validation}
 
       include partials/_footer
       include partials/_scripts

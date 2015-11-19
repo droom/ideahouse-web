@@ -1,6 +1,12 @@
 label.hide
   display: none
 
+.ui.form .field.error .input,
+.ui.form .field.error label,
+.ui.form .fields.error .field .input,
+.ui.form .fields.error .field label
+  color: $copy
+
 .ui.dropdown.category
   .menu
     .item
@@ -19,6 +25,15 @@ label.hide
       &:nth-child(9n+9)
         img.product
           background: #5ec5e2
+
+
+.content
+  form.ui.form
+    fieldset
+      margin: 0
+    fieldset:nth-child(1)
+      padding: 0
+
 
 form.ui.form
   margin: 0

@@ -4,28 +4,193 @@
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
 
-    $('.ui.radio.checkbox').checkbox();
+    $('.ui.checkbox')
+    .checkbox()
+    ;
+
     $('.ui.accordion').accordion(
     {
       exclusive : false
     }
     );
 
-    $('.gate .ui.radio.checkbox').prop("checked", false);
-    searchSwatch.hide();
 
-    $("#colour-specify").on('click', function() {
-      searchSwatch.show();
-    });
+    $('.ui.form')
+    .form({
 
-    $("#colour-any").on('click', function() {
-     searchSwatch.hide();
-   });
+      fields: {
+        name: {
+          identifier: 'name',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your name'
+          }
+          ]
+        },
 
-    $('table.swatch.search td.swatch').on('click', function() {
-      $('table.swatch.search td.swatch').removeClass('selected');
-      $(this).toggleClass('selected');
-    });
+        membership: {
+          identifier: 'membership',
+          rules: [
+          {
+            type   : 'checked',
+            prompt : 'Please select your membership type'
+          }
+          ]
+        },
+
+        currency: {
+          identifier: 'currency',
+          rules: [
+          {
+            type   : 'checked',
+            prompt : 'Please select your currency type'
+          }
+          ]
+        },
+
+
+        account: {
+          identifier: 'account',
+          rules: [
+          {
+            type   : 'checked',
+            prompt : 'Please select your account type'
+          }
+          ]
+        },
+
+
+        language: {
+          identifier: 'language',
+          rules: [
+          {
+            type   : 'checked',
+            prompt : 'Please select your default language'
+          }
+          ]
+        },
+
+
+
+        email: {
+          identifier: 'email',
+          rules: [
+          {
+            type   : 'email',
+            prompt : 'Please enter your email'
+          }
+          ]
+        },
+
+
+        country: {
+          identifier: 'country',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select a country'
+          }
+          ]
+        },
+
+
+        company: {
+          identifier: 'company',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your company name'
+          }
+          ]
+        },
+
+        telephone: {
+          identifier: 'telephone',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your telephone number'
+          }
+          ]
+        },
+
+
+        password: {
+          identifier: 'password',
+          rules: [
+          {
+            type   : 'minLength[6]',
+            prompt : 'Your password must be at least 6 characters'
+          },
+          {
+            type   : 'maxLength[12]',
+            prompt : 'Your password must a maximum of 12 characters'
+          }
+
+          ]
+        },
+
+
+        passwordNew: {
+          identifier: 'passwordNew',
+          rules: [
+          {
+            type   : 'minLength[6]',
+            prompt : 'Your new password must be at least 6 characters'
+          },
+          {
+            type   : 'maxLength[12]',
+            prompt : 'Your new password must a maximum of 12 characters'
+          }
+          ]
+        },
+
+
+        passwordNewRetype: {
+          identifier: 'passwordNewRetype',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please retype your new password'
+          },
+          {
+            type   : 'match[passwordNew]',
+            prompt : 'Your new passwords don\'t match. Please check again.'
+          }
+          ]
+        },
+
+
+
+        terms: {
+          identifier: 'terms',
+          rules: [
+          {
+            type   : 'checked',
+            prompt : 'You must agree to the conditions of use before continuing'
+          }
+          ]
+        }
+      }
+    })
+  ;
+
+  $('.gate .ui.radio.checkbox').prop("checked", false);
+  searchSwatch.hide();
+
+  $("#colour-specify").on('click', function() {
+    searchSwatch.show();
+  });
+
+  $("#colour-any").on('click', function() {
+   searchSwatch.hide();
+ });
+
+  $('table.swatch.search td.swatch').on('click', function() {
+    $('table.swatch.search td.swatch').removeClass('selected');
+    $(this).toggleClass('selected');
+  });
 
 
 
@@ -51,6 +216,7 @@
     $('.ui.dropdown').dropdown({
       on: 'click'
     });
+
 
 
     // Navigation
