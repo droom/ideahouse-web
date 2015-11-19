@@ -21,10 +21,10 @@ html(lang="en")
               h2 Login information
               .inline.field
                 label.static.required Login
-                input(name='email', type='email', placeholder='Email/Login ID', required)
+                input(name='email', type='email', placeholder='Email/Login ID')
               .inline.field
                 label.static.required Password
-                input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}", required)
+                input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}")
                 small.support 6&ndash;12 characters
 
             fieldset
@@ -37,7 +37,7 @@ html(lang="en")
 
               .inline.field
                 label.static.required Name
-                input(name='name', type='text', placeholder='Name', required)
+                input(name='name', type='text', placeholder='Name')
 
 
               hr
@@ -45,11 +45,11 @@ html(lang="en")
                 label.static.required.radio I am a
                 .field.radio
                   .ui.radio.checkbox(id="account-private")
-                    input(type="radio", name="account", required)
+                    input(type="radio", name="account")
                     label private individual
                 .field.radio
                   .ui.radio.checkbox(id="account-business")
-                    input(type="radio", name="account", required)
+                    input(type="radio", name="account")
                     label company
 
 
@@ -807,26 +807,44 @@ html(lang="en")
 
               .inline.field
                 label.static.required Mobile Number
-                input(name='tel', type='tel', required)
+                input(name='telephone', type='tel')
 
+            hr
 
             fieldset
               img(src="img/catchpa-spoof.png")
 
+            hr
+
             fieldset
               h4 I would like to receive new products update, promotional offers, clearance sales and newsletters. Select options below.
-              .inline.field
+              .inline.fields
                 .ui.checkbox
-                  input(type='checkbox', name='checkbox' checked="checked")
+                  input(type='checkbox', name='notify-email' checked="checked")
                   label By email
                 .ui.checkbox
-                  input(type='checkbox', name='checkbox' checked="checked")
+                  input(type='checkbox', name='notify-whatsapp' checked="checked")
                   label Whatsapp
 
             hr
-            a(href="gate-register-1.html").ui.submit.large.button Back
-            a(href="gate-register-3.html").ui.submit.large.cta.button Register my account
+
+            .inline.field
+              .ui.checkbox
+                input(type='checkbox', name='terms')
+                label
+                  = "I agree with Ideahouse's conditions of use. "
+                  br
+                  = "To read them, please "
+                  a(href="conditions.html") click here
+                  = "."
+
+            hr
             .ui.error.message
+            a(href="gate-register-1.html").ui.submit.basic.button Back
+            a(href="gate-register-3.html").ui.submit.cta.button Register my account
+            hr
+            button.ui.submit.button(type="submit") {Check Validation}
+
 
       include partials/_footer
       include partials/_scripts

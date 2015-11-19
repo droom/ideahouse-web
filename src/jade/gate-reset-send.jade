@@ -20,13 +20,16 @@ html(lang="en")
         .content
           p You'll be emailed instructions on how to reset your password.
           hr
-          label.input Login
-          .ui.big.input
-            input(type="email", placeholder="Email/Login ID")
-          hr
-          a(href="#" aria-label="Email me reset link").ui.button Email me reset link
-          a(href="#" aria-label="Email me reset link").ui.button.disabled Email me reset link
+          form.ui.form
+            fieldset
+              label.input Login
+              .inline.field
+                .ui.big.fluid.input
+                  input(type="email", placeholder="Email / Login ID")
 
+
+          hr
+          a(href="#" aria-label="Email me reset link").ui.button.cta Email reset link
 
       include partials/_footer
       include partials/_scripts
