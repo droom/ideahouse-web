@@ -147,9 +147,9 @@
 
     e.preventDefault();
     if (!bookmarkAdded){
-      $.notify(productTitle+" added to your likes." , "success");
+      $.notify(productTitle+" added to your bookmarks." , "success");
     } else {
-      $.notify(productTitle+" removed from your likes.", "success");
+      $.notify(productTitle+" removed from your bookmarks.", "success");
     }
     $(this).find('i.heart.icon').toggleClass('empty');
     bookmarkAdded = !bookmarkAdded;
@@ -174,7 +174,7 @@
 
     }, 800);
 
-    $.notify(tileDesc+" removed from your likes.", "success");
+    $.notify(tileDesc+" removed from your bookmarks.", "success");
 
   });
 
