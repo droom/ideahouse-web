@@ -1,8 +1,8 @@
   $(document).ready(function() {
 
+
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
-
 
     $('.ui.radio.checkbox').checkbox();
     $('.ui.accordion').accordion(
@@ -26,8 +26,6 @@
       $('table.swatch.search td.swatch').removeClass('selected');
       $(this).toggleClass('selected');
     });
-
-
 
 
 
@@ -110,17 +108,17 @@
 
 
 
-  $('table.sortable').tablesort();
+    $('table.sortable').tablesort();
 
-  $(window).scroll(function () {
+    $(window).scroll(function () {
 
-    if ($(window).scrollTop() > 99) {
-      $('#nav_bar').addClass('navbar-fixed');
-    }
-    if ($(window).scrollTop() < 100) {
-      $('#nav_bar').removeClass('navbar-fixed');
-    }
-  });
+      if ($(window).scrollTop() > 99) {
+        $('#nav_bar').addClass('navbar-fixed');
+      }
+      if ($(window).scrollTop() < 100) {
+        $('#nav_bar').removeClass('navbar-fixed');
+      }
+    });
 
   // smooth scrolling
   $(function() {
