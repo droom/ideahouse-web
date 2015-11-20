@@ -131,7 +131,6 @@
           ]
         },
 
-
         passwordNew: {
           identifier: 'passwordNew',
           rules: [
@@ -146,7 +145,6 @@
           ]
         },
 
-
         passwordNewRetype: {
           identifier: 'passwordNewRetype',
           rules: [
@@ -160,8 +158,6 @@
           }
           ]
         },
-
-
 
         terms: {
           identifier: 'terms',
@@ -287,30 +283,27 @@
     });
 
   // smooth scrolling
-  $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 300);
-          return false;
-        }
-      }
-    });
-  });
-
+  // $(function() {
+  //   $('a[href*=#]:not([href=#])').click(function() {
+  //     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  //       var target = $(this.hash);
+  //       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  //       if (target.length) {
+  //         $('html,body').animate({
+  //           scrollTop: target.offset().top
+  //         }, 300);
+  //         return false;
+  //       }
+  //     }
+  //   });
+  // });
 
 
 
   var bookmarkAdded = false;
 
   $('#bookmark-toggle').click(function(e){
-
     productTitle = $('#product-title').text();
-
     e.preventDefault();
     if (!bookmarkAdded){
       $.notify(productTitle+" added to your bookmarks." , "success");
@@ -324,21 +317,21 @@
 
 
 
-
-
   $('.ui.icon.button.remove').click(function(e){
     var tileRemoved = $(this).parent()
     var tileDesc =  $(tileRemoved).find('.description').text();
 
     $(this).find('i').addClass('empty');
 
-    tileRemoved.addClass('rotateOutDownRight')
-    setTimeout(function() {
+    // tileRemoved.addClass('rotateOutDownRight')
+    tileRemoved.addClass('fadeAway')
 
+
+    setTimeout(function() {
       tileRemoved.remove();
       checkBookmarkTiles();
 
-    }, 800);
+    }, 400);
 
     $.notify(tileDesc+" removed from your bookmarks.", "success");
 
