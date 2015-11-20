@@ -186,27 +186,25 @@ html(lang="en")
 
               fieldset
                 label.input Unit Quantity
-                .ui.large.input.as
+                .ui.input.as
                   input(type="number", placeholder="Quantity")
-                .ui.large.buttons.increment
+                .ui.buttons.increment
                   button.ui.button &minus;
                   .or
                   button.ui.button &plus;
-
               hr
-
               fieldset
                 label.input Unit Price Range (MYR)
-                .ui.large.input.as
+                .ui.input.as
                   input(type="number", placeholder="From")
-                .ui.large.buttons.increment
+                .ui.buttons.increment
                   button.ui.button &minus;
                   .or
                   button.ui.button &plus;
-
-                .ui.large.input.as
+              fieldset
+                .ui.input.as
                   input(type="number", placeholder="To")
-                .ui.large.buttons.increment
+                .ui.buttons.increment
                   button.ui.button &minus;
                   .or
                   button.ui.button &plus;
@@ -214,7 +212,7 @@ html(lang="en")
               hr
               .ui.error.message
 
-              a(href="search-results.html").ui.large.cta.button Search now
+              a(href="search-results.html").ui.cta.button Search now
               button.ui.submit.button(type="submit") {DEV: Check Validation}
 
         else
