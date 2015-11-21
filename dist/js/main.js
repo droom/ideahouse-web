@@ -35701,6 +35701,26 @@ $.fn.visibility.settings = {
   });
 ;  $(document).ready(function() {
 
+    $('#change-currency .item').click(function(e){
+      $.notify("Did you know, you can change the default currency in your profile settings?", "success");
+    });
+
+    $('#profile-password').click(function(e){
+      $.notify("Your password has been updated", "success")
+    });
+
+    $('#profile-notices').click(function(e){
+      $.notify("Your notices have been updated", "success")
+    });
+
+    $('#profile-details').click(function(e){
+      $.notify("Your details have been updated", "success");
+    });
+
+
+  });
+;  $(document).ready(function() {
+
     $('.ui.checkbox').checkbox();
     $('.ui.accordion').accordion({exclusive : false});
 
@@ -35912,11 +35932,20 @@ $.fn.visibility.settings = {
 });
 ;  $(document).ready(function() {
 
+    $('.authorised-hide').show();
+    $('.authorised-show').hide();
+
+    // storage.removeItem(localStorage.auth);
+
+    // var authorised = localStorage.auth;
+    // console.log("authorised is "+authorised);
+
     function pageState(){
 
      console.log("localStorage.auth is "+localStorage.auth);
 
-     if (localStorage.auth === "true" || localStorage.auth === "undefined"){
+     if (localStorage.auth === "true"){
+
       console.log("show authorised items");
 
       $('.authorised-hide').hide();
@@ -35949,20 +35978,7 @@ $.fn.visibility.settings = {
 
   pageState();
 
-  $('#change-currency .item').click(function(e){
-    $.notify("Did you know, you can change the default currency in your profile settings?", "success");
-  });
-
-  $('#profile-password').click(function(e){
-    console.log("Your password has been updated", "success")
-  });
-
-  $('#profile-notices').click(function(e){
-    console.log("Your notices have been updated", "success")
-  });
-
   $('#profile-details').click(function(e){
-
     localStorage.name = $('#name').val();
     localStorage.company = $('#company').val();
     localStorage.currency = $('#currency').val();
@@ -35971,10 +35987,7 @@ $.fn.visibility.settings = {
     localStorage.telephone = $('#telephone').val();
     localStorage.state = $('#state').val();
     pageState();
-    $.notify("Your details have been updated", "success");
-
   });
-
 
   $('#signin').click(function(e){
     localStorage.email = $('#email').val();
@@ -35984,7 +35997,6 @@ $.fn.visibility.settings = {
   $('#signout').click(function(e){
     localStorage.auth = "false";
   });
-
 
 
 });
@@ -36031,7 +36043,6 @@ $.fn.visibility.settings = {
       $('table.swatch.search td.swatch').removeClass('selected');
       $(this).toggleClass('selected');
     });
-
 
   });
 ;  $(document).ready(function() {
