@@ -13,21 +13,21 @@ html(lang="en")
         .ui.huge.breadcrumb
           .section Download 2015 Price List / Catalogue
 
-        .content
+
+        .content.authorised-show
           h3
             = "Ideahouse 2015 Agent Price List (PDF)"
           hr
+          .ui.cta.tiny.button
+            i.icon.download
+            = "Download full price list"
 
-          if authorised
-            .ui.cta.tiny.button
-              i.icon.download
-              = "Download full price list"
 
-          else
-            .ui.info.message
-              .header To download Ideahouse 2015 Agent Price List (PDF), please sign in. If you don't have an account with Ideahouse, register now for a free account.
-              .ui.button Sign in
-              .ui.button Register
+        .ui.info.message.authorised-hide
+          .header To download Ideahouse 2015 Agent Price List (PDF), please sign in. If you don't have an account with Ideahouse, register now for a free account.
+          .ui.button Sign in
+          .ui.button Register
+
 
         .content
           h3

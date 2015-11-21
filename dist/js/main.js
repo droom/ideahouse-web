@@ -35642,19 +35642,89 @@ $.fn.visibility.settings = {
 }));
 ;  $(document).ready(function() {
 
+    var bookmarkAdded = false;
 
-    var searchSwatch = $('table.ui.table.swatch.search')
-    var searchSwatchSelected = false
-
-    $('.ui.checkbox')
-    .checkbox()
-    ;
-
-    $('.ui.accordion').accordion(
+    if ($('body.bookmarks').length > 0)
     {
-      exclusive : false
+      checkBookmarkTiles();
     }
-    );
+
+
+    $('#bookmark-toggle').click(function(e){
+      productTitle = $('#product-title').text();
+      e.preventDefault();
+      if (!bookmarkAdded){
+        $.notify(productTitle+" added to your bookmarks." , "success");
+      } else {
+        $.notify(productTitle+" removed from your bookmarks.", "success");
+      }
+      $(this).find('i.heart.icon').toggleClass('empty');
+      bookmarkAdded = !bookmarkAdded;
+    });
+
+
+    $('.ui.icon.button.remove').click(function(e){
+      var tileRemoved = $(this).parent()
+      var tileDesc =  $(tileRemoved).find('.description').text();
+
+      $(this).find('i').addClass('empty');
+
+      tileRemoved.addClass('fadeAway')
+
+      setTimeout(function() {
+        tileRemoved.remove();
+        checkBookmarkTiles();
+
+      }, 400);
+
+      $.notify(tileDesc+" removed from your bookmarks.", "success");
+
+    });
+
+
+    function checkBookmarkTiles(){
+
+      if ($('#bookmark-tiles').is(':empty')){
+        console.log("empty");
+        $('#bookmark-msg').show();
+
+      } else {
+        console.log("not empty");
+        $('#bookmark-msg').hide();
+      }
+    }
+
+
+
+
+
+  });
+;  $(document).ready(function() {
+
+    $('.ui.checkbox').checkbox();
+    $('.ui.accordion').accordion({exclusive : false});
+
+    // Register
+
+    $('#account-private').on('click', function() {
+      $('input[name=\'company\']').prop('disabled', true);
+    });
+
+    $('#account-business').on('click', function() {
+      $('input[name=\'company\']').prop('disabled', false);
+    });
+
+    $('.ui.labeled.icon.button.bookmark').on('click', function() {
+      $(this).toggleClass('active');
+    });
+
+    $('.ui.button.menu').on('click', function() {
+      $('.ui.sidebar').sidebar('toggle');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on: 'click'
+    });
 
 
     $('.ui.form')
@@ -35671,6 +35741,7 @@ $.fn.visibility.settings = {
           ]
         },
 
+
         membership: {
           identifier: 'membership',
           rules: [
@@ -35680,17 +35751,6 @@ $.fn.visibility.settings = {
           }
           ]
         },
-
-        currency: {
-          identifier: 'currency',
-          rules: [
-          {
-            type   : 'checked',
-            prompt : 'Please select your currency type'
-          }
-          ]
-        },
-
 
         account: {
           identifier: 'account',
@@ -35703,12 +35763,34 @@ $.fn.visibility.settings = {
         },
 
 
+
+
+        currency: {
+          identifier: 'currency',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select your currency type'
+          }
+          ]
+        },
+
         language: {
           identifier: 'language',
           rules: [
           {
-            type   : 'checked',
+            type   : 'empty',
             prompt : 'Please select your default language'
+          }
+          ]
+        },
+
+        country: {
+          identifier: 'country',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select a country'
           }
           ]
         },
@@ -35726,15 +35808,7 @@ $.fn.visibility.settings = {
         },
 
 
-        country: {
-          identifier: 'country',
-          rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please select a country'
-          }
-          ]
-        },
+
 
 
         company: {
@@ -35814,50 +35888,19 @@ $.fn.visibility.settings = {
     })
   ;
 
-  $('.gate .ui.radio.checkbox').prop("checked", false);
-  searchSwatch.hide();
 
-  $("#colour-specify").on('click', function() {
-    searchSwatch.show();
-  });
+});
+;  $(document).ready(function() {
 
-  $("#colour-any").on('click', function() {
-   searchSwatch.hide();
- });
-
-  $('table.swatch.search td.swatch').on('click', function() {
-    $('table.swatch.search td.swatch').removeClass('selected');
-    $(this).toggleClass('selected');
-  });
-
-
-
-
-    // Register
-
-    $('#account-private').on('click', function() {
-      $('input[name=\'company\']').prop('disabled', true);
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 99) {
+        $('#nav_bar').addClass('navbar-fixed');
+      }
+      if ($(window).scrollTop() < 100) {
+        $('#nav_bar').removeClass('navbar-fixed');
+      }
     });
 
-    $('#account-business').on('click', function() {
-      $('input[name=\'company\']').prop('disabled', false);
-    });
-
-    $('.ui.labeled.icon.button.bookmark').on('click', function() {
-      $(this).toggleClass('active');
-    });
-
-    $('.ui.button.menu').on('click', function() {
-      $('.ui.sidebar').sidebar('toggle');
-    });
-
-    $('.ui.dropdown').dropdown({
-      on: 'click'
-    });
-
-
-
-    // Navigation
 
     $('.ui.menu a.item').on('click', function() {
       $(this)
@@ -35866,7 +35909,134 @@ $.fn.visibility.settings = {
       .removeClass('active');
     });
 
+});
+;  $(document).ready(function() {
 
+    function pageState(){
+
+     console.log("localStorage.auth is "+localStorage.auth);
+
+     if (localStorage.auth === "true" || localStorage.auth === "undefined"){
+      console.log("show authorised items");
+
+      $('.authorised-hide').hide();
+      $('.authorised-show').show();
+
+      $('.browse .personalise').text("Welcome back, "+localStorage.name);
+      $('.profile .personalise').text(localStorage.name+"\'s Profile");
+      $('.profile .personalise').text(localStorage.name+"\'s Profile");
+
+      $('.email-static').text(localStorage.email);
+
+      $('#name').val(localStorage.name);
+      $('#company').val(localStorage.company);
+      $('#state').val(localStorage.state);
+      $('#telephone').val(localStorage.telephone);
+
+      $('#salutation').dropdown('set value', localStorage.salutation);
+      $('#currency').dropdown('set value', localStorage.currency);
+      $('#language').dropdown('set value', localStorage.language);
+
+    }
+
+    else {
+      console.log("hide authorised items");
+      $('.authorised-hide').show();
+      $('.authorised-show').hide();
+
+    }
+  }
+
+  pageState();
+
+  $('#change-currency .item').click(function(e){
+    $.notify("Did you know, you can change the default currency in your profile settings?", "success");
+  });
+
+  $('#profile-password').click(function(e){
+    console.log("Your password has been updated", "success")
+  });
+
+  $('#profile-notices').click(function(e){
+    console.log("Your notices have been updated", "success")
+  });
+
+  $('#profile-details').click(function(e){
+
+    localStorage.name = $('#name').val();
+    localStorage.company = $('#company').val();
+    localStorage.currency = $('#currency').val();
+    localStorage.salutation = $('#salutation').val();
+    localStorage.language = $('#language').val();
+    localStorage.telephone = $('#telephone').val();
+    localStorage.state = $('#state').val();
+    pageState();
+    $.notify("Your details have been updated", "success");
+
+  });
+
+
+  $('#signin').click(function(e){
+    localStorage.email = $('#email').val();
+    localStorage.auth = "true";
+  });
+
+  $('#signout').click(function(e){
+    localStorage.auth = "false";
+  });
+
+
+
+});
+;  $(document).ready(function() {
+
+    // Elipsis
+    $(".content .description").dotdotdot({});
+
+    // Touch swipe
+    $('.product-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      lazyLoad: 'progressive',
+      arrows: true,
+      fade: false,
+      dots: true,
+      focusOnSelect: true,
+      nextArrow: '.slick-slide'
+    });
+
+    // tablesort
+    $('table.sortable').tablesort();
+
+
+  });
+;  $(document).ready(function() {
+
+    var searchSwatch = $('table.ui.table.swatch.search')
+    var searchSwatchSelected = false
+
+    $('.gate .ui.radio.checkbox').prop("checked", false);
+    searchSwatch.hide();
+
+    $("#colour-specify").on('click', function() {
+      searchSwatch.show();
+    });
+
+    $("#colour-any").on('click', function() {
+     searchSwatch.hide();
+    });
+
+    $('table.swatch.search td.swatch').on('click', function() {
+      $('table.swatch.search td.swatch').removeClass('selected');
+      $(this).toggleClass('selected');
+    });
+
+
+  });
+;  $(document).ready(function() {
+
+    $('.menu .item').tab();
 
     // Dry this out
     $('table.stock').hide();
@@ -35891,133 +36061,4 @@ $.fn.visibility.settings = {
     });
 
 
-
-    $('.menu .item').tab();
-
-    // Elipsis
-    $(".content .description").dotdotdot({});
-
-    // Touch swipe
-    $('.product-carousel').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: true,
-      lazyLoad: 'progressive',
-      arrows: true,
-      fade: false,
-      dots: true,
-      focusOnSelect: true,
-      nextArrow: '.slick-slide'
-    });
-
-
-
-    $('table.sortable').tablesort();
-
-    $(window).scroll(function () {
-
-      if ($(window).scrollTop() > 99) {
-        $('#nav_bar').addClass('navbar-fixed');
-      }
-      if ($(window).scrollTop() < 100) {
-        $('#nav_bar').removeClass('navbar-fixed');
-      }
-    });
-
-  // smooth scrolling
-  // $(function() {
-  //   $('a[href*=#]:not([href=#])').click(function() {
-  //     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-  //       var target = $(this.hash);
-  //       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-  //       if (target.length) {
-  //         $('html,body').animate({
-  //           scrollTop: target.offset().top
-  //         }, 300);
-  //         return false;
-  //       }
-  //     }
-  //   });
-  // });
-
-
-
-  var bookmarkAdded = false;
-
-  $('#bookmark-toggle').click(function(e){
-    productTitle = $('#product-title').text();
-    e.preventDefault();
-    if (!bookmarkAdded){
-      $.notify(productTitle+" added to your bookmarks." , "success");
-    } else {
-      $.notify(productTitle+" removed from your bookmarks.", "success");
-    }
-    $(this).find('i.heart.icon').toggleClass('empty');
-    bookmarkAdded = !bookmarkAdded;
   });
-
-
-
-
-  $('.ui.icon.button.remove').click(function(e){
-    var tileRemoved = $(this).parent()
-    var tileDesc =  $(tileRemoved).find('.description').text();
-
-    $(this).find('i').addClass('empty');
-
-    // tileRemoved.addClass('rotateOutDownRight')
-    tileRemoved.addClass('fadeAway')
-
-
-    setTimeout(function() {
-      tileRemoved.remove();
-      checkBookmarkTiles();
-
-    }, 400);
-
-    $.notify(tileDesc+" removed from your bookmarks.", "success");
-
-  });
-
-
-  function checkBookmarkTiles(){
-
-    if ($('#bookmark-tiles').is(':empty')){
-      console.log("empty");
-      $('#bookmark-msg').show();
-
-    } else {
-      console.log("not empty");
-      $('#bookmark-msg').hide();
-    }
-  }
-
-
-  if ($('body.bookmarks').length > 0)
-  {
-    checkBookmarkTiles();
-  }
-
-
-
-  $('#change-currency .item').click(function(e){
-    $.notify("Did you know, you can change the default currency in your profile settings?", "success");
-  });
-
-  $('#profile-details').click(function(e){
-    $.notify("Your details have been updated", "success");
-  });
-
-  $('#profile-password').click(function(e){
-    console.log("Your password has been updated", "success")
-  });
-
-  $('#profile-notices').click(function(e){
-    console.log("Your notices have been updated", "success")
-  });
-
-
-
-
-
-});

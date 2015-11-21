@@ -11,29 +11,27 @@
         a(href="index.html" aria-label="Browse item categories")
           img(src="img/logo-full.svg" class="ih-logo" alt="Ideahouse")
 
-      if authorised
-        section.profile
-          .ui.icon.top.right.pointing.dropdown.button
-            i.user.icon
-            .menu
-              a(href="profile.html" aria-label="View or edit your profile").item.profile
-                i.setting.icon
-                = "My Profile"
-              a(href="bookmarks.html" aria-label="View bookmarked items").item.bookmarks
-                i.heart.icon
-                = "Bookmarks"
-              a(href="history.html" aria-label="View your history").item.history
-                i.history.icon
-                = "View History"
-              hr
-              a(href="gate-signin.html" aria-label="Sign out of Ideahouse").item
-                i.sign.out.icon
-                = "Sign out"
+      section.profile.authorised-show
+        .ui.icon.top.right.pointing.dropdown.button
+          i.user.icon
+          .menu
+            a(href="profile.html" aria-label="View or edit your profile").item.profile
+              i.setting.icon
+              span.personalise My Profile
+            a(href="bookmarks.html" aria-label="View bookmarked items").item.bookmarks
+              i.heart.icon
+              = "Bookmarks"
+            a(href="history.html" aria-label="View your history").item.history
+              i.history.icon
+              = "View History"
+            hr
+            a(href="index.html" aria-label="Sign out of Ideahouse" id="signout").item
+              i.sign.out.icon
+              = "Sign out"
 
-      else
-        section.profile
-          a(href="gate-signin.html" aria-label="Sign in to Ideahouse").item.gate
-            = "Sign in / up"
+      section.profile.authorised-hide
+        a(href="gate-signin.html" aria-label="Sign in to Ideahouse").item.gate
+          = "Sign in / up"
 
     section.search(id="search-snap")
       .ui.fluid.search.quick(role="search")

@@ -30,7 +30,6 @@ module.exports = function(grunt) {
       }
     },
 
-
     concat: {
       options: {
         separator: ';',
@@ -43,7 +42,7 @@ module.exports = function(grunt) {
               'src/lib/jquery.dotdotdot.js',
               'src/lib/semantic.js',
               'src/lib/notify.js',
-              'src/js/ih.js'
+              'src/js/*.js'
               ],
         dest: 'dist/js/main.js',
       },
@@ -82,13 +81,6 @@ module.exports = function(grunt) {
         }
       },
 
-      uncss: {
-        dist: {
-          files: {
-            'dist/css/style.css': ['dist/*.html']
-          }
-        }
-      },
 
     jade: {
       compile: {
