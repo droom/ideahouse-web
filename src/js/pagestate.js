@@ -1,27 +1,25 @@
   $(document).ready(function() {
 
-
     function pageState(){
 
      console.log("localStorage.auth is "+localStorage.auth);
 
      if (localStorage.auth === "true" || localStorage.auth === "undefined"){
-      console.log("show sign in items");
+      console.log("show authorised items");
 
       $('.authorised-hide').hide();
       $('.authorised-show').show();
 
       $('.browse .personalise').text("Welcome back, "+localStorage.name);
       $('.profile .personalise').text(localStorage.name+"\'s Profile");
-      $('.email-static').text(localStorage.email);
+      $('.profile .personalise').text(localStorage.name+"\'s Profile");
 
+      $('.email-static').text(localStorage.email);
 
       $('#name').val(localStorage.name);
       $('#company').val(localStorage.company);
       $('#state').val(localStorage.state);
       $('#telephone').val(localStorage.telephone);
-
-      console.log("localStorage.email is "+localStorage.email);
 
       $('#salutation').dropdown('set value', localStorage.salutation);
       $('#currency').dropdown('set value', localStorage.currency);
@@ -30,16 +28,14 @@
     }
 
     else {
-      console.log("hide sign in items");
+      console.log("hide authorised items");
       $('.authorised-hide').show();
       $('.authorised-show').hide();
 
     }
   }
 
-
   pageState();
-
 
   $('#change-currency .item').click(function(e){
     $.notify("Did you know, you can change the default currency in your profile settings?", "success");
@@ -64,6 +60,7 @@
     localStorage.state = $('#state').val();
     pageState();
     $.notify("Your details have been updated", "success");
+
   });
 
 
