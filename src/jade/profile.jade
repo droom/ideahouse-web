@@ -11,7 +11,7 @@ html(lang="en")
       include partials/_col-main-left
       .col-main-right(role="main")
         .ui.huge.breadcrumb
-          .section $FIRST_NAME's Profile
+          .section.personalise Your profile
 
         .ui.top.attached.tabular.menu
           a.item.active(data-tab='first') My Details
@@ -23,57 +23,35 @@ html(lang="en")
             fieldset
               .inline.field
                 label.static Login address
-                p $EMAIL_ADDRESS
+                p.email-static $EMAIL_ADDRESS
               .inline.field
                 label.static Salutation
-                select.ui.dropdown.salutation
+                select.ui.dropdown.salutation(name="salutation", id="salutation")
                   option(value="1") Mr.
                   option(value="0") Ms.
               .inline.field
                 label.static(for="name") Name
-                input(id="name" name='name', type='text', placeholder='Name', minlength='2', value='$NAME')
+                input(id="name" name='name', type='text', placeholder='Name', minlength='2')
+
 
             fieldset
               hr
               .inline.field
                 label.static Default Currency
-                .ui.search.selection.dropdown
-                  input(type="hidden", name="currency")
-                  i.dropdown.icon
-                  .default.text Select Currency
-                  .menu
-                    .item(data-value="my")
-                      i.my.flag
-                      | MYR
-                    .item(data-value="sg")
-                      i.sg.flag
-                      | SGD
-                    .item(data-value="us")
-                      i.us.flag
-                      | USD
-                    .item(data-value="au")
-                      i.au.flag
-                      | AUD
+                select.ui.dropdown(name="currency", id="currency")
+                  option(value="0") MYR
+                  option(value="1") SGD
+                  option(value="2") USD
+                  option(value="3") AUD
 
               .inline.field
                 label.static Default Language
-                .ui.search.selection.dropdown
-                  input(type="hidden", name="language")
-                  i.dropdown.icon
-                  .default.text Select Language
-                  .menu
-                    .item(data-value="my")
-                      i.my.flag
-                      | Malay
-                    .item(data-value="cn")
-                      i.cn.flag
-                      | Chinese
-                    .item(data-value="gb")
-                      i.gb.flag
-                      | English
-                    .item(data-value="in")
-                      i.in.flag
-                      | Tamil
+                select.ui.dropdown(name="language", id="language")
+                  option(value="0") Malay
+                  option(value="1") Chinese
+                  option(value="2") English
+                  option(value="3") Tamil
+
 
             fieldset
               hr
@@ -92,12 +70,12 @@ html(lang="en")
 
               .inline.field
                 label.static Company Name
-                input(name='company', type='text', placeholder='Company Name')
+                input(name='company', id='company', type='text', placeholder='Company Name')
 
               .inline.field
                 label.static Country
                 .ui.search.selection.dropdown
-                  input(type="hidden", name="country")
+                  input(type="hidden", name="country", id="country")
                   i.dropdown.icon
                   .default.text Select Country
                   .menu
@@ -840,11 +818,11 @@ html(lang="en")
 
               .inline.field
                 label.static State
-                input(name='state', type='text', placeholder='State')
+                input(name='state', id='state', type='text', placeholder='State')
 
               .inline.field
                 label.static Mobile Number
-                input(name='telephone', type='tel')
+                input(name='telephone', id='telephone', type='tel')
 
             hr
 
@@ -853,7 +831,7 @@ html(lang="en")
             a(href="#" aria-label="Update Details" id="profile-details").ui.small.cta.button Update Details
             a(href="#" aria-label="Cancel").ui.small.basic.button Cancel
             hr
-            button.ui.submit.small.button(type="submit") {Check Validation}
+            button.ui.submit.small.button(type="submit") Submit
 
 
 
@@ -876,7 +854,7 @@ html(lang="en")
             a(href="#" aria-label="Update Details" id="profile-details").ui.small.cta.button Update Details
             a(href="#" aria-label="Cancel").ui.small.basic.button Cancel
             hr
-            button.ui.submit.small.button(type="submit") {Check Validation}
+            button.ui.submit.small.button(type="submit" id="submityo") {Check Validation}
 
 
 

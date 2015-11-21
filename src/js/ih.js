@@ -4,6 +4,18 @@
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
 
+
+
+
+
+
+
+
+
+
+
+
+
     $('.ui.checkbox')
     .checkbox()
     ;
@@ -29,6 +41,7 @@
           ]
         },
 
+
         membership: {
           identifier: 'membership',
           rules: [
@@ -38,17 +51,6 @@
           }
           ]
         },
-
-        currency: {
-          identifier: 'currency',
-          rules: [
-          {
-            type   : 'checked',
-            prompt : 'Please select your currency type'
-          }
-          ]
-        },
-
 
         account: {
           identifier: 'account',
@@ -61,12 +63,34 @@
         },
 
 
+
+
+        currency: {
+          identifier: 'currency',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select your currency type'
+          }
+          ]
+        },
+
         language: {
           identifier: 'language',
           rules: [
           {
-            type   : 'checked',
+            type   : 'empty',
             prompt : 'Please select your default language'
+          }
+          ]
+        },
+
+        country: {
+          identifier: 'country',
+          rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select a country'
           }
           ]
         },
@@ -84,15 +108,7 @@
         },
 
 
-        country: {
-          identifier: 'country',
-          rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please select a country'
-          }
-          ]
-        },
+
 
 
         company: {
@@ -178,6 +194,13 @@
   $("#colour-specify").on('click', function() {
     searchSwatch.show();
   });
+
+
+
+
+
+
+
 
   $("#colour-any").on('click', function() {
    searchSwatch.hide();
@@ -282,23 +305,6 @@
       }
     });
 
-  // smooth scrolling
-  // $(function() {
-  //   $('a[href*=#]:not([href=#])').click(function() {
-  //     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-  //       var target = $(this.hash);
-  //       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-  //       if (target.length) {
-  //         $('html,body').animate({
-  //           scrollTop: target.offset().top
-  //         }, 300);
-  //         return false;
-  //       }
-  //     }
-  //   });
-  // });
-
-
 
   var bookmarkAdded = false;
 
@@ -315,17 +321,13 @@
   });
 
 
-
-
   $('.ui.icon.button.remove').click(function(e){
     var tileRemoved = $(this).parent()
     var tileDesc =  $(tileRemoved).find('.description').text();
 
     $(this).find('i').addClass('empty');
 
-    // tileRemoved.addClass('rotateOutDownRight')
     tileRemoved.addClass('fadeAway')
-
 
     setTimeout(function() {
       tileRemoved.remove();
@@ -362,17 +364,93 @@
     $.notify("Did you know, you can change the default currency in your profile settings?", "success");
   });
 
+
+
+
+
+
+
   $('#profile-details').click(function(e){
+
+    localStorage.name = $('#name').val();
+    localStorage.company = $('#company').val();
+
+    localStorage.currency = $('#currency').val();
+    localStorage.salutation = $('#salutation').val();
+
+    localStorage.language = $('#language').val();
+    localStorage.telephone = $('#telephone').val();
+    localStorage.state = $('#state').val();
+
+    pageState();
+
     $.notify("Your details have been updated", "success");
+
   });
 
-  $('#profile-password').click(function(e){
-    console.log("Your password has been updated", "success")
+  // console.log("$('#name').val() is "+$('#name').val());
+
+
+  $('#signin').click(function(e){
+    localStorage.email = $('#email').val();
+    localStorage.auth = "true";
+
   });
 
-  $('#profile-notices').click(function(e){
-    console.log("Your notices have been updated", "success")
+  $('#signout').click(function(e){
+    localStorage.auth = "false";
   });
+
+
+
+  function pageState(){
+
+   console.log("localStorage.auth is "+localStorage.auth);
+
+   if (localStorage.auth === "true" || localStorage.auth === "undefined"){
+    console.log("show sign in items");
+
+    $('.authorised-hide').hide();
+    $('.authorised-show').show();
+
+    $('.browse .personalise').text("Welcome back, "+localStorage.name);
+    $('.profile .personalise').text(localStorage.name+"\'s Profile");
+    $('.email-static').text(localStorage.email);
+
+
+    // update fields
+    $('#name').val(localStorage.name);
+    $('#company').val(localStorage.company);
+    $('#state').val(localStorage.state);
+    $('#telephone').val(localStorage.telephone);
+
+    console.log("localStorage.email is "+localStorage.email);
+
+    $('#salutation').dropdown('set value', localStorage.salutation);
+    $('#currency').dropdown('set value', localStorage.currency);
+    $('#language').dropdown('set value', localStorage.language);
+
+  }
+
+  else {
+    console.log("hide sign in items");
+    $('.authorised-hide').show();
+    $('.authorised-show').hide();
+
+  }
+}
+
+pageState();
+
+
+$('#profile-password').click(function(e){
+  console.log("Your password has been updated", "success")
+});
+
+$('#profile-notices').click(function(e){
+  console.log("Your notices have been updated", "success")
+});
+
 
 
 

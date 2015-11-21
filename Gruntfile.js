@@ -82,13 +82,6 @@ module.exports = function(grunt) {
         }
       },
 
-      uncss: {
-        dist: {
-          files: {
-            'dist/css/style.css': ['dist/*.html']
-          }
-        }
-      },
 
     jade: {
       compile: {

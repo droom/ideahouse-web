@@ -14,14 +14,6 @@ html(lang="en")
         .ui.huge.breadcrumb
           .section Welcome to Ideahouse
 
-        .ui.info.message
-          i.close.icon
-          .header
-            = "Don't have an Ideahouse account?"
-            br
-            = "Register an account now for free."
-          a(href="gate-register-1.html").ui.button Register
-
         //- .ui.info.message
         //-   .header
         //-     | You've sucessfully changed your password. Please sign in using your new credentials.
@@ -31,7 +23,7 @@ html(lang="en")
             fieldset
               .field
                 label.input Login
-                input(type="email", name="email", placeholder="Email / Login ID")
+                input(type="email", name="email", id="email", placeholder="Email / Login ID")
               .field
                 label.input Password
                 input(type="password", name="password", placeholder="Password")
@@ -46,7 +38,15 @@ html(lang="en")
             hr
             .ui.error.message
             button.ui.submit.button(type="submit") {Check Validation}
-            a(href="index.html").ui.button.cta Sign in
+            a(href="index.html" id="signin").ui.button.cta Sign in
+
+        .ui.info.message
+          i.close.icon
+          .header
+            = "Don't have an Ideahouse account?"
+            br
+            = "Register an account now for free."
+          a(href="gate-register-1.html").ui.button Register
 
 
 
