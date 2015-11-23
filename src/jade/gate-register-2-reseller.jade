@@ -25,7 +25,8 @@ html(lang="en")
               h2 Login information
               .inline.field
                 label.static.required Login
-                input(name='email', type='email', placeholder='Email/Login ID')
+                input(type="email", name="email", id="email", placeholder="Email / Login ID")
+
               .inline.field
                 label.static.required Password
                 input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}")
@@ -60,7 +61,7 @@ html(lang="en")
 
               .inline.field
                 label.static.required Company Name
-                input(name='company', type='text', placeholder='Company Name')
+                input(name='company', id='company', type='text', placeholder='Company Name')
 
               .inline.field
                 label.static.required Country
@@ -808,11 +809,13 @@ html(lang="en")
 
               .inline.field
                 label.static State
-                input(name='state', type='text', placeholder='State')
+                input(name='state', id='state', type='text', placeholder='State')
 
               .inline.field
-                label.static.required Mobile Number
-                input(name='telephone', type='tel')
+                label.static Mobile Number
+                input(name='telephone', id='telephone', type='tel')
+
+
 
             hr
             fieldset

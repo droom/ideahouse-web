@@ -18,6 +18,15 @@ html(lang="en")
         //-   .header
         //-     | You've sucessfully changed your password. Please sign in using your new credentials.
 
+        .ui.info.message
+          i.close.icon
+          .header
+            = "Don't have an Ideahouse account?"
+            br
+            = "Register an account now for free."
+          a(href="gate-register-1.html").ui.button Register
+
+
         .content
           form.ui.form.login
             fieldset
@@ -38,15 +47,8 @@ html(lang="en")
             hr
             .ui.error.message
             button.ui.submit.button(type="submit") {Check Validation}
-            a(href="index.html" id="signin").ui.button.cta Sign in
+            a(href="index.html" id="gate-signin").ui.button.cta Sign in
 
-        .ui.info.message
-          i.close.icon
-          .header
-            = "Don't have an Ideahouse account?"
-            br
-            = "Register an account now for free."
-          a(href="gate-register-1.html").ui.button Register
 
 
 

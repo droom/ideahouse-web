@@ -13,12 +13,12 @@ html(lang="en")
         .ui.huge.breadcrumb
           .section Reset my password
 
-        .ui.info.message
+        .ui.info.message.reset
           .header
             | Please check your email for further instructions.
 
         .content
-          p You'll be emailed instructions on how to reset your password.
+          p Please enter the email address you used to sign up with Ideahouse. You'll be emailed instructions on how to reset your password.
           hr
           form.ui.form
             fieldset
@@ -29,7 +29,7 @@ html(lang="en")
 
 
           hr
-          a(href="#" aria-label="Email me reset link").ui.button.cta Email reset link
+          a(href="#" aria-label="Email me reset link", id="gate-reset").ui.button.cta Email reset link
 
       include partials/_footer
       include partials/_scripts
