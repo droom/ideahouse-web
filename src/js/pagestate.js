@@ -1,56 +1,70 @@
   $(document).ready(function() {
 
+    $('.authorised-hide').show();
+    $('.authorised-show').hide();
+    $('.ui.info.message.reset').hide();
+
     function pageState(){
 
      console.log("localStorage.auth is "+localStorage.auth);
 
-     if (localStorage.auth === "true" || localStorage.auth === "undefined"){
-      console.log("show authorised items");
+     if (localStorage.auth === "true"){
 
       $('.authorised-hide').hide();
       $('.authorised-show').show();
 
-      $('.browse .personalise').text("Welcome back, "+localStorage.name);
-      $('.profile .personalise').text(localStorage.name+"\'s Profile");
-      $('.profile .personalise').text(localStorage.name+"\'s Profile");
+      // Adds name to profile, menu, browse
+      if (localStorage.name !== undefined && localStorage.name.length !== 0) {
+        $('.browse .personalise').text("Welcome back, "+localStorage.name);
+        $('.profile .personalise').text(localStorage.name+"\'s Profile");
+        $('.profile .personalise').text(localStorage.name+"\'s Profile");
+      }
 
-      $('.email-static').text(localStorage.email);
+      // Adds email to profile
+      if (localStorage.email !== undefined && localStorage.email.length !== 0) {
+       $('.email-static').text(localStorage.email);
+     }
 
+      // Persists entered values inputs
       $('#name').val(localStorage.name);
       $('#company').val(localStorage.company);
       $('#state').val(localStorage.state);
       $('#telephone').val(localStorage.telephone);
 
+      // Persists dropdown selections
       $('#salutation').dropdown('set value', localStorage.salutation);
       $('#currency').dropdown('set value', localStorage.currency);
       $('#language').dropdown('set value', localStorage.language);
 
+      // Bookmarks
+      if (localStorage.bookmarked === "true") {
+      }
+
     }
 
     else {
-      console.log("hide authorised items");
       $('.authorised-hide').show();
       $('.authorised-show').hide();
-
     }
   }
 
-  pageState();
 
-  $('#change-currency .item').click(function(e){
-    $.notify("Did you know, you can change the default currency in your profile settings?", "success");
-  });
+  // var bookmarkAdded = false;
+  // $('#bookmark-toggle').click(function(e){
+  //   localStorage.bookmarked = "true";
+  //   productTitle = $('#product-title').text();
+  //   if (!bookmarkAdded){
+  //     $.notify(productTitle+" added to your bookmarks." , "success");
+  //   } else {
+  //     $.notify(productTitle+" removed from your bookmarks.", "success");
+  //   }
+  //   $(this).find('i.heart.icon').toggleClass('empty');
+  //   bookmarkAdded = !bookmarkAdded;
+  // });
 
-  $('#profile-password').click(function(e){
-    console.log("Your password has been updated", "success")
-  });
 
-  $('#profile-notices').click(function(e){
-    console.log("Your notices have been updated", "success")
-  });
 
   $('#profile-details').click(function(e){
-
     localStorage.name = $('#name').val();
     localStorage.company = $('#company').val();
     localStorage.currency = $('#currency').val();
@@ -59,20 +73,21 @@
     localStorage.telephone = $('#telephone').val();
     localStorage.state = $('#state').val();
     pageState();
-    $.notify("Your details have been updated", "success");
-
   });
 
-
-  $('#signin').click(function(e){
+  $('#gate-signin').click(function(e){
     localStorage.email = $('#email').val();
     localStorage.auth = "true";
   });
 
-  $('#signout').click(function(e){
+  $('#gate-signout').click(function(e){
     localStorage.auth = "false";
   });
 
+  $('#gate-reset').click(function(e){
+    $('.ui.info.message.reset').show();
+  });
 
+  pageState();
 
 });

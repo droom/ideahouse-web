@@ -35640,63 +35640,52 @@ $.fn.visibility.settings = {
 	});
 
 }));
+;$(document).ready(function() {
+
+  if ($('body.bookmarks').length > 0){
+    checkBookmarkTiles();
+  }
+  function checkBookmarkTiles(){
+    if ($('#bookmark-tiles').is(':empty')){
+      console.log("empty");
+      $('#bookmark-msg').show();
+    } else {
+      console.log("not empty");
+      $('#bookmark-msg').hide();
+    }
+  }
+
+
+  $('.ui.icon.button.remove').click(function(e){
+    var tileRemoved = $(this).parent()
+    var tileDesc =  $(tileRemoved).find('.description').text();
+    $(this).find('i').addClass('empty');
+    tileRemoved.addClass('fadeAway')
+    setTimeout(function() {
+      tileRemoved.remove();
+      checkBookmarkTiles();
+    }, 400);
+    $.notify(tileDesc+" removed from your bookmarks.", "success");
+  });
+
+});
 ;  $(document).ready(function() {
 
-    var bookmarkAdded = false;
-
-    if ($('body.bookmarks').length > 0)
-    {
-      checkBookmarkTiles();
-    }
-
-
-    $('#bookmark-toggle').click(function(e){
-      productTitle = $('#product-title').text();
-      e.preventDefault();
-      if (!bookmarkAdded){
-        $.notify(productTitle+" added to your bookmarks." , "success");
-      } else {
-        $.notify(productTitle+" removed from your bookmarks.", "success");
-      }
-      $(this).find('i.heart.icon').toggleClass('empty');
-      bookmarkAdded = !bookmarkAdded;
+    $('#change-currency .item').click(function(e){
+      $.notify("Did you know, you can change the default currency in your profile settings?", "success");
     });
 
-
-    $('.ui.icon.button.remove').click(function(e){
-      var tileRemoved = $(this).parent()
-      var tileDesc =  $(tileRemoved).find('.description').text();
-
-      $(this).find('i').addClass('empty');
-
-      tileRemoved.addClass('fadeAway')
-
-      setTimeout(function() {
-        tileRemoved.remove();
-        checkBookmarkTiles();
-
-      }, 400);
-
-      $.notify(tileDesc+" removed from your bookmarks.", "success");
-
+    $('#profile-password').click(function(e){
+      $.notify("Your password has been updated", "success")
     });
 
+    $('#profile-notices').click(function(e){
+      $.notify("Your notices have been updated", "success")
+    });
 
-    function checkBookmarkTiles(){
-
-      if ($('#bookmark-tiles').is(':empty')){
-        console.log("empty");
-        $('#bookmark-msg').show();
-
-      } else {
-        console.log("not empty");
-        $('#bookmark-msg').hide();
-      }
-    }
-
-
-
-
+    $('#profile-details').click(function(e){
+      $.notify("Your details have been updated", "success");
+    });
 
   });
 ;  $(document).ready(function() {
@@ -35912,57 +35901,71 @@ $.fn.visibility.settings = {
 });
 ;  $(document).ready(function() {
 
+    $('.authorised-hide').show();
+    $('.authorised-show').hide();
+    $('.ui.info.message.reset').hide();
+
     function pageState(){
 
      console.log("localStorage.auth is "+localStorage.auth);
 
-     if (localStorage.auth === "true" || localStorage.auth === "undefined"){
-      console.log("show authorised items");
+     if (localStorage.auth === "true"){
 
       $('.authorised-hide').hide();
       $('.authorised-show').show();
 
-      $('.browse .personalise').text("Welcome back, "+localStorage.name);
-      $('.profile .personalise').text(localStorage.name+"\'s Profile");
-      $('.profile .personalise').text(localStorage.name+"\'s Profile");
+      // Adds name to profile, menu, browse
+      if (localStorage.name !== undefined && localStorage.name.length !== 0) {
+        $('.browse .personalise').text("Welcome back, "+localStorage.name);
+        $('.profile .personalise').text(localStorage.name+"\'s Profile");
+        $('.profile .personalise').text(localStorage.name+"\'s Profile");
+      }
 
-      $('.email-static').text(localStorage.email);
+      // Adds email to profile
+      if (localStorage.email !== undefined && localStorage.email.length !== 0) {
+       $('.email-static').text(localStorage.email);
+     }
 
+      // Persists entered values inputs
       $('#name').val(localStorage.name);
       $('#company').val(localStorage.company);
       $('#state').val(localStorage.state);
       $('#telephone').val(localStorage.telephone);
 
+      // Persists dropdown selections
       $('#salutation').dropdown('set value', localStorage.salutation);
       $('#currency').dropdown('set value', localStorage.currency);
       $('#language').dropdown('set value', localStorage.language);
 
+      // Bookmarks
+      if (localStorage.bookmarked === "true") {
+      }
+
     }
 
     else {
-      console.log("hide authorised items");
       $('.authorised-hide').show();
       $('.authorised-show').hide();
-
     }
   }
 
-  pageState();
 
-  $('#change-currency .item').click(function(e){
-    $.notify("Did you know, you can change the default currency in your profile settings?", "success");
-  });
+  // var bookmarkAdded = false;
+  // $('#bookmark-toggle').click(function(e){
+  //   localStorage.bookmarked = "true";
+  //   productTitle = $('#product-title').text();
+  //   if (!bookmarkAdded){
+  //     $.notify(productTitle+" added to your bookmarks." , "success");
+  //   } else {
+  //     $.notify(productTitle+" removed from your bookmarks.", "success");
+  //   }
+  //   $(this).find('i.heart.icon').toggleClass('empty');
+  //   bookmarkAdded = !bookmarkAdded;
+  // });
 
-  $('#profile-password').click(function(e){
-    console.log("Your password has been updated", "success")
-  });
 
-  $('#profile-notices').click(function(e){
-    console.log("Your notices have been updated", "success")
-  });
 
   $('#profile-details').click(function(e){
-
     localStorage.name = $('#name').val();
     localStorage.company = $('#company').val();
     localStorage.currency = $('#currency').val();
@@ -35971,21 +35974,22 @@ $.fn.visibility.settings = {
     localStorage.telephone = $('#telephone').val();
     localStorage.state = $('#state').val();
     pageState();
-    $.notify("Your details have been updated", "success");
-
   });
 
-
-  $('#signin').click(function(e){
+  $('#gate-signin').click(function(e){
     localStorage.email = $('#email').val();
     localStorage.auth = "true";
   });
 
-  $('#signout').click(function(e){
+  $('#gate-signout').click(function(e){
     localStorage.auth = "false";
   });
 
+  $('#gate-reset').click(function(e){
+    $('.ui.info.message.reset').show();
+  });
 
+  pageState();
 
 });
 ;  $(document).ready(function() {
@@ -36013,6 +36017,24 @@ $.fn.visibility.settings = {
   });
 ;  $(document).ready(function() {
 
+    var bookmarkAdded = false;
+
+    $('#bookmark-toggle').click(function(e){
+      e.preventDefault();
+      productTitle = $('#product-title').text();
+      if (!bookmarkAdded){
+        $.notify(productTitle+" added to your bookmarks." , "success");
+      } else {
+        $.notify(productTitle+" removed from your bookmarks.", "success");
+      }
+      $(this).find('i.heart.icon').toggleClass('empty');
+      bookmarkAdded = !bookmarkAdded;
+    });
+
+
+  });
+;  $(document).ready(function() {
+
     var searchSwatch = $('table.ui.table.swatch.search')
     var searchSwatchSelected = false
 
@@ -36031,7 +36053,6 @@ $.fn.visibility.settings = {
       $('table.swatch.search td.swatch').removeClass('selected');
       $(this).toggleClass('selected');
     });
-
 
   });
 ;  $(document).ready(function() {
