@@ -49,22 +49,18 @@
   }
 
 
-  // var bookmarkAdded = false;
-  // $('#bookmark-toggle').click(function(e){
-  //   localStorage.bookmarked = "true";
-  //   productTitle = $('#product-title').text();
-  //   if (!bookmarkAdded){
-  //     $.notify(productTitle+" added to your bookmarks." , "success");
-  //   } else {
-  //     $.notify(productTitle+" removed from your bookmarks.", "success");
-  //   }
-  //   $(this).find('i.heart.icon').toggleClass('empty');
-  //   bookmarkAdded = !bookmarkAdded;
-  // });
-
-
-
   $('#profile-details').click(function(e){
+    localStorage.name = $('#name').val();
+    localStorage.company = $('#company').val();
+    localStorage.currency = $('#currency').val();
+    localStorage.salutation = $('#salutation').val();
+    localStorage.language = $('#language').val();
+    localStorage.telephone = $('#telephone').val();
+    localStorage.state = $('#state').val();
+    pageState();
+  });
+
+  $('#gate-submit').click(function(e){
     localStorage.name = $('#name').val();
     localStorage.company = $('#company').val();
     localStorage.currency = $('#currency').val();
