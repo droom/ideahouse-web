@@ -87,7 +87,7 @@
 
 // // Mobile
 
-@media (max-width: 600px)
+@media (max-width: $phone-max)
   .ui.search.quick
     .ui.icon.input
       input.prompt
@@ -139,7 +139,7 @@
         &:focus
           border-bottom: 1px solid $stroke
 
-@media (min-width: 601px)
+@media (min-width: $desktop-min)
   .brand
     height: 100px
 
@@ -162,7 +162,7 @@
     section.search
       float: left
       width: 48%
-      padding: 30px 15px 15px 15px
+      padding: 30px 15px 15px 0px
       .ui.search.quick
         .ui.icon.input
           input.prompt

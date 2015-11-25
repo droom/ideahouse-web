@@ -35949,7 +35949,8 @@ $.fn.visibility.settings = {
     }
   }
 
-  $('#gate-submit').click(function(e){
+
+  $('#profile-details').click(function(e){
     localStorage.name = $('#name').val();
     localStorage.company = $('#company').val();
     localStorage.currency = $('#currency').val();
@@ -35960,7 +35961,7 @@ $.fn.visibility.settings = {
     pageState();
   });
 
-  $('#profile-details').click(function(e){
+  $('#gate-submit').click(function(e){
     localStorage.name = $('#name').val();
     localStorage.company = $('#company').val();
     localStorage.currency = $('#currency').val();
@@ -36055,25 +36056,25 @@ $.fn.visibility.settings = {
     $('.menu .item').tab();
 
     // Dry this out
-    $('table.stock').hide();
-    $('table.price').hide();
+    $('.product .stock').hide();
+    $('.product .price').hide();
 
     $('a.btn-details').on('click', function() {
-      $('table.stock').hide();
-      $('table.details').show();
-      $('table.price').hide();
+      $('.product .stock').hide();
+      $('.product .details').show();
+      $('.product .price').hide();
     });
 
     $('a.btn-stock').on('click', function() {
-      $('table.stock').show();
-      $('table.details').hide();
-      $('table.price').hide();
+      $('.product .stock').show();
+      $('.product .details').hide();
+      $('.product .price').hide();
     });
 
     $('a.btn-price').on('click', function() {
-      $('table.stock').hide();
-      $('table.details').hide();
-      $('table.price').show();
+      $('.product .stock').hide();
+      $('.product .details').hide();
+      $('.product .price').show();
     });
 
 

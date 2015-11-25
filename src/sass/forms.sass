@@ -27,12 +27,7 @@ label.hide
           background: #5ec5e2
 
 
-.content
-  form.ui.form
-    fieldset
-      margin: 0
-    fieldset:nth-child(1)
-      padding: 0
+
 
 
 form.ui.form
@@ -102,6 +97,36 @@ form.ui.form
     margin-left: 30px
   .ui.button + .ui.button
     margin-left: 10px
+
+.content
+  .account-type
+    margin-bottom: 10px
+    .column
+      p
+        padding: 0 30px
+        min-height: 6.5em
+
+  form.ui.form
+    fieldset
+      margin: 0
+    fieldset:nth-child(1)
+      padding: 0
+    input,
+    .ui.error.message
+      max-width: 370px
+
+
+@media (max-width: 768px)
+  .content
+    .account-type
+      .column
+        p
+          min-height: 1em
+      .ui.vertical.divider
+        margin-top: 15px !important
+      .ui.vertical.divider + .column
+        margin-top: 15px !important
+        margin-bottom: 0 !important
 
 @media (max-width: 780px)
   form.ui.form

@@ -32,7 +32,7 @@ html(lang="en")
         hr
 
         .boundary.no-select
-          .product-actions
+          .product-actions.authorised-show
             .ui.icon.button.bookmark.cta(id="bookmark-toggle")
               i.empty.white.heart.icon
             .ui.icon.button.download.cta
@@ -53,205 +53,212 @@ html(lang="en")
           a.item(class="btn-stock") Stock
           a.item(class="btn-price") Price
 
-        table.ui.celled.table.unstackable.details
-          tbody
-            tr
-              td Category
-              td Pens
-            tr
-              td Sub Category
-              td Metal Pens
-            tr
-              td Code No.
-              td 903B
+        .details
+          table.ui.celled.table.unstackable
+            tbody
+              tr
+                td Category
+                td Pens
+              tr
+                td Sub Category
+                td Metal Pens
+              tr
+                td Code No.
+                td 903B
 
-            tr
-              td Base material
-              td Metals
+              tr
+                td Base material
+                td Metals
 
-            tr
-              td Ink Type
-              td Ball Point
-            tr
-              td Nib Size (mm)
-              td 1.0
-            tr
-              td Refill Color
-              td Black
-            tr
-              td Surface Finishing
-              td Metalic
-            tr
-              td Units Per Carton
-              td 500
-            tr
-              td Units Per inner box
-              td 50
-            tr
-              td Weight per carton (Kg)
-              td 20 kg
-            tr
-              td Dimension (mm)
-              td 142(L) x 13(D)
-            tr
-              td Carton size (mm)
-              td 460 (L) x 280 (W) x 185 (H)
-            tr
-              td Print area 1
-              td Barrel : 40mm (L) x 8mm (W)
-            tr
-              td Print area 2
-              td Clip : 30mm (L) x 8mm (W)
-            tr
-              td Print Type
-              td A2 - Pad Print Metal
-            tr
-              td Packing details
-              td Each in opp bag
-          tfoot
-            tr
-              td(colspan="2")
-                | NOTES
-                br
-                | Parker Refill Compatible
-                br
-                | Material: Brass;
-                br
-                | These executive promotional metal pens are elegantly durable. Logo will have silver chrome finishing if by laser.
+              tr
+                td Ink Type
+                td Ball Point
+              tr
+                td Nib Size (mm)
+                td 1.0
+              tr
+                td Refill Color
+                td Black
+              tr
+                td Surface Finishing
+                td Metalic
+              tr
+                td Units Per Carton
+                td 500
+              tr
+                td Units Per inner box
+                td 50
+              tr
+                td Weight per carton (Kg)
+                td 20 kg
+              tr
+                td Dimension (mm)
+                td 142(L) x 13(D)
+              tr
+                td Carton size (mm)
+                td 460 (L) x 280 (W) x 185 (H)
+              tr
+                td Print area 1
+                td Barrel : 40mm (L) x 8mm (W)
+              tr
+                td Print area 2
+                td Clip : 30mm (L) x 8mm (W)
+              tr
+                td Print Type
+                td A2 - Pad Print Metal
+              tr
+                td Packing details
+                td Each in opp bag
+            tfoot
+              tr
+                td(colspan="2")
+                  | NOTES
+                  br
+                  | Parker Refill Compatible
+                  br
+                  | Material: Brass;
+                  br
+                  | These executive promotional metal pens are elegantly durable. Logo will have silver chrome finishing if by laser.
 
-        table.ui.sortable.celled.table.unstackable.stock
-          thead
-            tr
-              th.sorted.descending Colour
-              th Available
-              th Reserved
-              th Expected Arrival
+        .stock
+          table.ui.sortable.celled.table.unstackable
+            thead
+              tr
+                th.sorted.descending Colour
+                th Available
+                th Reserved
+                th Expected Arrival
 
-          tbody
-            tr
-              td.swatch.pictured (As pictured)
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.black Black
-              td 53
-              td 1
-              td
-                = "10000"
-                span.due
-                  = "10/12/15"
-            tr
-              td.swatch.white White
-              td 0
-              td 0
-              td
-                = "10000"
-                span.due
-                  = "10/12/15"
-            tr
-              td.swatch.grey Grey
-              td 0
-              td 05
-              td
-            tr
-              td.swatch.blue Blue
-              td 7598
-              td 1001
-              td
-            tr
-              td.swatch.lightBlue Light Blue
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.red Red
-              td 7432
-              td 1
-              td
-                = "5000"
-                span.due
-                  = "10/12/15"
-            tr
-              td.swatch.maroon Maroon
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.green Green
-              td 0
-              td 0
-              td
-                = "10000"
-                span.due
-                  = "10/12/15"
-            tr
-              td.swatch.brightGreen Bright Green
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.yellow Yellow
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.purple Purple
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.pink Pink
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.orange Orange
-              td 10
-              td 0
-              td
-                = "10000"
-                span.due
-                  = "10/12/15"
-            tr
-              td.swatch.turquoise Turquoise
-              td 10
-              td 0
-              td
-            tr
-              td.swatch.silver Silver
-              td 10
-              td 0
-              td
-            tr
-              td.swatch.gold Gold
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.glow Glow in the dark
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.wood Wood
-              td 0
-              td 0
-              td
-            tr
-              td.swatch.beige Beige
-              td 0
-              td 0
-              td
-          tfoot
-            tr
-              td Total
-              td 15083
-              td 1003
-              td
+            tbody
+              tr
+                td.swatch.pictured (As pictured)
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.black Black
+                td 53
+                td 1
+                td
+                  = "10000"
+                  span.due
+                    = "10/12/15"
+              tr
+                td.swatch.white White
+                td 0
+                td 0
+                td
+                  = "10000"
+                  span.due
+                    = "10/12/15"
+              tr
+                td.swatch.grey Grey
+                td 0
+                td 05
+                td
+              tr
+                td.swatch.blue Blue
+                td 7598
+                td 1001
+                td
+              tr
+                td.swatch.lightBlue Light Blue
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.red Red
+                td 7432
+                td 1
+                td
+                  = "5000"
+                  span.due
+                    = "10/12/15"
+              tr
+                td.swatch.maroon Maroon
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.green Green
+                td 0
+                td 0
+                td
+                  = "10000"
+                  span.due
+                    = "10/12/15"
+              tr
+                td.swatch.brightGreen Bright Green
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.yellow Yellow
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.purple Purple
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.pink Pink
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.orange Orange
+                td 10
+                td 0
+                td
+                  = "10000"
+                  span.due
+                    = "10/12/15"
+              tr
+                td.swatch.turquoise Turquoise
+                td 10
+                td 0
+                td
+              tr
+                td.swatch.silver Silver
+                td 10
+                td 0
+                td
+              tr
+                td.swatch.gold Gold
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.glow Glow in the dark
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.wood Wood
+                td 0
+                td 0
+                td
+              tr
+                td.swatch.beige Beige
+                td 0
+                td 0
+                td
+            tfoot
+              tr
+                td Total
+                td 15083
+                td 1003
+                td
 
-        table.ui.celled.table.unstackable.price
-          if authorised
+        .price
+          .ui.info.message.authorised-hide
+            .header To view this item's prices, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+            .ui.button Sign in
+            .ui.button Register
+
+          table.ui.celled.table.unstackable.authorised-show
             thead
               tr
                 th QTY
@@ -314,11 +321,6 @@ html(lang="en")
                 td 100000
                 td 0.480
 
-          else
-            .ui.info.message
-              .header To view this item's prices, please sign in. If you don't have an account with Ideahouse, register now for a free account.
-              .ui.button Sign in
-              .ui.button Register
 
 
       include partials/_footer
