@@ -35640,7 +35640,32 @@ $.fn.visibility.settings = {
 	});
 
 }));
-;$(document).ready(function() {
+;/* Elementary. A CSS workflow for mimicking element queries. [c]2014 @scottjehl, @filamentgroup. MIT license. */
+(function( w ){
+
+	w.elementary = function( options ){
+		if( !( "querySelector" in w.document ) || !( "getComputedStyle" in w ) ){
+			return;
+		}
+		var selector = options && options.selector || ".mod";
+		var mods = w.document.querySelectorAll( selector );
+		for( var m = 0; m < mods.length; m++ ){
+			var mod = mods[ m ],
+				breakpoints = w.getComputedStyle( mod, ":before" ).getPropertyValue( "content" ),
+				widths = breakpoints.replace(/[^\d ]/g,"").split( " "),
+				modWidth = mod.clientWidth,
+				minWidths = [];
+
+			for( var i = 0; i < widths.length; i++ ){
+				if( w.parseFloat( widths[ i ] ) <= modWidth ){
+					minWidths.push( widths[ i ] );
+				}
+			}
+			mod.setAttribute( "data-minwidth", minWidths.join( " " ) );
+		}
+	};
+
+})( this );;$(document).ready(function() {
 
   if ($('body.bookmarks').length > 0){
     checkBookmarkTiles();
@@ -35949,7 +35974,8 @@ $.fn.visibility.settings = {
     }
   }
 
-  $('#gate-submit').click(function(e){
+
+  $('#profile-details').click(function(e){
     localStorage.name = $('#name').val();
     localStorage.company = $('#company').val();
     localStorage.currency = $('#currency').val();
@@ -35960,7 +35986,7 @@ $.fn.visibility.settings = {
     pageState();
   });
 
-  $('#profile-details').click(function(e){
+  $('#gate-submit').click(function(e){
     localStorage.name = $('#name').val();
     localStorage.company = $('#company').val();
     localStorage.currency = $('#currency').val();
@@ -36028,6 +36054,12 @@ $.fn.visibility.settings = {
 
 
   });
+;$(document).ready(function() {
+
+  window.addEventListener( "load", window.elementary, false );
+  window.addEventListener( "resize", window.elementary, false );
+
+});
 ;  $(document).ready(function() {
 
     var searchSwatch = $('table.ui.table.swatch.search')
@@ -36055,25 +36087,25 @@ $.fn.visibility.settings = {
     $('.menu .item').tab();
 
     // Dry this out
-    $('table.stock').hide();
-    $('table.price').hide();
+    $('.product .stock').hide();
+    $('.product .price').hide();
 
     $('a.btn-details').on('click', function() {
-      $('table.stock').hide();
-      $('table.details').show();
-      $('table.price').hide();
+      $('.product .stock').hide();
+      $('.product .details').show();
+      $('.product .price').hide();
     });
 
     $('a.btn-stock').on('click', function() {
-      $('table.stock').show();
-      $('table.details').hide();
-      $('table.price').hide();
+      $('.product .stock').show();
+      $('.product .details').hide();
+      $('.product .price').hide();
     });
 
     $('a.btn-price').on('click', function() {
-      $('table.stock').hide();
-      $('table.details').hide();
-      $('table.price').show();
+      $('.product .stock').hide();
+      $('.product .details').hide();
+      $('.product .price').show();
     });
 
 

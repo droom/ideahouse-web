@@ -42,6 +42,7 @@ module.exports = function(grunt) {
               'src/lib/jquery.dotdotdot.js',
               'src/lib/semantic.js',
               'src/lib/notify.js',
+              'src/lib/elementary.js',
               'src/js/*.js'
               ],
         dest: 'dist/js/main.js',

@@ -1,37 +1,28 @@
 body
+  .tiles[data-minwidth~="300"]
+    background: yellow
+    .ui.card
+      border: 1px solid blue
+
+  .tiles[data-minwidth~="700"]
+    background: red
+    .ui.card
+      border: 1px solid red
+
+  .tiles[data-minwidth~="900"]
+    background: yellow
+    .ui.card
+      border: 1px solid yellow
+
   .tiles
-
-    &.browse
-      .ui.card
-
-        &:nth-child(9n+1),
-        &:nth-child(9n+2),
-        &:nth-child(9n+3)
-          .image
-            background: #f4c95b
-
-        &:nth-child(9n+4),
-        &:nth-child(9n+5),
-        &:nth-child(9n+6)
-          .image
-            background: $brand-green
-
-        &:nth-child(9n+7),
-        &:nth-child(9n+8),
-        &:nth-child(9n+9)
-          .image
-            background: #5ec5e2
-
     .ui.card
       display: inline-block
       vertical-align: top
       box-shadow: none
       border: 1px solid $bg
       width: calc(100%/3)
+      width: calc(100%/4)
       margin: 0 0 2px 0
-      // transition: all 300ms ease
-
-
 
       &:hover
         transform: none
@@ -42,15 +33,16 @@ body
         background: none
 
       .content
-        padding: 10px
+        padding: 7px
         .description
+          font-size: 13px
           height: 3em
           overflow: hidden
           line-height: 1.22em
 
       .extra.content
         line-height: 15px
-        padding: 5px 10px
+        padding: 5px 7px
 
 
       &.offer:before,
@@ -63,7 +55,6 @@ body
         letter-spacing: 0.15em
         padding: 6px 10px
         margin-top: -1
-
         font-size: 10px
         line-height: 12px
         height: 24px
@@ -115,3 +106,54 @@ body
 
       &.fadeAway
         opacity: 0
+
+    &.browse
+      .ui.card
+        &:nth-child(12n+1),
+        &:nth-child(12n+2),
+        &:nth-child(12n+3),
+        &:nth-child(12n+4),
+          .image
+            background: #f4c95b
+        &:nth-child(12n+5),
+        &:nth-child(12n+6),
+        &:nth-child(12n+7),
+        &:nth-child(12n+8)
+          .image
+            background: $brand-green
+        &:nth-child(12n+9),
+        &:nth-child(12n+10),
+        &:nth-child(12n+11),
+        &:nth-child(12n+12)
+          .image
+            background: #5ec5e2
+
+
+@media (max-width: 415px)
+  body
+    .tiles
+      &.browse
+        .ui.card
+          &:nth-child(9n+1),
+          &:nth-child(9n+2),
+          &:nth-child(9n+3)
+            .image
+              background: #f4c95b
+
+          &:nth-child(9n+4),
+          &:nth-child(9n+5),
+          &:nth-child(9n+6)
+            .image
+              background: $brand-green
+
+          &:nth-child(9n+7),
+          &:nth-child(9n+8),
+          &:nth-child(9n+9)
+            .image
+              background: #5ec5e2
+
+      .ui.card
+        width: calc(100%/3)
+        .content
+          .description
+            height: 2.4em
