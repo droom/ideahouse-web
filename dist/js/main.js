@@ -35940,7 +35940,7 @@ $.fn.visibility.settings = {
       $('.authorised-show').show();
 
       // Adds name to profile, menu, browse
-      if (localStorage.name !== undefined && localStorage.name.length !== 0) {
+      if (localStorage.name !== undefined && localStorage.name !== "undefined" && localStorage.name.length !== 0) {
         $('.browse .personalise').text("Welcome back, "+localStorage.name);
         $('.profile .personalise').text(localStorage.name+"\'s Profile");
         $('.profile .personalise').text(localStorage.name+"\'s Profile");

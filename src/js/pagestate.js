@@ -14,14 +14,14 @@
       $('.authorised-show').show();
 
       // Adds name to profile, menu, browse
-      if (localStorage.name !== undefined && localStorage.name.length !== 0) {
+      if (localStorage.name !== undefined && localStorage.name !== "undefined" && localStorage.name.length !== 0) {
         $('.browse .personalise').text("Welcome back, "+localStorage.name);
         $('.profile .personalise').text(localStorage.name+"\'s Profile");
         $('.profile .personalise').text(localStorage.name+"\'s Profile");
       }
 
       // Adds email to profile
-      if (localStorage.email !== undefined && localStorage.email.length !== 0) {
+      if (localStorage.name !== undefined && localStorage.name !== "undefined" && localStorage.name.length !== 0) {
        $('.email-static').text(localStorage.email);
      }
 
