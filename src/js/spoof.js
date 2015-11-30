@@ -1,3 +1,5 @@
+// To be deleted in production
+
   $(document).ready(function() {
 
     $('.authorised-hide').show();
