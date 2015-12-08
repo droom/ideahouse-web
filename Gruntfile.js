@@ -30,11 +30,23 @@ module.exports = function(grunt) {
       }
     },
 
+    sass: {
+      dist: {
+        options: {
+          style: 'compressed'
+        },
+        files: {
+          'src/css/style.css': 'src/sass/style.sass',
+        }
+      }
+    },
+
+
     concat: {
       options: {
         separator: ';',
       },
-      dist: {
+      js: {
         src: [
               'src/lib/jquery-1.11.3.js',
               'src/lib/slick.js',
@@ -45,25 +57,26 @@ module.exports = function(grunt) {
               'src/lib/elementary.js',
               'src/js/*.js'
               ],
-        dest: 'dist/js/main.js',
+        dest: 'dist/js/ideahouse.js',
       },
+
+      css: {
+        src: [
+              'src/lib/semantic.css',
+              'src/lib/slick.css',
+              'src/lib/slick-theme.css',
+              'src/css/style.css'
+              ],
+        dest: 'dist/css/ih.css',
+      },
+
+
     },
 
     uglify: {
       build: {
-        src: 'dist/js/main.js',
-        dest:'dist/js/main.min.js'
-      }
-    },
-
-    sass: {
-      dist: {
-        options: {
-          style: 'compressed'
-        },
-        files: {
-          'dist/css/style.css': 'src/sass/style.sass',
-        }
+        src: 'dist/js/ideahouse.js',
+        dest:'dist/js/ideahouse.min.js'
       }
     },
 
@@ -78,7 +91,7 @@ module.exports = function(grunt) {
           ]
         },
         dist: {
-          src: 'dist/css/style.css'
+          src: 'src/css/style.css'
         }
       },
 
