@@ -577,7 +577,7 @@
 			},
 			info: {
 				"color": "#fff",
-				"background-color": "#f4c95b"
+				"background-color": "#f7931d"
 			},
 			warn: {
 				"color": "#fff",

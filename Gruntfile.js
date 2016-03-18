@@ -8,26 +8,34 @@ module.exports = function(grunt) {
       options: {
         livereload: true,
       },
+
       sass: {
         files: ['src/sass/*.sass'],
         tasks: ['sass'],
       },
+
       jade: {
         files: ['src/jade/*.jade', 'src/jade/partials/*.jade'],
         tasks: ['jade'],
       },
+
+
       concat: {
         files: ['src/js/*.js'],
         tasks: ['concat']
       },
+      
       uglify: {
         files: ['src/js/*.js'],
         tasks: ['uglify'],
-      },
+      }
+
+      ,
       postcss: {
         files: ['src/sass/*.sass'],
         tasks: ['postcss'],
       }
+
     },
 
     sass: {
