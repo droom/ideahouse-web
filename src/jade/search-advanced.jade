@@ -15,7 +15,7 @@ html(lang="en")
 
         if authorised
           .content
-            form.ui.form
+            form.ui.form.advanced-search
               fieldset
                 label.input Category
                 .ui.large.fluid.search.selection.dropdown.category
@@ -184,34 +184,37 @@ html(lang="en")
 
               hr
 
-              fieldset
+              fieldset.quantity
                 label.input Unit Quantity
                 .ui.input.as
                   input(type="number", placeholder="Quantity")
                 .ui.buttons.increment
-                  button.ui.button &minus;
+                  button.ui.button.minus &minus;
                   .or
-                  button.ui.button &plus;
+                  button.ui.button.plus &plus;
+
               hr
-              fieldset
+              
+              fieldset.price.from
                 label.input Unit Price Range (MYR)
                 .ui.input.as
-                  input(type="number", placeholder="From")
+                  input(type="number", placeholder="From", step="0.01")
                 .ui.buttons.increment
-                  button.ui.button &minus;
+                  button.ui.button.minus &minus;
                   .or
-                  button.ui.button &plus;
-              fieldset
+                  button.ui.button.plus &plus;
+
+              fieldset.price.to
                 .ui.input.as
-                  input(type="number", placeholder="To")
+                  input(type="number", placeholder="To", step="0.01")
                 .ui.buttons.increment
-                  button.ui.button &minus;
+                  button.ui.button.minus &minus;
                   .or
-                  button.ui.button &plus;
+                  button.ui.button.plus &plus;
 
               hr
-              .ui.error.message
 
+              .ui.error.message
               a(href="search-results.html").ui.cta.button Search now
               button.ui.submit.button(type="submit") {DEV: Check Validation}
 
