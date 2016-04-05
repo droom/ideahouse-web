@@ -48,6 +48,10 @@ html(lang="en")
 
         hr
 
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis minus alias, eaque magni iste reprehenderit nostrum illo ex neque, ipsa, dignissimos sunt animi, dolor doloribus repellat sint numquam atque ad!
+
+        hr
+
         .ui.three.item.menu
           a.item.active(class="btn-details") Product
           a.item(class="btn-stock") Stock
@@ -89,7 +93,10 @@ html(lang="en")
                 td Units Per inner box
                 td 50
               tr
-                td Weight per carton (Kg)
+                td Weight, per carton (kg)
+                td 1 kg
+              tr
+                td Weight, unit (kg)
                 td 20 kg
               tr
                 td Dimension (mm)
@@ -121,13 +128,13 @@ html(lang="en")
                   | These executive promotional metal pens are elegantly durable. Logo will have silver chrome finishing if by laser.
 
         .stock
-          table.ui.sortable.celled.table.unstackable
+          table.ui.sortable.celled.table.unstackable.product
             thead
               tr
-                th.sorted.descending Colour
-                th Available
-                th Reserved
-                th Expected Arrival
+                th.swatch Colour
+                th.available.sorted.descending Available
+                th.reserved Reserved
+                th.arrival Expected Arrival
 
             tbody
               tr
