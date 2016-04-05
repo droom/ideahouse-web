@@ -19,7 +19,9 @@
     $('table.sortable').tablesort();
 
 
-    $('table.sortable.product').tablesort().data('tablesort').sort($("th.available"), 'desc');
+    if ($('table.sortable.product').length){
+      $('table.sortable.product').tablesort().data('tablesort').sort($("th.available"), 'desc');
+    }
 
 
 

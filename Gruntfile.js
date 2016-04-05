@@ -36,7 +36,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'dist/css/style.css': 'src/sass/style.sass',
+          'src/sass/main.css': 'src/sass/main.sass',
         }
       }
     },
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
         'src/lib/semantic.css',
         'src/lib/slick.css',
         'src/lib/slick-theme.css',
-        'dist/css/style.css'
+        'src/sass/main.css'
         ],
         dest: 'dist/css/ih.css',
       },
@@ -94,6 +94,9 @@ module.exports = function(grunt) {
         dest:'dist/js/ideahouse.min.js'
       }
     },
+
+
+
 
     postcss: {
       options: {
