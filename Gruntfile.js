@@ -10,7 +10,10 @@ module.exports = function(grunt) {
       },
 
       sass: {
-        files: ['src/sass/*.sass'],
+        files: [
+        'src/sass/*.sass',
+        'src/sass/modules/*.sass'
+        ],
         tasks: ['sass'],
       },
 
@@ -44,7 +47,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'src/css/style.css': 'src/sass/style.sass',
+          'dist/css/style.css': 'src/sass/style.sass',
         }
       }
     },
@@ -56,30 +59,46 @@ module.exports = function(grunt) {
       },
       js: {
         src: [
-              'src/lib/jquery-1.11.3.js',
-              'src/lib/slick.js',
-              'src/lib/jquery.tablesort.js',
-              'src/lib/jquery.dotdotdot.js',
-              'src/lib/semantic.js',
-              'src/lib/notify.js',
-              'src/lib/elementary.js',
-              'src/js/*.js'
-              ],
+        'src/lib/jquery-1.11.3.js',
+        'src/lib/slick.js',
+        'src/lib/jquery.tablesort.js',
+        'src/lib/jquery.dotdotdot.js',
+        'src/lib/semantic.js',
+        'src/lib/notify.js',
+        'src/lib/elementary.js',
+        'src/js/*.js'
+        ],
         dest: 'dist/js/ideahouse.js',
       },
 
       css: {
         src: [
-              'src/lib/semantic.css',
-              'src/lib/slick.css',
-              'src/lib/slick-theme.css',
-              'src/css/style.css'
-              ],
+        'src/lib/semantic.css',
+        'src/lib/slick.css',
+        'src/lib/slick-theme.css',
+        'dist/css/style.css'
+        ],
         dest: 'dist/css/ih.css',
       },
-
-
     },
+
+
+    jade: {
+      compile: {
+        options: {
+          pretty: false,
+          data: {}
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/jade',
+          src: [ '*.jade' ],
+          dest: 'dist',
+          ext: '.html'
+        }]
+      }
+    },
+
 
     uglify: {
       build: {
@@ -99,37 +118,27 @@ module.exports = function(grunt) {
           ]
         },
         dist: {
-          src: 'src/css/style.css'
+          src: 'dist/css/ih.css'
         }
       },
 
 
-    jade: {
-      compile: {
-        options: {
-          data: {}
-        },
-        files: [{
-          expand: true,
-          cwd: 'src/jade',
-          src: [ '*.jade' ],
-          dest: 'dist',
-          ext: '.html'
-        }]
-      }
-    },
+
+      
+
+
 
     });
 
 
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-jade');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-contrib-sass');
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-imagemin');
-grunt.loadNpmTasks('grunt-postcss');
-grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-uncss');
 // Default task(s).
 grunt.registerTask('default', ['concat','uglify', 'sass', 'postcss','jade']);
 
