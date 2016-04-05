@@ -16,8 +16,12 @@
       nextArrow: '.slick-slide'
     });
 
-    // tablesort
     $('table.sortable').tablesort();
+
+
+    $('table.sortable.product').tablesort().data('tablesort').sort($("th.available"), 'desc');
+
+
 
 
   });

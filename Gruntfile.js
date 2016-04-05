@@ -26,17 +26,6 @@ module.exports = function(grunt) {
       concat: {
         files: ['src/js/*.js'],
         tasks: ['concat']
-      },
-      
-      uglify: {
-        files: ['src/js/*.js'],
-        tasks: ['uglify'],
-      }
-
-      ,
-      postcss: {
-        files: ['src/sass/*.sass'],
-        tasks: ['postcss'],
       }
 
     },
@@ -98,7 +87,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-
 
     uglify: {
       build: {
