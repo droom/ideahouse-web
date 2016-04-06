@@ -1,27 +1,18 @@
 body
-  // .tiles[data-minwidth~="300"]
-  //   background: yellow
-  //   .ui.card
-  //     // border: 1px solid blue
-
-  // .tiles[data-minwidth~="700"]
-  //   background: red
-  //   .ui.card
-  //     // border: 1px solid red
-
-  // .tiles[data-minwidth~="900"]
-  //   background: yellow
-  //   .ui.card
-  //     // border: 1px solid yellow
-
   .tiles
+    width: 100%
+
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start 
+
     .ui.card
-      display: inline-block
-      vertical-align: top
+      align-self: flex-start 
+      width: 25%
       box-shadow: none
       border: 1px solid $bg
-      width: calc(100%/4)
-      margin: 0 0 2px 0
+      margin: 0
+
       &:hover
         transform: none
         border: 1px solid #ccc
@@ -38,6 +29,8 @@ body
       .extra.content
         line-height: 15px
         padding: 5px 7px
+        min-height: 3em !important
+        
       &.bookmark
         transition: all 400ms ease
         .remove
