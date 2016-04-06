@@ -1,0 +1,219 @@
+- var authorised = true
+- var page = 'email'
+
+doctype html
+html(lang="en")
+  head
+    style.
+      body{
+        background: #ccc;
+        margin: auto;
+        padding: 30px 0;
+        font-family: helvetica, arial;
+        font-size: 14px;
+      }
+      table.email{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+      }
+
+      table.email thead{
+        background: white;
+      }
+
+      table.email tbody{
+        background: #f4f4f4;
+      }
+      table.email tfoot{
+        background: #f9f9f9;
+      }
+
+      table.details{
+        margin: auto;
+        padding: 20px;
+      }
+
+      table.details td{
+        font-size: 12px;
+        background: white;
+      }
+
+      table.details tr:first-child td{
+        padding-bottom: 0;
+      }
+
+
+      table.details td.label{
+        text-align: right;
+        padding-right: 0;
+      }
+      table.details td.report{
+        text-align: left
+      }
+
+
+      table.access td{
+        font-size: 12px;
+      }
+
+      table.access thead{
+        background: none;
+      }
+
+      table.access thead tr td{
+        padding-top: 0;
+      }
+      table.access tbody tr:first-child td{
+        padding-bottom: 0;
+      }
+
+      table.access tbody tr:first-child td {
+        padding-bottom: 0;
+        vertical-align: bottom;
+      }
+
+      table.access td.feature{
+        width: 33%;
+        vertical-align: top; 
+      }
+
+      td.feature.img {
+        max-width: 109px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+      }
+
+      td.feature.img img{
+        width: 100%
+      }
+
+      table{
+        border-collapse: collapse;
+      }
+
+      table td{
+        padding: 15px;
+        margin: 0;
+      }
+
+      table td.feature {
+        padding: 10px 5px;
+      }
+
+      td.bold{
+        font-weight: bold;
+      }
+      
+      td.brand img{
+        padding: 10px 0
+      }
+
+      td.cta{
+        padding-top: 20px;
+      }
+
+      td.cta a{
+        background: #60af74;
+        color: white;
+        padding: 20px;
+        border-radius: 3px;
+        text-decoration: none;
+      }
+
+      td.cta a:hover{
+        background: #498B5A;
+      }
+
+
+  body
+    table.email(cellspacing="20")
+      thead
+        tr
+          td.brand
+            img(src="img/brand/logo.png" width="70")
+
+      tbody
+
+
+        tr
+          td
+            h2
+              = "$NAME, thank you for registering with Ideahouse"
+
+        tr
+          td
+            table.details
+              tbody
+                tr
+                  td.label Your Account Type:
+                  td.report.bold $ACCOUNT_TYPE
+                tr
+                  td.label User ID:
+                  td.report.bold $EMAIL
+
+        tr
+          td 
+            table.access
+              thead
+                tr
+                  td(colspan="3") 
+                    h3 You can now access more useful features in our website
+
+              tbody
+                tr
+                  td.feature.bold 
+                    p Advanced Search
+                  td.feature.bold 
+                    p Full 2016 Price List
+                  td.feature.bold 
+                    p Bookmark items
+
+                tr
+                  td.feature.img 
+                    img(src="img/email/feature.png")
+                  td.feature.img 
+                    img(src="img/email/feature.png")
+                  td.feature.img 
+                    img(src="img/email/feature.png")
+
+                tr
+                  td.feature Advanced Search allows you to search by Price range, Color and Quantity in stock. 
+                  
+                  td.feature Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto in explicabo qui. Ipsa tempora ea, ratione illum optio dolorum dolores repudiandae sed, itaque reprehenderit illo distinctio ut assumenda, alias voluptas!
+
+                  td.feature Ipsa tempora ea, ratione illum optio dolorum dolores repudiandae sed, itaque reprehenderit illo distinctio ut assumenda, alias voluptas!
+
+        tr
+          td.cta
+            p
+              a(href="#") View latest deals at Ideahouse
+
+
+        tr
+          td
+            p
+              &mdash;
+              br
+              br
+              = "Sales & Support Team"
+              br
+              = "Ideahouse"
+
+
+
+
+      tfoot
+        tr
+          td
+            small 
+              = "Good luck to your sourcing at " 
+              a(href="www.ideahouse.com.my") www.ideahouse.com.my
+              = "."
+            br
+            small Call us on our HOTLINE : 603-62754648 for further assistance, or send us your enquiry to 
+              a(href="sales@ideahouse.com.my") sales@ideahouse.com.my
+
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body{
+        background: #ccc;
+        margin: auto;
+        padding: 30px 0;
+        font-family: helvetica, arial;
+        font-size: 14px;
+      }
+      table.email{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+      }
+      
+      table.email thead{
+        background: white;
+      }
+      
+      table.email tbody{
+        background: #f4f4f4;
+      }
+      table.email tfoot{
+        background: #f9f9f9;
+      }
+      
+      table.details{
+        margin: auto;
+        padding: 20px;
+      }
+      
+      table.details td{
+        font-size: 12px;
+        background: white;
+      }
+      
+      table.details tr:first-child td{
+        padding-bottom: 0;
+      }
+      
+      
+      table.details td.label{
+        text-align: right;
+        padding-right: 0;
+      }
+      table.details td.report{
+        text-align: left
+      }
+      
+      
+      table.access td{
+        font-size: 12px;
+      }
+      
+      table.access thead{
+        background: none;
+      }
+      
+      table.access thead tr td{
+        padding-top: 0;
+      }
+      table.access tbody tr:first-child td{
+        padding-bottom: 0;
+      }
+      
+      table.access tbody tr:first-child td {
+        padding-bottom: 0;
+        vertical-align: bottom;
+      }
+      
+      table.access td.feature{
+        width: 33%;
+        vertical-align: top; 
+      }
+      
+      td.feature.img {
+        max-width: 109px;
+        padding-top: 0;
+        padding-bottom: 0;
+      
+      }
+      
+      td.feature.img img{
+        width: 100%
+      }
+      
+      table{
+        border-collapse: collapse;
+      }
+      
+      table td{
+        padding: 15px;
+        margin: 0;
+      }
+      
+      table td.feature {
+        padding: 10px 5px;
+      }
+      
+      td.bold{
+        font-weight: bold;
+      }
+      
+      td.brand img{
+        padding: 10px 0
+      }
+      
+      td.cta{
+        padding-top: 20px;
+      }
+      
+      td.cta a{
+        background: #60af74;
+        color: white;
+        padding: 20px;
+        border-radius: 3px;
+        text-decoration: none
+      }
+      
+      td.cta a:hover{
+        background: #498B5A;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <table cellspacing="20" class="email">
+      <thead>
+        <tr>
+          <td class="brand"><img src="img/brand/logo.png" width="70"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <h2>$NAME, thank you for registering with Ideahouse
+            </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table class="details">
+              <tbody>
+                <tr>
+                  <td class="label">Your Account Type:</td>
+                  <td class="report bold">$ACCOUNT_TYPE</td>
+                </tr>
+                <tr>
+                  <td class="label">User ID:</td>
+                  <td class="report bold">$EMAIL</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td> 
+            <table class="access">
+              <thead>
+                <tr>
+                  <td colspan="3"> 
+                    <h3>You can now access more useful features in our website</h3>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature bold"> 
+                    <p>Advanced Search</p>
+                  </td>
+                  <td class="feature bold"> 
+                    <p>Full 2016 Price List</p>
+                  </td>
+                  <td class="feature bold"> 
+                    <p>Bookmark items</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature img"> <img src="img/email/feature.png"></td>
+                  <td class="feature img"> <img src="img/email/feature.png"></td>
+                  <td class="feature img"> <img src="img/email/feature.png"></td>
+                </tr>
+                <tr>
+                  <td class="feature">Advanced Search allows you to search by Price range, Color and Quantity in stock. </td>
+                  <td class="feature">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto in explicabo qui. Ipsa tempora ea, ratione illum optio dolorum dolores repudiandae sed, itaque reprehenderit illo distinctio ut assumenda, alias voluptas!</td>
+                  <td class="feature">Ipsa tempora ea, ratione illum optio dolorum dolores repudiandae sed, itaque reprehenderit illo distinctio ut assumenda, alias voluptas!</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="cta">
+            <p><a href="#">View latest deals at Ideahouse</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>&mdash;<br><br>Sales &amp; Support Team<br>Ideahouse
+            </p>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><small> Good luck to your sourcing at <a href="www.ideahouse.com.my">www.ideahouse.com.my</a>.</small><br><small>Call us on our HOTLINE : 603-62754648 for further assistance, or send us your enquiry to <a href="sales@ideahouse.com.my">sales@ideahouse.com.my</a></small></td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
