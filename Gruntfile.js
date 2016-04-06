@@ -22,12 +22,10 @@ module.exports = function(grunt) {
         tasks: ['jade'],
       },
 
-
       concat: {
         files: ['src/js/*.js'],
         tasks: ['concat']
       }
-
     },
 
     sass: {
@@ -36,11 +34,10 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'src/sass/main.css': 'src/sass/main.sass',
+          'dist/css/ideahouse.css': 'src/sass/main.sass',
         }
       }
     },
-
 
     concat: {
       options: {
@@ -58,19 +55,8 @@ module.exports = function(grunt) {
         'src/js/*.js'
         ],
         dest: 'dist/js/ideahouse.js',
-      },
-
-      css: {
-        src: [
-        'src/lib/semantic.css',
-        'src/lib/slick.css',
-        'src/lib/slick-theme.css',
-        'src/sass/main.css'
-        ],
-        dest: 'dist/css/ih.css',
-      },
+      }
     },
-
 
     jade: {
       compile: {
@@ -95,32 +81,21 @@ module.exports = function(grunt) {
       }
     },
 
-
-
-
     postcss: {
       options: {
         map: false,
         processors: [
-          require('pixrem')(), // add fallbacks for rem units
-          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-          require('cssnano')() // minify the result
-
+          require('pixrem')(),
+          require('autoprefixer')({browsers: 'last 2 versions'}),
+          require('cssnano')()
           ]
         },
         dist: {
-          src: 'dist/css/ih.css'
+          src: 'dist/css/ideahouse.css'
         }
       },
 
-
-
-      
-
-
-
     });
-
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');
