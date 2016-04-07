@@ -14,33 +14,42 @@ html(lang="en")
           .section Contact Us
 
         h3 Ideahouse Corporation S/B (258221-K)
-        p No. 20-2, Jalan Tanjung SD 13/2
-          br
-          | Bandar Sri Damansara
-          br
-          | 52200 Kuala Lumpur
-          br
-          | Selangor
-          br
-          | Malaysia / South-East Asia
 
         iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31869.025806619917!2d101.621389!3d3.192022!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4f575c855f97%3A0xb249e1a7c577947c!2sIdeahouse+Corporation+Sdn+Bhd!5e0!3m2!1sen!2s!4v1444713493593" width="100%" height="450" frameborder="0" style="border:0" scrollable="no")
 
-        ul.details
-          li LAT/LON: N 03 11.270 / E 101 36.300
-          li
-            a(href="http://www.instantstreetview.com/@3.1878,101.604853,82.7h,18.1p,0.34z") Find us on Google Street View
-          li
-            a(href="waze://?q=<Ideahouse Corporation Sdn Bhd>", target="_blank") Find us on Waze
-        ul.details
-          strong Operating Hours
-          li 9.00am–6.00pm
-          li Monday–Friday (GMT+8)
-
-        hr
 
         table.ui.very.basic.unstackable.celled.table.contact
           tbody
+
+            tr
+              td
+                h3
+                  = "Address"
+              td
+                = "No. 20-2, Jalan Tanjung SD 13/2"
+                br
+                = "Bandar Sri Damansara"
+                br
+                = "52200 Kuala Lumpur"
+                br
+                = "Selangor"
+                br
+                = "Malaysia / South-East Asia"
+                br
+                a(href="http://www.instantstreetview.com/@3.1878,101.604853,82.7h,18.1p,0.34z") Find us on Google Street View
+                br
+                a(href="waze://?q=<Ideahouse Corporation Sdn Bhd>", target="_blank") Find us on Waze
+              
+
+            tr
+              td
+                h3
+                  = "Operating hours"
+              td
+                | 9.00am&ndash;6.00pm
+                br
+                | Monday&ndash;Friday (GMT+8)
+
             tr
               td
                 h3
@@ -61,6 +70,7 @@ html(lang="en")
                 i.mail.icon
                 a(href="sales@ideahouse.com.my" aria-label="Email Ideahouse") sales@ideahouse.com.my
 
+        hr
 
         .ui.contact.cards
           .card
@@ -73,7 +83,9 @@ html(lang="en")
                 a(href="tel:016668464") 016 668 464
                 br
                 i.mail.icon
-                a(href="ashikin@ideahouse.com.my" aria-label="Email Ms. Ashikin") ashikin@ideahouse.com.my
+                a(href="ashikin@ideahouse.com.my" aria-label="Email Ms. Ashikin") 
+                  | ashikin
+                  span.domain @ideahouse.com.my
 
           .card
             .content
@@ -86,7 +98,9 @@ html(lang="en")
                 a(href="tel:016 229 1648") 016 229 1648
                 br
                 i.mail.icon
-                a(href="zabri@ideahouse.com.my" aria-label="Email Mr. Zabri/Bee") zabri@ideahouse.com.my
+                a(href="zabri@ideahouse.com.my" aria-label="Email Mr. Zabri/Bee") 
+                  | zabri
+                  span.domain @ideahouse.com.my
 
           .card
             .content
@@ -99,7 +113,9 @@ html(lang="en")
                 a(href="tel:0162254648") 016 225 4648
                 br
                 i.mail.icon
-                a(href="jerry@ideahouse.com.my" aria-label="Email Ms. Nurul") jerry@ideahouse.com.my
+                a(href="jerry@ideahouse.com.my" aria-label="Email Jerry") 
+                  | jerry
+                  span.domain @ideahouse.com.my
 
           .card
             .content
@@ -112,7 +128,9 @@ html(lang="en")
                 a(href="tel:0126044648") 012 604 4648
                 br
                 i.mail.icon
-                a(href="nurul@ideahouse.com.my" aria-label="Email Ms. Nurul") nurul@ideahouse.com.my
+                a(href="nurul@ideahouse.com.my" aria-label="Email Ms. Nurul") 
+                  | nurul
+                  span.domain @ideahouse.com.my
 
 
       include partials/_footer
