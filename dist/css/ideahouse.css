@@ -24615,10 +24615,25 @@ table.ui.table.download tr:nth-child(even) {
   background: white;
 }
 
-table.ui.table.stock td, table.ui.table.stock th {
+.details table.ui.table td, .details table.ui.table th {
+  width: 50%;
+  vertical-align: top;
+}
+.details table.ui.table tbody tr td:nth-child(1) {
+  width: 33%;
+}
+.details table.ui.table tbody tr td:nth-child(2) {
+  width: 67%;
+}
+
+.product table.ui.table td, .product table.ui.table th {
   font-size: 12px;
 }
-table.ui.table.stock td span.due, table.ui.table.stock th span.due {
+
+.stock table.ui.table td, .stock table.ui.table th {
+  font-size: 12px;
+}
+.stock table.ui.table td span.due, .stock table.ui.table th span.due {
   background: #eee;
   border-radius: 2px;
   font-size: 12px;
@@ -24638,6 +24653,13 @@ table.ui.table.stock td span.due, table.ui.table.stock th span.due {
   margin-left: 10px;
   min-width: 4em;
   background: none;
+}
+.price table.ui.table thead tr.switch {
+  text-align: right;
+}
+.price table.ui.table tbody tr td,
+.price table.ui.table tr.titles th {
+  width: 33% !important;
 }
 
 table.ui.table.contact {
@@ -25161,7 +25183,10 @@ body hr {
   background: rgba(34, 36, 38, 0.07);
   border: none;
 }
-body h2 {
+body p, body .p {
+  font-size: 1em;
+}
+body h2, body .h2 {
   font-size: 1.42857rem;
   line-height: 25px;
   font-weight: 400;
@@ -25177,6 +25202,10 @@ body small {
 body.faq h3 {
   margin-top: 20px;
   margin-bottom: 8px;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 table.ui.celled.table td.black {
