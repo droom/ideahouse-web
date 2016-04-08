@@ -47,6 +47,7 @@ html(lang="en")
             .div
               img(alt="Image of $PRODUCT_NAME" src="img/product/product-3.jpg", class="product-hero product-3")
 
+
         hr
 
         .ui.three.item.menu
@@ -58,6 +59,9 @@ html(lang="en")
           table.ui.celled.table.unstackable
             tbody
               tr
+                td Description
+                td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore omnis explicabo est delectus sapiente corporis nobis quos ab consequuntur ad eum assumenda dolorem quibusdam architecto voluptatem maxime aperiam recusandae, iure.
+              tr
                 td Category
                 td Pens
               tr
@@ -66,11 +70,9 @@ html(lang="en")
               tr
                 td Code No.
                 td 903B
-
               tr
-                td Base material
+                td Base Material
                 td Metals
-
               tr
                 td Ink Type
                 td Ball Point
@@ -84,34 +86,34 @@ html(lang="en")
                 td Surface Finishing
                 td Metalic
               tr
-                td Units Per Carton
+                td Units per Carton
                 td 500
               tr
-                td Units Per inner box
+                td Units per Inner Box
                 td 50
               tr
-                td Weight, per carton (kg)
-                td 1 kg
+                td Weight per Carton (g)
+                td 2g
               tr
-                td Weight, unit (kg)
-                td 20 kg
+                td Weight per Unit (g)
+                td 20g
               tr
                 td Dimension (mm)
                 td 142(L) x 13(D)
               tr
-                td Carton size (mm)
+                td Carton Size (mm)
                 td 460 (L) x 280 (W) x 185 (H)
               tr
-                td Print area 1
+                td Print Area 1
                 td Barrel : 40mm (L) x 8mm (W)
               tr
-                td Print area 2
+                td Print Area 2
                 td Clip : 30mm (L) x 8mm (W)
               tr
                 td Print Type
                 td A2 - Pad Print Metal
               tr
-                td Packing details
+                td Packing Details
                 td Each in opp bag
             tfoot
               tr
@@ -175,7 +177,7 @@ html(lang="en")
                 td 7432
                 td 1
                 td
-                  = "5000"
+                  = "50000"
                   span.due
                     = "10/12/15"
               tr
@@ -262,11 +264,10 @@ html(lang="en")
             .ui.button Sign in
             .ui.button Register
 
-          table.ui.celled.table.unstackable.authorised-show
+          table.ui.celled.table.price.unstackable.authorised-show
             thead
-              tr
-                th QTY
-                th Price
+              tr.switch
+                th(colspan="3").rl Currency
                   .ui.selection.dropdown.currency
                     .text MYR
                     i.dropdown.icon
@@ -274,55 +275,76 @@ html(lang="en")
                       .item MYR
                       .item USD
                       .item SGD
+              tr.titles
+                th QTY
+                th Agent
+                th Corporate
+
             tbody
               tr
-                td 100
-                td 0.630
+                td RM100
+                td RM1.63
+                td RM0.63
               tr
-                td 200
-                td 0.620
+                td RM200
+                td RM1.62
+                td RM0.62
               tr
-                td 300
-                td 0.610
+                td RM300
+                td RM1.61
+                td RM0.61
               tr
-                td 500
-                td 0.600
+                td RM500
+                td RM1.60
+                td RM0.60
               tr
-                td 1000
-                td 0.590
+                td RM1000
+                td RM1.59
+                td RM0.59
               tr
-                td 2000
-                td 0.580
+                td RM2000
+                td RM1.58
+                td RM0.58
               tr
-                td 3000
-                td 0.570
+                td RM3000
+                td RM1.57
+                td RM0.57
               tr
-                td 5000
-                td 0.560
+                td RM5000
+                td RM1.56
+                td RM0.56
               tr
-                td 7000
-                td 0.550
+                td RM7000
+                td RM1.55
+                td RM0.55
               tr
-                td 10000
-                td 0.540
+                td RM10000
+                td RM1.54
+                td RM0.54
               tr
-                td 15000
-                td 0.530
+                td RM15000
+                td RM1.53
+                td RM0.53
               tr
-                td 20000
-                td 0.520
+                td RM20000
+                td RM1.52
+                td RM0.52
               tr
-                td 30000
-                td 0.510
+                td RM30000
+                td RM1.51
+                td RM0.51
               tr
-                td 50000
-                td 0.500
+                td RM50000
+                td RM1.50
+                td RM0.50
               tr
-                td 70000
-                td 0.490
+                td RM70000
+                td RM1.49
+                td RM0.49
               tr
-                td 100000
-                td 0.480
+                td RM100000
+                td RM1.48
+                td RM0.48
 
 
 
