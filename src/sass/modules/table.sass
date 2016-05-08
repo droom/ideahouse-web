@@ -58,10 +58,8 @@ table.ui.table.download
       tr
         td:nth-child(1)
           width: 33%
-          // background: pink
         td:nth-child(2)
           width: 67%
-          // background: yellow
 
 .product
   table.ui.table
@@ -72,7 +70,12 @@ table.ui.table.download
   table.ui.table
     td, th
       font-size: 12px
+      
+    td:nth-child(1),
+    th:nth-child(1)
+      width: 25%
 
+    td
       span.due
         background: #eee
         border-radius: 2px

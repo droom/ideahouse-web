@@ -24506,10 +24506,14 @@ body .wrap .boundary {
 }
 body .wrap .product-actions {
   position: absolute;
+  pointer-events: none;
   z-index: 2;
   top: 10px;
   left: 10px;
   width: calc(100% - 20px);
+}
+body .wrap .product-actions .ui.button {
+  pointer-events: auto;
 }
 body .wrap .product-actions .notify {
   right: 0;
@@ -24633,7 +24637,11 @@ table.ui.table.download tr:nth-child(even) {
 .stock table.ui.table td, .stock table.ui.table th {
   font-size: 12px;
 }
-.stock table.ui.table td span.due, .stock table.ui.table th span.due {
+.stock table.ui.table td:nth-child(1),
+.stock table.ui.table th:nth-child(1) {
+  width: 25%;
+}
+.stock table.ui.table td span.due {
   background: #eee;
   border-radius: 2px;
   font-size: 12px;
@@ -24851,7 +24859,7 @@ img.imprint.half {
 
 .product-carousel {
   margin: 0;
-  cursor: e-resize;
+  cursor: url("../img/components/arrow-next.svg"), e-resize;
 }
 .product-carousel button.slick-prev.slick-arrow {
   display: none !important;
@@ -25197,7 +25205,8 @@ body label.input {
   font-weight: 700;
 }
 body small {
-  line-height: 10px;
+  line-height: 1.2em;
+  display: inline-block;
 }
 body.faq h3 {
   margin-top: 20px;
@@ -25664,147 +25673,337 @@ body.history .item.history {
   background: #ddd;
 }
 
-.cost {
-  font-size: 14px;
+.pap-diagram h2, .pap-diagram h3, .pap-diagram h4 {
   text-align: center;
+  margin: auto;
 }
-.cost .to {
-  display: block;
+.pap-diagram h3 {
+  margin: 0 0 40px 0;
 }
-
-i.icon.mail:before {
-  content: "";
-  padding: 0 8px 0 0;
+.pap-diagram h4 {
+  margin: 25px 0 15px 0;
 }
-
-p.terms {
-  font-size: 10px;
-  text-align: left;
+.pap-diagram hr {
+  margin: 20px 0 20px 0;
 }
-
-ul.split {
-  margin: none;
-  padding: 0;
-  -moz-column-count: 3;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 20px;
+.pap-diagram section {
+  background: white;
+  padding: 30px;
+  margin: 20px 0;
 }
-ul.split li {
-  list-style: none;
-}
-
-img.pap {
+.pap-diagram table {
   width: 100%;
+  line-height: 1.2em;
+  border-collapse: separate;
 }
-
-table.dispatch {
-  margin-bottom: 10px;
+.pap-diagram table small {
+  margin-top: 4px;
 }
-table.dispatch th, table.dispatch td {
+.pap-diagram table thead th {
+  padding: 10px 0;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+.pap-diagram table thead.underline th {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+}
+.pap-diagram table tbody.border tr td {
   border: 1px solid rgba(34, 36, 38, 0.07);
+}
+.pap-diagram table tfoot tr td {
+  text-align: left;
+  padding: 30px 0 0 0;
+}
+.pap-diagram table td, .pap-diagram table th {
+  text-align: center;
+  padding: 4px;
+  width: calc(100%/6);
+  vertical-align: center;
   font-size: 11px;
   line-height: 15px;
 }
-table.dispatch th {
-  background: rgba(58, 62, 65, 0.07);
-  padding: 5px 4px;
+.pap-diagram table td {
+  padding: 10px;
 }
-table.dispatch td {
+.pap-diagram table td.relative {
+  position: relative;
+}
+.pap-diagram table td.relative .joiner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(50% - 20px);
+  height: 100%;
+  z-index: 0;
+}
+.pap-diagram table td.relative .joiner .rod {
+  background: url("../img/pap/join-right.png") 50% 50% no-repeat;
+}
+.pap-diagram table td.relative .joiner .down {
+  background: url("../img/pap/join-down.png") 50% 50% no-repeat;
+}
+.pap-diagram table td.relative .joiner .up {
+  background: url("../img/pap/join-up.png") 50% 50% no-repeat;
+}
+.pap-diagram table td.relative .joiner .updown {
+  background: url("../img/pap/join-updown.png") 50% 50% no-repeat;
+}
+.pap-diagram table td.relative .joiner .left,
+.pap-diagram table td.relative .joiner .right {
+  position: absolute;
+  width: calc(50% - 10px);
+  width: 50%;
+  top: 0;
+  height: 100%;
+}
+.pap-diagram table td.relative .joiner .left {
+  left: 0;
+}
+.pap-diagram table td.relative .joiner .right {
+  right: 0;
+}
+.pap-diagram table td.grey {
+  background: #f5f5f5;
+}
+.pap-diagram table td.green {
+  background: #8DC63F;
+}
+.pap-diagram table td.purple {
+  background: #9D6CAE;
+}
+.pap-diagram table td.blue {
+  background: #94BDE5;
+}
+.pap-diagram table td.orange {
+  background: #FBB040;
+}
+.pap-diagram table td.red {
+  background: #F26A5A;
+}
+.pap-diagram table td.white {
+  background: white;
+}
+.pap-diagram table td.top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.pap-diagram table td.bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.pap-diagram table td.left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.pap-diagram table td.right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.pap-diagram table.rows {
+  border-spacing: 0 10px;
+}
+.pap-diagram table.columns {
+  border-spacing: 10px 0;
+}
+.pap-diagram table.rewards tbody td img {
+  max-width: 80px;
+}
+.pap-diagram table.dispatch th, .pap-diagram table.dispatch td {
+  border: 1px solid rgba(34, 36, 38, 0.07);
+}
+.pap-diagram table.dispatch th {
+  background: #f5f5f5;
+  padding: 5px 4px;
+  vertical-align: middle;
+}
+.pap-diagram table.dispatch td {
   padding: 4px;
   vertical-align: top;
 }
-table.dispatch tbody tr:nth-child(even) {
+.pap-diagram table.dispatch tbody tr:nth-child(even) {
   background: white;
 }
-table.dispatch tbody td {
+.pap-diagram table.dispatch tbody td {
   text-align: right;
   width: calc(100%/8);
 }
-table.dispatch tbody td:first-child {
+.pap-diagram table.dispatch tbody td:first-child {
   font-weight: bold;
   text-align: left;
 }
-
-.pap-col {
-  position: relative;
+.pap-diagram .flex {
   width: 100%;
-  background: lightblue;
-  display: inline-block;
-  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.pap-col.pap-col-1 {
-  background: #5dbfec;
+.pap-diagram .flex .benefits:nth-child(2) {
+  border-left: 10px solid white;
 }
-.pap-col.pap-col-1::before, .pap-col.pap-col-1::after {
-  background: #5dbfec;
+.pap-diagram .flex .benefits {
+  flex-basis: 50%;
+  align-self: stretch;
+  text-align: center;
+  justify-content: space-around;
+  background: #f5f5f5;
+  padding: 35px 25px;
 }
-.pap-col.pap-col-2 {
-  background: #94c120;
-}
-.pap-col.pap-col-2::before {
-  background: #94c120;
-}
-.pap-col.pap-col-3 {
-  background: #383a60;
-}
-.pap-col.pap-col-3::before {
-  background: #383a60;
-}
-.pap-col.pap-col-4 {
-  background: #c72652;
-}
-.pap-col.pap-col-4::before {
-  background: #c72652;
-}
-.pap-col.pap-col-5 {
-  background: #31a7b3;
-}
-.pap-col.pap-col-5::before {
-  background: #31a7b3;
-}
-.pap-col .inner {
-  font-size: 11px;
+.pap-diagram .flex .benefits img {
+  max-width: 100%;
   padding: 10px;
-  margin-top: 0;
-  color: #f5f5f5;
-  text-align: left;
+  display: block;
+  margin: 0 auto;
 }
-.pap-col .inner .head {
-  min-height: 70px;
-  margin-top: 2px;
+.pap-diagram .flex .benefits small {
+  display: block;
 }
-.pap-col .inner .head h5 {
-  margin-top: -37px;
-  color: black;
-  font-size: 16px;
+.pap-diagram .flex .benefits .counter {
+  background: #444;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  transform: rotate(-45deg);
+  padding: 2px;
+  border-radius: 2px;
 }
-.pap-col .inner .head img {
-  padding: 0 12px;
+.pap-diagram .flex .benefits .counter p {
+  padding: 0;
+  color: white;
+  margin: 2px 0 0 1px;
+  transform: rotate(45deg);
+}
+.pap-diagram .flex + .flex {
+  margin-top: 10px;
 }
 
-.pap-col:after {
-  content: "";
+label.node {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+label.node.n0 {
+  background: #f5f5f5;
+}
+label.node.n1 {
+  background: #8DC63F;
+}
+label.node.n2 {
+  background: #9D6CAE;
+}
+label.node.n3 {
+  background: #94BDE5;
+}
+label.node.n4 {
+  background: #FBB040;
+}
+label.node.n5 {
+  background: #F26A5A;
+}
+label.node.n-blank {
+  background: rgba(255, 255, 255, 0.8);
+  color: #444;
+  height: 25px;
+  width: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+label.node.hover {
   position: absolute;
-  left: 0;
-  bottom: -15px;
-  width: 100%;
-  height: 26px;
-  transform: skewY(-2deg);
-  -webkit-backface-visibility: hidden;
+  top: 5px;
+  right: 6px;
 }
 
-.pap-col:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -15px;
-  width: 100%;
-  height: 26px;
-  transform: skewY(-2deg);
-  -webkit-backface-visibility: hidden;
+.row-nodes {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+}
+.row-nodes label.node {
+  height: 30px;
+  width: 30px;
+  border-radius: 0;
+  color: white;
+}
+.row-nodes label.node:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.row-nodes label.node:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
+ul.dispatch {
+  margin: none;
+  padding: 0;
+  column-count: 3;
+  column-gap: 20px;
+}
+ul.dispatch li {
+  list-style: none;
+}
+
+@media (max-width: 500px) {
+  .pap-diagram section {
+    background: white;
+    padding: 35px 0 30px 0;
+    margin: 10px 0;
+  }
+  .pap-diagram h3 {
+    margin: 0 0 30px 0;
+  }
+  .pap-diagram p, .pap-diagram h3, .pap-diagram h4, .pap-diagram ul, .pap-diagram table tfoot tr td {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .pap-diagram table.rows {
+    border-spacing: 0 5px;
+  }
+  .pap-diagram table.columns {
+    border-spacing: 3px 0;
+  }
+  .pap-diagram table td.left, .pap-diagram table td.right {
+    border-radius: 0;
+  }
+  .pap-diagram table.rewards {
+    padding: 0 6px;
+  }
+  .pap-diagram table.rewards tbody td {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pap-diagram table.rewards tbody td img {
+    max-width: 50px;
+  }
+  .pap-diagram .flex .benefits:nth-child(2) {
+    border-left: none;
+  }
+  .pap-diagram .flex .benefits {
+    flex-basis: 100%;
+    margin: 15px 0 0 0;
+  }
+  .pap-diagram .flex + .flex {
+    margin-top: 0;
+  }
+  .pap-diagram ul.dispatch {
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
 html, body {
   background: #f5f5f5;
 }

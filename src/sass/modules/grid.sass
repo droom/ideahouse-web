@@ -24,8 +24,6 @@ body
           text-align: left
           padding: 0
 
-
-
   footer
     width: 70%
     margin-top: 80px
@@ -48,10 +46,14 @@ body
 
     .product-actions
       position: absolute
+      pointer-events: none
       z-index: 2
       top: 10px
       left: 10px
       width: calc(100% - 20px)
+      
+      .ui.button
+        pointer-events: auto
 
       .notify
         right: 0

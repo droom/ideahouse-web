@@ -11,234 +11,584 @@ html(lang="en")
       include partials/_col-main-left
       .col-main-right(role="main" id="qStart")
         .ui.huge.breadcrumb
-          .section Preferred Agents Program
+          .section Why be part of of our Preferred Agent Program?
+        
+        .content.authorised-show
+            h3
+              = "Download Preferred Agent Program information as a PDF"
+            hr
 
-        p As you rise up the rank in levels, the benefits in pricings, credit and delivery terms increases. Evaluation of level is based on last 12 months total sales order. Free Sample and Free Dispatch credit will be granted base on total sales evaluation in strong previous calendar year (Jan-Dec). Credit will be provided on 1st January with one year validity.
+            a(href="store/ideahouse-pap.pdf")
+              .ui.cta.tiny.button
+                i.icon.download
+                = "Download PDF"
+        
+        .pap-diagram
+          section
+            h3 Benefits and rewards
 
-        hr
+            .flex
+              .benefits
+                .counter
+                  p 1
+                h4 More savings! Enjoy better pricing!
+                p With our programme, you’re entitled to skip past price points correspondingto your level.
+                img(src="img/pap/benefits-coins.png")
+                .row-nodes
+                  label.node.n1 &times;1
+                  label.node.n2 &times;2
+                  label.node.n3 &times;3
+                  label.node.n4 &times;4
+                  label.node.n5 &times;5
+              .benefits
+                .counter
+                  p 2
+                h4 Gain credit terms up to 45 Days
+                p Give yourself extra time. Take advantage of our credit extention programme offered to our leveled. Preferred Agents.
+                img(src="img/pap/benefits-cash-arrow.png")
 
-        img(src="img/editorial/pap-level-full.jpg").pap
-        a(href="img/editorial/pap-level-full.jpg").ui.tiny.button.basic Download hi-res image
+            .flex
+              .benefits
+                .counter
+                  p 3
+                h4 Claim up to RM 500 worth of samples
+                p Receive credit and claim samples at no additional charge! Credit value given correlates to your level and is issued yearly in January.
+                img(src="img/pap/benefits-parcel-sparkle.png")
 
-        hr
-
-        p Free Dispatch/Dispatch credit are only applicable in the selected areas below:
-
-        ul.split
-          li Ampang
-          li Bangsar
-          li Bandar Baru Selayang
-          li Bandar Sri Damansara
-          li Bandar Utama
-          li Batu Caves
-          li Bukit Damansara
-          li Bukit Kiara
-          li Cheras
-          li Damansara Jaya
-          li Damansara Town Centre
-          li Damansara Utama
-          li Gombak
-          li Kepong
-          li Kota Damansara
-          li Kuala Lumpur
-          li Lembah Beringin
-          li Maluri
-          li Miharja
-          li Petaling Jaya
-          li Puchong
-          li Pudu
-          li Segambut
-          li Serdang
-          li Seri Kembangan
-          li Setapak
-          li Sentul
-          li Sri Hartamas
-          li Sri Petaling
-          li Sungai Buloh
-          li Shah Alam
-          li Subang Jaya
-          li Sungai Besi
-          li Taman Melawati
-          li Taman Tun Dr Ismail
-          li USJ
-          li Wangsa Maju
-
-
-        hr
-        p If first time purchasing (or at 0 level), agents are still eligible for the free dispatch as long as their orders reaches RM2000.
-        h3 Dispatch rate
-
-        table.dispatch
-          thead
-            tr
-              th(rowspan="3") Weight of samples or goods (kg)
-              th(colspan="7") Distance between our office and the drop off location (km)
-            tr
-              th 0-5km
-              th 5-10km
-              th 10-15km
-              th 15km-20km
-              th 25km-30km
-              th 30km-35km
-              th 35km-40km
-            tr
-              th(colspan="7") Dispatch rate are in RM
-          tbody
-            tr
-              td
-                = "<1 kg"
-              td 5.00
-              td 5.80
-              td 6.60
-              td 7.40
-              td 8.20
-              td 9.00
-              td 9.80
-
-            tr
-              td
-                = "1-3 kg"
-              td 6.50
-              td 7.30
-              td 8.10
-              td 8.90
-              td 9.70
-              td 10.50
-              td 11.30
-
-            tr
-              td 3-5 kg
-              td 8.00
-              td 8.80
-              td 9.60
-              td 10.40
-              td 11.20
-              td 12.00
-              td 12.80
-            tr
-              td 5-7 kg
-              td 9.50
-              td 10.30
-              td 11.10
-              td 11.90
-              td 12.70
-              td 13.50
-              td 14.30
-            tr
-              td 7-9 kg
-              td 11.00
-              td 11.80
-              td 12.60
-              td 13.40
-              td 14.20
-              td 15.00
-              td 15.80
-            tr
-              td 9-11 kg
-              td 12.50
-              td 13.30
-              td 14.10
-              td 14.90
-              td 15.70
-              td 16.50
-              td 17.30
-            tr
-              td 11-13kg
-              td 14.00
-              td 14.80
-              td 15.60
-              td 16.40
-              td 17.20
-              td 18.00
-              td 18.80
-            tr
-              td 13-15kg
-              td 15.50
-              td 16.30
-              td 17.10
-              td 17.90
-              td 18.70
-              td 19.50
-              td 20.30
-            tr
-              td 15-17kg
-              td 17.00
-              td 17.80
-              td 18.60
-              td 19.40
-              td 20.20
-              td 21.00
-              td 21.80
-            tr
-              td 17-19kg
-              td 18.50
-              td 19.30
-              td 20.10
-              td 20.90
-              td 21.70
-              td 22.50
-              td 23.30
-            tr
-              td 19-21kg
-              td 20.00
-              td 20.80
-              td 21.60
-              td 22.40
-              td 23.20
-              td 24.00
-              td 24.80
-            tr
-              td 21-23kg
-              td 21.50
-              td 22.30
-              td 23.10
-              td 23.90
-              td 24.70
-              td 25.50
-              td 26.30
-            tr
-              td 23-25kg
-              td 23.00
-              td 23.80
-              td 24.60
-              td 25.40
-              td 26.20
-              td 27.00
-              td 27.80
-            tr
-              td 25-27kg
-              td 24.50
-              td 25.30
-              td 26.10
-              td 26.90
-              td 27.70
-              td 28.50
-              td 29.30
-            tr
-              td 27-29kg
-              td 26.00
-              td 26.80
-              td 27.60
-              td 28.40
-              td 29.20
-              td 30.00
-              td 30.80
-            tr
-              td 30-31kg
-              td 27.50
-              td 28.30
-              td 29.10
-              td 29.90
-              td 30.70
-              td 31.50
-              td 32.30
+              .benefits
+                .counter
+                  p 4
+                h4 Claim free delivery no minimum order needed!
+                p Applies to Level 3 Preferred Agents and above. The value given correspond to levels accordingly. Limited to the surrounding Klang Valley Area. 
+                img(src="img/pap/benefits-van-move.png")
+                small Terms and Conditions apply.
 
 
-        a(href="img/editorial/pap-table.jpg").ui.tiny.button.basic Download hi-res image
 
-        hr
+          section
+            h3 How to determine your level
+            p Upon achieving a level and any further changes of your level, you will receive an automatic e-mail notification. Alternatively, you may call your sales respresentative to check with. Delivery and credit terms are determined in an on-going basis, according to the last 12 months of your Total Sales Order. For sample credit, your total sales order is tabulated base on the annual year (Jan-Dec) and is granted on January.
 
-        p Orders to be delivered outside of the selected areas will be charged according to standard courier rates.
+            table.rows
+              thead
+                tr
+                  th Levels
+                  th
+                    = "Total Sales Order"
+                    br 
+                    small (last 12 months)
+              tbody
+                tr
+                  td.grey.left.relative
+                    label.node.n1 1
+                  td.grey.right RM10000
+                tr
+                  td.grey.left.relative
+                    label.node.n2 2
+                  td.grey.right RM25001
+                tr
+                  td.grey.left.relative
+                    label.node.n3 3
+                  td.grey.right RM40001
+                tr
+                  td.grey.left.relative 
+                    label.node.n4 4
+                  td.grey.right RM 60001
+                tr
+                  td.grey.left.relative 
+                    label.node.n5 5
+                  td.grey.right RM 80001
+
+
+          section
+            h3 Levels allow you to skip price points according to your level
+
+            .row-nodes
+              label.node.n1 &times;1
+              label.node.n2 &times;2
+              label.node.n3 &times;3
+              label.node.n4 &times;4
+              label.node.n5 &times;5
+
+            hr
+            h4 Example 1
+
+            table
+              thead.underline
+                tr
+                  th(colspan="2") Price table
+                tr
+                  th Quantity
+                  th Price
+
+              tbody
+                tr
+                  td.relative 10
+                    .joiner
+                      .left.rod
+                      .right
+                        .left.down
+                        .right
+
+                  td.grey.relative 9.50
+                    label.node.n-blank.hover 0
+
+                tr
+                  td.relative 20
+                    .joiner
+                      .left
+                      .right
+                        .left.updown
+                        .right.rod
+
+
+                  td.green.relative 9.30
+                    label.node.n-blank.hover 1
+                tr
+                  td.relative 30
+                    .joiner
+                      .left
+                      .right
+                        .left.updown
+                        .right.rod
+
+                  td.purple.relative 9.20
+                    label.node.n-blank.hover 2
+                tr
+                  td.relative 40
+                    .joiner
+                      .left
+                      .right
+                        .left.updown
+                        .right.rod
+
+
+                  td.blue.relative 9.00
+                    label.node.n-blank.hover 3
+
+                tr
+                  td.relative 50
+                    .joiner
+                      .left
+                      .right
+                        .left.updown
+                        .right.rod
+
+                  td.orange.relative 8.90
+                    label.node.n-blank.hover 4
+
+                tr
+                  td.relative 60
+                    .joiner
+                      .left
+                      .right
+                        .left.up
+                        .right.rod
+
+                  td.red.relative 8.70
+                    label.node.n-blank.hover 5
+
+                tr
+                  td.relative 70
+                  td 8.50
+
+                tr
+                  td.relative 80
+                  td 8.30
+
+                tr
+                  td.relative 90
+                  td 8.10
+
+                tr
+                  td.relative 100
+                  td 7.90
+
+              tfoot
+                td(colspan="2") A level 1 agent skips 1 price point for the purchase of 10 product pieces , whereas an agent at level 4 skips 4 points from the original price point. * being a leveled agent will allow you better pricing by skipping price points according to your level 
+
+            hr
+            h4 Example 2
+
+            table
+              thead.underline
+                tr
+                  th(colspan="2") Price table
+                tr
+                  th Quantity
+                  th Price
+
+              tbody
+
+                tr
+                  td.relative 10
+                  td 9.50
+
+                tr
+                  td.relative 20
+                  td 9.30
+
+                tr
+                  td.relative 30
+                  td 9.20
+
+
+                tr
+                  td.relative 40
+                    .joiner
+                      .left.rod
+                      .right
+                        .left.down
+                        .right
+
+                  td.grey.relative 9.00
+                    label.node.n-blank.hover 0
+
+                tr
+                  td.relative 50
+                    .joiner
+                      .left
+                      .right
+                        .left.updown
+                        .right.rod
+
+                  td.green.relative 8.90
+                    label.node.n-blank.hover 1
+
+                tr
+                  td.relative 60
+                    .joiner
+                      .left
+                      .right
+                        .left.updown
+                        .right.rod
+
+                  td.purple.relative 8.70
+                    label.node.n-blank.hover 2
+                
+
+                tr
+                  td.relative 70
+                    .joiner
+                      .left
+                      .right
+                        .left.updown
+                        .right.rod
+
+
+                  td.blue.relative 8.50
+                    label.node.n-blank.hover 3
+
+                tr
+                  td.relative 80
+                    .joiner
+                      .left
+                      .right
+                        .left.updown
+                        .right.rod
+
+                  td.orange.relative 8.30
+                    label.node.n-blank.hover 4
+
+                tr
+                  td.relative 90
+                    .joiner
+                      .left
+                      .right
+                        .left.up
+                        .right.rod
+
+                  td.red.relative 8.10
+                    label.node.n-blank.hover 5
+
+                tr
+                  td.relative 100
+                  td 7.90
+
+              tfoot
+                td(colspan="2") * the price point skips correspond to the quantity selected
+
+
+          section
+            h3 Benefits &amp; rewards reference chart
+            table.columns.rewards
+              thead
+                tr
+                  th
+                  th
+                    label.node.n1 1
+                  th 
+                    label.node.n2 2
+                  th
+                    label.node.n3 3
+                  th
+                    label.node.n4 4
+                  th
+                    label.node.n5 5
+              tbody
+                tr
+                  td.left 
+                    img(src="img/pap/benefits-van.png")
+                    p Free delivery*
+
+                  td.grey.top RM1000
+                  td.grey.top RM500
+                  td.grey.top RM250
+                  td.grey.top RM150
+                  td.grey.top RM100
+                tr
+                  td.left 
+
+                    img(src="img/pap/benefits-cash.png")
+                    p Credit terms
+
+                  td.grey —
+                  td.grey 14 Days
+                  td.grey 21 Days
+                  td.grey 30 Days
+                  td.grey 45 Days
+                tr
+                  td.left
+                    img(src="img/pap/benefits-parcel.png")
+                    p Sample credit**
+
+                  td.grey.bottom —
+                  td.grey.bottom RM100
+                  td.grey.bottom RM200
+                  td.grey.bottom RM300
+                  td.grey.bottom RM400
+              tfoot
+                tr
+                  td(colspan="6")
+                    = "* Minimum order needed."
+                    br
+                    = "** Sample credit is based on Past Total annual sales (jan—dec). It is issued on January and valid for 1 year."
+
+
+        .pap-diagram
+          section
+            h3 Gain credit terms up to 45 Days
+            p Give yourself extra time. Take advantage of our credit extention programme offered to our leveled Preferred Agents.
+
+
+          section
+            h3 Free Dispatch/Dispatch
+            p Free Dispatch/Dispatch credit to the following areas. Orders to be delivered outside of the selected areas will be charged according to standard courier rates.
+            hr
+            ul.dispatch
+              li Ampang
+              li Bangsar
+              li Bandar Baru Selayang
+              li Bandar Sri Damansara
+              li Bandar Utama
+              li Batu Caves
+              li Bukit Damansara
+              li Bukit Kiara
+              li Cheras
+              li Damansara Jaya
+              li Damansara Town Centre
+              li Damansara Utama
+              li Gombak
+              li Kepong
+              li Kota Damansara
+              li Kuala Lumpur
+              li Lembah Beringin
+              li Maluri
+              li Miharja
+              li Petaling Jaya
+              li Puchong
+              li Pudu
+              li Segambut
+              li Serdang
+              li Seri Kembangan
+              li Setapak
+              li Sentul
+              li Sri Hartamas
+              li Sri Petaling
+              li Sungai Buloh
+              li Shah Alam
+              li Subang Jaya
+              li Sungai Besi
+              li Taman Melawati
+              li Taman Tun Dr Ismail
+              li USJ
+              li Wangsa Maju
+
+
+          section
+            h3 Dispatch rate
+            p If first time purchasing (or at 0 level), agents are still eligible for the free dispatch as long as their orders reaches RM2000.
+            hr
+            table.dispatch
+              thead
+                tr
+                  th(rowspan="3") Weight of samples or goods (kg)
+                  th(colspan="7") Distance between our office and the drop off location (km)
+                tr
+                  th 0-5km
+                  th 5-10km
+                  th 10-15km
+                  th 15km-20km
+                  th 25km-30km
+                  th 30km-35km
+                  th 35km-40km
+                tr
+                  th(colspan="7") Dispatch rate are in RM
+              tbody
+                tr
+                  td
+                    = "<1 kg"
+                  td 5.00
+                  td 5.80
+                  td 6.60
+                  td 7.40
+                  td 8.20
+                  td 9.00
+                  td 9.80
+
+                tr
+                  td
+                    = "1-3 kg"
+                  td 6.50
+                  td 7.30
+                  td 8.10
+                  td 8.90
+                  td 9.70
+                  td 10.50
+                  td 11.30
+
+                tr
+                  td 3-5 kg
+                  td 8.00
+                  td 8.80
+                  td 9.60
+                  td 10.40
+                  td 11.20
+                  td 12.00
+                  td 12.80
+                tr
+                  td 5-7 kg
+                  td 9.50
+                  td 10.30
+                  td 11.10
+                  td 11.90
+                  td 12.70
+                  td 13.50
+                  td 14.30
+                tr
+                  td 7-9 kg
+                  td 11.00
+                  td 11.80
+                  td 12.60
+                  td 13.40
+                  td 14.20
+                  td 15.00
+                  td 15.80
+                tr
+                  td 9-11 kg
+                  td 12.50
+                  td 13.30
+                  td 14.10
+                  td 14.90
+                  td 15.70
+                  td 16.50
+                  td 17.30
+                tr
+                  td 11-13kg
+                  td 14.00
+                  td 14.80
+                  td 15.60
+                  td 16.40
+                  td 17.20
+                  td 18.00
+                  td 18.80
+                tr
+                  td 13-15kg
+                  td 15.50
+                  td 16.30
+                  td 17.10
+                  td 17.90
+                  td 18.70
+                  td 19.50
+                  td 20.30
+                tr
+                  td 15-17kg
+                  td 17.00
+                  td 17.80
+                  td 18.60
+                  td 19.40
+                  td 20.20
+                  td 21.00
+                  td 21.80
+                tr
+                  td 17-19kg
+                  td 18.50
+                  td 19.30
+                  td 20.10
+                  td 20.90
+                  td 21.70
+                  td 22.50
+                  td 23.30
+                tr
+                  td 19-21kg
+                  td 20.00
+                  td 20.80
+                  td 21.60
+                  td 22.40
+                  td 23.20
+                  td 24.00
+                  td 24.80
+                tr
+                  td 21-23kg
+                  td 21.50
+                  td 22.30
+                  td 23.10
+                  td 23.90
+                  td 24.70
+                  td 25.50
+                  td 26.30
+                tr
+                  td 23-25kg
+                  td 23.00
+                  td 23.80
+                  td 24.60
+                  td 25.40
+                  td 26.20
+                  td 27.00
+                  td 27.80
+                tr
+                  td 25-27kg
+                  td 24.50
+                  td 25.30
+                  td 26.10
+                  td 26.90
+                  td 27.70
+                  td 28.50
+                  td 29.30
+                tr
+                  td 27-29kg
+                  td 26.00
+                  td 26.80
+                  td 27.60
+                  td 28.40
+                  td 29.20
+                  td 30.00
+                  td 30.80
+                tr
+                  td 30-31kg
+                  td 27.50
+                  td 28.30
+                  td 29.10
+                  td 29.90
+                  td 30.70
+                  td 31.50
+                  td 32.30
+
+
+
+
+
+
 
 
       include partials/_footer
