@@ -1,120 +1,322 @@
-.cost
-  font-size: 14px
+$pap-green:     #8DC63F
+$pap-purple:    #9D6CAE
+$pap-blue:      #94BDE5
+$pap-orange:    #FBB040
+$pap-red:       #F26A5A
+$pap-grey:      $bg 
+$pap-white:     white
+
+.pap-diagram
+  h2, h3, h4
+    text-align: center
+    margin: auto
+    
+  h3
+    margin: 0 0 40px 0  
+    
+  h4
+    margin: 25px 0 15px 0  
+
+  hr
+    margin: 20px 0 20px 0
+
+  section
+    background: $pap-white
+    padding: 30px 
+    margin: 20px 0 
+
+  table
+    width: 100%
+    line-height: 1.2em
+    border-collapse: separate
+    
+    small
+      margin-top: 4px
+    
+    thead
+      th
+        padding: 10px 0
+        vertical-align: top
+        text-transform: uppercase
+
+      &.underline
+        th
+          border-bottom: 2px solid rgba(0, 0, 0, 0.87)
+
+    tbody
+      &.border
+        tr
+          td
+            border: 1px solid $grey-border
+
+
+    tfoot tr td
+      text-align: left
+      padding: 30px 0 0 0
+
+    td, th
+      text-align: center
+      padding: 4px
+      width: calc(100%/6)
+      vertical-align: center
+      font-size: 11px
+      line-height: 15px
+      
+    td
+      padding: 10px
+      
+      &.relative
+        position: relative
+       
+        .joiner
+          position: absolute
+          top: 0
+          right: 0
+          width: calc(50% - 20px)
+          height: 100%
+          z-index: 0
+          
+          .rod
+            background: url("../img/pap/join-right.png") 50% 50% no-repeat
+          .down
+            background: url("../img/pap/join-down.png") 50% 50% no-repeat
+          .up
+            background: url("../img/pap/join-up.png") 50% 50% no-repeat
+          .updown
+            background: url("../img/pap/join-updown.png") 50% 50% no-repeat
+
+          .left,
+          .right
+            position: absolute
+            width: calc(50% - 10px)
+            width: 50%
+            top: 0
+            height: 100%
+
+          .left
+            left: 0
+
+          .right
+            right: 0
+            
+      &.grey
+        background: $pap-grey
+      &.green
+        background: $pap-green
+      &.purple
+        background: $pap-purple
+      &.blue
+        background: $pap-blue
+      &.orange
+        background: $pap-orange
+      &.red
+        background: $pap-red 
+      &.white
+        background: $pap-white
+
+
+      &.top
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+      &.bottom
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+      &.left
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+      &.right
+        border-top-right-radius: 10px
+        border-bottom-right-radius: 10px
+
+    &.rows
+      border-spacing: 0 10px
+
+    &.columns
+      border-spacing: 10px 0
+
+    &.rewards tbody td img
+      max-width: 80px
+
+    &.dispatch
+      th, td
+        border: 1px solid $grey-border
+      th
+        background: $pap-grey
+        padding: 5px 4px
+        vertical-align: middle
+      td
+        padding: 4px
+        vertical-align: top
+      tbody
+        tr:nth-child(even)
+          background: white
+        td
+          text-align: right
+          width: calc(100%/8)
+        td:first-child
+          font-weight: bold
+          text-align: left
+
+  .flex
+    width: 100%
+    display: flex
+    justify-content: space-around
+    margin: auto
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .benefits:nth-child(2)
+      border-left: 10px solid white
+      
+    .benefits
+      flex-basis: 50%
+      align-self: stretch
+      text-align: center
+      justify-content: space-around
+      background: $pap-grey
+      padding: 35px 25px
+    
+      img
+        max-width: 100%
+        padding: 10px
+        display: block
+        margin: 0 auto
+      
+      small
+        display: block
+
+      .counter
+        background: #444
+        display: inline-block
+        width: 30px 
+        height: 30px
+        transform: rotate(-45deg)
+        padding: 2px
+        border-radius: 2px
+        p
+          padding: 0
+          color: white 
+          margin: 2px 0 0 1px
+          transform: rotate(45deg)  
+
+  .flex + .flex
+    margin-top: 10px    
+
+label.node
+  height: 40px
+  width: 40px
+  border-radius: 50%
   text-align: center
-  .to
-    display: block
+  display: flex
+  flex-wrap: nowrap 
+  margin: auto
+  align-items: center
+  justify-content: center
+  z-index: 3
 
-i.icon.mail:before
-  content: "\f0e0"
-  padding: 0 8px 0 0
+  &.n0
+    background: $pap-grey
+  &.n1
+    background: $pap-green
+  &.n2
+    background: $pap-purple
+  &.n3
+    background: $pap-blue
+  &.n4
+    background: $pap-orange
+  &.n5
+    background: $pap-red 
+  &.n-blank
+    background: rgba(255, 255, 255, 0.8)
+    color: #444
+    height: 25px
+    width: 25px
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    border-radius: 4px
 
-p.terms
-  font-size: 10px
-  text-align: left
+  &.hover
+    position: absolute
+    top: 5px
+    right: 6px
 
-ul.split
+.row-nodes
+  display: flex
+  flex-wrap: nowrap
+  margin: auto
+  width: 150px
+  align-items: center
+  justify-content: center
+  border-radius: 1em
+
+  label.node
+    height: 30px
+    width: 30px
+    border-radius: 0
+    color: white
+
+    &:first-child
+      border-top-left-radius: 4px
+      border-bottom-left-radius: 4px
+    &:last-child
+      border-top-right-radius: 4px
+      border-bottom-right-radius: 4px
+
+ul.dispatch
   margin: none
   padding: 0
-
-  -moz-column-count: 3
-  -moz-column-gap: 20px
-  -webkit-column-count: 3
-  -webkit-column-gap: 20px
+  column-count: 3
+  column-gap: 20px
 
   li
     list-style: none
 
-img.pap
-  width: 100%
 
-table.dispatch
-  margin-bottom: 10px
-  th, td
-    border: 1px solid $grey-border
-    font-size: 11px
-    line-height: 15px
-  th
-    background: lighten($grey-border, 10%)
-    padding: 5px 4px
-  td
-    padding: 4px
-    vertical-align: top
-  tbody
-    tr:nth-child(even)
+@media (max-width: 500px)
+  .pap-diagram
+    section
       background: white
+      padding: 35px 0 30px 0 
+      margin: 10px 0 
 
-    td
-      text-align: right
-      width: calc(100%/8)
-    td:first-child
-      font-weight: bold
-      text-align: left
+    h3
+      margin: 0 0 30px 0  
+    
+    p, h3, h4, ul, table tfoot tr td
+      padding-left: 20px
+      padding-right: 20px 
 
-.pap-col
-  position: relative
-  width: 100%
-  background: lightblue
-  display: inline-block
-  margin-top: 40px
+    table
+      &.rows
+        border-spacing: 0 5px
+      &.columns
+        border-spacing: 3px 0
+      td
+        &.left,
+        &.right
+          border-radius: 0
 
-  &.pap-col-1
-    background: #5dbfec
-    &::before,
-    &::after
-      background: #5dbfec
-  &.pap-col-2
-    background: #94c120
-    &::before
-      background: #94c120
-  &.pap-col-3
-    background: #383a60
-    &::before
-      background: #383a60
-  &.pap-col-4
-    background: #c72652
-    &::before
-      background: #c72652
-  &.pap-col-5
-    background: #31a7b3
-    &::before
-      background: #31a7b3
+    table.rewards
+      padding: 0 6px
+      tbody
+        td
+          padding-left: 0
+          padding-right: 0
+          img
+            max-width: 50px
+            
+    .flex
+      .benefits:nth-child(2)
+        border-left: none
+      .benefits
+        flex-basis: 100%
+        margin: 15px 0 0 0 
 
-  .inner
-    font-size: 11px
-    padding: 10px
-    margin-top: 0
-    color: $bg
-    text-align: left
+    .flex + .flex
+      margin-top: 0
+          
+    ul.dispatch
+      column-count: 2
+      column-gap: 20px
 
-    .head
-      min-height: 70px
-      margin-top: 2px
-
-      h5
-        margin-top: -37px
-        color: black
-        font-size: 16px
-      img
-        padding: 0 12px
-
-.pap-col:after
-  content: ''
-  position: absolute
-  left: 0
-  bottom: -15px
-  width: 100%
-  height: 26px
-  transform: skewY(-2deg)
-  -webkit-backface-visibility: hidden
-
-.pap-col:before
-  content: ''
-  position: absolute
-  left: 0
-  top: -15px
-  width: 100%
-  height: 26px
-  transform: skewY(-2deg)
-  -webkit-backface-visibility: hidden
-
-
+    
