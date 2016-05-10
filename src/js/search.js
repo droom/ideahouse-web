@@ -21,12 +21,13 @@
     });
 
 
-    // 1-100 units : Each incremental click is 1 unit
-    // 101-500 units: Each incremental click is 10 units
-    // 501-1,000 units: Each incremental click is 50 units
-    // 1,001-10,000 units: Each incremental click is 100 units
-    // 10,001-30,000 units: Each incremental click is 500 units
-    // 30,001-999,999 units: Each incremental click is 1000 units.
+
+// 1-99 units : Each incremental click is 1 unit
+// 100-499 units: Each incremental click is 10 units
+// 500-999 units: Each incremental click is 50 units
+// 1,000-9,999 units: Each incremental click is 100 units
+// 10,000-29,999 units: Each incremental click is 500 units
+// 30,000-999,999 units: Each incremental click is 1000 units
 
 
     $("form.ui.form.advanced-search button.ui.button").click(function(e) {
@@ -39,51 +40,51 @@
       var valTenPercent = (valCurrent / 100) * 10;
 
 
+      var val6 = 30000
+      var val5 = 10000
+      var val4 = 1000
+      var val3 = 500
+      var val2 = 100 
+      var val1 = 0
+
+
       if ($(this).hasClass("minus")){
 
         switch(true) {
 
           case (isNaN(valCurrent)):
-          console.log("NaN, make 0")
           $(valInput).val(0);
           break;
 
-          case (0 === valCurrent):
-          console.log("already lowest, keep at 0")
+          case (val1 === valCurrent):
+          console.log("already lowest, keep at val1")
           break;
 
-          case (valCurrent > 0 && valCurrent <= 100 ):
-          console.log("1-100 units : Each incremental click is 1 unit")
+          case (valCurrent >= 1 && valCurrent < val2 ):
           $(valInput).val(parseInt(valCurrent - 1));
           break;
 
-          case (valCurrent > 100 && valCurrent <= 500):
-          console.log("101-500 units: Each incremental click is 10 units")
+          case (valCurrent >= val2 && valCurrent < val3):
           $(valInput).val(parseInt(valCurrent - 10));
           break;
       
-          case (valCurrent > 500 && valCurrent <= 1000):
-          console.log("501-1,000 units: Each incremental click is 50 units")
+          case (valCurrent >= val3 && valCurrent < val4):
           $(valInput).val(parseInt(valCurrent - 50));
           break;
 
-          case (valCurrent > 1000 && valCurrent <= 10000):
-          console.log("1,001-10,000 units: Each incremental click is 100 units")
+          case (valCurrent >= val4 && valCurrent < val5):
           $(valInput).val(parseInt(valCurrent - 100));
           break;
 
-          case (valCurrent > 10000 && valCurrent <= 30000):
-          console.log("10,001-30,000 units: Each incremental click is 500 units")
+          case (valCurrent >= val5 && valCurrent < val6):
           $(valInput).val(parseInt(valCurrent - 500));
           break;
 
-          case (valCurrent > 30000):
-          console.log("10,001-30,000 units: Each incremental click is 500 units")
+          case (valCurrent >= val6):
           $(valInput).val(parseInt(valCurrent - 1000));
           break;
 
           default:
-          console.log("DEFAULT: 1-100 units : Each incremental click is 1 unit")
           $(valInput).val(parseInt(valCurrent - 1));
           return;
 
@@ -96,43 +97,35 @@
         switch(true) {
 
           case (isNaN(valCurrent)):
-          console.log("not a number, add 1")
           $(valInput).val(1);
           break;
 
-          case (valCurrent > 0 && valCurrent <= 100 ):
-          console.log("1-100 units : Each incremental click is 1 unit")
+          case (valCurrent >= val1 && valCurrent < val2 ):
           $(valInput).val(parseInt(valCurrent + 1));
           break;
 
-          case (valCurrent > 100 && valCurrent <= 500):
-          console.log("101-500 units: Each incremental click is 10 units")
+          case (valCurrent >= val2 && valCurrent < val3):
           $(valInput).val(parseInt(valCurrent + 10));
           break;
       
-          case (valCurrent > 500 && valCurrent <= 1000):
-          console.log("501-1,000 units: Each incremental click is 50 units")
+          case (valCurrent >= val3 && valCurrent < val4):
           $(valInput).val(parseInt(valCurrent + 50));
           break;
 
-          case (valCurrent > 1000 && valCurrent <= 10000):
-          console.log("1,001-10,000 units: Each incremental click is 100 units")
+          case (valCurrent >= val4 && valCurrent < val5):
           $(valInput).val(parseInt(valCurrent + 100));
           break;
 
-          case (valCurrent > 10000 && valCurrent <= 30000):
-          console.log("10,001-30,000 units: Each incremental click is 500 units")
+          case (valCurrent >= val5 && valCurrent < val6):
           $(valInput).val(parseInt(valCurrent + 500));
           break;
 
-          case (valCurrent > 30000):
-          console.log("10,001-30,000 units: Each incremental click is 500 units")
+          case (valCurrent >= val6):
           $(valInput).val(parseInt(valCurrent + 1000));
           break;
 
           default:
           $(valInput).val(parseInt(valCurrent + 1));
-          console.log("DEFAULT: 1-100 units : Each incremental click is 1 unit")
           return;
 
 
