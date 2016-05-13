@@ -3,7 +3,7 @@
     // Tablesorter 
     // Default sorting
 
-    $("table").tablesorter({ 
+    $("table.tablesorter").tablesorter({ 
       sortList: [[1,1]] 
     }); 
 
