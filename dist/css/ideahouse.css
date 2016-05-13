@@ -25580,11 +25580,11 @@ body .tiles.browse .ui.card:nth-child(12n+9) .image, body .tiles.browse .ui.card
     height: 2.4em;
   }
 }
-.label.offer:before, .label.clearance:before, .label.popular:before, .label.new:before {
+.label.offer:before, .label.clearance:before, .label.popular:before, .label.new:before, .label.none:before {
   z-index: 3;
   color: white;
   text-transform: uppercase;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   padding: 6px 10px;
   margin-top: -1;
   font-size: 10px;
@@ -25594,6 +25594,14 @@ body .tiles.browse .ui.card:nth-child(12n+9) .image, body .tiles.browse .ui.card
   display: block;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+}
+.label.none + .image img {
+  margin: -10px 0 10px 0;
+}
+.label.none:before {
+  background: none;
+  content: "—";
+  color: white;
 }
 .label.offer:before {
   background: #2fb6ee;
