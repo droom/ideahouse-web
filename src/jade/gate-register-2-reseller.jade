@@ -20,7 +20,7 @@ html(lang="en")
         .content
           p All items marked asterisk(&#42;) are required.
           hr
-          form.ui.form
+          form.ui.form(autocomplete="off")
             fieldset
               h2 Login information
               .inline.field
@@ -29,7 +29,7 @@ html(lang="en")
 
               .inline.field
                 label.static.required Password
-                input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}", autocomplete="off")
+                input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}", autocomplete="new-password")
                 small.support 6&ndash;12 characters
 
             fieldset
