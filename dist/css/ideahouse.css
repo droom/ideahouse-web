@@ -25764,17 +25764,55 @@ body.history .item.history {
   height: 100%;
   z-index: 0;
 }
-.pap-diagram table td.relative .joiner .rod {
-  background: url("../img/pap/join-right.png") 50% 50% no-repeat;
+.pap-diagram table td.relative .joiner .across {
+  position: absolute;
+}
+.pap-diagram table td.relative .joiner .across .pipe {
+  height: 50%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #444;
 }
 .pap-diagram table td.relative .joiner .down {
-  background: url("../img/pap/join-down.png") 50% 50% no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.pap-diagram table td.relative .joiner .down .pipe {
+  height: 50%;
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  border-left: 1px solid #444;
 }
 .pap-diagram table td.relative .joiner .up {
-  background: url("../img/pap/join-up.png") 50% 50% no-repeat;
+  position: absolute;
+}
+.pap-diagram table td.relative .joiner .up .pipe {
+  height: 50%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-left: 1px solid #444;
+  border-bottom: 1px solid #444;
 }
 .pap-diagram table td.relative .joiner .updown {
-  background: url("../img/pap/join-updown.png") 50% 50% no-repeat;
+  position: absolute;
+}
+.pap-diagram table td.relative .joiner .updown .pipe {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-left: 1px solid #444;
+}
+.pap-diagram table td.relative .joiner .updown .pipe .pipe {
+  height: 50%;
+  border-left: none;
+  border-bottom: 1px solid #444;
 }
 .pap-diagram table td.relative .joiner .left,
 .pap-diagram table td.relative .joiner .right {
