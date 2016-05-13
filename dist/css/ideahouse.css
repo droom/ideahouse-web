@@ -25918,6 +25918,9 @@ label.node {
   align-items: center;
   justify-content: center;
   z-index: 3;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
 label.node.n0 {
   background: #f5f5f5;
@@ -25964,7 +25967,6 @@ label.node.hover {
   height: 30px;
   width: 30px;
   border-radius: 0;
-  color: white;
 }
 .row-nodes label.node:first-child {
   border-top-left-radius: 4px;
