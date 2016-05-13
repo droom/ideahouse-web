@@ -15,25 +15,9 @@ html(lang="en")
           i.right.angle.icon.divider
           .section Search results for $SEARCH_QUERY ($RESULTS_INT)
 
-        hr
-          
-        label.sort Sort by 
-        .ui.selection.dropdown.sort
-          .text Name
-          i.dropdown.icon
-          .menu
-            .item Name
-            .item Code
-            .item Price
 
+        include partials/_search-options
 
-        .ui.selection.dropdown.sort
-          .text Ascending
-          i.dropdown.icon
-          .menu
-            .item Ascending
-            .item Descending
-        hr
 
         .tiles
           a(href="product.html" aria-label="View &PRODUCT_NAME").ui.card
