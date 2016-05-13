@@ -25,11 +25,11 @@ html(lang="en")
               h2 Login information
               .inline.field
                 label.static.required Login
-                input(type="email", name="email", id="email", placeholder="Email")
+                input(type="email", name="email", id="email", placeholder="Email", autocomplete="off")
 
               .inline.field
                 label.static.required Password
-                input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}")
+                input(id='password' name='password', type='password', placeholder='Password', pattern=".{6,12}", autocomplete="off")
                 small.support 6&ndash;12 characters
 
             fieldset
@@ -43,7 +43,7 @@ html(lang="en")
 
               .inline.field
                 label.static.required Name
-                input(name='name', type='text', placeholder='Name')
+                input(name='name', type='text', placeholder='Name', autocomplete="off")
 
               hr
 
@@ -61,7 +61,7 @@ html(lang="en")
 
               .inline.field
                 label.static.required Company Name
-                input(name='company', id='company', type='text', placeholder='Company Name')
+                input(name='company', id='company', type='text', placeholder='Company Name', autocomplete="off")
 
               .inline.field
                 label.static.required Country
@@ -809,11 +809,11 @@ html(lang="en")
 
               .inline.field
                 label.static State
-                input(name='state', id='state', type='text', placeholder='State')
+                input(name='state', id='state', type='text', placeholder='State', autocomplete="off")
 
               .inline.field
                 label.static Mobile Number
-                input(name='telephone', id='telephone', type='tel')
+                input(name='telephone', id='telephone', type='tel', autocomplete="off")
 
 
 
