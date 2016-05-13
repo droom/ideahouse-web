@@ -25595,6 +25595,9 @@ body .tiles.browse .ui.card:nth-child(12n+9) .image, body .tiles.browse .ui.card
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+.label.none + .image img {
+  margin: -10px 0 10px 0;
+}
 .label.none:before {
   background: none;
   content: "—";

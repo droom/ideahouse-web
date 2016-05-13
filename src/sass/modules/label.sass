@@ -18,10 +18,14 @@
     border-top-left-radius: 3px
     border-top-right-radius: 3px
 
-  &.none:before
-    background: none
-    content: "—"
-    color: white
+  &.none 
+    & + .image img
+      margin: -10px 0 10px 0
+      
+    &:before
+      background: none
+      content: "—"
+      color: white
 
   &.offer:before
     background: $brand-blue
