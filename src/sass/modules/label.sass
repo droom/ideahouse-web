@@ -2,7 +2,8 @@
   &.offer:before,
   &.clearance:before,
   &.popular:before,
-  &.new:before
+  &.new:before,
+  &.none:before
     z-index: 3
     color: white
     text-transform: uppercase
@@ -16,6 +17,11 @@
     display: block
     border-top-left-radius: 3px
     border-top-right-radius: 3px
+
+  &.none:before
+    background: none
+    content: "—"
+    color: white
 
   &.offer:before
     background: $brand-blue
