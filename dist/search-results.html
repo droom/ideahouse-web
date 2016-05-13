@@ -120,35 +120,47 @@
       </div>
       <div role="main" class="col-main-right">
         <div class="ui huge breadcrumb"><a href="search-advanced.html" aria-label="Return to Advanced Search" class="section">Advanced Search</a><i class="right angle icon divider"></i>
-          <div class="section">Results (4)</div>
+          <div class="section">Search results for $SEARCH_QUERY ($RESULTS_INT)</div>
         </div>
-        <h3>Search results for $SEARCH_QUERY</h3>
-        <div class="ui selection dropdown currency">
-          <div class="text">SORT BY</div><i class="dropdown icon"></i>
+        <hr>
+        <label class="sort">Sort by </label>
+        <div class="ui selection dropdown sort">
+          <div class="text">Name</div><i class="dropdown icon"></i>
           <div class="menu">
-            <div class="item">$PRODUCT_NAME (default)</div>
-            <div class="item">$CODE</div>
-            <div class="item">$PRICE</div>
+            <div class="item">Name</div>
+            <div class="item">Code</div>
+            <div class="item">Price</div>
+          </div>
+        </div>
+        <div class="ui selection dropdown sort">
+          <div class="text">Ascending</div><i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item">Ascending</div>
+            <div class="item">Descending</div>
           </div>
         </div>
         <hr>
         <div class="tiles"><a href="product.html" aria-label="View &amp;PRODUCT_NAME" class="ui card">
+            <div class="label new"></div>
             <div class="image"><img alt="" src="img/product/UM02.jpg" class="product"></div>
             <div class="content">
               <div class="description">Umbra 24</div>
             </div>
             <div class="extra content"><small>UM02</small></div></a><a href="product.html" aria-label="View &amp;PRODUCT_NAME" class="ui card">
+            <div class="label none"></div>
             <div class="image"><img alt="" src="img/product/005.jpg" class="product"></div>
             <div class="content">
               <div class="description">Minute - Push Action Ball Plastic Pen (Blue Ink)</div>
             </div>
             <div class="extra content"><small>005</small></div></a><a href="product.html" aria-label="View &amp;PRODUCT_NAME" class="ui card">
+            <div class="label none"></div>
             <div class="image"><img alt="" src="img/product/1809.jpg" class="product"></div>
             <div class="content">
               <div class="description">Phoenix-Push Action Ball Plastic Pen (Black Ink)</div>
             </div>
             <div class="extra content"><small>1809</small></div></a>
           <div class="ui card">
+            <div class="label clearance"></div>
             <div class="image"><img alt="" src="img/product/1910.jpg" class="product"></div>
             <div class="content">
               <div class="description">Cambridge - Push Action Ball Plastic Pen (Black Ink)</div>
@@ -156,6 +168,7 @@
             <div class="extra content"><small>1910</small></div>
           </div>
           <div class="ui card">
+            <div class="label offer"></div>
             <div class="image"><img alt="" src="img/product/1926.jpg" class="product"></div>
             <div class="content">
               <div class="description">Ringo - Push Action Ball Plastic Pen (Black Ink)</div>
@@ -163,6 +176,7 @@
             <div class="extra content"><small>1926</small></div>
           </div>
           <div class="ui card">
+            <div class="label none"></div>
             <div class="image"><img alt="" src="img/product/2009.jpg" class="product"></div>
             <div class="content">
               <div class="description">Speedo - Push Action Ball Plastic Pen (Black Ink)</div>
@@ -170,6 +184,7 @@
             <div class="extra content"><small>2009</small></div>
           </div>
           <div class="ui card">
+            <div class="label popular"></div>
             <div class="image"><img alt="" src="img/product/2106.jpg" class="product"></div>
             <div class="content">
               <div class="description">Admiral - Push Action Ball Plastic Pen (Black Ink)</div>
@@ -177,6 +192,7 @@
             <div class="extra content"><small>2106</small></div>
           </div>
           <div class="ui card">
+            <div class="label offer"></div>
             <div class="image"><img alt="" src="img/product/2109.jpg" class="product"></div>
             <div class="content">
               <div class="description">Swan - Twist Action Ball Plastic Pen (Black Ink</div>
@@ -184,6 +200,7 @@
             <div class="extra content"><small>2106</small></div>
           </div>
           <div class="ui card">
+            <div class="label new"></div>
             <div class="image"><img alt="" src="img/product/2111.jpg" class="product"></div>
             <div class="content">
               <div class="description">Galaxy - Push Action Ball Plastic Pen (Black Ink)</div>

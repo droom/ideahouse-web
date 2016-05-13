@@ -13,7 +13,18 @@ html(lang="en")
         .ui.huge.breadcrumb
           .section About Ideahouse
 
-        img(src="img/editorial/team.jpg").team
+        .boundary.no-select
+          .product-carousel.tooltip(title="Click for the next image in this set.")
+            .div
+              img(alt="Image of $PRODUCT_NAME" src="img/product/product-1.jpg", class="product-hero product-1")
+            .div
+              img(alt="Image of $PRODUCT_NAME" src="img/product/product-2.jpg", class="product-hero product-2")
+            .div
+              img(alt="Image of $PRODUCT_NAME" src="img/product/product-3.jpg", class="product-hero product-3")
+
+
+        hr
+
 
         h3 22 Years ago, Ideahouse Corporation Sdn Bhd has started its journey in the shoes of a sales agent.
 

@@ -13,24 +13,31 @@ html(lang="en")
         .ui.huge.breadcrumb
           a(href="search-advanced.html" aria-label="Return to Advanced Search").section Advanced Search
           i.right.angle.icon.divider
-          .section Results (4)
-
-        h3 Search results for $SEARCH_QUERY
-
-        .ui.selection.dropdown.currency
-          .text SORT BY
-          i.dropdown.icon
-          .menu
-            .item $PRODUCT_NAME (default)
-            .item $CODE
-            .item $PRICE
-
-
-
+          .section Search results for $SEARCH_QUERY ($RESULTS_INT)
 
         hr
+          
+        label.sort Sort by 
+        .ui.selection.dropdown.sort
+          .text Name
+          i.dropdown.icon
+          .menu
+            .item Name
+            .item Code
+            .item Price
+
+
+        .ui.selection.dropdown.sort
+          .text Ascending
+          i.dropdown.icon
+          .menu
+            .item Ascending
+            .item Descending
+        hr
+
         .tiles
           a(href="product.html" aria-label="View &PRODUCT_NAME").ui.card
+            .label.new
             .image
               img.product(alt="" src="img/product/UM02.jpg")
             .content
@@ -38,6 +45,7 @@ html(lang="en")
             .extra.content
               small UM02
           a(href="product.html" aria-label="View &PRODUCT_NAME").ui.card
+            .label.none
             .image
               img.product(alt="" src="img/product/005.jpg")
             .content
@@ -45,6 +53,7 @@ html(lang="en")
             .extra.content
               small 005
           a(href="product.html" aria-label="View &PRODUCT_NAME").ui.card
+            .label.none
             .image
               img.product(alt="" src="img/product/1809.jpg")
             .content
@@ -53,6 +62,7 @@ html(lang="en")
               small 1809
 
           .ui.card
+            .label.clearance
             .image
               img.product(alt="" src="img/product/1910.jpg")
             .content
@@ -60,6 +70,7 @@ html(lang="en")
             .extra.content
               small 1910
           .ui.card
+            .label.offer
             .image
               img.product(alt="" src="img/product/1926.jpg")
             .content
@@ -67,6 +78,7 @@ html(lang="en")
             .extra.content
               small 1926
           .ui.card
+            .label.none
             .image
               img.product(alt="" src="img/product/2009.jpg")
             .content
@@ -74,6 +86,7 @@ html(lang="en")
             .extra.content
               small 2009
           .ui.card
+            .label.popular
             .image
               img.product(alt="" src="img/product/2106.jpg")
             .content
@@ -81,6 +94,7 @@ html(lang="en")
             .extra.content
               small 2106
           .ui.card
+            .label.offer
             .image
               img.product(alt="" src="img/product/2109.jpg")
             .content
@@ -88,6 +102,7 @@ html(lang="en")
             .extra.content
               small 2106
           .ui.card
+            .label.new
             .image
               img.product(alt="" src="img/product/2111.jpg")
             .content

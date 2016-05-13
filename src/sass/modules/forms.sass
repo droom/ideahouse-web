@@ -1,11 +1,25 @@
 label.hide
   display: none
 
+label.sort
+  padding: 0 4px 0 0
+
 .ui.form .field.error .input,
 .ui.form .field.error label,
 .ui.form .fields.error .field .input,
 .ui.form .fields.error .field label
   color: $copy
+
+  ul.list
+    list-style-type: none
+
+
+.ui.selection.dropdown.sort
+  min-width: auto
+
+.ui.selection.dropdown.sort + .ui.selection.dropdown.sort
+  margin-left: 2px
+
 
 .ui.dropdown.category
   .menu
@@ -138,6 +152,7 @@ form.ui.form
     input,
     .ui.error.message
       max-width: 370px
+
 
 
 @media (max-width: 768px)

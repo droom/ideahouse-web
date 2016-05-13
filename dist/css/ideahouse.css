@@ -25289,11 +25289,29 @@ label.hide {
   display: none;
 }
 
+label.sort {
+  padding: 0 4px 0 0;
+}
+
 .ui.form .field.error .input,
 .ui.form .field.error label,
 .ui.form .fields.error .field .input,
 .ui.form .fields.error .field label {
   color: #444;
+}
+.ui.form .field.error .input ul.list,
+.ui.form .field.error label ul.list,
+.ui.form .fields.error .field .input ul.list,
+.ui.form .fields.error .field label ul.list {
+  list-style-type: none;
+}
+
+.ui.selection.dropdown.sort {
+  min-width: auto;
+}
+
+.ui.selection.dropdown.sort + .ui.selection.dropdown.sort {
+  margin-left: 2px;
 }
 
 .ui.dropdown.category .menu .item:nth-child(12n+1) img.product, .ui.dropdown.category .menu .item:nth-child(12n+2) img.product, .ui.dropdown.category .menu .item:nth-child(12n+3) img.product, .ui.dropdown.category .menu .item:nth-child(12n+4) img.product {
@@ -25353,7 +25371,7 @@ form.ui.form small.support {
   margin-left: 178px;
   margin-top: 5px;
   line-height: 14px;
-  opacity: .7;
+  opacity: 0.7;
 }
 form.ui.form small.info {
   margin-left: 20px;
@@ -25372,8 +25390,8 @@ form.ui.form .inline.field input.block-first {
   border-bottom-right-radius: 0;
 }
 form.ui.form .inline.field input.block:last-child {
-  border-bottom-left-radius: .28571rem;
-  border-bottom-right-radius: .28571rem;
+  border-bottom-left-radius: 0.28571rem;
+  border-bottom-right-radius: 0.28571rem;
 }
 form.ui.form .field {
   margin: 0em 0em 10px;
