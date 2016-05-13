@@ -12,6 +12,9 @@
           img(src="img/brand/logo-full.svg" class="ih-logo" alt="Ideahouse")
 
       section.profile
+
+        // To be shown when signed in, hidden when signed out
+        
         .authorised-show
           .ui.icon.top.right.pointing.dropdown.button
             i.user.icon
@@ -29,10 +32,16 @@
               a(href="index.html" aria-label="Sign out of Ideahouse" id="gate-signout").item
                 i.sign.out.icon
                 = "Sign out"
+        
+
+        // To be hidden when signed in, shown when signed out
 
         .authorised-hide
           a(href="gate-signin.html" aria-label="Sign in to Ideahouse").item.gate
             = "Sign in / up"
+
+
+
 
     section.search(id="search-snap")
       .ui.fluid.search.quick(role="search")

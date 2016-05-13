@@ -24520,7 +24520,7 @@ body .wrap .product-actions .notify {
   position: absolute;
   display: inline-block;
 }
-body .wrap .product-hero {
+body .wrap .carousel-hero {
   width: 100%;
 }
 body .content {
@@ -24857,20 +24857,22 @@ img.imprint.half {
   display: inline-block;
 }
 
-.product-carousel {
+.carousel {
   margin: 0;
+}
+.carousel img {
   cursor: url("../img/components/arrow-next.svg"), e-resize;
 }
-.product-carousel button.slick-prev.slick-arrow {
+.carousel button.slick-prev.slick-arrow {
   display: none !important;
 }
-.product-carousel .slick-dots {
+.carousel .slick-dots {
   position: static;
 }
-.product-carousel .slick-dots li {
+.carousel .slick-dots li {
   margin: 0 8px;
 }
-.product-carousel .slick-dots li button::before {
+.carousel .slick-dots li button::before {
   font-size: 13px;
 }
 

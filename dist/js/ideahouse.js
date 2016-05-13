@@ -35929,8 +35929,8 @@ $.fn.visibility.settings = {
     // Elipsis
     $(".content .description").dotdotdot({});
 
-    // Touch swipe
-    $('.product-carousel').slick({
+    // Slick Slider
+    $('.carousel-product').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       infinite: true,
@@ -35942,14 +35942,27 @@ $.fn.visibility.settings = {
       nextArrow: '.slick-slide'
     });
 
-    $('table.sortable').tablesort();
+    // Slick Slider
+    $('.carousel-about').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      lazyLoad: 'progressive',
+      arrows: true,
+      fade: false,
+      dots: true,
+      focusOnSelect: true,
+      nextArrow: '.slick-slide',
+      autoplay: true,
+      autoplaySpeed: 4000
+    });
 
+
+    $('table.sortable').tablesort();
 
     if ($('table.sortable.product').length){
       $('table.sortable.product').tablesort().data('tablesort').sort($("th.available"), 'desc');
     }
-
-
 
 
   });
