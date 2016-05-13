@@ -6,10 +6,6 @@
     $('.product .stock').hide();
     $('.product .price').hide();
 
-    // $('.product .details').hide();
-    // $('.product .stock').hide();
-    // $('.product .price').show();
-
     $('a.btn-details').on('click', function() {
       $('.product .stock').hide();
       $('.product .details').show();

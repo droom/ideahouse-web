@@ -47,7 +47,7 @@ module.exports = function(grunt) {
         src: [
         'src/lib/jquery-1.11.3.js',
         'src/lib/slick.js',
-        'src/lib/jquery.tablesort.js',
+        'src/lib/jquery.tablesorter.combined.js',
         'src/lib/jquery.dotdotdot.js',
         'src/lib/semantic.js',
         'src/lib/notify.js',

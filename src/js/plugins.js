@@ -32,11 +32,4 @@
     });
 
 
-    $('table.sortable').tablesort();
-
-    if ($('table.sortable.product').length){
-      $('table.sortable.product').tablesort().data('tablesort').sort($("th.available"), 'desc');
-    }
-
-
   });

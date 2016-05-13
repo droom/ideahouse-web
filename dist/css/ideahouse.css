@@ -24392,6 +24392,10 @@ html.ios body {
   display: none;
 }
 
+.tablesorter-header-inner {
+  display: inline;
+}
+
 .ui.button {
   margin: 0;
 }
