@@ -24577,6 +24577,13 @@ body .col-main-left {
     margin: 0 0 20px 0;
   }
 }
+table.ui.tablesorter thead th.active:after {
+  font-family: "Icons";
+  content: "";
+  font-size: 10px;
+  margin: 0 0 0 6px;
+}
+
 table.download tbody tr:nth-child(9n+1) img, table.download tbody tr:nth-child(9n+2) img, table.download tbody tr:nth-child(9n+3) img {
   background: #f4c95b;
 }
@@ -24643,6 +24650,10 @@ table.ui.table.download tr:nth-child(even) {
 }
 .stock table.ui.table td:nth-child(1),
 .stock table.ui.table th:nth-child(1) {
+  width: 25%;
+}
+.stock table.ui.table td,
+.stock table.ui.table th {
   width: 25%;
 }
 .stock table.ui.table td span.due {

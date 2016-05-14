@@ -1,3 +1,11 @@
+table.ui.tablesorter thead
+  th
+    &.active:after
+      font-family: 'Icons'
+      content: "\f07d"
+      font-size: 10px
+      margin: 0 0 0 6px
+
 table.download
   tbody
     tr
@@ -73,6 +81,10 @@ table.ui.table.download
       
     td:nth-child(1),
     th:nth-child(1)
+      width: 25%
+
+    td,
+    th
       width: 25%
 
     td
