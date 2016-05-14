@@ -254,34 +254,44 @@ $pap-white:     white
     margin-top: 10px    
 
 label.node
-  height: 40px
-  width: 40px
-  border-radius: 50%
-  text-align: center
+
+  // text-align: center
   display: flex
   flex-wrap: nowrap 
   margin: auto
   align-items: center
   justify-content: center
   z-index: 3
+  
 
-  color: white
-  font-size: 14px
-  font-weight: bold
+  .n0,
+  .n1,
+  .n2,
+  .n3,
+  .n4,
+  .n5,
+  .n-blank,
+  .hover
+    padding: 5px 7px 4px 7px
+    border-radius: 3px
+    color: white
+    font-size: 13px
+    font-weight: bold
+    display: inline-block
 
-  &.n0
+  .n0
     background: $pap-grey
-  &.n1
+  .n1
     background: $pap-green
-  &.n2
+  .n2
     background: $pap-purple
-  &.n3
+  .n3
     background: $pap-blue
-  &.n4
+  .n4
     background: $pap-orange
-  &.n5
+  .n5
     background: $pap-red 
-  &.n-blank
+  .n-blank
     background: rgba(255, 255, 255, 0.8)
     color: #444
     height: 25px
@@ -289,10 +299,12 @@ label.node
     border: 1px solid rgba(0, 0, 0, 0.1)
     border-radius: 4px
 
-  &.hover
+  .hover
     position: absolute
     top: 5px
     right: 6px
+
+
 
 .row-nodes
   display: flex
