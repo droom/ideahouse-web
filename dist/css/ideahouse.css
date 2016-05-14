@@ -25766,10 +25766,16 @@ body.history .item.history {
   line-height: 15px;
 }
 .pap-diagram table td {
-  padding: 10px;
+  padding: 10px 0px;
 }
 .pap-diagram table td.relative {
   position: relative;
+}
+.pap-diagram table td.relative .start {
+  background: #eee;
+  border-radius: 50%;
+  padding: 5px 6px;
+  display: inline;
 }
 .pap-diagram table td.relative .joiner {
   position: absolute;
@@ -25884,7 +25890,7 @@ body.history .item.history {
   border-spacing: 0 10px;
 }
 .pap-diagram table.columns {
-  border-spacing: 10px 0;
+  border-spacing: 4px 0;
 }
 .pap-diagram table.rewards tbody td img {
   max-width: 80px;
