@@ -67,13 +67,6 @@ $pap-white:     white
       
       &.relative
         position: relative
-        
-        .start
-          background: #eee
-          border-radius: 50%
-          padding: 5px 6px
-          display: inline
-
 
         // dry this out 
         $pipe-border: 1px solid #444
@@ -242,7 +235,8 @@ $pap-white:     white
         width: 30px 
         height: 30px
         transform: rotate(-45deg)
-        padding: 2px
+        // padding: 2px
+        padding: 4px 3px 2px 1px
         border-radius: 2px
         p
           padding: 0
@@ -262,7 +256,12 @@ label.node
   align-items: center
   justify-content: center
   z-index: 3
-  
+
+  .selected
+    font-weight: bold
+    padding: 2px
+    color: black
+
 
   .n0,
   .n1,
@@ -272,7 +271,7 @@ label.node
   .n5,
   .n-blank,
   .hover
-    padding: 5px 7px 4px 7px
+    padding: 5px 7px 5px 7px
     border-radius: 3px
     color: white
     font-size: 13px
@@ -280,6 +279,7 @@ label.node
     display: inline-block
 
   .n0
+    color: #333
     background: $pap-grey
   .n1
     background: $pap-green

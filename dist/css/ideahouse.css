@@ -25771,12 +25771,6 @@ body.history .item.history {
 .pap-diagram table td.relative {
   position: relative;
 }
-.pap-diagram table td.relative .start {
-  background: #eee;
-  border-radius: 50%;
-  padding: 5px 6px;
-  display: inline;
-}
 .pap-diagram table td.relative .joiner {
   position: absolute;
   top: 0;
@@ -25953,7 +25947,7 @@ body.history .item.history {
   width: 30px;
   height: 30px;
   transform: rotate(-45deg);
-  padding: 2px;
+  padding: 4px 3px 2px 1px;
   border-radius: 2px;
 }
 .pap-diagram .flex .benefits .counter p {
@@ -25974,6 +25968,11 @@ label.node {
   justify-content: center;
   z-index: 3;
 }
+label.node .selected {
+  font-weight: bold;
+  padding: 2px;
+  color: black;
+}
 label.node .n0,
 label.node .n1,
 label.node .n2,
@@ -25982,7 +25981,7 @@ label.node .n4,
 label.node .n5,
 label.node .n-blank,
 label.node .hover {
-  padding: 5px 7px 4px 7px;
+  padding: 5px 7px 5px 7px;
   border-radius: 3px;
   color: white;
   font-size: 13px;
@@ -25990,6 +25989,7 @@ label.node .hover {
   display: inline-block;
 }
 label.node .n0 {
+  color: #333;
   background: #f5f5f5;
 }
 label.node .n1 {
