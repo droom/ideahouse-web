@@ -25,10 +25,10 @@
 - var mImage   		= "http://clients.droom.io/ih/img/icons/og-600.jpg"
 - var mCanon 		= "http://www.ideahouse.com"
 
-meta(http-equiv="x-ua-compatible" content="ie=edge")
-meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0")
-
 meta(charset=mCharset)
+meta(http-equiv="x-ua-compatible" content="ie=edge")
+
+meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0")
 meta(name="area" content="general")
 meta(name="language" content=mLangCode)
 meta(name="title" content=mTitle)
@@ -49,11 +49,7 @@ meta(name="geo.placename" content=mCity)
 meta(name="geo.position" content=mGeoData)
 meta(name="ICBM" content=mGeoData)
 meta(name="path" content="Ideahouse Corporation S/B")
-
-meta(property="og:site_name" content="Ideahouse Corporation S/B")
-meta(property="og:type" content="article")
-meta(property="og:url" content=mURL)
-meta(property="og:title" content="Ideahouse Corporation S/B")
+meta(name="robot" content="index, follow")
 meta(name="ctype" content="page")
 meta(name="pinterest:url" content="")
 
@@ -69,15 +65,14 @@ meta(name="twitter:image" content=mImage)
 meta(name="twitter:site" content=mAuthor)
 meta(name="twitter:creator" content=mTwitter)
 
-meta(property="og:title" content=mTitle)
-meta(property="og:type" content="article")
-meta(property="og:url" content=mURL)
 // Think we need an absolute path here
 meta(property="og:image" content=mImage)
 meta(property="og:description" content=mDescription)
 meta(property="og:site_name" content=mTitle)
+meta(property="og:url" content=mURL)
+meta(property="og:title" content="Ideahouse Corporation S/B")
+meta(property="og:type" content="article")
 
-meta(name="robot" content="index, follow")
 
 link(rel="canonical" href=mCanon)
 link(rel="icon" type="image/png" href="img/icons/favicon.png")
