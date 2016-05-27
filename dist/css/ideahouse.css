@@ -24775,27 +24775,6 @@ img.imprint.half {
   font-weight: 400;
 }
 
-.ui.breadcrumb {
-  min-height: 62px;
-  display: block;
-  line-height: 25px;
-}
-.ui.breadcrumb .section {
-  margin-bottom: 5px;
-  color: #444;
-}
-.ui.breadcrumb a {
-  border-bottom: 2px solid #444;
-}
-.ui.breadcrumb a:hover {
-  color: #2fb6ee;
-  border-bottom: 2px solid #2fb6ee;
-}
-
-.ui.breadcrumb + .boundary {
-  margin-top: 24px;
-}
-
 .search-advanced .inline.fields .field.radio {
   width: 50%;
   display: inline-block;
@@ -24872,25 +24851,6 @@ img.imprint.half {
   display: inline-block;
 }
 
-.carousel {
-  margin: 0;
-}
-.carousel img {
-  cursor: url("../img/components/arrow-next.svg"), e-resize;
-}
-.carousel button.slick-prev.slick-arrow {
-  display: none !important;
-}
-.carousel .slick-dots {
-  position: static;
-}
-.carousel .slick-dots li {
-  margin: 0 8px;
-}
-.carousel .slick-dots li button::before {
-  font-size: 13px;
-}
-
 .ui.styled.accordion,
 .ui.styled.accordion .accordion {
   border-radius: 0;
@@ -24909,38 +24869,6 @@ img.imprint.half {
 .ui.styled.accordion .title:hover,
 .ui.styled.accordion .accordion .title:hover {
   background-color: white;
-}
-
-.notify {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-.notify .ui.button {
-  background: #60af74;
-  color: white;
-}
-.notify .ui.info.message {
-  margin-top: 0;
-  margin-left: 20px;
-  padding: 8px 12px;
-  max-width: 300px;
-  border-radius: 2px;
-}
-.notify .ui.info.message i.close.icon {
-  font-size: 18px;
-}
-.notify .ui.info.message .header {
-  font-size: 14px;
-  padding: 0;
-  min-width: 170px;
-  line-height: 20px;
-}
-.notify .ui.info.message .button {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  margin: 12px 0 0 0;
-  width: 65px;
-  padding: 8px;
 }
 
 #nav_bar {
@@ -26101,6 +26029,83 @@ ul.dispatch li {
     column-gap: 20px;
   }
 }
+.ui.breadcrumb {
+  min-height: 62px;
+  display: block;
+  line-height: 25px;
+}
+.ui.breadcrumb .section {
+  margin-bottom: 5px;
+  color: #444;
+}
+.ui.breadcrumb a {
+  border-bottom: 2px solid #444;
+}
+.ui.breadcrumb a:hover {
+  color: #2fb6ee;
+  border-bottom: 2px solid #2fb6ee;
+}
+
+.ui.breadcrumb + .boundary {
+  margin-top: 24px;
+}
+
+.carousel {
+  margin: 0;
+}
+.carousel .slick-prev,
+.carousel .slick-next,
+.carousel .slick-arrow {
+  display: none !important;
+}
+.carousel ul.slick-dots {
+  position: static;
+}
+.carousel ul.slick-dots li {
+  margin: 0 8px;
+}
+.carousel ul.slick-dots li button::before {
+  font-size: 13px;
+}
+.carousel .slick-list,
+.carousel .slick-track,
+.carousel .slick-slide {
+  outline: none;
+  height: 100%;
+}
+
+.notify {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.notify .ui.button {
+  background: #60af74;
+  color: white;
+}
+.notify .ui.info.message {
+  margin-top: 0;
+  margin-left: 20px;
+  padding: 8px 12px;
+  max-width: 300px;
+  border-radius: 2px;
+}
+.notify .ui.info.message i.close.icon {
+  font-size: 18px;
+}
+.notify .ui.info.message .header {
+  font-size: 14px;
+  padding: 0;
+  min-width: 170px;
+  line-height: 20px;
+}
+.notify .ui.info.message .button {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 12px 0 0 0;
+  width: 65px;
+  padding: 8px;
+}
+
 html, body {
   background: #f5f5f5;
 }
