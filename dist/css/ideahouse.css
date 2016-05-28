@@ -24444,25 +24444,13 @@ html.ios body {
   top: 1.1em;
   font-size: 10px;
 }
-
 .ui.buttons .or {
   position: relative;
-  width: .3em;
+  width: 0.3em;
   height: 2.57143em;
   z-index: 2;
 }
 
-.contact .card i.phone.icon {
-  margin: 0 8px 0 -2px;
-}
-
-@media (max-width: 500px) {
-  a .domain {
-    display: block;
-    margin-left: 19px;
-    line-height: 1em;
-  }
-}
 body {
   padding: 0;
   margin: 0;
@@ -25581,6 +25569,18 @@ body .tiles.browse .ui.card:nth-child(12n+9) .image, body .tiles.browse .ui.card
   color: #444;
 }
 
+.contact .card i.phone.icon,
+.contact .card i.mail.icon {
+  margin: 0 5px 0 1px;
+}
+
+@media (max-width: 300px) {
+  a .domain {
+    display: block;
+    margin-left: 19px;
+    line-height: 1em;
+  }
+}
 body .ui.contact.cards {
   margin: 0;
   padding: 0;
@@ -25601,6 +25601,16 @@ body .ui.contact.cards .card:nth-child(even) {
   margin-left: 2%;
 }
 
+@media (max-width: 450px) {
+  body .ui.contact.cards .card {
+    width: 100%;
+    display: block;
+    margin-left: 0 !important;
+  }
+  body .ui.contact.cards .card + .card {
+    margin-top: 1px;
+  }
+}
 body.browse .item.browse {
   background: #ddd;
 }

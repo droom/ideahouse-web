@@ -1,3 +1,13 @@
+.contact .card i.phone.icon,
+.contact .card i.mail.icon
+  margin: 0 5px 0 1px
+
+@media (max-width: 300px)
+  a .domain
+    display: block
+    margin-left: 19px
+    line-height: 1em
+
 body
   .ui.contact.cards
     margin: 0
@@ -18,4 +28,14 @@ body
       margin-left: 2%
 
 
+@media (max-width: 450px)
+  body 
+    .ui.contact.cards 
+      .card
+        width: 100%
+        display: block
+        margin-left: 0 !important
+
+      .card + .card
+        margin-top: 1px
 
