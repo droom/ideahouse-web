@@ -287,7 +287,7 @@
             <fieldset class="quantity">
               <label class="input">Unit Quantity</label>
               <div class="ui input as">
-                <input type="number" pattern="d*" placeholder="Quantity">
+                <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" placeholder="Quantity">
               </div>
               <div class="ui buttons increment">
                 <button class="ui button minus">&minus;</button>
@@ -299,7 +299,7 @@
             <fieldset class="price from">
               <label class="input">Unit Price Range (MYR)</label>
               <div class="ui input as">
-                <input type="number" pattern="d*" placeholder="From" step="0.01">
+                <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="From" step="0.01">
               </div>
               <div class="ui buttons increment">
                 <button class="ui button minus">&minus;</button>
@@ -309,7 +309,7 @@
             </fieldset>
             <fieldset class="price to">
               <div class="ui input as">
-                <input type="number" pattern="d*" placeholder="To" step="0.01">
+                <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="To" step="0.01">
               </div>
               <div class="ui buttons increment">
                 <button class="ui button minus">&minus;</button>

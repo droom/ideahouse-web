@@ -183,7 +183,9 @@ html(lang="en")
             fieldset.quantity
               label.input Unit Quantity
               .ui.input.as
-                input(type="number", pattern="\d*", placeholder="Quantity" )
+                //- input(type="number", pattern="\d*", placeholder="Quantity" )
+                input(type="number" min="0" inputmode="numeric" pattern="[0-9]*" placeholder="Quantity")
+
               .ui.buttons.increment
                 button.ui.button.minus &minus;
                 .or
@@ -194,7 +196,7 @@ html(lang="en")
             fieldset.price.from
               label.input Unit Price Range (MYR)
               .ui.input.as
-                input(type="number", pattern="\d*", placeholder="From", step="0.01")
+                input(type="number" inputmode="numeric" pattern="[0-9]*" placeholder="From" step="0.01")
               .ui.buttons.increment
                 button.ui.button.minus &minus;
                 .or
@@ -202,7 +204,7 @@ html(lang="en")
 
             fieldset.price.to
               .ui.input.as
-                input(type="number", pattern="\d*", placeholder="To", step="0.01")
+                input(type="number" inputmode="numeric" pattern="[0-9]*" placeholder="To" step="0.01")
               .ui.buttons.increment
                 button.ui.button.minus &minus;
                 .or
