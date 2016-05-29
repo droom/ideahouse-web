@@ -26,8 +26,19 @@ module.exports = function(grunt) {
       concat: {
         files: ['src/js/*.js'],
         tasks: ['concat']
+      },
+
+      postcss: {
+        files: [
+        'src/sass/*.sass',
+        'src/sass/modules/*.sass',
+        'src/sass/components/*.sass'
+        ],
+
+        tasks: ['postcss'],
       }
     },
+
 
     sass: {
       dist: {
@@ -39,6 +50,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
 
     concat: {
       options: {
