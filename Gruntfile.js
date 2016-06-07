@@ -39,7 +39,6 @@ module.exports = function(grunt) {
       }
     },
 
-
     sass: {
       dist: {
         options: {
@@ -50,7 +49,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
 
     concat: {
       options: {
@@ -107,7 +105,6 @@ module.exports = function(grunt) {
           src: 'dist/css/ideahouse.css'
         }
       },
-
     });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -118,7 +115,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-uncss');
-// Default task(s).
-grunt.registerTask('default', ['concat','uglify', 'sass', 'postcss','jade']);
+  
+  // Default task(s).
+  grunt.registerTask('default', ['concat','uglify', 'sass', 'postcss','jade']);
+
 
 };

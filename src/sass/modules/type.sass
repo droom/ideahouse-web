@@ -4,7 +4,7 @@ body
   input[type='text'],
   input[type='number'],
   textarea
-    font-size: 16px
+    font-size: 1rem
 
   hr
     margin: 1rem 0rem
@@ -13,12 +13,47 @@ body
     border: none
 
   p, .p
-    font-size: 1em
-  
+    font-size: 1.15rem
+    line-height: 1.75rem
+
   h2, .h2
-    font-size: 1.42857143rem
+    font-size: 1.5rem
     line-height: 25px
     font-weight: 400
+
+  h3, .h3
+    display: block 
+    font-size: 1.65rem
+    line-height: 1.9rem
+    font-weight: 700
+    margin: 0 0 50px 0
+
+  .content
+    h3, .h3
+      font-size: 1.5rem
+      line-height: 25px
+      font-weight: 700
+
+  td p,
+  .ui.button,
+  .ui.tiny.button, 
+  .ui.tiny.buttons .button, 
+  .ui.tiny.buttons .or,
+  .ui.labeled.button,
+  .ui.labeled.button p,
+  ul.links li
+    font-size: 1rem
+    line-height: 1.25rem
+
+  ul.links li
+    margin: 0 0 8px 0
+    display: block
+
+  ul.contact li
+    font-size: 0.8rem
+    line-height: 1.15rem
+    opacity: 0.8
+
 
   label.input
     margin: 0 0 8px 0
@@ -26,7 +61,7 @@ body
     font-weight: 700
 
   small
-    line-height: 1.2em
+    line-height: 1.2rem
     display: inline-block
     
   &.faq
@@ -34,5 +69,27 @@ body
       margin-top: 20px
       margin-bottom: 8px
 
-.capitalize
-  text-transform: capitalize
+  .capitalize
+    text-transform: capitalize
+
+  .notify
+    .ui.info.message
+      i.close.icon
+        font-size: 1.2rem
+        
+      .header
+        font-size: 1rem
+        line-height: 1.2rem
+
+  .tiles
+    .ui.card
+      &.bookmark
+        .remove
+          font-size: 1rem
+
+  .tiles
+    .ui.card
+      .content
+        .description
+          font-size: 1rem
+          line-height: 1.2rem

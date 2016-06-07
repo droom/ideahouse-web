@@ -6,6 +6,7 @@ table.ui.tablesorter thead
       font-size: 10px
       margin: 0 0 0 6px
 
+
 table.download
   tbody
     tr
@@ -24,6 +25,7 @@ table.download
       &:nth-child(9n+9)
         img
           background: #5ec5e2
+
 
 
 table.ui.table.swatch.search
@@ -51,17 +53,25 @@ table.ui.table.download
   margin-top: 35px
   width: 100%
   border-radius: 0
+  
   td
     padding: 4px
     border: 0
+    
   tr:nth-child(even)
     background: white
 
+
+
 .details
   table.ui.table
-    td, th
-      width: 50%
-      vertical-align: top
+    tbody,
+    thead 
+      td, th
+        width: 50%
+        vertical-align: top
+        font-size: 1rem
+    
     tbody
       tr
         td:nth-child(1)
@@ -69,15 +79,11 @@ table.ui.table.download
         td:nth-child(2)
           width: 67%
 
-.product
-  table.ui.table
-    td, th
-      font-size: 12px
 
 .stock
   table.ui.table
     td, th
-      font-size: 12px
+      font-size: 1rem
       
     td:nth-child(1),
     th:nth-child(1)
@@ -91,7 +97,7 @@ table.ui.table.download
       span.due
         background: #eee
         border-radius: 2px
-        font-size: 12px
+        font-size: 1rem
         padding: 5px 7px
         margin-left: 1em
 
@@ -99,7 +105,7 @@ table.ui.table.download
   table.ui.table
     th, td
       width: 50%
-      font-size: 12px
+      font-size: 1rem
     th
       padding-top: 4px
       padding-bottom: 4px
@@ -132,7 +138,6 @@ table.ui.table.contact
       img
         width: 60px
         margin-top: -6px
-
 
 table.ui.table
   margin-top: 0
