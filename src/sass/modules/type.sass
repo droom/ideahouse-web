@@ -12,7 +12,8 @@ body
     background: $grey-border
     border: none
 
-  p, .p
+  p, .p,
+  .ui.search.quick input[type=text]
     font-size: 1.15rem
     line-height: 1.75rem
 
@@ -23,16 +24,10 @@ body
 
   h3, .h3
     display: block 
-    font-size: 1.65rem
-    line-height: 1.9rem
+    font-size: 1.5rem
+    line-height: 1.85rem
     font-weight: 700
     margin: 0 0 50px 0
-
-  .content
-    h3, .h3
-      font-size: 1.5rem
-      line-height: 25px
-      font-weight: 700
 
   td p,
   .ui.button,
@@ -40,20 +35,13 @@ body
   .ui.tiny.buttons .button, 
   .ui.tiny.buttons .or,
   .ui.labeled.button,
-  .ui.labeled.button p,
-  ul.links li
+  .ui.labeled.button p
     font-size: 1rem
     line-height: 1.18rem
 
-  ul.links li
-    margin: 0 0 8px 0
-    display: block
-
-  ul.contact li
-    font-size: 0.8rem
-    line-height: 1.15rem
-    opacity: 0.8
-
+  ul.secondary li
+    font-size: 0.8555rem
+    line-height: 1.23rem
 
   label.input
     margin: 0 0 8px 0
@@ -64,10 +52,6 @@ body
     line-height: 1.2rem
     display: inline-block
     
-  &.faq
-    h3
-      margin-top: 20px
-      margin-bottom: 8px
 
   .capitalize
     text-transform: capitalize
