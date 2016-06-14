@@ -25092,7 +25092,8 @@ body h3, body .h3 {
   margin: 0 0 50px 0;
 }
 body .opening p,
-body .address p {
+body .address p,
+body .flex .grid-half-set button p {
   font-size: 1rem;
   line-height: 1.4rem;
 }
