@@ -3,20 +3,10 @@ img.team
 
 img.imprint
   max-width: 100%
-  margin: auto
-  text-align: center
-  margin-bottom: 10px
+  border-top: $grey-border 1px solid
+  border-bottom: $grey-border 1px solid
   &.half
     width: 50%
-    display: inline-block
-
-img#lightbox
-  z-index: 4
-  margin: auto
-
-@media (max-width: $phone-max)
-  img#lightbox
-    width: 100%
 
 img.editorial1,
 img.editorial2
@@ -28,3 +18,12 @@ img.editorial2
     width: 100%
   img.editorial2
     display: none
+
+
+img#lightbox
+  z-index: 4
+  margin: auto
+
+@media (max-width: $phone-max)
+  img#lightbox
+    width: 100%
