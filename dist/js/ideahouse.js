@@ -41301,9 +41301,6 @@ $.fn.visibility.settings = {
   });
 ;  $(document).ready(function() {
 
-    $('.ui.checkbox').checkbox();
-    $('.ui.accordion').accordion({exclusive : false});
-
     // Register
 
     $('#account-private').on('click', function() {
@@ -41312,18 +41309,6 @@ $.fn.visibility.settings = {
 
     $('#account-business').on('click', function() {
       $('input[name=\'company\']').prop('disabled', false);
-    });
-
-    $('.ui.labeled.icon.button.bookmark').on('click', function() {
-      $(this).toggleClass('active');
-    });
-
-    $('.ui.button.menu').on('click', function() {
-      $('.ui.sidebar').sidebar('toggle');
-    });
-
-    $('.ui.dropdown').dropdown({
-      on: 'click'
     });
 
 
@@ -41710,6 +41695,27 @@ $.fn.visibility.settings = {
         }
       }
     });
+
+
+  });
+;  $(document).ready(function() {
+
+
+    $('.ui.checkbox').checkbox();
+    $('.ui.accordion').accordion({exclusive : false});
+
+    $('.ui.labeled.icon.button.bookmark').on('click', function() {
+      $(this).toggleClass('active');
+    });
+
+    $('.ui.button.menu').on('click', function() {
+      $('.ui.sidebar').sidebar('toggle');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on: 'click'
+    });
+    
 
 
   });
