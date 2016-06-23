@@ -31,14 +31,18 @@
   .controls
     section.menu
       .ui.dropdown.burger
-        border-radius: 3px
-        &:hover,
-        &.active
-          background: $active
+
         .ui.icon.button
+          border-radius: 3px
           background: none
-          border: 1px solid #666
-          color: #666
+          border: 1px solid rgba(34,36,38,.25)
+          color: rgba(34,36,38,.384)
+
+          &:hover,
+          &.active
+            background: #f3f3f3
+            color: rgba(34,36,38,.8)
+            
         .menu
           margin: 4px 0 0 0
           .item
@@ -59,18 +63,23 @@
         &:hover
           background: #ddd
 
-
       a.item.gate + a.item.gate
         margin-left: 5px
       .ui.button + .ui.button
         margin-left: 3px
+        
       .ui.icon.top.right.pointing.dropdown.button
+        transition: all ease 300ms
         background: none
-        border: 1px solid #666
-        color: #666
+        border: 1px solid rgba(34,36,38,.25)
+        color: rgba(34,36,38,.384)
+        
         &:hover,
         &.active
-          background: $active
+          background: #f3f3f3
+          color: rgba(34,36,38,0.8)
+          
+
         .menu
           margin: 4px 0 0 0
           .item
