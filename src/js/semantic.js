@@ -1,7 +1,9 @@
   $(document).ready(function() {
 
 
+
     $('.ui.checkbox').checkbox();
+
     $('.ui.accordion').accordion({exclusive : false});
 
     $('.ui.labeled.icon.button.bookmark').on('click', function() {
@@ -17,5 +19,15 @@
     });
     
 
+
+    // $('.ui.modal').modal('show');
+    // $('.ui.modal').modal('show');
+    
+    $('.ui.button.pop').click(function(e){
+      e.preventDefault();
+      $('.ui.modal').modal('show');
+    });
+
+    
 
   });

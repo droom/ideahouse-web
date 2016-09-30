@@ -54,8 +54,8 @@
   <meta name="application-name" content="Ideahouse">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-startup-image" href="img/icons/favicon.png">
   <link rel="manifest" href="js/manifest.json">
+  <link rel="apple-touch-startup-image" href="img/icons/Icon-192.png">
   <link rel="icon" type="image/png" href="img/icons/favicon.png">
   <link rel="icon" sizes="57x57" href="img/icons/Icon-57.png">
   <link rel="icon" sizes="60x60" href="img/icons/Icon-60.png">
@@ -97,21 +97,14 @@
           </section>
           <section class="logo"><a href="index.html" aria-label="Browse item categories"><img src="img/brand/logo-full.svg" alt="Ideahouse" class="ih-logo"></a></section>
           <section class="profile">
-            <!-- To be shown when signed in, hidden when signed out-->
             <div class="authorised-show">
               <div class="ui icon top right pointing dropdown button"><i class="user icon"></i>
-                <div class="menu"><a href="profile.html" aria-label="View or edit your profile" class="item profile"><i class="setting icon"></i><span class="personalise">My Profile</span></a><a href="history.html" aria-label="View your history" class="item history"><i class="history icon"></i>View History</a>
-                  <hr><a href="index.html" aria-label="Sign out of Ideahouse" id="gate-signout" class="item"><i class="sign out icon"></i>Sign out</a>
+                <div class="menu"><a aria-label="View or edit your profile" href="profile.html" class="item profile"><i class="setting icon"></i><span class="personalise">My Profile</span></a><a href="bookmarks.html" class="item"><i class="heart icon"></i>Bookmarks</a><a href="history.html" class="item"><i class="history icon"></i>View History</a>
+                  <hr><a id="gate-signout" aria-label="Sign out of Ideahouse" href="index.html" class="item"><i class="sign out icon"></i>Sign out</a>
                 </div>
               </div>
             </div>
-            <!-- To be hidden when signed in, shown when signed out-->
-            <!-- .authorised-hide-->
-            <!--   a(href="gate-signin.html" aria-label="Sign in to Ideahouse").item.gate-->
-            <!--     = "Sign in / up"-->
-            
-            
-            
+            <div class="authorised-hide"><a aria-label="Sign in to Ideahouse" href="gate-signin.html" class="item gate">Sign in / up</a></div>
           </section>
         </div>
         <section id="search-snap" class="search">
@@ -153,10 +146,13 @@
       <div role="main" class="col-main-right">
         <div class="ui huge breadcrumb">
           <div class="section personalise">Welcome to Ideahouse</div>
-        </div>
-        <div class="ui info message update authorised-show"><i class="close icon"></i>
+        </div><a class="ui button pop">{modal test button}</a>
+        <div class="ui info message update"><i class="close icon"></i>
           <div class="header">There are 10 new products since your last visit.</div>
           <div class="ui button">View</div>
+        </div>
+        <div class="ui modal"><i class="close icon"></i>
+          <div class="header">To use this feature, please sign in. If you don't have an account with Ideahouse, register now for a free account.</div><a href="gate-signin.html" class="ui button">Sign in</a><a href="gate-register-1.html" class="ui button">Register</a>
         </div>
         <div class="tiles browse"><a href="category.html" aria-label="Click to view Metal Pens section" class="ui card">
             <div class="image"><img alt="" src="img/category/pens-metal.svg" class="product"></div>
@@ -376,6 +372,15 @@
         </ul>
       </footer>
       <script src="js/ideahouse.js"></script>
+      <script type="text/javascript">
+        var _mfq = _mfq || [];
+        (function() {
+        var mf = document.createElement("script");
+        mf.type = "text/javascript"; mf.async = true;
+        mf.src = "//cdn.mouseflow.com/projects/4b741a92-c959-4055-878c-cf498ee60cf9.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+      </script>
     </div>
   </body>
 </html>

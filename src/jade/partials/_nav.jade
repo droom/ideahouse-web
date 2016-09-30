@@ -11,34 +11,27 @@
         a(href="index.html" aria-label="Browse item categories")
           img(src="img/brand/logo-full.svg" class="ih-logo" alt="Ideahouse")
 
-      section.profile
 
-        // To be shown when signed in, hidden when signed out
-        
+      section.profile
         .authorised-show
           .ui.icon.top.right.pointing.dropdown.button
             i.user.icon
             .menu
-              a(href="profile.html" aria-label="View or edit your profile").item.profile
+              a.item.profile(aria-label='View or edit your profile', href='profile.html')
                 i.setting.icon
                 span.personalise My Profile
-              //- a(href="bookmarks.html" aria-label="View bookmarked items").item.bookmarks
+              a.item(href='bookmarks.html')
                 i.heart.icon
-                = "Bookmarks"
-              a(href="history.html" aria-label="View your history").item.history
+                | Bookmarks
+              a.item(href='history.html')
                 i.history.icon
-                = "View History"
+                | View History
               hr
-              a(href="index.html" aria-label="Sign out of Ideahouse" id="gate-signout").item
+              a#gate-signout.item(aria-label='Sign out of Ideahouse', href='index.html')
                 i.sign.out.icon
-                = "Sign out"
-        
-        // To be hidden when signed in, shown when signed out
-        // .authorised-hide
-        //   a(href="gate-signin.html" aria-label="Sign in to Ideahouse").item.gate
-        //     = "Sign in / up"
-
-
+                | Sign out
+        .authorised-hide
+          a.item.gate(aria-label='Sign in to Ideahouse', href='gate-signin.html') Sign in / up
 
 
     section.search(id="search-snap")

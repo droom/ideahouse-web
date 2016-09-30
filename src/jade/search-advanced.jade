@@ -186,9 +186,7 @@ html(lang="en")
             fieldset.quantity
               label.input Unit Quantity
               .ui.input.as
-                //- input(type="number", pattern="\d*", placeholder="Quantity" )
                 input(type="number" min="0" inputmode="numeric" pattern="[0-9]*" placeholder="Quantity")
-
               .ui.buttons.increment
                 button.ui.button.minus &minus;
                 .or
@@ -197,15 +195,16 @@ html(lang="en")
             hr
             
             fieldset.price.from
-              label.input Unit Price Range (MYR)
+              label.input Unit Price Range (MYR) step="0.01"
               .ui.input.as
-                input(type="number" inputmode="numeric" pattern="[0-9]*" placeholder="From" step="0.01")
+                input(type="number" inputmode="numeric" placeholder="From" step="0.01")
               .ui.buttons.increment
                 button.ui.button.minus &minus;
                 .or
                 button.ui.button.plus &plus;
 
             fieldset.price.to
+              label.input Unit Price Range (MYR) step="0.01 pattern="[0-9]*""
               .ui.input.as
                 input(type="number" inputmode="numeric" pattern="[0-9]*" placeholder="To" step="0.01")
               .ui.buttons.increment
@@ -213,9 +212,9 @@ html(lang="en")
                 .or
                 button.ui.button.plus &plus;
 
+
             hr
             .ui.error.message
-
             a(href="search-results.html").ui.cta.button Search now
 
       include partials/_footer
