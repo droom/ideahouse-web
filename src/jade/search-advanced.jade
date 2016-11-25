@@ -13,6 +13,13 @@ html(lang="en")
         .ui.huge.breadcrumb
           .section Advanced Search
 
+        .ui.modal
+          i.close.icon
+          .header To use this feature, please sign in. If you don't have an account with Ideahouse, register now for a free account.
+          a.ui.button(href="gate-signin.html") Sign in
+          a.ui.button(href="gate-register-1.html") Register
+
+
         .content
           form.ui.form.advanced-search
             fieldset
@@ -215,7 +222,13 @@ html(lang="en")
 
             hr
             .ui.error.message
-            a(href="search-results.html").ui.cta.button Search now
+            
+            .authorised-show
+              a(href="search-results.html").ui.cta.button Search now
+            
+            .authorised-hide
+              a(href="#").ui.cta.button.pop Search now
+
 
       include partials/_footer
       include partials/_scripts
